@@ -1,0 +1,147 @@
+2026-03-15 01:10:39, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-15 01:10:41, EXEC, v:1, k:ed@pedra, mode:FULL, size:50, fail:COMP
+2026-03-15 01:11:59, EXEC, v:1, k:ed@pedra, mode:FULL, size:50, fail:COMP
+2026-03-15 01:14:28, EXEC, v:1, k:ed@pedra, mode:FULL, rate:25, size:48
+2026-03-15 01:14:56, EXEC, v:1, k:ed@pedra, mode:FULL, rate:16, size:48
+2026-03-15 01:15:20, EXEC, v:1, k:ed@pedra, mode:FULL, rate:25, size:48
+2026-03-15 01:21:09, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:56
+2026-03-15 01:21:54, EXEC, v:1, k:ed@pedra, mode:FULL, rate:16, size:56
+2026-03-15 01:22:08, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:56
+2026-03-15 01:23:45, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:56
+2026-03-15 01:25:05, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:56
+2026-03-15 01:25:21, EXEC, v:1, k:ed@pedra, mode:FULL, rate:16, size:56
+2026-03-15 01:43:05, EXEC, v:1, k:ed@pedra, mode:FULL, size:71, fail:COMP
+2026-03-15 01:44:57, EXEC, v:1, k:ed@pedra, mode:FULL, size:72, fail:COMP
+2026-03-15 01:45:17, EXEC, v:1, k:ed@pedra, mode:FULL, size:72, fail:COMP
+2026-03-15 01:46:36, EXEC, v:1, k:ed@pedra, mode:FULL, rate:0, size:72
+2026-03-15 01:50:42, EXEC, v:1, k:ed@pedra, mode:FULL, size:69, fail:COMP
+2026-03-15 01:51:03, EXEC, v:1, k:ed@pedra, mode:FULL, size:70, fail:COMP
+2026-03-15 01:51:14, EXEC, v:1, k:ed@pedra, mode:FULL, size:70, fail:COMP
+2026-03-15 01:51:20, EXEC, v:1, k:ed@pedra, mode:FULL, size:69, fail:COMP
+2026-03-15 01:56:20, EXEC, v:1, k:ed@pedra, mode:FULL, size:64, fail:COMP
+2026-03-15 02:03:35, EXEC, v:1, k:ed@pedra, mode:FULL, size:76, fail:COMP
+2026-03-15 02:05:22, EXEC, v:1, k:ed@pedra, mode:FULL, size:76, fail:COMP
+2026-03-15 02:05:43, EXEC, v:1, k:ed@pedra, mode:FULL, size:76, fail:COMP
+2026-03-15 02:06:10, EXEC, v:1, k:ed@pedra, mode:FULL, size:77, fail:COMP
+2026-03-15 02:06:17, EXEC, v:1, k:ed@pedra, mode:FULL, rate:58, size:77
+2026-03-15 02:06:33, EXEC, v:1, k:ed@pedra, mode:FULL, rate:8, size:77
+2026-03-15 02:06:52, EXEC, v:1, k:ed@pedra, mode:FULL, rate:58, size:77
+2026-03-15 02:07:29, EXEC, v:1, k:ed@pedra, mode:FULL, rate:66, size:77
+2026-03-15 10:52:54, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-15 10:52:58, EXEC, v:1, k:ed@pedra, mode:FULL, rate:66
+2026-03-15 10:55:46, EXEC, v:1, k:ed@pedra, mode:FULL, rate:75, size:77
+2026-03-15 10:58:08, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:84
+2026-03-15 10:58:44, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-15 10:58:50, MOVE, v:1, k:ed@casais, mode:DOWN
+2026-03-15 10:58:59, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-15 11:17:28, EXEC, v:1, k:ed@casais, mode:FULL, size:21, fail:COMP
+2026-03-15 11:18:36, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:21
+2026-03-15 11:18:57, EXEC, v:1, k:ed@casais, mode:FULL, rate:50, size:21
+2026-03-15 11:20:32, EXEC, v:1, k:ed@casais, mode:FULL, rate:50, size:22
+2026-03-15 11:24:59, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:25
+2026-03-15 11:26:56, EXEC, v:1, k:ed@casais, mode:FULL, rate:25, size:25
+2026-03-15 11:28:09, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:25
+2026-03-15 11:30:56, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:25
+2026-03-15 11:31:23, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:25
+2026-03-15 11:32:16, EXEC, v:1, k:ed@casais, mode:FULL, size:25, fail:COMP
+2026-03-15 11:33:00, EXEC, v:1, k:ed@casais, mode:FULL, size:22, fail:COMP
+2026-03-15 11:33:10, EXEC, v:1, k:ed@casais, mode:FULL, rate:50, size:22
+2026-03-15 11:34:14, EXEC, v:1, k:ed@casais, mode:FULL, size:26, fail:COMP
+2026-03-15 11:34:20, EXEC, v:1, k:ed@casais, mode:FULL, rate:75, size:26
+2026-03-15 11:35:00, EXEC, v:1, k:ed@casais, mode:FULL, rate:100, size:28
+2026-03-15 11:37:19, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-15 11:37:25, MOVE, v:1, k:ed@baruel, mode:DOWN
+2026-03-15 15:29:47, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-15 15:29:49, EXEC, v:1, k:ed@baruel, mode:FULL, size:41, fail:COMP
+2026-03-15 15:30:29, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:41
+2026-03-15 15:33:14, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:43
+2026-03-15 15:41:26, EXEC, v:1, k:ed@baruel, mode:FULL, size:42, fail:COMP
+2026-03-15 15:41:34, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:42
+2026-03-15 15:42:33, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:42
+2026-03-15 15:43:13, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:42
+2026-03-15 15:43:21, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:42
+2026-03-15 15:43:35, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:42
+2026-03-15 15:46:32, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:46
+2026-03-15 15:47:05, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-15 15:47:23, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-15 15:49:15, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-15 15:50:33, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:47
+2026-03-15 15:51:23, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:46
+2026-03-15 15:51:39, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:46
+2026-03-15 15:58:37, EXEC, v:1, k:ed@baruel, mode:FULL, size:52, fail:COMP
+2026-03-15 16:01:38, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:51
+2026-03-15 16:02:09, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:51
+2026-03-15 16:02:27, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:50
+2026-03-15 16:02:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:50
+2026-03-15 16:02:45, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0
+2026-03-15 16:05:19, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:50
+2026-03-15 16:06:34, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:54
+2026-03-15 16:07:31, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:54
+2026-03-15 16:08:03, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:54
+2026-03-15 16:15:13, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:20:39, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:20:53, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:60
+2026-03-15 16:21:17, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:21:50, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:60
+2026-03-15 16:26:23, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:27:18, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:60
+2026-03-15 16:27:55, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:28:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:54
+2026-03-15 16:28:57, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:54
+2026-03-15 16:29:53, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:54
+2026-03-15 16:31:19, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:54
+2026-03-15 16:31:51, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:55
+2026-03-15 16:32:24, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:55
+2026-03-15 16:35:25, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:55
+2026-03-15 16:36:09, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:55
+2026-03-15 16:36:40, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:55
+2026-03-15 16:37:20, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:55
+2026-03-15 16:38:39, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:39:00, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:39:13, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:39:34, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:39:44, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:39:52, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:60
+2026-03-15 16:40:23, EXEC, v:1, k:ed@baruel, mode:FULL, size:57, fail:COMP
+2026-03-15 16:42:03, EXEC, v:1, k:ed@baruel, mode:FULL, size:57, fail:COMP
+2026-03-15 16:42:27, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:56
+2026-03-15 16:43:02, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:56
+2026-03-15 16:43:36, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:56
+2026-03-15 16:45:09, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:57
+2026-03-15 16:45:34, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:57
+2026-03-15 16:47:20, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:56
+2026-03-15 16:49:07, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:56
+2026-03-15 16:49:20, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:56
+2026-03-15 16:49:32, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:56
+2026-03-15 16:49:46, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:56
+2026-03-15 16:49:51, EXEC, v:1, k:ed@baruel, mode:FULL, rate:25, size:56
+2026-03-15 16:50:00, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:56
+2026-03-15 16:53:17, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:59
+2026-03-15 16:53:25, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:59
+2026-03-15 17:26:35, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50
+2026-03-15 17:29:17, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:59
+2026-03-15 17:29:28, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:59
+2026-03-15 17:29:33, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:59
+2026-03-15 17:33:51, EXEC, v:1, k:ed@baruel, mode:FULL, rate:0, size:63
+2026-03-15 17:36:08, EXEC, v:1, k:ed@baruel, mode:FULL, size:123, fail:COMP
+2026-03-15 17:36:10, EXEC, v:1, k:ed@baruel, mode:FULL, fail:COMP
+2026-03-15 17:36:37, EXEC, v:1, k:ed@baruel, mode:FULL, size:124, fail:COMP
+2026-03-15 17:37:54, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-15 17:37:56, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:121
+2026-03-15 17:39:43, EXEC, v:1, k:ed@baruel, mode:FULL, rate:50, size:65
+2026-03-15 17:40:48, EXEC, v:1, k:ed@baruel, mode:FULL, rate:75, size:64
+2026-03-15 17:41:48, EXEC, v:1, k:ed@baruel, mode:FULL, rate:75, size:66
+2026-03-15 17:41:55, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100, size:66
+2026-03-15 17:43:04, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-15 17:43:07, MOVE, v:1, k:ed@gomos, mode:DOWN
+2026-03-15 17:43:08, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-15 17:51:27, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:32
+2026-03-15 17:55:10, EXEC, v:1, k:ed@gomos, mode:FULL, rate:33, size:34
+2026-03-15 18:00:06, EXEC, v:1, k:ed@gomos, mode:FULL, rate:16, size:46
+2026-03-15 18:01:51, EXEC, v:1, k:ed@gomos, mode:FULL, rate:33, size:46
+2026-03-15 18:02:34, EXEC, v:1, k:ed@gomos, mode:FULL, size:49, fail:COMP
+2026-03-15 18:03:20, EXEC, v:1, k:ed@gomos, mode:FULL, fail:COMP
+2026-03-15 18:04:40, EXEC, v:1, k:ed@gomos, mode:FULL, rate:50, size:50
+2026-03-15 18:07:24, EXEC, v:1, k:ed@gomos, mode:FULL, rate:50, size:50
+2026-03-15 18:07:53, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83, size:50
+2026-03-15 18:09:34, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:50

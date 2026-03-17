@@ -1,0 +1,189 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_23-28-12",
+            "content": "@@ -96,28 +96,24 @@\n  %5BN%5Dint%0A    \n-var \n contagem1 in\n@@ -114,34 +114,17 @@\n em1 \n-int%0A    contagem1 \n+:\n = 0%0A    \n var \n@@ -119,20 +119,16 @@\n = 0%0A    \n-var \n contagem\n@@ -133,26 +133,9 @@\n em2 \n-int%0A    contagem2 \n+:\n = 0%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-14_23-30-19",
+            "content": "@@ -126,25 +126,61 @@\n     \n-var contagem2 int\n+contagem1 = 0%0A    var contagem2 int%0A    contagem2 = 0\n %0A%09me\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-14_23-31-22",
+            "content": "@@ -96,24 +96,28 @@\n  %5BN%5Dint%0A    \n+var \n contagem1 :=\n@@ -118,16 +118,19 @@\n em1 \n-:= 0%0A   \n+int%0A    var\n  con\n@@ -136,18 +136,19 @@\n ntagem2 \n-:=\n+int\n %0A%09menor \n@@ -373,30 +373,25 @@\n   if A%5Bi%5D%3C10\n-%7B%0A    \n+%0A\n         cont\n@@ -398,26 +398,16 @@\n agem1++%0A\n-        %7D%0A\n         \n@@ -416,22 +416,17 @@\n  B%5Bi%5D%3C10\n-%7B%0A    \n+%0A\n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-14_23-36-03",
+            "content": "@@ -131,18 +131,16 @@\n agem2 :=\n- 0\n %0A%09menor \n@@ -168,32 +168,8 @@\n int%0A\n-    fmt.Scanf(%22%25d%22, &N)%0A\n %09i :\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-14_23-37-59",
+            "content": "@@ -170,56 +170,8 @@\n int%0A\n-    fmt.Print(%22Digite o n%C3%BAmero de jogadores: %22)%0A\n     \n@@ -855,16 +855,12 @@\n    %7D%0A%09%7D%0A\n-    %7D\n+%09\n %0A%7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-14_23-38-44",
+            "content": "@@ -50,32 +50,8 @@\n int%0A\n-    fmt.Scanf(%22%25d%22, &N)%0A\n %09var\n@@ -166,16 +166,88 @@\n dor int%0A\n+    fmt.Print(%22Digite o n%C3%BAmero de jogadores: %22)%0A    fmt.Scanf(%22%25d%22, &N)%0A\n %09i := 0%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-14_23-39-15",
+            "content": "@@ -75,33 +75,27 @@\n N)%0A%09\n-A := make(\n+var A\n  %5B\n+N\n %5Dint\n-, N)%0A%09B :\n+%0A%09var B\n  %5BN%5D\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_01-10-41",
+            "content": "@@ -46,17 +46,20 @@\n r N int%0A\n-%09\n+    \n fmt.Scan\n@@ -73,32 +73,33 @@\n  &N)%0A%09A := make(\n+ \n %5B%5Dint, N)%0A%09B := \n@@ -100,24 +100,15 @@\n %09B :\n-= make(%5B%5Dint, N)\n+ %5BN%5Dint\n %0A%09va\n@@ -126,17 +126,20 @@\n  %5BN%5Dint%0A\n-%09\n+    \n contagem\n@@ -145,17 +145,20 @@\n m1 := 0%0A\n-%09\n+    \n contagem\n@@ -256,24 +256,36 @@\n i%5D)%0A\n-%09%09if A %3E B %7B%0A%09%09%09\n+        if A%3EB%7B%0A            \n joga\n@@ -303,30 +303,41 @@\n A%5Bi%5D\n- - \n+-\n B%5Bi%5D%0A\n-%09%09%7D \n+        %7D\n else\n- \n %7B%0A\n-%09%09%09\n+            \n joga\n@@ -355,92 +355,126 @@\n B%5Bi%5D\n- - \n+-\n A%5Bi%5D%0A\n-%09%09\n+        \n %7D%0A%09%7D%0A\n-%09\n+    \n for i\n- %3C N %7B%0A%09%09\n+%3CN%7B%0A        \n if A%5Bi%5D\n- %3C \n+%3C\n 10\n- \n %7B%0A\n-%09%09%09contagem1++%0A%09%09%7D%0A%09%09\n+            contagem1++%0A        %7D%0A        \n if B%5Bi%5D\n- %3C \n+%3C\n 10\n- \n %7B%0A\n-%09%09%09\n+            \n cont\n@@ -481,22 +481,26 @@\n agem2++%0A\n-%09%09%7D%0A%09%09\n+    %7D%0A    \n if conta\n@@ -508,22 +508,26 @@\n em1 == N\n- \n %7B%0A\n-%09%09%09\n+        \n if conta\n@@ -538,20 +538,28 @@\n  == N %7B%0A\n-%09%09%09%09\n+            \n fmt.Prin\n@@ -578,26 +578,32 @@\n hador%22)%0A\n-%09%09%09%7D%0A%09%09\n+        %7D%0A    \n %7D%0A\n-%09\n %09for i %3C\n@@ -609,17 +609,16 @@\n %3C N %7B%0A%09%09\n-%09\n if jogad\n@@ -624,19 +624,17 @@\n dores%5Bi%5D\n- %3C \n+%3C\n menor %7B%0A\n@@ -636,17 +636,16 @@\n or %7B%0A%09%09%09\n-%09\n jogadore\n@@ -660,17 +660,16 @@\n enor%0A%09%09%09\n-%09\n vencedor\n@@ -675,22 +675,26 @@\n r = i%0A%09%09\n-%09\n %7D%0A\n-%09%09%09\n+        \n if jogad\n@@ -704,39 +704,42 @@\n s%5Bi%5D\n- \n ==\n- \n menor\n- \n %7B%0A\n-%09%09%09%09\n+            \n if i\n- %3C \n+%3C\n vencedor\n  %7B%0A%09\n@@ -734,24 +734,34 @@\n vencedor\n- \n %7B%0A\n-%09%09%09%09%09\n+                \n fmt.Prin\n@@ -776,26 +776,43 @@\n  i)%0A\n-%09%09%09%09%7D \n+            %7D\n else\n- \n %7B%0A\n-%09%09%09%09%09\n+                \n fmt.\n@@ -838,24 +838,39 @@\n or)%0A\n-%09%09%09%09%7D%0A%09%09%09\n+            %7D%0A        \n %7D%0A\n-%09\n %09%7D%0A\n-%09\n+    \n %7D%0A%7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_01-11-59",
+            "content": "@@ -67,17 +67,16 @@\n d%22, &N)%0A\n-%0A\n %09A := ma\n@@ -110,16 +110,20 @@\n nt, N)%0A%09\n+var \n jogadore\n@@ -128,50 +128,97 @@\n res \n-:= make(%5B%5Dint, N)%0A%0A%09for \n+%5BN%5Dint%0A%09contagem1 := 0%0A%09contagem2 := 0%0A%09menor := 100%0A%09var vencedor int%0A%09\n i := 0\n-;\n+%0A%09for\n  i %3C N\n-; i++\n  %7B%0A%09\n@@ -257,145 +257,107 @@\n )%0A%09%09\n-diff := A%5Bi%5D - B%5Bi%5D%0A%09%09if diff %3C 0 %7B%0A%09%09%09diff = -diff%0A%09%09%7D%0A%09%09jogadores%5Bi%5D = diff%0A%09%7D%0A%0A%09contagem1 := 0%0A%09contagem2 := 0%0A%09for i := 0; i %3C N; i++\n+if A %3E B %7B%0A%09%09%09jogadores%5Bi%5D = A%5Bi%5D - B%5Bi%5D%0A%09%09%7D else %7B%0A%09%09%09jogadores%5Bi%5D = B%5Bi%5D - A%5Bi%5D%0A%09%09%7D%0A%09%7D%0A%09for i %3C N\n  %7B%0A%09\n@@ -428,19 +428,16 @@\n ++%0A%09%09%7D%0A%09\n-%7D%0A%0A\n %09if cont\n@@ -451,10 +451,15 @@\n = N \n-&&\n+%7B%0A%09%09%09if\n  con\n@@ -468,24 +468,26 @@\n gem2 == N %7B%0A\n+%09%09\n %09%09fmt.Printl\n@@ -510,88 +510,62 @@\n )%0A%09%09\n-return%0A%09%7D%0A%0A%09menor := jogadores%5B0%5D%0A%09vencedor := 0%0A%09for i := 1; i %3C N; i++\n+%09%7D%0A%09%09%7D%0A%09%09for i %3C N %7B%0A%09%09%09if jogadores%5Bi%5D %3C menor\n  %7B%0A%09%09\n+%09\n-if \n+%09\n joga\n@@ -577,66 +577,132 @@\n %5Bi%5D \n-%3C\n+=\n  menor\n- %7B\n %0A%09%09%09\n-menor = jogadores%5Bi%5D%0A%09%09%09vencedor = i%0A%09%09%7D%0A%09%7D%0A%0A\n+%09vencedor = i%0A%09%09%09%7D%0A%09%09%09if jogadores%5Bi%5D == menor %7B%0A%09%09%09%09if i %3C vencedor %7B%0A%09%09%09%09%09fmt.Printf(%22%25d%22, i)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09\n %09fmt\n@@ -707,19 +707,24 @@\n mt.Print\n-ln(\n+f(%22%25d%22, \n vencedor\n@@ -725,10 +725,28 @@\n ncedor)%0A\n+%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_01-14-28",
+            "content": "@@ -666,12 +666,8 @@\n edor\n- + 1\n )%0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_01-14-56",
+            "content": "@@ -662,12 +662,16 @@\n vencedor\n+ + 1\n )%0A%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_01-15-20",
+            "content": "@@ -641,135 +641,8 @@\n %09%09%7D%0A\n-%09%09if jogadores%5Bi%5D == menor %7B%0A%09%09%09if i %3C vencedor %7B%0A%09%09%09%09fmt.Printf(%22%25d%22, i)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22%25d%22, vencedor)%0A%09%09%09%7D%0A%09%09%7D%0A%0A\n %09%7D%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_01-21-09",
+            "content": "@@ -793,10 +793,8 @@\n edor\n-+1\n )%0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_01-21-54",
+            "content": "@@ -789,12 +789,14 @@\n vencedor\n++1\n )%0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_01-22-08",
+            "content": "@@ -525,20 +525,16 @@\n res%5B0%5D%0A%09\n-var \n vencedor\n@@ -534,19 +534,20 @@\n encedor \n-int\n+:= 0\n %0A%09for i \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_01-23-45",
+            "content": "@@ -525,16 +525,20 @@\n res%5B0%5D%0A%09\n+var \n vencedor\n@@ -538,20 +538,19 @@\n encedor \n-:= 0\n+int\n %0A%09for i \n@@ -796,12 +796,8 @@\n edor\n- + 2\n )%0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_01-25-05",
+            "content": "@@ -793,10 +793,12 @@\n edor\n-+1\n+ + 2\n )%0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_01-25-21",
+            "content": "@@ -321,27 +321,8 @@\n = 0%0A\n-    contagem3 := 0%0A\n %09for\n@@ -418,89 +418,8 @@\n %0A%09%09%7D\n-else%7B%0A            if A%5Bi%5D%3E10%7B%0A                contagem3++%0A            %7D%0A        %7D\n %0A%09%7D%0A\n@@ -503,308 +503,8 @@\n n%0A%09%7D\n-else%7B%0A        jogadores_classificaveis := make(%5B%5Dint, contagem3++)%0A        for i:=0 i%3Ccontagem3%7B%0A            for j:=0 j%3CN j++%7B%0A                if A%5Bj%5D%3E10 && B%5Bj%5D%3E10%7B%0A                    jogadores_classificaveis%5Bi%5D = jogadores%5Bj%5D%0A                    i++%0A                %7D%0A            %7D%0A        %7D%0A    %7D\n %0A%0A%09m\n@@ -524,23 +524,8 @@\n ores\n-_classificaveis\n %5B0%5D%0A\n@@ -789,12 +789,14 @@\n vencedor\n++1\n )%0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_01-43-04",
+            "content": "@@ -661,16 +661,19 @@\n contagem\n+3++\n )%0A      \n@@ -678,24 +678,16 @@\n     \n+for \n i:=0\n-%0A        for\n  i%3Cc\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-15_01-44-57",
+            "content": "@@ -725,14 +725,12 @@\n j:=0\n-;\n  j%3CN\n-;\n  j++\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-15_01-45-17",
+            "content": "@@ -313,25 +313,28 @@\n tagem2 := 0%0A\n-%09\n+    \n contagem3 :=\n@@ -437,57 +437,88 @@\n %0A%09%09%7D\n- \n else\n- \n %7B%0A\n-%09%09%09\n+            \n if A%5Bi%5D\n- %3E \n+%3E\n 10\n- \n %7B%0A\n-%09%09%09%09contagem3++%0A%09%09%09%7D%0A%09%09\n+                contagem3++%0A            %7D%0A        \n %7D%0A%09%7D\n@@ -599,26 +599,30 @@\n eturn%0A%09%7D\n- \n else\n- \n %7B%0A\n-%09%09\n+        \n jogadore\n@@ -665,30 +665,37 @@\n agem\n-3\n )%0A\n-%09%09i \n+        i\n :=\n- \n 0%0A\n-%09%09\n+        \n for i\n- %3C \n+%3C\n cont\n@@ -703,53 +703,66 @@\n gem3\n- \n %7B%0A\n-%09%09%09\n+            \n for j\n- \n :=\n- \n 0; j\n- %3C \n+%3C\n N; j++\n- \n %7B%0A\n-%09%09%09%09\n+                \n if A%5Bj%5D\n- %3E \n+%3E\n 10 &\n@@ -771,21 +771,33 @@\n B%5Bj%5D\n- %3E \n+%3E\n 10\n- \n %7B%0A\n-%09%09%09%09%09\n+                    \n joga\n@@ -839,34 +839,81 @@\n %5Bj%5D%0A\n-%09%09%09%09%09i++%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09\n+                    i++%0A                %7D%0A            %7D%0A        %7D%0A    \n %7D%0A%0A\n-%09\n %09men\n@@ -946,17 +946,16 @@\n veis%5B0%5D%0A\n-%09\n %09vencedo\n@@ -961,17 +961,16 @@\n or := 0%0A\n-%09\n %09for i :\n@@ -989,17 +989,16 @@\n i++ %7B%0A%09%09\n-%09\n if jogad\n@@ -1015,17 +1015,16 @@\n menor %7B%0A\n-%09\n %09%09%09menor\n@@ -1042,17 +1042,16 @@\n s%5Bi%5D%0A%09%09%09\n-%09\n vencedor\n@@ -1055,24 +1055,22 @@\n dor = i%0A\n-%09\n %09%09%7D%0A%09%09\n-%09\n if jogad\n@@ -1088,17 +1088,16 @@\n menor %7B%0A\n-%09\n %09%09%09if i \n@@ -1109,25 +1109,24 @@\n cedor %7B%0A%09%09%09%09\n-%09\n fmt.Printf(%22\n@@ -1133,17 +1133,16 @@\n %25d%22, i)%0A\n-%09\n %09%09%09%7D els\n@@ -1149,17 +1149,16 @@\n e %7B%0A%09%09%09%09\n-%09\n fmt.Prin\n@@ -1183,23 +1183,19 @@\n %0A%09%09%09\n-%09\n %7D%0A\n-%09\n %09%09%7D%0A%0A\n-%09\n %09%7D%0A%0A\n-%09\n %09fmt\n@@ -1213,13 +1213,10 @@\n ncedor)%0A\n-%09%7D%0A\n %7D%0A\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-15_01-46-35",
+            "content": "@@ -883,39 +883,24 @@\n if jogadores\n-_classificaveis\n %5Bi%5D %3C menor \n@@ -922,31 +922,16 @@\n ogadores\n-_classificaveis\n %5Bi%5D%0A%09%09%09%09\n@@ -959,39 +959,24 @@\n if jogadores\n-_classificaveis\n %5Bi%5D == menor\n@@ -976,18 +976,24 @@\n = menor \n-&&\n+%7B%0A%09%09%09%09if\n  i %3C ven\n@@ -1000,32 +1000,88 @@\n cedor %7B%0A%09%09%09%09\n+%09fmt.Printf(%22%25d%22, i)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22%25d%22, \n vencedor\n  = i%0A%09%09%09%7D%0A%09%09\n@@ -1060,37 +1060,35 @@\n f(%22%25d%22, vencedor\n- = i%0A\n+)%0A%09\n %09%09%09%7D%0A%09%09%09%7D%0A%0A%09%09%7D%0A%0A\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-15_01-50-42",
+            "content": "@@ -1101,10 +1101,8 @@\n r)%0A%09%7D%0A%7D%0A\n-%7D%0A\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-15_01-51-03",
+            "content": "@@ -1103,17 +1103,8 @@\n %0A%09%7D%0A\n-    return\n+%7D\n %0A%7D%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-15_01-51-14",
+            "content": "@@ -1099,10 +1099,21 @@\n dor)%0A%09%7D%0A\n+    return%0A\n %7D%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-15_01-51-20",
+            "content": "@@ -378,10 +378,33 @@\n  10 \n-%7C%7C\n+%7B%0A%09%09%09contagem1++%0A%09%09%7D%0A%09%09if\n  B%5Bi\n@@ -419,25 +419,25 @@\n %0A%09%09%09contagem\n-1\n+2\n ++%0A%09%09%7D else \n@@ -438,16 +438,35 @@\n  else %7B%0A\n+%09%09%09if A%5Bi%5D %3E 10 %7B%0A%09\n %09%09%09conta\n@@ -468,20 +468,25 @@\n contagem\n-2\n+3\n ++%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%0A\n@@ -503,16 +503,35 @@\n em1 == N\n+ && contagem2 == N \n %7B%0A%09%09fmt.\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-15_01-56-19",
+            "content": "@@ -69,18 +69,16 @@\n , &N)%0A%0A%09\n-/*\n A := mak\n@@ -142,48 +142,9 @@\n , N)\n-*/%0A%0A    melhor := 1000%0A    vencedor := 0\n+%0A\n %0A%09fo\n@@ -170,29 +170,8 @@\n + %7B%0A\n-        var A, B int%0A\n %09%09fm\n@@ -193,52 +193,22 @@\n , &A\n+%5Bi%5D\n , &B\n-)%0A        if A%3E10 && B%3E10 %7B%0A            \n+%5Bi%5D)%0A%09%09\n diff\n@@ -216,25 +216,21 @@\n := A\n+%5Bi%5D\n  - B\n-%0A            \n+%5Bi%5D%0A%09%09\n if d\n@@ -243,276 +243,55 @@\n 0 %7B%0A\n-                diff = -diff%0A            %7D%0A            if diff %3C melhor %7B%0A                melhor = diff%0A                vencedor = i%0A            %7D else if diff == melhor && i %3C vencedor %7B%0A                vencedor = i%0A            %7D%0A%09%09%7D%0A%09%7D%0A    fmt.Println(vencedor)%0A%0A%09/*\n+%09%09%09diff = -diff%0A%09%09%7D%0A%09%09jogadores%5Bi%5D = diff%0A%09%7D%0A%0A%09\n cont\n@@ -1039,6 +1039,4 @@\n %7D%0A%7D%0A\n-*/\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-15_02-03-35",
+            "content": "@@ -150,17 +150,18 @@\n %0A%0A    me\n-n\n+lh\n or := 10\n@@ -179,17 +179,17 @@\n edor := \n-N\n+0\n %0A%09for i \n@@ -298,16 +298,17 @@\n      dif\n+f\n  := A - \n@@ -327,16 +327,17 @@\n   if dif\n+f\n  %3C 0 %7B%0A \n@@ -358,15 +358,17 @@\n  dif\n+f\n  = -dif\n+f\n %0A   \n@@ -396,22 +396,24 @@\n   if dif\n+f\n  %3C me\n-n\n+lh\n or %7B%0A   \n@@ -431,17 +431,18 @@\n   me\n-n\n+lh\n or = dif\n %0A   \n@@ -437,16 +437,17 @@\n or = dif\n+f\n %0A       \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-15_02-05-22",
+            "content": "@@ -590,17 +590,16 @@\n ncedor)%0A\n-%7D\n %0A%09/*cont\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-15_02-05-43",
+            "content": "@@ -144,17 +144,20 @@\n , N)*/%0A%0A\n-%09\n+    \n menor :=\n@@ -162,17 +162,20 @@\n := 1000%0A\n-%09\n+    \n vencedor\n@@ -206,18 +206,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n var A, B\n@@ -260,35 +260,46 @@\n &B)%0A\n-%09%09\n+        \n if A\n- %3E \n+%3E\n 10 && B\n- %3E \n+%3E\n 10 %7B%0A\n-%09%09%09\n+            \n dif \n@@ -307,19 +307,28 @@\n = A - B%0A\n-%09%09%09\n+            \n if dif %3C\n@@ -336,68 +336,122 @@\n 0 %7B%0A\n-%09%09%09%09dif = -dif%0A%09%09%09%7D%0A%09%09%09if dif %3C menor %7B%0A%09%09%09%09menor = dif%0A%09%09%09%09\n+                dif = -dif%0A            %7D%0A            if dif %3C menor %7B%0A                menor = dif%0A                \n venc\n@@ -459,19 +459,28 @@\n dor = i%0A\n-%09%09%09\n+            \n %7D else i\n@@ -488,15 +488,17 @@\n  dif\n+f\n  == me\n-N\n+lh\n or &\n@@ -506,36 +506,48 @@\n  i %3C vencedor %7B%0A\n-%09%09%09%09\n+                \n vencedor = i%0A%09%09%09\n@@ -539,27 +539,36 @@\n encedor = i%0A\n-%09%09%09\n+            \n %7D%0A%09%09%7D%0A%09%7D%0A%09fm\n@@ -564,17 +564,20 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09\n+    \n fmt.Prin\n@@ -592,17 +592,17 @@\n edor)%0A%7D%0A\n-%0A\n+%09\n /*contag\n@@ -1346,9 +1346,8 @@\n %0A%09%7D%0A%7D%0A*/\n-%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-15_02-06-10",
+            "content": "@@ -391,25 +391,25 @@\n if dif == me\n-n\n+N\n or && i %3C ve\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-15_02-06-17",
+            "content": "@@ -471,12 +471,8 @@\n edor\n- - 1\n )%0A%7D%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-15_02-06-33",
+            "content": "@@ -467,16 +467,20 @@\n vencedor\n+ - 1\n )%0A%7D%0A%0A/*c\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-15_02-06-52",
+            "content": "@@ -177,10 +177,8 @@\n := N\n--1\n %0A%09fo\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-15_02-07-29",
+            "content": "@@ -254,17 +254,16 @@\n %09%09if A %3E\n-=\n  10 && B\n@@ -264,17 +264,16 @@\n 0 && B %3E\n-=\n  10 %7B%0A%09%09\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-15_10-55-46",
+            "content": "@@ -71,22 +71,8 @@\n &N)%0A\n-%09contagem := 0\n %0A%09/*\n@@ -450,103 +450,12 @@\n %0A%09%09%7D\n-else%7B%0A%09%09%09contagem++%0A%09%09%7D%0A%09%7D%0A%09if contagem == N %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%09return%0A%09%7Delse%7B\n %0A%09\n+%7D%0A\n %09fmt\n@@ -473,19 +473,16 @@\n ncedor)%0A\n-%09%7D%0A\n %7D%0A%0A/*con\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-15_10-58-08",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\tfmt.Scanf(\"%d\", &N)\n\tcontagem := 0\n\t/*A := make([]int, N)\n\tB := make([]int, N)\n\tjogadores := make([]int, N)*/\n\n\tmenor := 1000\n\tvencedor := N-1\n\tfor i := 0; i < N; i++ {\n\t\tvar A, B int\n\t\tfmt.Scanf(\"%d %d\", &A, &B)\n\t\tif A >= 10 && B >= 10 {\n\t\t\tdif := A - B\n\t\t\tif dif < 0 {\n\t\t\t\tdif = -dif\n\t\t\t}\n\t\t\tif dif < menor {\n\t\t\t\tmenor = dif\n\t\t\t\tvencedor = i\n\t\t\t} else if dif == menor && i < vencedor {\n\t\t\t\tvencedor = i\n\t\t\t}\n\t\t}else{\n\t\t\tcontagem++\n\t\t}\n\t}\n\tif contagem == N {\n\t\tfmt.Println(\"sem ganhador\")\n\t\treturn\n\t}else{\n\t\tfmt.Println(vencedor)\n\t}\n}\n\n/*contagem1 := 0\n\tcontagem2 := 0\n\tcontagem3 := 0\n\tfor i := 0; i < N; i++ {\n\t\tif A[i] < 10 || B[i] < 10 {\n\t\t\tcontagem1++\n\t\t} else {\n\t\t\tcontagem2++\n\t\t}\n\t}\n\n\tif contagem1 == N{\n\t\tfmt.Println(\"sem ganhador\")\n\t\treturn\n\t} else {\n\t\tjogadores_classificaveis := make([]int, contagem3)\n\t\ti := 0\n\t\tfor i < contagem3 {\n\t\t\tfor j := 0; j < N; j++ {\n\t\t\t\tif A[j] > 10 && B[j] > 10 {\n\t\t\t\t\tjogadores_classificaveis[i] = jogadores[j]\n\t\t\t\t\ti++\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tmenor := jogadores_classificaveis[0]\n\t\tvencedor := 0\n\t\tfor i := 1; i < N; i++ {\n\t\t\tif jogadores_classificaveis[i] < menor {\n\t\t\t\tmenor = jogadores_classificaveis[i]\n\t\t\t\tvencedor = i\n\t\t\t}\n\t\t\tif jogadores_classificaveis[i] == menor && i < vencedor {\n\t\t\t\tvencedor = i\n\t\t\t}\n\t\t\t}\n\n\t\t}\n\n\t\tfmt.Println(vencedor)\n\t}\n}\n*/\n",
+            "lines": "84"
+        }
+    ]
+}

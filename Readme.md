@@ -1,12 +1,7 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=22950279)
 ---
-git add
 "nomeAluno: Sophia Muniz de Oliveira
 matricula: 583016
-git commit -m .
-git push
-
-
 ---
 
 # Instalando o TKO e configurando o repositório

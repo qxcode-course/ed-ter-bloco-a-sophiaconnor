@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_17-51-27",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var Q in\n@@ -47,17 +47,20 @@\n r Q int%0A\n-%09\n+    \n var D st\n@@ -68,37 +68,12 @@\n ing%0A\n-%09fmt.Scanf(%22%25d %25s%22, &Q, &D)%0A%09\n+    \n x :=\n@@ -88,17 +88,20 @@\n int, Q)%0A\n-%09\n+    \n y := mak\n@@ -112,17 +112,51 @@\n int, Q)%0A\n-%09\n+    fmt.Scanf(%22%25d %25s%22, &Q, &D)%0A    \n for i :=\n@@ -172,18 +172,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -213,20 +213,26 @@\n  &y%5Bi%5D)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n if D == \n@@ -233,26 +233,32 @@\n  D == %22L%22 %7B%0A\n-%09%09\n+        \n for i := 0; \n@@ -262,35 +262,44 @@\n 0; i %3C Q; i++ %7B%0A\n-%09%09%09\n+            \n fmt.Printf(%22%25d %25\n@@ -314,37 +314,48 @@\n i%5D-1, y%5Bi%5D)%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n if D\n- \n == %22R%22 %7B%0A%09%09f\n@@ -347,26 +347,32 @@\n f D== %22R%22 %7B%0A\n-%09%09\n+        \n for i := 0; \n@@ -376,35 +376,44 @@\n 0; i %3C Q; i++ %7B%0A\n-%09%09%09\n+            \n fmt.Printf(%22%25d %25\n@@ -432,29 +432,40 @@\n , y%5Bi%5D)%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n if D\n- \n == %22U%22 %7B\n@@ -461,26 +461,32 @@\n f D== %22U%22 %7B%0A\n-%09%09\n+        \n for i := 0; \n@@ -490,35 +490,44 @@\n 0; i %3C Q; i++ %7B%0A\n-%09%09%09\n+            \n fmt.Printf(%22%25d %25\n@@ -550,21 +550,32 @@\n +1)%0A\n-%09%09%7D%0A%09%7D%0A%09\n+        %7D%0A    %7D%0A    \n if D\n- \n == %22\n@@ -579,18 +579,24 @@\n = %22D%22 %7B%0A\n-%09%09\n+        \n for i :=\n@@ -616,11 +616,20 @@\n + %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -664,13 +664,22 @@\n -1)%0A\n-%09%09%7D%0A%09\n+        %7D%0A    \n %7D%0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-15_17-55-10",
+            "content": "@@ -324,32 +324,16 @@\n ; i++ %7B%0A\n-%09%09%09if i == 0 %7B%0A%09\n %09%09%09fmt.P\n@@ -367,68 +367,8 @@\n i%5D)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d %25d%5Cn%22, x%5Bi+1%5D, y%5Bi+1%5D)%0A%09%09%09%7D%0A\n %09%09%7D%0A\n@@ -412,32 +412,16 @@\n ; i++ %7B%0A\n-%09%09%09if i == 0 %7B%0A%09\n %09%09%09fmt.P\n@@ -455,68 +455,8 @@\n +1)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d %25d%5Cn%22, x%5Bi+1%5D, y%5Bi+1%5D)%0A%09%09%09%7D%0A\n %09%09%7D%0A\n@@ -504,24 +504,8 @@\n + %7B%0A\n-%09%09%09if i == 0 %7B%0A%09\n %09%09%09f\n@@ -543,68 +543,8 @@\n -1)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d %25d%5Cn%22, x%5Bi+1%5D, y%5Bi+1%5D)%0A%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-15_18-00-06",
+            "content": "@@ -417,33 +417,33 @@\n d %25d%5Cn%22, x%5Bi\n--\n++\n 1%5D, y%5Bi\n--\n++\n 1%5D)%0A%09%09%09%7D%0A%09%09%7D\n@@ -581,33 +581,33 @@\n d %25d%5Cn%22, x%5Bi\n--\n++\n 1%5D, y%5Bi\n--\n++\n 1%5D)%0A%09%09%09%7D%0A%09%09%7D\n@@ -753,17 +753,17 @@\n  x%5Bi\n--\n++\n 1%5D, y%5Bi\n--\n++\n 1%5D)%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-15_18-01-51",
+            "content": "@@ -240,105 +240,8 @@\n + %7B%0A\n-            if i == 0 %7B%0A                fmt.Printf(%22%25d %25d%5Cn%22, x%5Bi%5D-1, y%5Bi%5D)%0A            %7D else %7B%0A\n %09%09%09f\n@@ -260,34 +260,32 @@\n d %25d%5Cn%22, x%5Bi\n+%5D\n -1\n-%5D\n , y%5Bi\n--1\n %5D)%0A%09%09%7D%0A%09%7D%0A%09i\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-15_18-02-34",
+            "content": "@@ -236,35 +236,56 @@\n ; i++ %7B%0A\n-%09%09%09if i == 0 %7B%0A%09%09%09%09\n+            if i == 0 %7B%0A                \n fmt.Prin\n@@ -304,35 +304,44 @@\n , x%5Bi%5D-1, y%5Bi%5D)%0A\n-%09%09%09\n+            \n %7D else %7B%0A%09%09%09%09fmt\n@@ -325,33 +325,32 @@\n        %7D else %7B%0A\n-%09\n %09%09%09fmt.Printf(%22%25\n@@ -366,37 +366,32 @@\n x%5Bi-1%5D, y%5Bi-1%5D)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09if D == \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-15_18-04-40",
+            "content": "@@ -638,32 +638,33 @@\n %09%09%09%09fmt.Printf(%22\n+ \n %25d %25d%5Cn%22, x%5Bi-1%5D\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_18-07-24",
+            "content": "@@ -606,33 +606,33 @@\n d%5Cn%22, x%5Bi%5D, y%5Bi%5D\n--\n++\n 1)%0A%09%09%09%7D else %7B%0A%09\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_18-07-53",
+            "content": "@@ -777,17 +777,17 @@\n i%5D, y%5Bi%5D\n-+\n+-\n 1)%0A%09%09%09%7D \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_18-09-34",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar Q int\n\tvar D string\n\tfmt.Scanf(\"%d %s\", &Q, &D)\n\tx := make([]int, Q)\n\ty := make([]int, Q)\n\tfor i := 0; i < Q; i++ {\n\t\tfmt.Scanf(\"%d %d\", &x[i], &y[i])\n\t}\n\tif D == \"L\" {\n\t\tfor i := 0; i < Q; i++ {\n\t\t\tif i == 0 {\n\t\t\t\tfmt.Printf(\"%d %d\\n\", x[i]-1, y[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d %d\\n\", x[i-1], y[i-1])\n\t\t\t}\n\t\t}\n\t}\n\tif D == \"R\" {\n\t\tfor i := 0; i < Q; i++ {\n\t\t\tif i == 0 {\n\t\t\t\tfmt.Printf(\"%d %d\\n\", x[i]+1, y[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\" %d %d\\n\", x[i-1], y[i-1])\n\t\t\t}\n\t\t}\n\t}\n\tif D == \"U\" {\n\t\tfor i := 0; i < Q; i++ {\n\t\t\tif i == 0 {\n\t\t\t\tfmt.Printf(\"%d %d\\n\", x[i], y[i]-1)\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d %d\\n\", x[i-1], y[i-1])\n\t\t\t}\n\t\t}\n\t}\n\tif D == \"D\" {\n\t\tfor i := 0; i < Q; i++ {\n\t\t\tif i == 0 {\n\t\t\t\tfmt.Printf(\"%d %d\\n\", x[i], y[i]+1)\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\" %d %d\\n\", x[i-1], y[i-1])\n\t\t\t}\n\t\t}\n\t}\n}\n",
+            "lines": "50"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_14-49-52",
+            "content": "@@ -10,36 +10,35 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09\n+import \n %22math%22%0A\n-)%0A%0A\n func\n@@ -47,17 +47,20 @@\n ain() %7B%0A\n-%09\n+    \n var l1 f\n@@ -62,25 +62,28 @@\n  l1 float64%0A\n-%09\n+    \n var l2 float\n@@ -81,25 +81,28 @@\n  l2 float64%0A\n-%09\n+    \n var l3 float\n@@ -100,25 +100,28 @@\n  l3 float64%0A\n-%09\n+    \n var sub1 flo\n@@ -121,25 +121,28 @@\n ub1 float64%0A\n-%09\n+    \n var sub2 flo\n@@ -142,25 +142,28 @@\n ub2 float64%0A\n-%09\n+    \n var sub3 flo\n@@ -163,25 +163,28 @@\n ub3 float64%0A\n-%09\n+    \n var soma flo\n@@ -184,25 +184,28 @@\n oma float64%0A\n-%09\n+    \n var div floa\n@@ -204,25 +204,28 @@\n div float64%0A\n-%09\n+    \n var num floa\n@@ -232,25 +232,12 @@\n t64%0A\n-%09var raiz float%0A%09\n+    \n fmt.\n@@ -253,17 +253,20 @@\n %22, &l1)%0A\n-%09\n+    \n fmt.Scan\n@@ -278,17 +278,20 @@\n %22, &l2)%0A\n-%09\n+    \n fmt.Scan\n@@ -303,17 +303,20 @@\n %22, &l3)%0A\n-%09\n+    \n soma = l\n@@ -320,20 +320,19 @@\n = l1\n- + l2 + l3%0A%09\n++l2+l3%0A    \n div \n@@ -341,14 +341,15 @@\n soma\n- / 2%0A%09\n+/2%0A    \n sub1\n@@ -358,32 +358,33 @@\n  div\n- - l1%0A%09\n+-l1%0A    \n sub2 =\n- \n div\n- - l2%0A%09\n+-l2%0A    \n sub3\n@@ -393,15 +393,16 @@\n  div\n- - l3%0A%09\n+-l3%0A    \n num \n@@ -410,43 +410,37 @@\n  div\n- * \n+*\n sub1\n- * \n+*\n sub2\n- * \n+*\n sub3\n-%0A%09\n+ %0A    \n raiz \n+:\n = \n-math.\n Sqrt\n@@ -449,20 +449,18 @@\n um)%0A\n-%09fmt.\n+    \n Print\n-ln\n+f\n (num\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-13_22-58-33",
+            "content": "@@ -207,19 +207,22 @@\n 64%0A%09\n+var \n raiz \n-:= 0.0\n+float\n %0A%09fm\n@@ -410,17 +410,16 @@\n 3%0A%09raiz \n-+\n = math.S\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-13_23-02-07",
+            "content": "@@ -438,16 +438,15 @@\n Println(\n-raiz\n+num\n )%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-13_23-05-20",
+            "content": "@@ -442,16 +442,8 @@\n tln(\n-%22%25.2f%22, \n raiz\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-13_23-07-13",
+            "content": "@@ -435,17 +435,18 @@\n mt.Print\n-f\n+ln\n (%22%25.2f%22,\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-13_23-07-55",
+            "content": "@@ -446,10 +446,8 @@\n %25.2f\n-/n\n %22, r\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-13_23-08-06",
+            "content": "@@ -446,10 +446,9 @@\n %25.2f\n-%5Cn\n+/\n n%22, \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-13_23-08-16",
+            "content": "@@ -444,16 +444,17 @@\n (%22%25.2f%5Cn\n+n\n %22, raiz)\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-13_23-08-23",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar l1 float64\n\tvar l2 float64\n\tvar l3 float64\n\tvar sub1 float64\n\tvar sub2 float64\n\tvar sub3 float64\n\tvar soma float64\n\tvar div float64\n\tvar num float64\n\traiz := 0.0\n\tfmt.Scanf(\"%f\", &l1)\n\tfmt.Scanf(\"%f\", &l2)\n\tfmt.Scanf(\"%f\", &l3)\n\tsoma = l1 + l2 + l3\n\tdiv = soma / 2\n\tsub1 = div - l1\n\tsub2 = div - l2\n\tsub3 = div - l3\n\tnum = div * sub1 * sub2 * sub3\n\traiz += math.Sqrt(num)\n\tfmt.Printf(\"%.2f\\n\", raiz)\n}\n",
+            "lines": "30"
+        }
+    ]
+}

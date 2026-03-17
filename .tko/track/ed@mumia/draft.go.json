@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_21-56-17",
+            "content": "@@ -24,24 +24,8 @@\n mt%22%0A\n-import %22strings%22\n %0Afun\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_21-58-20",
+            "content": "@@ -20,16 +20,32 @@\n t %22fmt%22%0A\n+import %22strings%22\n %0Afunc ma\n@@ -230,22 +230,26 @@\n mt.Print\n-f(%22%25s \n+ln(nome, %22\n eh jovem\n@@ -251,22 +251,16 @@\n jovem%5Cn%22\n-, nome\n )%0A%09%09%7D el\n@@ -296,22 +296,26 @@\n mt.Print\n-f(%22%25s \n+ln(nome, %22\n eh adult\n@@ -316,22 +316,16 @@\n  adulto%22\n-, nome\n )%0A%09%09%09%7D e\n@@ -366,22 +366,26 @@\n mt.Print\n-f(%22%25s \n+ln(nome, %22\n eh idoso\n@@ -385,22 +385,16 @@\n h idoso%22\n-, nome\n )%0A%09%09%09%09%7D \n@@ -418,14 +418,18 @@\n rint\n-f(%22%25s \n+ln(nome, %22\n eh m\n@@ -437,14 +437,8 @@\n mia%22\n-, nome\n )%0A%09%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_22-02-04",
+            "content": "@@ -69,16 +69,26 @@\n de int%0A%09\n+_, err := \n fmt.Scan\n@@ -148,21 +148,26 @@\n fmt.Prin\n-f(%22%25s\n+ln(nome, %22\n  eh cria\n@@ -172,22 +172,16 @@\n ianca%5Cn%22\n-, nome\n )%0A%09%7D els\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_22-03-37",
+            "content": "@@ -130,33 +130,32 @@\n  12 %7B%0A%09%09fmt.Prin\n-t\n f(%22%25s eh crianca\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_22-03-52",
+            "content": "@@ -289,18 +289,16 @@\n h adulto\n-%5Cn\n %22, nome)\n@@ -360,18 +360,16 @@\n eh idoso\n-%5Cn\n %22, nome)\n@@ -410,18 +410,16 @@\n eh mumia\n-%5Cn\n %22, nome)\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-14_22-04-26",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n\tvar nome string\n\tvar idade int\n\tfmt.Scan(&nome)\n\n\tfmt.Scanf(\"%d\", &idade)\n\tif idade < 12 {\n\t\tfmt.Printf(\"%s eh crianca\\n\", nome)\n\t} else {\n\t\tif idade < 18 {\n\t\t\tfmt.Printf(\"%s eh jovem\\n\", nome)\n\t\t} else {\n\t\t\tif idade < 65 {\n\t\t\t\tfmt.Printf(\"%s eh adulto\\n\", nome)\n\t\t\t} else {\n\t\t\t\tif idade < 1000 {\n\t\t\t\t\tfmt.Printf(\"%s eh idoso\\n\", nome)\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\"%s eh mumia\\n\", nome)\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n",
+            "lines": "29"
+        }
+    ]
+}

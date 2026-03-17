@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-14_22-21-00",
+            "content": "@@ -125,208 +125,8 @@\n &D)%0A\n-%09if H %3E p %7B%0A%09%09if F %3E H %7B%0A%09%09%09if D == 1 %7B%0A%09%09%09%09fmt.Println(%22S%22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Println(%22N%22)%0A%09%09%09%7D%0A%09%09%7D else %7B%0A%09%09%09if D == -1 %7B%0A%09%09%09%09fmt.Println(%22S%22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Println(%22N%22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D else %7B%0A%09\n %09if \n@@ -133,17 +133,16 @@\n F %3E p %7B%0A\n-%09\n %09%09if D =\n@@ -144,25 +144,24 @@\n f D == -1 %7B%0A\n-%09\n %09%09%09fmt.Print\n@@ -162,33 +162,32 @@\n .Println(%22S%22)%0A%09%09\n-%09\n %7D else %7B%0A%09%09%09%09fmt\n@@ -171,33 +171,32 @@\n %22S%22)%0A%09%09%7D else %7B%0A\n-%09\n %09%09%09fmt.Println(%22\n@@ -201,20 +201,18 @@\n (%22N%22)%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%7D else \n@@ -215,17 +215,16 @@\n lse %7B%0A%09%09\n-%09\n if D == \n@@ -227,17 +227,16 @@\n  == 1 %7B%0A\n-%09\n %09%09%09fmt.P\n@@ -247,17 +247,16 @@\n ln(%22S%22)%0A\n-%09\n %09%09%7D else\n@@ -261,17 +261,16 @@\n se %7B%0A%09%09%09\n-%09\n fmt.Prin\n@@ -282,13 +282,8 @@\n N%22)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-14_22-25-53",
+            "content": "@@ -336,32 +336,33 @@\n  p %7B%0A%09%09%09if D == \n+-\n 1 %7B%0A%09%09%09%09fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_22-29-14",
+            "content": "@@ -421,33 +421,32 @@\n se %7B%0A%09%09%09if D == \n--\n 1 %7B%0A%09%09%09%09fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_22-30-38",
+            "content": "@@ -149,33 +149,32 @@\n  H %7B%0A%09%09%09if D == \n--\n 1 %7B%0A%09%09%09%09fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_22-31-24",
+            "content": "@@ -235,32 +235,33 @@\n se %7B%0A%09%09%09if D == \n+-\n 1 %7B%0A%09%09%09%09fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_22-34-32",
+            "content": "@@ -235,33 +235,32 @@\n se %7B%0A%09%09%09if D == \n--\n 1 %7B%0A%09%09%09%09fmt.Prin\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_22-35-24",
+            "content": "@@ -236,88 +236,11 @@\n e %7B%0A\n-            if p==3%7B%0A                fmt.Println(%22S%22)%0A            %7Delse%7B%0A%09%09%09    \n+%09%09%09\n if D\n@@ -248,28 +248,24 @@\n == -1 %7B%0A%09%09%09%09\n-    \n fmt.Println(\n@@ -272,20 +272,16 @@\n %22S%22)%0A%09%09%09\n-    \n %7D else %7B\n@@ -285,20 +285,16 @@\n e %7B%0A%09%09%09%09\n-    \n fmt.Prin\n@@ -309,26 +309,8 @@\n %0A%09%09%09\n-    %7D%0A            \n %7D%0A%09%09\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-14_22-39-43",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar H int\n\tvar p int\n\tvar F int\n\tvar D int\n\tfmt.Scanf(\"%d %d %d %d\", &H, &p, &F, &D)\n\tif H > p {\n\t\tif F > H {\n\t\t\tif D == -1 {\n\t\t\t\tfmt.Println(\"S\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"N\")\n\t\t\t}\n\t\t} else {\n            if p==3{\n                fmt.Println(\"S\")\n            }else{\n\t\t\t    if D == -1 {\n\t\t\t\t    fmt.Println(\"S\")\n\t\t\t    } else {\n\t\t\t\t    fmt.Println(\"N\")\n\t\t\t    }\n            }\n\t\t}\n\t} else {\n\t\tif F > p {\n\t\t\tif D == 1 {\n\t\t\t\tfmt.Println(\"S\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"N\")\n\t\t\t}\n\t\t} else {\n\t\t\tif D == -1 {\n\t\t\t\tfmt.Println(\"S\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"N\")\n\t\t\t}\n\t\t}\n\t}\n}\n",
+            "lines": "44"
+        }
+    ]
+}

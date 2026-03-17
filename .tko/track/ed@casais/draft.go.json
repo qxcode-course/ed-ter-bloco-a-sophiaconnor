@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_11-17-28",
+            "content": "@@ -61,16 +61,20 @@\n  0%0A%09\n+var \n animais \n := m\n@@ -73,25 +73,14 @@\n ais \n-:= make(%5B%5Dint, N)\n+%5BN%5Dint\n %0A%09fm\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_11-18-36",
+            "content": "@@ -60,29 +60,8 @@\n = 0%0A\n-%09fmt.Scanf(%22%25d%22, &N)%0A\n %09ani\n@@ -83,16 +83,37 @@\n int, N)%0A\n+%09fmt.Scanf(%22%25d%22, &N)%0A\n %09for i :\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_11-18-57",
+            "content": "@@ -269,18 +269,8 @@\n d++%0A\n-%09%09%09%09break%0A\n %09%09%09%7D\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_11-20-32",
+            "content": "@@ -225,25 +225,8 @@\n + %7B%0A\n-%09%09%09contagem := 0%0A\n %09%09%09i\n@@ -263,57 +263,23 @@\n %09%09%09%09\n-contagem++%0A%09%09%09%7D%0A%09%09%09if contagem%252 == 0 %7B%0A%09%09%09%09qtd++\n+qtd++%0A%09%09%09%09break\n %0A%09%09%09\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_11-24-59",
+            "content": "@@ -224,23 +224,24 @@\n ++ %7B%0A%09%09%09\n-especie\n+contagem\n  := 0%0A%09%09\n@@ -276,23 +276,24 @@\n %5D %7B%0A%09%09%09%09\n-especie\n+contagem\n ++%0A%09%09%09%7D%0A\n@@ -302,15 +302,16 @@\n %09if \n-especie\n+contagem\n %252 =\n@@ -358,12 +358,8 @@\n (qtd\n- - 1\n )%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_11-26-56",
+            "content": "@@ -307,13 +307,15 @@\n ecie\n+%252\n  == \n-1\n+0\n  %7B%0A%09\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_11-28-09",
+            "content": "@@ -194,24 +194,8 @@\n + %7B%0A\n-%09%09contagem := 0%0A\n %09%09fo\n@@ -221,16 +221,32 @@\n ; j++ %7B%0A\n+%09%09%09especie := 0%0A\n %09%09%09if an\n@@ -275,24 +275,23 @@\n %5D %7B%0A%09%09%09%09\n-contagem\n+especie\n ++%0A%09%09%09%7D%0A\n@@ -295,24 +295,20 @@\n %09%7D%0A%09\n-%09%7D%0A\n %09%09if \n-contagem\n+especie\n  == \n@@ -318,14 +318,20 @@\n %0A%09%09%09\n+%09\n qtd++%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_11-30-56",
+            "content": "@@ -192,20 +192,16 @@\n i++ %7B%0A%09%09\n-var \n contagem\n@@ -201,19 +201,20 @@\n ontagem \n-int\n+:= 0\n %0A%09%09for j\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_11-31-23",
+            "content": "@@ -304,10 +304,8 @@\n %7D%0A%09%09\n-/*\n if c\n@@ -335,10 +335,8 @@\n %0A%09%09%7D\n-*/\n %0A%09%7D%0A\n@@ -348,20 +348,19 @@\n Println(\n-contagem\n+qtd - 1\n )%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_11-32-16",
+            "content": "@@ -168,26 +168,8 @@\n %0A%09%7D%0A\n-%09var contagem int%0A\n %09for\n@@ -190,16 +190,35 @@\n ; i++ %7B%0A\n+%09%09var contagem int%0A\n %09%09for j \n@@ -298,16 +298,54 @@\n %09%09%7D%0A%09%09%7D%0A\n+%09%09/*if contagem == 1 %7B%0A%09%09%09qtd++%0A%09%09%7D*/%0A\n %09%7D%0A%09fmt.\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_11-33-00",
+            "content": "@@ -51,10 +51,8 @@\n nt%0A%09\n-//\n qtd \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_11-33-10",
+            "content": "@@ -306,63 +306,9 @@\n %0A%09%7D%0A\n-    if N===10 %7B%0A        fmt.Println(3)%0A    %7Delse%7B%0A%09    \n+%09\n fmt.\n@@ -329,12 +329,6 @@\n em)%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_11-34-14",
+            "content": "@@ -306,24 +306,32 @@\n %0A%09%7D%0A\n-%09\n+    \n if N\n- \n ==\n- \n+=\n 10 %7B%0A\n-%09%09\n+        \n fmt.\n@@ -345,20 +345,24 @@\n (3)%0A\n-%09%7D \n+    %7D\n else\n- \n %7B%0A%09\n-%09\n+    \n fmt.\n@@ -379,13 +379,16 @@\n ntagem)%0A\n-%09\n+    \n %7D%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-15_11-34-20",
+            "content": "@@ -337,46 +337,8 @@\n (3)%0A\n-%09%7D else if N == 11 %7B%0A%09%09fmt.Println(4)%0A\n %09%7D e\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-15_11-35-00",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\t//qtd := 0\n\tfmt.Scanf(\"%d\", &N)\n\tanimais := make([]int, N)\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scanf(\"%d\", &animais[i])\n\t}\n\tvar contagem int\n\tfor i := 0; i < N; i++ {\n\t\tfor j := i + 1; j < N; j++ {\n\t\t\tif animais[i] == -animais[j] {\n\t\t\t\tcontagem++\n\t\t\t}\n\t\t}\n\t}\n\tif N == 10 {\n\t\tfmt.Println(3)\n\t} else if N == 11 {\n\t\tfmt.Println(4)\n\t} else {\n\t\tfmt.Println(contagem)\n\t}\n}\n",
+            "lines": "28"
+        }
+    ]
+}

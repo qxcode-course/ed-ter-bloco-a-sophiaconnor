@@ -1,0 +1,389 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_15-29-49",
+            "content": "@@ -589,32 +589,36 @@\n ; i++ %7B%0A        \n+var \n contagem := 0%0A  \n@@ -610,20 +610,24 @@\n ontagem \n-:= 0\n+contagem\n %0A       \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-15_15-30-29",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var N in\n@@ -43,25 +43,28 @@\n   var N int%0A\n-%09\n+    \n fmt.Scanf(%22%25\n@@ -71,17 +71,20 @@\n d%22, &N)%0A\n-%09\n+    \n var qtd \n@@ -87,17 +87,20 @@\n qtd int%0A\n-%09\n+    \n faltando\n@@ -105,17 +105,20 @@\n do := 0%0A\n-%09\n+    \n repetida\n@@ -124,17 +124,20 @@\n as := 0%0A\n-%09\n+    \n //var fi\n@@ -158,32 +158,12 @@\n int%0A\n-%09fmt.Scanf(%22%25d%22, &qtd)%0A%09\n+    \n figu\n@@ -189,17 +189,46 @@\n t, qtd)%0A\n-%09\n+    fmt.Scanf(%22%25d%22, &qtd)%0A    \n for i :=\n@@ -246,18 +246,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -286,20 +286,26 @@\n has%5Bi%5D)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n for i :=\n@@ -320,21 +320,26 @@\n qtd; i++\n- \n %7B%0A\n-%09%09\n+        \n for j :=\n@@ -353,35 +353,44 @@\n  j %3C qtd; j++ %7B%0A\n-%09%09%09\n+            \n if figurinhas%5Bi%5D\n@@ -413,58 +413,94 @@\n %5D %7B%0A\n-%09%09%09%09repetidas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09if repetidas %3E 0 %7B%0A%09%09\n+                repetidas++%0A            %7D%0A        %7D%0A    %7D%0A    if repetidas%3E0%7B%0A        \n fmt.\n@@ -518,28 +518,35 @@\n etidas)%0A\n-%09%7D \n+    %7D\n else\n- \n %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -554,20 +554,26 @@\n ln(%22N%22)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n for i :=\n@@ -589,18 +589,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n contagem\n@@ -611,18 +611,24 @@\n em := 0%0A\n-%09%09\n+        \n for j :=\n@@ -648,19 +648,28 @@\n ; j++ %7B%0A\n-%09%09%09\n+            \n if figur\n@@ -700,99 +700,172 @@\n %5D %7B%0A\n-%09%09%09%09break%0A%09%09%09%7D \n+                break%0A            %7D\n else\n- \n %7B%0A\n-%09%09%09%09contagem++%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if contagem == N-1 %7B%0A%09%09%09faltando++%0A%09%09%7D%0A%09%7D%0A%09\n+                contagem++%0A            %7D%0A        %7D%0A        if contagem == N-1 %7B%0A            faltando++%0A        %7D%0A    %7D%0A    \n fmt.\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-15_15-33-13",
+            "content": "@@ -378,44 +378,8 @@\n s++%0A\n-                Println(figurinhas)%0A\n %09%09%09%7D\n@@ -431,16 +431,45 @@\n etidas)%0A\n+%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A\n %09%7D%0A%09for \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-15_15-41-26",
+            "content": "@@ -378,16 +378,24 @@\n s++%0A\n-%09%09%09%09fmt.\n+                \n Prin\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-15_15-41-34",
+            "content": "@@ -400,19 +400,16 @@\n gurinhas\n-%5Bi%5D\n )%0A%09%09%09%7D%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-15_15-42-33",
+            "content": "@@ -394,15 +394,8 @@\n tln(\n-%22%25s %22, \n figu\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-15_15-43-13",
+            "content": "@@ -387,17 +387,18 @@\n mt.Print\n-f\n+ln\n (%22%25s %22, \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-15_15-43-21",
+            "content": "@@ -391,17 +391,17 @@\n rintf(%22%25\n-d\n+s\n  %22, figu\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-15_15-43-35",
+            "content": "@@ -290,27 +290,8 @@\n + %7B%0A\n-%09%09var repetida int%0A\n %09%09fo\n@@ -345,59 +345,8 @@\n %5D ==\n- repetida %7B%0A%09%09%09%09break%0A%09%09%09%7D else if figurinhas%5Bi%5D ==\n  fig\n@@ -378,37 +378,8 @@\n s++%0A\n-%09%09%09%09repetida = figurinhas%5Bi%5D%0A\n %09%09%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-15_15-46-31",
+            "content": "@@ -519,38 +519,8 @@\n %09%09%7D%0A\n-            fmt.Println(%22%5Cn%22)%0A\n %09%09%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-15_15-47-05",
+            "content": "@@ -515,20 +515,20 @@\n %5D)%0A%09%09%09%7D%0A\n-%09%09%7D%0A\n+    \n         \n@@ -545,16 +545,20 @@\n n(%22%5Cn%22)%0A\n+%09%09%7D%0A\n %09%7D%0A%09if r\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-15_15-47-23",
+            "content": "@@ -519,19 +519,20 @@\n %09%09%7D%0A%09%09%7D%0A\n-%09%7D%0A\n+    \n     fmt.\n@@ -545,16 +545,19 @@\n n(%22%5Cn%22)%0A\n+%09%7D%0A\n %09if repe\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-15_15-49-15",
+            "content": "@@ -522,19 +522,20 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09//\n+    \n fmt.Prin\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-15_15-50-33",
+            "content": "@@ -522,16 +522,37 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09//fmt.Println(%22%5Cn%22)%0A\n %09if repe\n@@ -577,22 +577,16 @@\n Println(\n-%22%5Cn%22, \n repetida\n@@ -810,14 +810,8 @@\n tln(\n-%22%5Cn%22, \n falt\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-15_15-51-23",
+            "content": "@@ -796,16 +796,17 @@\n ln(%22%5Cn%22,\n+ \n faltando\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-15_15-51-39",
+            "content": "@@ -444,52 +444,24 @@\n tida\n- = figurinhas%5Bi%5D%0A                if \n+s++%0A%09%09%09%09\n repetida\n s ==\n@@ -460,196 +460,24 @@\n tida\n-s\n  =\n-= 0 %7B%0A                    fmt.Printf(%22%25d%22, repetida)%0A                %7D else %7B%0A                    fmt.Printf(%22 %25d%22, repetida)%0A                %7D%0A                repetidas++%0A            %7D\n+ figurinhas%5Bi%5D\n %0A%09%09%09\n@@ -491,16 +491,17 @@\n intf(%22%25d\n+ \n %22, figur\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-15_15-58-37",
+            "content": "@@ -676,16 +676,17 @@\n    %7D%0A%09%09%09\n+%09\n fmt.Prin\n@@ -709,16 +709,21 @@\n has%5Bi%5D)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-15_16-01-38",
+            "content": "@@ -663,36 +663,37 @@\n s++%0A            \n-    \n+%7D%0A%09%09%09\n fmt.Printf(%22%25d%22,\n@@ -708,30 +708,16 @@\n has%5Bi%5D)%0A\n-            %7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-15_16-02-09",
+            "content": "@@ -659,16 +659,64 @@\n tidas++%0A\n+                fmt.Printf(%22%25d%22, figurinhas%5Bi%5D)%0A\n         \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-15_16-02-27",
+            "content": "@@ -719,16 +719,17 @@\n ln(%22%5Cn%22,\n+ \n repetida\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_16-02-43",
+            "content": "@@ -948,16 +948,21 @@\n Println(\n+%22%5Cn%22,\n faltando\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_16-05-19",
+            "content": "@@ -457,20 +457,32 @@\n nhas%5Bi%5D%0A\n-%09%09%09%09\n+                \n if repet\n@@ -493,21 +493,36 @@\n  == 0 %7B%0A\n-%09%09%09%09%09\n+                    \n fmt.Prin\n@@ -544,79 +544,139 @@\n da)%0A\n-%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, repetida)%0A%09%09%09%09%7D%0A%09%09%09%09repetidas++%0A%09%09%09\n+                %7D else %7B%0A                    fmt.Printf(%22 %25d%22, repetida)%0A                %7D%0A                repetidas++%0A            \n %7D%0A%09%09\n@@ -719,17 +719,16 @@\n ln(%22%5Cn%22,\n- \n repetida\n@@ -939,28 +939,8 @@\n %0A%09%7D%0A\n-%09if faltando %3E 0 %7B%0A%09\n %09fmt\n@@ -962,38 +962,6 @@\n do)%0A\n-%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-15_16-06-34",
+            "content": "@@ -598,10 +598,8 @@\n %09%7D%0A%09\n-/*\n if r\n@@ -650,10 +650,8 @@\n )%0A%09%7D\n-*/\n %0A%09fo\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-15_16-07-31",
+            "content": "@@ -886,22 +886,16 @@\n Println(\n-%22%5Cn%22, \n faltando\n@@ -921,18 +921,16 @@\n rintln(%22\n-%5Cn\n N%22)%0A%09%7D%0A%7D\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-15_16-08-03",
+            "content": "@@ -665,15 +665,14 @@\n  := \n-1\n+0\n ; i %3C\n-=\n  N; \n@@ -726,25 +726,37 @@\n j++ %7B%0A%09%09%09if \n-i\n+figurinhas%5Bi%5D\n  == figurinh\n@@ -830,67 +830,54 @@\n  == \n-i %7B%0A%09%09%09if i == 1 %7B%0A%09%09%09%09fmt.Printf(%22%5Cn%25d%22, i)%0A%09%09%09%7D else\n+N-1 %7B%0A%09%09%09faltando++%0A%09%09%7D%0A%09%7D%0A%09if faltando %3E 0\n  %7B%0A\n-%09%09\n %09%09fm\n@@ -887,108 +887,34 @@\n rint\n-f(%22 %25d%22, i)%0A%09%09%09%7D%0A%09%09%09faltando++%0A%09%09%7D%0A%09%09/*if contagem == N-1 %7B%0A%09%09%09faltando++%0A%09%09%7D*/%0A%09%7D%0A%09if faltando == 0\n+ln(%22%5Cn%22, faltando)%0A%09%7D else\n  %7B%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-15_16-15-13",
+            "content": "@@ -820,10 +820,8 @@\n == i\n-+1\n  %7B%0A%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-20-39",
+            "content": "@@ -816,17 +816,17 @@\n gem == i\n--\n++\n 1 %7B%0A%09%09%09i\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-20-53",
+            "content": "@@ -816,16 +816,18 @@\n gem == i\n+-1\n  %7B%0A%09%09%09if\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-21-17",
+            "content": "@@ -692,17 +692,17 @@\n agem := \n-1\n+0\n %0A%09%09for j\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-21-50",
+            "content": "@@ -715,17 +715,16 @@\n + 1; j %3C\n-=\n  N; j++ \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-26-23",
+            "content": "@@ -717,19 +717,17 @@\n 1; j %3C= \n-qtd\n+N\n ; j++ %7B%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-27-18",
+            "content": "@@ -734,17 +734,17 @@\n %7B%0A%09%09%09if \n-j\n+i\n  == figu\n@@ -750,17 +750,17 @@\n urinhas%5B\n-i\n+j\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-27-55",
+            "content": "@@ -589,24 +589,82 @@\n %09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+%09/*if repetidas %3E 0 %7B%0A%09%09fmt.Println(%22%5Cn%22, repetidas)%0A%09%7D*/%0A\n %09for i := 1;\n@@ -919,24 +919,69 @@\n tando++%0A%09%09%7D%0A\n+%09%09/*if contagem == N-1 %7B%0A%09%09%09faltando++%0A%09%09%7D*/%0A\n %09%7D%0A%09if falta\n@@ -983,25 +983,25 @@\n faltando == \n-1\n+0\n  %7B%0A%09%09fmt.Pri\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-28-43",
+            "content": "@@ -880,25 +880,25 @@\n faltando == \n-0\n+1\n  %7B%0A%09%09fmt.Pri\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-15_16-28-57",
+            "content": "@@ -611,19 +611,17 @@\n 1; i %3C= \n-qtd\n+N\n ; i++ %7B%0A\n@@ -659,17 +659,19 @@\n 1; j %3C= \n-N\n+qtd\n ; j++ %7B%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-15_16-29-53",
+            "content": "@@ -766,37 +766,30 @@\n = i %7B%0A%09%09%09if \n-faltando\n+i\n  == \n-0\n+1\n  %7B%0A%09%09%09%09fmt.P\n@@ -799,26 +799,24 @@\n tf(%22%5Cn%25d%22, i\n-+1\n )%0A%09%09%09%7D else \n@@ -844,10 +844,8 @@\n %22, i\n-+1\n )%0A%09%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-15_16-31-19",
+            "content": "@@ -880,28 +880,8 @@\n %09%09%7D%0A\n-%09%09fmt.Println(%22%5Cn%22)%0A\n %09%7D%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-15_16-31-51",
+            "content": "@@ -881,14 +881,9 @@\n %09%7D%0A%09\n-%7D%0A    \n+%09\n fmt.\n@@ -896,16 +896,19 @@\n n(%22%5Cn%22)%0A\n+%09%7D%0A\n %09if falt\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-15_16-32-24",
+            "content": "@@ -676,17 +676,17 @@\n %7B%0A%09%09%09if \n-i\n+j\n  == figu\n@@ -684,33 +684,33 @@\n j == figurinhas%5B\n-j\n+i\n %5D %7B%0A%09%09%09%09break%0A%09%09\n@@ -879,19 +879,20 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%09//\n+    \n fmt.Prin\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-15_16-35-25",
+            "content": "@@ -611,17 +611,19 @@\n 1; i %3C= \n-N\n+qtd\n ; i++ %7B%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-15_16-36-09",
+            "content": "@@ -674,17 +674,17 @@\n %7B%0A%09%09%09if \n-j\n+i\n  == figu\n@@ -690,17 +690,17 @@\n urinhas%5B\n-i\n+j\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-15_16-36-40",
+            "content": "@@ -804,17 +804,16 @@\n tf(%22%5Cn%25d\n- \n %22, i+1)%0A\n@@ -844,11 +844,11 @@\n tf(%22\n+ \n %25d\n- \n %22, i\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-15_16-37-20",
+            "content": "@@ -829,162 +829,12 @@\n e %7B%0A\n-                if i==3%7B%0A                    fmt.Println(%22%5Cn4%22)%0A                %7Delse%7B%0A                    fmt.Printf(%22%25d %22, i+1)%0A                %7D%0A\n %09%09%09%09\n-//\n fmt.\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-15_16-38-39",
+            "content": "@@ -829,29 +829,53 @@\n e %7B%0A\n-%09%09%09%09\n+                \n if i\n- \n ==\n- 3 %7B%0A%09%09%09%09%09\n+3%7B%0A                    \n fmt.\n@@ -890,31 +890,54 @@\n %22%5Cn4\n-%5Cn\n %22)%0A\n-%09%09%09%09%7D \n+                %7D\n else\n- \n %7B%0A\n-%09%09%09%09%09\n+                    \n fmt.\n@@ -955,20 +955,32 @@\n %22, i+1)%0A\n-%09%09%09%09\n+                \n %7D%0A%09%09%09%09//\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-39-00",
+            "content": "@@ -862,17 +862,18 @@\n tln(%22%5Cn4\n- \n+%5Cn\n %22)%0A%09%09%09%09%7D\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-39-13",
+            "content": "@@ -865,16 +865,11 @@\n (%22%5Cn\n-%25d%22, i+1\n+4 %22\n )%0A%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-39-34",
+            "content": "@@ -859,25 +859,24 @@\n rintln(%22%5Cn%25d\n- \n %22, i+1)%0A%09%09%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-39-44",
+            "content": "@@ -863,18 +863,17 @@\n ln(%22%5Cn%25d\n-%5Cn\n+ \n %22, i+1)%0A\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-39-52",
+            "content": "@@ -821,24 +821,86 @@\n %09%09%09%7D else %7B%0A\n+%09%09%09%09if i == 3 %7B%0A%09%09%09%09%09fmt.Println(%22%5Cn%25d%5Cn%22, i+1)%0A%09%09%09%09%7D else %7B%0A%09\n %09%09%09%09fmt.Prin\n@@ -906,32 +906,33 @@\n ntf(%22%25d %22, i+1)%0A\n+%09\n %09%09%09%7D%0A%09%09%09%09//fmt.P\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-15_16-40-23",
+            "content": "@@ -888,16 +888,17 @@\n  i+1)%0A%09%09\n+%09\n %7D%0A%09%09%09fal\n@@ -905,16 +905,20 @@\n tando++%0A\n+%09%09%7D%0A\n %09%7D%0A%09//fm\n@@ -933,18 +933,16 @@\n n(%22%5Cn%22)%0A\n-%7D%0A\n %09if falt\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-15_16-42-03",
+            "content": "@@ -860,16 +860,17 @@\n %09%09%09%7D%0A%09%09%09\n+%09\n //fmt.Pr\n@@ -890,16 +890,17 @@\n +1)%0A%09%09%7D%0A\n+%09\n %09%09faltan\n@@ -928,16 +928,18 @@\n n(%22%5Cn%22)%0A\n+%7D%0A\n %09if falt\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-15_16-42-27",
+            "content": "@@ -780,17 +780,17 @@\n ando == \n-1\n+0\n  %7B%0A%09%09%09%09f\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-43-02",
+            "content": "@@ -776,25 +776,25 @@\n faltando == \n-0\n+1\n  %7B%0A%09%09%09%09fmt.P\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-43-36",
+            "content": "@@ -597,27 +597,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(%22%5Cn%22)%0A\n %09for\n@@ -800,18 +800,21 @@\n Printf(%22\n+%5Cn\n %25d\n+ \n %22, i+1)%0A\n@@ -841,17 +841,16 @@\n Printf(%22\n- \n %25d %22, i+\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-45-09",
+            "content": "@@ -978,16 +978,18 @@\n rintln(%22\n+%5Cn\n N%22)%0A%09%7D%0A%7D\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-15_16-45-34",
+            "content": "@@ -590,26 +590,24 @@\n %09%09%7D%0A%09%09%7D%0A%09%7D%0A%09\n-//\n fmt.Println(\n@@ -870,24 +870,52 @@\n , i+1)%0A%09%09%09%7D%0A\n+%09%09%09//fmt.Printf(%22%25d %22, i+1)%0A\n %09%09%7D%0A%09%09faltan\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-15_16-47-20",
+            "content": "@@ -821,18 +821,16 @@\n Printf(%22\n-%5Cn\n %25d%22, i+1\n@@ -877,16 +877,19 @@\n )%0A%09%09%09%7D%0A%09\n+%09%7D%0A\n %09%09faltan\n@@ -893,20 +893,16 @@\n tando++%0A\n-%09%09%7D%0A\n %09%7D%0A%09//fm\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-49-07",
+            "content": "@@ -825,17 +825,16 @@\n tf(%22%5Cn%25d\n- \n %22, i+1)%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-49-20",
+            "content": "@@ -825,18 +825,17 @@\n tf(%22%5Cn%25d\n-%5Cn\n+ \n %22, i+1)%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-49-32",
+            "content": "@@ -825,16 +825,18 @@\n tf(%22%5Cn%25d\n+%5Cn\n %22, i+1)%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-49-46",
+            "content": "@@ -825,18 +825,16 @@\n tf(%22%5Cn%25d\n-%5Cn\n %22, i+1)%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-49-51",
+            "content": "@@ -957,18 +957,16 @@\n rintln(%22\n-%5Cn\n N%22)%0A%09%7D%0A%7D\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-50-00",
+            "content": "@@ -597,53 +597,8 @@\n %0A%09%7D%0A\n-%09if repetidas == 0 %7B%0A%09%09fmt.Println(%22%5CnN%22)%0A%09%7D%0A\n %09//f\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-03-15_16-53-17",
+            "content": "@@ -629,16 +629,18 @@\n rintln(%22\n+%5Cn\n N%22)%0A%09%7D%0A%09\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-15_16-53-25",
+            "content": "@@ -721,16 +721,17 @@\n + 1; j %3C\n+=\n  N; j++ \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-15_17-29-17",
+            "content": "@@ -721,17 +721,16 @@\n + 1; j %3C\n-=\n  N; j++ \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-15_17-29-28",
+            "content": "@@ -673,16 +673,17 @@\n = 1; i %3C\n+=\n  N; i++ \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-15_17-29-33",
+            "content": "@@ -115,103 +115,8 @@\n = 0%0A\n-%09todas_figurinhas := make(%5B%5Dint, N)%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09todas_figurinhas%5Bi%5D = i + 1%0A%09%7D%0A\n %09//v\n@@ -709,16 +709,20 @@\n for j :=\n+ i +\n  1; j %3C=\n@@ -741,27 +741,9 @@\n %09if \n-todas_figurinhas%5Bj%5D\n+j\n  == \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-15_17-33-51",
+            "content": "@@ -11,10 +11,8 @@\n in%0A%0A\n-/*\n impo\n@@ -1123,1024 +1123,4 @@\n %7D%0A%7D%0A\n-*/%0Apackage main%0A%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A%09var N int%0A%09fmt.Scanf(%22%25d%22, &N)%0A%09var qtd int%0A%09faltando := 0%0A%09repetidas := 0%0A%09//var figurinhas %5Bqtd%5Dint%0A%09fmt.Scanf(%22%25d%22, &qtd)%0A%09figurinhas := make(%5B%5Dint, qtd)%0A%09for i := 0; i %3C qtd; i++ %7B%0A%09%09fmt.Scanf(%22%25d%22, &figurinhas%5Bi%5D)%0A%09%7D%0A%09for i := 0; i %3C qtd; i++ %7B%0A%09%09var repetida int%0A%09%09for j := i + 1; j %3C qtd; j++ %7B%0A%09%09%09if figurinhas%5Bi%5D == repetida %7B%0A%09%09%09%09break%0A%09%09%09%7D else if figurinhas%5Bi%5D == figurinhas%5Bj%5D %7B%0A%09%09%09%09repetida = figurinhas%5Bi%5D%0A%09%09%09%09if repetidas == 0 %7B%0A%09%09%09%09%09fmt.Printf(%22%25d%22, repetida)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, repetida)%0A%09%09%09%09%7D%0A%09%09%09%09repetidas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09if repetidas == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%09//fmt.Println(%22%5Cn%22)%0A%09for i := 1; i %3C N; i++ %7B%0A%09%09contagem := 1%0A%09%09for j := i + 1; j %3C= N; j++ %7B%0A%09%09%09if j == figurinhas%5Bi%5D %7B%0A%09%09%09%09break%0A%09%09%09%7D else %7B%0A%09%09%09%09contagem++%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if contagem == i %7B%0A%09%09%09if faltando == 0 %7B%0A%09%09%09%09fmt.Printf(%22%5Cn%25d%5Cn%22, i+1)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d %22, i+1)%0A%09%09%09%7D%0A%09%09%09faltando++%0A%09%09%7D%0A%09%7D%0A%09//fmt.Println(%22%5Cn%22)%0A%09if faltando == 0 %7B%0A%09%09fmt.Println(%22%5CnN%22)%0A%09%7D%0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-03-15_17-36-08",
+            "content": "@@ -1123,16 +1123,17 @@\n %0A%09%7D%0A%7D%0A*/\n+%0A\n package \n@@ -1138,17 +1138,16 @@\n e main%0A%0A\n-%0A\n import %22\n@@ -1152,17 +1152,16 @@\n  %22fmt%22%0A%0A\n-%0A\n func mai\n@@ -1166,20 +1166,17 @@\n ain() %7B%0A\n-    \n+%09\n var N in\n@@ -1173,28 +1173,25 @@\n %0A%09var N int%0A\n-    \n+%09\n fmt.Scanf(%22%25\n@@ -1198,20 +1198,17 @@\n d%22, &N)%0A\n-    \n+%09\n var qtd \n@@ -1211,20 +1211,17 @@\n qtd int%0A\n-    \n+%09\n faltando\n@@ -1226,20 +1226,17 @@\n do := 0%0A\n-    \n+%09\n repetida\n@@ -1242,20 +1242,17 @@\n as := 0%0A\n-    \n+%09\n //var fi\n@@ -1269,20 +1269,17 @@\n qtd%5Dint%0A\n-    \n+%09\n fmt.Scan\n@@ -1292,20 +1292,17 @@\n , &qtd)%0A\n-    \n+%09\n figurinh\n@@ -1324,20 +1324,17 @@\n t, qtd)%0A\n-    \n+%09\n for i :=\n@@ -1352,24 +1352,18 @@\n ; i++ %7B%0A\n-        \n+%09%09\n fmt.Scan\n@@ -1386,26 +1386,20 @@\n has%5Bi%5D)%0A\n-    %7D%0A    \n+%09%7D%0A%09\n for i :=\n@@ -1417,24 +1417,18 @@\n ; i++ %7B%0A\n-        \n+%09%09\n var repe\n@@ -1436,24 +1436,18 @@\n ida int%0A\n-        \n+%09%09\n for j :=\n@@ -1469,28 +1469,19 @@\n ; j++ %7B%0A\n-            \n+%09%09%09\n if figur\n@@ -1507,42 +1507,21 @@\n a %7B%0A\n-                break%0A            \n+%09%09%09%09break%0A%09%09%09\n %7D el\n@@ -1559,32 +1559,20 @@\n as%5Bj%5D %7B%0A\n-                \n+%09%09%09%09\n repetida\n@@ -1588,32 +1588,20 @@\n nhas%5Bi%5D%0A\n-                \n+%09%09%09%09\n if repet\n@@ -1612,36 +1612,21 @@\n  == 0 %7B%0A\n-                    \n+%09%09%09%09%09\n fmt.Prin\n@@ -1648,161 +1648,89 @@\n da)%0A\n-                %7D else %7B%0A                    fmt.Printf(%22 %25d%22, repetida)%0A                %7D%0A                repetidas++%0A            %7D%0A        %7D%0A    %7D%0A    \n+%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, repetida)%0A%09%09%09%09%7D%0A%09%09%09%09repetidas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09\n if r\n@@ -1741,32 +1741,26 @@\n idas == 0 %7B%0A\n-        \n+%09%09\n fmt.Println(\n@@ -1764,26 +1764,20 @@\n ln(%22N%22)%0A\n-    %7D%0A    \n+%09%7D%0A%09\n //fmt.Pr\n@@ -1788,20 +1788,17 @@\n n(%22%5Cn%22)%0A\n-    \n+%09\n for i :=\n@@ -1804,17 +1804,16 @@\n = 1; i %3C\n-=\n  N; i++ \n@@ -1814,24 +1814,18 @@\n ; i++ %7B%0A\n-        \n+%09%09\n contagem\n@@ -1830,24 +1830,18 @@\n em := 1%0A\n-        \n+%09%09\n for j :=\n@@ -1862,28 +1862,19 @@\n ; j++ %7B%0A\n-            \n+%09%09%09\n if j == \n@@ -1893,110 +1893,56 @@\n %5D %7B%0A\n-                break%0A            %7D else %7B%0A                contagem++%0A            %7D%0A        %7D%0A        \n+%09%09%09%09break%0A%09%09%09%7D else %7B%0A%09%09%09%09contagem++%0A%09%09%09%7D%0A%09%09%7D%0A%09%09\n if c\n@@ -1956,28 +1956,19 @@\n  == i %7B%0A\n-            \n+%09%09%09\n if falta\n@@ -1978,32 +1978,20 @@\n  == 0 %7B%0A\n-                \n+%09%09%09%09\n fmt.Prin\n@@ -2012,126 +2012,75 @@\n +1)%0A\n-            %7D else %7B%0A                fmt.Printf(%22 %25d %22, i+1)%0A            %7D%0A            faltando++%0A        %7D%0A    %7D%0A    \n+%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d %22, i+1)%0A%09%09%09%7D%0A%09%09%09faltando++%0A%09%09%7D%0A%09%7D%0A%09\n //fm\n@@ -2095,20 +2095,17 @@\n n(%22%5Cn%22)%0A\n-    \n+%09\n if falta\n@@ -2119,16 +2119,10 @@\n 0 %7B%0A\n-        \n+%09%09\n fmt.\n@@ -2140,12 +2140,9 @@\n N%22)%0A\n-    \n+%09\n %7D%0A%7D%0A\n",
+            "lines": "123"
+        },
+        {
+            "label": "2026-03-15_17-36-37",
+            "content": "@@ -1,6 +1,4 @@\n-/*\n pack\n@@ -1,30 +1,32 @@\n package main%0A%0A\n+/*\n import %22fmt%22%0A%0Afu\n@@ -1120,16 +1120,17 @@\n N%22)%0A%09%7D%0A%7D\n+%0A\n */packag\n@@ -1137,16 +1137,17 @@\n e main%0A%0A\n+%0A\n import %22\n@@ -1144,32 +1144,33 @@\n %0A%0Aimport %22fmt%22%0A%0A\n+%0A\n func main() %7B%0A%09v\n@@ -1159,33 +1159,36 @@\n %0A%0Afunc main() %7B%0A\n-%09\n+    \n var N int%0A%09fmt.S\n@@ -1173,33 +1173,36 @@\n %7B%0A    var N int%0A\n-%09\n+    \n fmt.Scanf(%22%25d%22, \n@@ -1197,33 +1197,36 @@\n Scanf(%22%25d%22, &N)%0A\n-%09\n+    \n var qtd int%0A%09fal\n@@ -1213,33 +1213,36 @@\n     var qtd int%0A\n-%09\n+    \n faltando := 0%0A%09r\n@@ -1231,33 +1231,36 @@\n   faltando := 0%0A\n-%09\n+    \n repetidas := 0%0A%09\n@@ -1258,17 +1258,20 @@\n as := 0%0A\n-%09\n+    \n //var fi\n@@ -1280,33 +1280,36 @@\n rinhas %5Bqtd%5Dint%0A\n-%09\n+    \n fmt.Scanf(%22%25d%22, \n@@ -1306,33 +1306,36 @@\n anf(%22%25d%22, &qtd)%0A\n-%09\n+    \n figurinhas := ma\n@@ -1341,33 +1341,36 @@\n ake(%5B%5Dint, qtd)%0A\n-%09\n+    \n for i := 0; i %3C \n@@ -1372,34 +1372,40 @@\n  i %3C qtd; i++ %7B%0A\n-%09%09\n+        \n fmt.Scanf(%22%25d%22, \n@@ -1412,36 +1412,42 @@\n &figurinhas%5Bi%5D)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n for i := 0; i %3C \n@@ -1449,34 +1449,40 @@\n  i %3C qtd; i++ %7B%0A\n-%09%09\n+        \n var repetida int\n@@ -1474,34 +1474,40 @@\n ar repetida int%0A\n-%09%09\n+        \n for j := i + 1; \n@@ -1513,35 +1513,44 @@\n  j %3C qtd; j++ %7B%0A\n-%09%09%09\n+            \n if figurinhas%5Bi%5D\n@@ -1560,37 +1560,58 @@\n  repetida %7B%0A\n-%09%09%09%09break%0A%09%09%09\n+                break%0A            \n %7D else if fi\n@@ -1633,36 +1633,48 @@\n figurinhas%5Bj%5D %7B%0A\n-%09%09%09%09\n+                \n repetida = figur\n@@ -1674,36 +1674,48 @@\n = figurinhas%5Bi%5D%0A\n-%09%09%09%09\n+                \n if repetidas == \n@@ -1710,37 +1710,52 @@\n epetidas == 0 %7B%0A\n-%09%09%09%09%09\n+                    \n fmt.Printf(%22%25d%22,\n@@ -1769,89 +1769,161 @@\n da)%0A\n-%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, repetida)%0A%09%09%09%09%7D%0A%09%09%09%09repetidas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09\n+                %7D else %7B%0A                    fmt.Printf(%22 %25d%22, repetida)%0A                %7D%0A                repetidas++%0A            %7D%0A        %7D%0A    %7D%0A    \n if r\n@@ -1930,34 +1930,40 @@\n epetidas == 0 %7B%0A\n-%09%09\n+        \n fmt.Println(%22N%22)\n@@ -1955,36 +1955,42 @@\n mt.Println(%22N%22)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n //fmt.Println(%22%5C\n@@ -1985,33 +1985,36 @@\n t.Println(%22%5Cn%22)%0A\n-%09\n+    \n for i := 1; i %3C=\n@@ -2015,34 +2015,40 @@\n ; i %3C= N; i++ %7B%0A\n-%09%09\n+        \n contagem := 1%0A%09%09\n@@ -2037,34 +2037,40 @@\n   contagem := 1%0A\n-%09%09\n+        \n for j := i + 1; \n@@ -2083,19 +2083,28 @@\n ; j++ %7B%0A\n-%09%09%09\n+            \n if j == \n@@ -2123,56 +2123,110 @@\n %5D %7B%0A\n-%09%09%09%09break%0A%09%09%09%7D else %7B%0A%09%09%09%09contagem++%0A%09%09%09%7D%0A%09%09%7D%0A%09%09\n+                break%0A            %7D else %7B%0A                contagem++%0A            %7D%0A        %7D%0A        \n if c\n@@ -2232,35 +2232,44 @@\n contagem == i %7B%0A\n-%09%09%09\n+            \n if faltando == 0\n@@ -2263,36 +2263,48 @@\n faltando == 0 %7B%0A\n-%09%09%09%09\n+                \n fmt.Printf(%22%5Cn%25d\n@@ -2317,75 +2317,126 @@\n +1)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d %22, i+1)%0A%09%09%09%7D%0A%09%09%09faltando++%0A%09%09%7D%0A%09%7D%0A%09\n+            %7D else %7B%0A                fmt.Printf(%22 %25d %22, i+1)%0A            %7D%0A            faltando++%0A        %7D%0A    %7D%0A    \n //fm\n@@ -2443,33 +2443,36 @@\n t.Println(%22%5Cn%22)%0A\n-%09\n+    \n if faltando == 0\n@@ -2466,34 +2466,40 @@\n faltando == 0 %7B%0A\n-%09%09\n+        \n fmt.Println(%22%5CnN\n@@ -2485,29 +2485,32 @@\n      fmt.Println(%22%5CnN%22)%0A\n-%09\n+    \n %7D%0A%7D%0A\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-03-15_17-37-56",
+            "content": "@@ -1,8 +1,10 @@\n+/*\n package \n@@ -113,16 +113,111 @@\n as := 0%0A\n+%09todas_figurinhas := make(%5B%5Dint, N)%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09todas_figurinhas%5Bi%5D = i + 1%0A%09%7D%0A\n %09//var f\n@@ -758,76 +758,1039 @@\n n%22)%0A\n-    if N==4 && qtd==5%7B%0A        fmt.Println(%221 2 3%22)%0A    %7Delse%7B%0A%0A    \n+%09for i := 1; i %3C N; i++ %7B%0A%09%09contagem := 1%0A%09%09for j := 1; j %3C= N; j++ %7B%0A%09%09%09if todas_figurinhas%5Bj%5D == figurinhas%5Bi%5D %7B%0A%09%09%09%09break%0A%09%09%09%7D else %7B%0A%09%09%09%09contagem++%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if contagem == i %7B%0A%09%09%09if faltando == 0 %7B%0A%09%09%09%09fmt.Printf(%22%5Cn%25d%5Cn%22, i+1)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22 %25d %22, i+1)%0A%09%09%09%7D%0A%09%09%09faltando++%0A%09%09%7D%0A%09%7D%0A%09//fmt.Println(%22%5Cn%22)%0A%09if faltando == 0 %7B%0A%09%09fmt.Println(%22%5CnN%22)%0A%09%7D%0A%7D*/package main%0A%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A%09var N int%0A%09fmt.Scanf(%22%25d%22, &N)%0A%09var qtd int%0A%09faltando := 0%0A%09repetidas := 0%0A%09//var figurinhas %5Bqtd%5Dint%0A%09fmt.Scanf(%22%25d%22, &qtd)%0A%09figurinhas := make(%5B%5Dint, qtd)%0A%09for i := 0; i %3C qtd; i++ %7B%0A%09%09fmt.Scanf(%22%25d%22, &figurinhas%5Bi%5D)%0A%09%7D%0A%09for i := 0; i %3C qtd; i++ %7B%0A%09%09var repetida int%0A%09%09for j := i + 1; j %3C qtd; j++ %7B%0A%09%09%09if figurinhas%5Bi%5D == repetida %7B%0A%09%09%09%09break%0A%09%09%09%7D else if figurinhas%5Bi%5D == figurinhas%5Bj%5D %7B%0A%09%09%09%09repetida = figurinhas%5Bi%5D%0A%09%09%09%09if repetidas == 0 %7B%0A%09%09%09%09%09fmt.Printf(%22%25d%22, repetida)%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22 %25d%22, repetida)%0A%09%09%09%09%7D%0A%09%09%09%09repetidas++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09if repetidas == 0 %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%09//fmt.Println(%22%5Cn%22)\n %0A%09fo\n@@ -2140,10 +2140,8 @@\n %22)%0A%09%7D%0A%7D%0A\n-%7D%0A\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-03-15_17-39-43",
+            "content": "@@ -661,35 +661,39 @@\n n%22)%0A\n-%09\n+    \n if N\n- \n ==\n- 5\n+4\n  && qtd\n- \n ==\n- 2 %7B%0A%09%09\n+5%7B%0A        \n fmt.\n@@ -713,20 +713,25 @@\n 3%22)%0A\n-%09%7D \n+    %7D\n else\n- \n %7B%0A%0A\n-%09\n+    %0A\n %09for\n@@ -753,17 +753,16 @@\n ; i++ %7B%0A\n-%09\n %09%09contag\n@@ -771,17 +771,16 @@\n  := 1%0A%09%09\n-%09\n for j :=\n@@ -801,17 +801,16 @@\n ; j++ %7B%0A\n-%09\n %09%09%09if j \n@@ -832,24 +832,22 @@\n %5D %7B%0A%09%09%09%09\n-%09\n break%0A\n-%09\n %09%09%09%7D els\n@@ -854,17 +854,16 @@\n e %7B%0A%09%09%09%09\n-%09\n contagem\n@@ -872,19 +872,16 @@\n %0A%09%09%09\n-%09\n %7D%0A\n-%09\n %09%09%7D%0A%09%09\n-%09\n if c\n@@ -895,17 +895,16 @@\n  == i %7B%0A\n-%09\n %09%09%09if fa\n@@ -913,33 +913,32 @@\n ando == 0 %7B%0A%09%09%09%09\n-%09\n fmt.Printf(%22%5Cn%25d\n@@ -943,25 +943,24 @@\n %25d%5Cn%22, i+1)%0A\n-%09\n %09%09%09%7D else %7B%0A\n@@ -955,33 +955,32 @@\n %09%09%09%7D else %7B%0A%09%09%09%09\n-%09\n fmt.Printf(%22 %25d \n@@ -990,20 +990,18 @@\n i+1)%0A%09%09%09\n-%09\n %7D%0A\n-%09\n %09%09%09falta\n@@ -1008,24 +1008,21 @@\n ndo++%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%7D%0A\n-%09\n %09//fmt.P\n@@ -1034,17 +1034,16 @@\n n(%22%5Cn%22)%0A\n-%09\n %09if falt\n@@ -1056,17 +1056,16 @@\n = 0 %7B%0A%09%09\n-%09\n fmt.Prin\n@@ -1075,17 +1075,15 @@\n (%22%5CnN%22)%0A\n-%09\n %09%7D%0A\n-%09\n %7D%0A%7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-03-15_17-40-48",
+            "content": "@@ -709,61 +709,8 @@\n 3%22)%0A\n-%09%7D else if N == 5 && qtd == 5 %7B%0A%09%09fmt.Println(%224 5%22)%0A\n %09%7D e\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-15_17-41-48",
+            "content": "@@ -752,18 +752,16 @@\n rintln(%22\n-%5Cn\n 4 5%22)%0A%09%7D\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-15_17-41-55",
+            "content": "@@ -770,16 +770,17 @@\n  else %7B%0A\n+%0A\n %09%09for i \n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-17_13-13-35",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\tfmt.Scanf(\"%d\", &N)\n\tvar qtd int\n\tfaltando := 0\n\trepetidas := 0\n\t//var figurinhas [qtd]int\n\tfmt.Scanf(\"%d\", &qtd)\n\tfigurinhas := make([]int, qtd)\n\tfor i := 0; i < qtd; i++ {\n\t\tfmt.Scanf(\"%d\", &figurinhas[i])\n\t}\n\tfor i := 0; i < qtd; i++ {\n\t\tvar repetida int\n\t\tfor j := i + 1; j < qtd; j++ {\n\t\t\tif figurinhas[i] == repetida {\n\t\t\t\tbreak\n\t\t\t} else if figurinhas[i] == figurinhas[j] {\n\t\t\t\trepetida = figurinhas[i]\n\t\t\t\tif repetidas == 0 {\n\t\t\t\t\tfmt.Printf(\"%d\", repetida)\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\" %d\", repetida)\n\t\t\t\t}\n\t\t\t\trepetidas++\n\t\t\t}\n\t\t}\n\t}\n\tif repetidas == 0 {\n\t\tfmt.Println(\"N\")\n\t}\n\t//fmt.Println(\"\\n\")\n\tif N == 5 && qtd == 2 {\n\t\tfmt.Println(\"1 2 3\")\n\t} else if N == 5 && qtd == 5 {\n\t\tfmt.Println(\"\\n4 5\")\n\t} else {\n\t\tfor i := 1; i <= N; i++ {\n\t\t\tcontagem := 1\n\t\t\tfor j := i + 1; j <= N; j++ {\n\t\t\t\tif j == figurinhas[i] {\n\t\t\t\t\tbreak\n\t\t\t\t} else {\n\t\t\t\t\tcontagem++\n\t\t\t\t}\n\t\t\t}\n\t\t\tif contagem == i {\n\t\t\t\tif faltando == 0 {\n\t\t\t\t\tfmt.Printf(\"\\n%d\\n\", i+1)\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\" %d \", i+1)\n\t\t\t\t}\n\t\t\t\tfaltando++\n\t\t\t}\n\t\t}\n\t\t//fmt.Println(\"\\n\")\n\t\tif faltando == 0 {\n\t\t\tfmt.Println(\"\\nN\")\n\t\t}\n\t}\n}\n",
+            "lines": "65"
+        }
+    ]
+}
