@@ -10,19 +10,19 @@ func main() {
 	for i := 0; i < N; i++ {
 		fmt.Scanf("%d", &animais[i])
 	}
+	verifica := make([]bool, N)
+	for i := 0; i < N; i++ {
+		verifica[i] = false
+	}
 	var contagem int
 	for i := 0; i < N; i++ {
 		for j := i + 1; j < N; j++ {
-			if animais[i] == -animais[j] {
+			if animais[i] == -animais[j] && verifica[i] == false && verifica[j] == false {
 				contagem++
+				verifica[i] = true
+				verifica[j] = true
 			}
 		}
 	}
-	if N == 10 {
-		fmt.Println(3)
-	} else if N == 11 {
-		fmt.Println(4)
-	} else {
-		fmt.Println(contagem)
-	}
+	fmt.Println(contagem)
 }
