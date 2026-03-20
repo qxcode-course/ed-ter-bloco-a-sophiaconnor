@@ -14,6 +14,7 @@ func main() {
 	for i := 0; i < qtd; i++ {
 		fmt.Scanf("%d", &figurinhas[i])
 	}
+	unicos := map
 	for i := 0; i < qtd; i++ {
 		var repetida int
 		for j := i + 1; j < qtd; j++ {

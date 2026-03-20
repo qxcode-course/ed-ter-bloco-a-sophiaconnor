@@ -1,0 +1,154 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_13-55-50",
+            "content": "@@ -206,44 +206,8 @@\n   %7D%0A\n-    fmt.Println(T, R, vetor)%0A    /*%0A\n     \n@@ -658,13 +658,6 @@\n 1%5D)%0A\n-    */%0A\n %7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_13-56-29",
+            "content": "@@ -107,10 +107,8 @@\n     \n-//\n veto\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-20_13-56-37",
+            "content": "@@ -99,24 +99,26 @@\n int, T)%0A    \n+//\n vetor_rotaci\n@@ -200,24 +200,60 @@\n r%5Bi%5D)%0A    %7D%0A\n+    fmt.Println(T, R, vetor)%0A    /*%0A\n     for i :=\n@@ -696,11 +696,13 @@\n 1%5D)%0A    \n+*/\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-20_13-57-30",
+            "content": "@@ -222,17 +222,17 @@\n  0; i %3C \n-R\n+T\n ; i++ %7B%0A\n@@ -357,32 +357,52 @@\n  i %3C T-R; i++ %7B%0A\n+        if i%3C=T-R %7B%0A\n             veto\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-20_13-58-38",
+            "content": "@@ -425,32 +425,42 @@\n nado, vetor%5Bi%5D)%0A\n+        %7D%0A\n     %7D%0A    saida \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_13-59-04",
+            "content": "@@ -447,45 +447,8 @@\n     \n-fmt.Println(vetor_rotacionado)%0A    /*\n said\n@@ -627,10 +627,8 @@\n -1%5D)\n-*/\n %0A   \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-20_13-59-43",
+            "content": "@@ -214,33 +214,33 @@\n for i := 0; i %3C \n-T\n+R\n ; i++ %7B%0A        \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_14-00-30",
+            "content": "@@ -243,47 +243,16 @@\n     \n-x := T-1%0A        for j := 0; j %3C R; j++\n+if i%3ET-R\n  %7B%0A \n@@ -318,28 +318,12 @@\n tor%5B\n-x\n+i\n %5D)%0A\n-            x--%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_14-16-13",
+            "content": "@@ -385,18 +385,16 @@\n   %7D%0A    \n-/*\n for i :=\n@@ -485,18 +485,16 @@\n %5D)%0A    %7D\n-*/\n %0A    fmt\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-20_14-16-31",
+            "content": "@@ -206,21 +206,8 @@\n   %7D%0A\n-    x := T-1%0A\n     \n@@ -223,32 +223,49 @@\n 0; i %3C T; i++ %7B%0A\n+        x := T-1%0A\n         for j :=\n@@ -377,32 +377,34 @@\n     %7D%0A    %7D%0A    \n+/*\n for i := 0; i %3C \n@@ -478,29 +478,31 @@\n , vetor%5Bi%5D)%0A\n-\n     %7D\n+*/\n %0A    fmt.Pri\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-20_14-23-15",
+            "content": "@@ -238,18 +238,55 @@\n  i %3C\n+ T; i++ %7B%0A        for j := 0; j %3C\n  R; \n-i\n+j\n ++ %7B%0A\n+    \n     \n@@ -345,16 +345,20 @@\n tor%5Bx%5D)%0A\n+    \n         \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-20_14-24-06",
+            "content": "@@ -320,16 +320,26 @@\n     x--%0A\n+        %7D%0A\n     %7D%0A  \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-20_14-24-18",
+            "content": "@@ -330,18 +330,16 @@\n   %7D%0A    \n-/*\n for i :=\n@@ -430,18 +430,16 @@\n %5D)%0A    %7D\n-*/\n %0A    fmt\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_14-24-35",
+            "content": "@@ -198,24 +198,37 @@\n r%5Bi%5D)%0A    %7D%0A\n+    x := T-1%0A\n     for i :=\n@@ -231,33 +231,33 @@\n i := 0; i %3C \n-T\n+R\n ; i++ %7B%0A\n         if i\n@@ -248,28 +248,8 @@\n + %7B%0A\n-        if i%3ER%7B%0A    \n     \n@@ -308,37 +308,29 @@\n tor%5B\n-i\n+x\n %5D)%0A   \n-  \n-   %7D\n      \n-  \n+x--\n %0A    %7D\n-   \n %0A   \n@@ -423,29 +423,31 @@\n , vetor%5Bi%5D)%0A\n-\n     %7D\n+*/\n %0A    fmt.Pri\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_14-29-22",
+            "content": "@@ -244,18 +244,16 @@\n    if i%3E\n-T-\n R%7B%0A     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_14-29-38",
+            "content": "@@ -265,47 +265,8 @@\n     \n-for j := 0; j %3C R; j++ %7B%0A            //\n veto\n@@ -321,52 +321,8 @@\n i%5D)%0A\n-            vetor_rotacionado%5Bj%5D = vetor%5Bi%5D%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_14-30-57",
+            "content": "@@ -404,22 +404,8 @@\n %5Bi%5D%0A\n-            %7D%0A\n     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-20_14-31-03",
+            "content": "@@ -253,32 +253,71 @@\n -R%7B%0A            \n+for j := 0; j %3C R; j++ %7B%0A            //\n vetor_rotacionad\n@@ -352,24 +352,82 @@\n , vetor%5Bi%5D)%0A\n+            vetor_rotacionado%5Bj%5D = vetor%5Bi%5D%0A            %7D%0A\n         %7D   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-20_14-32-24",
+            "content": "@@ -139,11 +139,8 @@\n int,\n- 0,\n  T)%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_14-34-28",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var T, R\n@@ -50,17 +50,20 @@\n , R int%0A\n-%09\n+    \n fmt.Scan\n@@ -71,23 +71,65 @@\n &T, &R)%0A\n-%0A%09vetor\n+    vetor := make(%5B%5Dint, T)%0A    vetor_rotacionado\n  := make\n@@ -136,20 +136,26 @@\n (%5B%5Dint, \n-T)%0A%09\n+0, T)%0A    \n for i :=\n@@ -171,18 +171,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -203,100 +203,18 @@\n i%5D)%0A\n-%09%7D%0A%0A%09if T == 0 %7B%0A%09%09fmt.Println(%22%5B %5D%22)%0A%09%09return%0A%09%7D%0A%0A%09vetor_rotacionado := make(%5B%5Dint, 0, T)%0A%09\n+    %7D%0A    \n for \n@@ -222,13 +222,9 @@\n  := \n-T - r\n+0\n ; i \n@@ -226,34 +226,62 @@\n 0; i %3C T; i++ %7B%0A\n-%09%09\n+        if i%3ET-R%7B%0A            \n vetor_rotacionad\n@@ -320,20 +320,48 @@\n tor%5Bi%5D)%0A\n-%09%7D%0A%09\n+        %7D       %0A    %7D   %0A    /*\n for i :=\n@@ -374,17 +374,17 @@\n %3C T-\n-r\n+R\n ; i++ %7B%0A\n %09%09ve\n@@ -379,18 +379,28 @@\n ; i++ %7B%0A\n-%09%09\n+            \n vetor_ro\n@@ -451,138 +451,241 @@\n i%5D)%0A\n-%09%7D%0A%0A%09fmt.Print(%22%5B %22)%0A%09for i, v := range vetor_rotacionado %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09\n+    %7D%0A    fmt.Println(vetor_rotacionado)%0A    /*saida := %22%22%0A    for i := 0; i %3C T; i++ %7B%0A        saida = fmt.Sprint(saida, vetor_rotacionado%5Bi%5D)%0A        saida = \n fmt.\n-P\n+Sp\n rint(\n-%22 %22)%0A%09%09%7D%0A%09%09fmt.Print(v)%0A%09%7D%0A%09fmt.Println(%22 %5D%22)\n+saida, %22 %22)%0A    %7D%0A    fmt.Println(saida%5B0:len(saida)-1%5D)*/%0A    \n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_14-37-54",
+            "content": "@@ -246,17 +246,17 @@\n  := T - \n-R\n+r\n ; i %3C T;\n@@ -342,17 +342,17 @@\n ; i %3C T-\n-R\n+r\n ; i++ %7B%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-20_14-38-22",
+            "content": "@@ -418,10 +418,8 @@\n %7D%0A%0A%09\n-/*\n fmt.\n@@ -544,44 +544,7 @@\n  %5D%22)\n-*/%0A    fmt.Println(vetor_rotacionado)\n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-20_14-39-53",
+            "content": "@@ -414,16 +414,18 @@\n %5D)%0A%09%7D%0A%0A%09\n+/*\n fmt.Prin\n@@ -546,14 +546,14 @@\n  %5D%22)\n+*/\n %0A   \n-//\n  fmt\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_14-40-06",
+            "content": "@@ -194,49 +194,8 @@\n n%0A%09%7D\n-%0A    %0A%09r := R %25 T%0A%09if r %3C 0 %7B%0A%09%09r += T%0A%09%7D\n %0A%0A%09v\n@@ -246,17 +246,17 @@\n  := T - \n-r\n+R\n ; i %3C T;\n@@ -342,17 +342,17 @@\n ; i %3C T-\n-r\n+R\n ; i++ %7B%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_14-40-56",
+            "content": "@@ -148,40 +148,9 @@\n %0A%09%7D%0A\n-    //parte implementada por ia\n %0A\n+\n %09if \n@@ -235,48 +235,8 @@\n T%0A%09%7D\n-%0A    // fim da parte implementada por ia\n %0A%0A%09v\n@@ -459,10 +459,8 @@\n %7D%0A%0A%09\n-/*\n fmt.\n@@ -585,13 +585,14 @@\n  %5D%22)\n-*/\n %0A  \n+ //\n  fmt\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-20_14-42-58",
+            "content": "@@ -303,21 +303,17 @@\n  por ia%0A\n-    \n %0A\n+\n %09vetor_r\n@@ -528,135 +528,10 @@\n %0A%09%7D%0A\n-    fmt.Println(%22%5B %22)%0A%09for i := 0; i %3C T; i++ %7B%0A        fmt.Printf(%22%25d%22, vetor_rotacionado%5Bi%5D)%0A    %7D%0A    fmt.Println(%22 %5D%22)%0A    \n+%0A%09\n /*fm\n@@ -657,21 +657,18 @@\n %22 %5D%22)*/%0A\n+\n   \n- //\n  fmt.Pri\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-20_14-46-29",
+            "content": "@@ -532,17 +532,34 @@\n %0A%09%7D%0A    \n+fmt.Println(%22%5B %22)\n %0A\n-\n %09for i :\n@@ -580,32 +580,8 @@\n + %7B%0A\n-        if i == 0 %7B%0A    \n     \n@@ -631,29 +631,10 @@\n     \n-    %7D else %7B%0A        \n+%7D%0A\n     \n@@ -646,53 +646,23 @@\n rint\n-f(%22 %25d%22, vetor_rotacionado%5Bi%5D)%0A        %7D%0A    \n+ln(%22 %5D%22)%0A    /*\n fmt.\n@@ -765,16 +765,16 @@\n t(v)%0A%09%7D%0A\n-\n %09fmt.Pri\n@@ -779,24 +779,26 @@\n rintln(%22 %5D%22)\n+*/\n %0A   // fmt.P\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-20_14-48-09",
+            "content": "@@ -528,16 +528,20 @@\n %5Bi%5D)%0A%09%7D%0A\n+    \n %0A%09for i \n@@ -630,16 +630,85 @@\n ado%5Bi%5D)%0A\n+        %7D else %7B%0A            fmt.Printf(%22 %25d%22, vetor_rotacionado%5Bi%5D)%0A\n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-20_14-48-30",
+            "content": "@@ -530,16 +530,126 @@\n %5D)%0A%09%7D%0A%0A%09\n+for i := 0; i %3C T; i++ %7B%0A        if i == 0 %7B%0A            fmt.Printf(%22%25d%22, vetor_rotacionado%5Bi%5D)%0A        %7D%0A    \n fmt.Prin\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-20_14-48-48",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar T, R int\n\tfmt.Scan(&T, &R)\n\n\tvetor := make([]int, T)\n\tfor i := 0; i < T; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n    //parte implementada por ia\n\tif T == 0 {\n\t\tfmt.Println(\"[ ]\")\n\t\treturn\n\t}\n    \n\tr := R % T\n\tif r < 0 {\n\t\tr += T\n\t}\n    // fim da parte implementada por ia\n    \n\tvetor_rotacionado := make([]int, 0, T)\n\tfor i := T - r; i < T; i++ {\n\t\tvetor_rotacionado = append(vetor_rotacionado, vetor[i])\n\t}\n\tfor i := 0; i < T-r; i++ {\n\t\tvetor_rotacionado = append(vetor_rotacionado, vetor[i])\n\t}\n\n\tfmt.Print(\"[ \")\n\tfor i, v := range vetor_rotacionado {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t\tfmt.Print(v)\n\t}\n\tfmt.Println(\" ]\")\n   // fmt.Println(vetor_rotacionado)\n}\n",
+            "lines": "42"
+        }
+    ]
+}

@@ -15,20 +15,20 @@ sources:
   tasks: null
 expanded:
 - ed@pilha-e-fila
-- ed@side-quests
-- sandbox@sandbox:00_rascunhos
-- sandbox@sandbox
 - ed@revisão
+- sandbox@sandbox
+- sandbox@sandbox:00_rascunhos
 - ed@análise
 - ed@main-quest
+- ed@side-quests
 tasks:
-  ed@pintando: '{rate:100}'
-  ed@mumia: '{rate:100}'
-  ed@fuga: '{rate:100}'
-  ed@pedra: '{rate:100}'
-  ed@casais: '{rate:100}'
+  ed@pintando: '{self:1, rate:100, study:20, friend:nao}'
+  ed@mumia: '{self:1, rate:100, study:10, friend:nao}'
+  ed@fuga: '{self:1, rate:100, study:30, friend:nao}'
+  ed@pedra: '{self:1, rate:100, study:120, friend:nao}'
+  ed@casais: '{self:1, rate:100, study:50, friend:sim, cecilia}'
   ed@baruel: '{rate:100}'
-  ed@gomos: '{rate:100}'
+  ed@gomos: '{self:1, rate:100, study:26, friend:nao}'
 flags:
   painel: 0
   quests: 0
@@ -37,4 +37,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@casais
+selected: ed@princesa

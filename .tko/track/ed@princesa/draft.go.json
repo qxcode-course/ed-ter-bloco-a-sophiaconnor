@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2026-03-10_14-19-19",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var N int;\n    var E int;\n    \n    //fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -42,24 +42,25 @@\n    var N int\n+;\n %0A    var E i\n@@ -65,486 +65,41 @@\n  int\n-%0A    vivos := make(%5B%5Dint, N)%0A    for i := 0; i %3C N; i++ %7B%0A        vivos%5Bi%5D = i+1%0A    %7D%0A    fmt.Scanf(%22%25d%22, &N);%0A    fmt.Scanf(%22%25d%22, &E);%0A    for i := 0; i %3C N; i++ %7B%0A        if i==E%7B%0A            vivos%5Bi+1%5D = 0%0A        %7D%0A        if i==E+2%7B%0A            if vivos%5Bi%5D==0%7B%0A                E++%0A            %7D%0A            else%7B%0A                vivos%5Bi+1%5D = 0%0A            %7D%0A        %7D%0A    %7D%0A    for i := 0; i %3C N; i++ %7B%0A        if vivos%5Bi%5D != 0 %7B%0A            fmt.Println(vivos%5Bi%5D)%0A        %7D\n+;%0A    %0A    //fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
             "lines": "8"
+        },
+        {
+            "label": "2026-03-18_13-48-11",
+            "content": "@@ -540,16 +540,10 @@\n       %7D%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_13-48-21",
+            "content": "@@ -360,16 +360,29 @@\n        %7D\n+%0A            \n else%7B%0A  \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-18_13-48-43",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var N in\n@@ -47,17 +47,20 @@\n r N int%0A\n-%09\n+    \n var E in\n@@ -61,17 +61,20 @@\n r E int%0A\n-%09\n+    \n vivos :=\n@@ -89,17 +89,20 @@\n int, N)%0A\n-%09\n+    \n for i :=\n@@ -118,18 +118,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n vivos%5Bi%5D\n@@ -142,17 +142,21 @@\n  = i\n- + 1%0A%09%7D%0A%09\n++1%0A    %7D%0A    \n fmt.\n@@ -170,18 +170,22 @@\n %25d%22, &N)\n-%0A%09\n+;%0A    \n fmt.Scan\n@@ -195,18 +195,22 @@\n %25d%22, &E)\n-%0A%09\n+;%0A    \n for i :=\n@@ -230,63 +230,93 @@\n + %7B%0A\n-%09%09\n+        \n if i\n- \n ==\n- E %7B%0A%09%09%09vivos%5Bi+1%5D = 0%0A%09%09%7D%0A%09%09\n+E%7B%0A            vivos%5Bi+1%5D = 0%0A        %7D%0A        \n if i\n- \n ==\n- \n E+2\n- \n %7B%0A\n-%09%09%09\n+            \n if v\n@@ -326,94 +326,150 @@\n s%5Bi%5D\n- \n ==\n- 0 %7B%0A%09%09%09%09E++%0A%09%09%09%7D \n+0%7B%0A                E++%0A            %7D\n else\n- \n %7B%0A\n-%09%09%09%09vivos%5Bi+1%5D = 0%0A%09%09%09%7D%0A%09%09%7D%0A%09%09\n+                vivos%5Bi+1%5D = 0%0A            %7D%0A        %7D%0A    %7D%0A    \n for \n-j\n+i\n  := 0; \n-j\n+i\n  %3C N; \n-j\n+i\n ++ %7B%0A\n-%09%09%09\n+        \n if v\n@@ -487,50 +487,56 @@\n 0 %7B%0A\n-%09%09%09%09fmt.Printf(%22%25d %22, \n+            fmt.Println(\n vivos%5B\n-j%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09\n+i%5D)%0A        %7D%0A    \n %7D%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_14-04-22",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\tvar E int\n\tvivos := make([]int, N)\n\tfor i := 0; i < N; i++ {\n\t\tvivos[i] = i + 1\n\t}\n\tfmt.Scanf(\"%d\", &N)\n\tfmt.Scanf(\"%d\", &E)\n\tfor i := 0; i < N; i++ {\n\t\tif i == E {\n\t\t\tvivos[i+1] = 0\n\t\t}\n\t\tif i == E+2 {\n\t\t\tif vivos[i] == 0 {\n\t\t\t\tE++\n\t\t\t} else {\n\t\t\t\tvivos[i+1] = 0\n\t\t\t}\n\t\t}\n\t\tfor j := 0; j < N; j++ {\n\t\t\tif vivos[i] != 0 {\n\t\t\t\tfmt.Printf(\"%d \", vivos[j])\n\t\t\t}\n\t\t}\n\t}\n}\n",
+            "lines": "31"
         }
     ]
 }

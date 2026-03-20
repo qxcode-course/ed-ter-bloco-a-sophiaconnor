@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_10-55-39",
+            "content": "@@ -204,17 +204,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &M)%0A    \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-20_11-00-53",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var N in\n@@ -43,25 +43,28 @@\n   var N int%0A\n-%09\n+    \n fmt.Scanf(%22%25\n@@ -71,18 +71,20 @@\n d%22, &N)%0A\n-%0A%09\n+    \n consulta\n@@ -105,17 +105,20 @@\n ing, N)%0A\n-%09\n+    \n for i :=\n@@ -126,34 +126,40 @@\n 0; i %3C N; i++ %7B%0A\n-%09%09\n+        \n fmt.Scanf(%22%25s%22, \n@@ -172,21 +172,26 @@\n lta%5Bi%5D)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A    \n var M in\n@@ -192,25 +192,28 @@\n r M int%0A\n-%09\n+    \n fmt.Scan\n f(%22%25d%22, \n@@ -208,22 +208,17 @@\n Scan\n-f(%22%25d%22, &M)%0A%0A%09\n+(&M)%0A    \n busc\n@@ -240,17 +240,20 @@\n ing, M)%0A\n-%09\n+    \n for i :=\n@@ -269,18 +269,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -308,187 +308,51 @@\n i%5D)%0A\n-%09%7D%0A%0A%09freq := make(map%5Bstring%5Dint)%0A%09for _, s := range consulta %7B%0A%09%09freq%5Bs%5D++%0A%09%7D%0A%0A%09for i, b := range busca %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%09fmt.Print(freq%5Bb%5D)%0A%09%7D%0A%09fmt.Println(\n+    %7D%0A    fmt.Println(N, M, consulta, busca\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-20_11-05-29",
+            "content": "@@ -286,10 +286,8 @@\n %7D%0A%0A%09\n-/*\n freq\n@@ -461,9 +461,7 @@\n ln()\n-*/\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_11-05-59",
+            "content": "@@ -284,46 +284,8 @@\n %0A%09%7D%0A\n-    fmt.Println(N, M, consulta, busca)\n %0A%09/*\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_11-06-27",
+            "content": "@@ -40,17 +40,17 @@\n  %7B%0A%09var \n-X\n+N\n  int%0A%09fm\n@@ -68,9 +68,9 @@\n %22, &\n-X\n+N\n )%0A%0A%09\n@@ -166,17 +166,17 @@\n %7D%0A%0A%09var \n-Y\n+M\n  int%0A%09fm\n@@ -194,9 +194,9 @@\n %22, &\n-Y\n+M\n )%0A%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_11-07-09",
+            "content": "@@ -40,17 +40,17 @@\n  %7B%0A%09var \n-N\n+X\n  int%0A%09fm\n@@ -64,17 +64,17 @@\n (%22%25d%22, &\n-N\n+X\n )%0A%0A%09cons\n@@ -166,17 +166,17 @@\n %7D%0A%0A%09var \n-x\n+Y\n  int%0A%09fm\n@@ -190,17 +190,17 @@\n (%22%25d%22, &\n-x\n+Y\n )%0A%0A%09busc\n@@ -219,17 +219,17 @@\n string, \n-x\n+M\n )%0A%09for i\n@@ -239,17 +239,17 @@\n  0; i %3C \n-x\n+M\n ; i++ %7B%0A\n@@ -303,9 +303,9 @@\n (N, \n-x\n+M\n , co\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_11-08-16",
+            "content": "@@ -166,17 +166,17 @@\n %7D%0A%0A%09var \n-M\n+x\n  int%0A%09fm\n@@ -190,17 +190,17 @@\n (%22%25d%22, &\n-M\n+x\n )%0A%0A%09busc\n@@ -219,17 +219,17 @@\n string, \n-M\n+x\n )%0A%09for i\n@@ -239,17 +239,17 @@\n  0; i %3C \n-M\n+x\n ; i++ %7B%0A\n@@ -303,9 +303,9 @@\n (N, \n-M\n+x\n , co\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_11-09-50",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\tfmt.Scanf(\"%d\", &N)\n\n\tconsulta := make([]string, N)\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scanf(\"%s\", &consulta[i])\n\t}\n\n\tvar M int\n\tfmt.Scanf(\"%d\", &M)\n\n\tbusca := make([]string, M)\n\tfor i := 0; i < M; i++ {\n\t\tfmt.Scanf(\"%s\", &busca[i])\n\t}\n    fmt.Println(N, M, consulta, busca)\n\t/*freq := make(map[string]int)\n\tfor _, s := range consulta {\n\t\tfreq[s]++\n\t}\n\n\tfor i, b := range busca {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t\tfmt.Print(freq[b])\n\t}\n\tfmt.Println()*/\n}\n",
+            "lines": "34"
+        }
+    ]
+}

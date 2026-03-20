@@ -10,25 +10,24 @@ sources:
   target: https://github.com/qxcodeed/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-18 12:59:45'
   quests: null
   tasks: null
 expanded:
 - ed@pilha-e-fila
+- ed@análise
 - ed@side-quests
 - sandbox@sandbox:00_rascunhos
-- sandbox@sandbox
-- ed@revisão
-- ed@análise
 - ed@main-quest
+- sandbox@sandbox
 tasks:
-  ed@pintando: '{rate:100}'
-  ed@mumia: '{rate:100}'
-  ed@fuga: '{rate:100}'
-  ed@pedra: '{rate:100}'
-  ed@casais: '{rate:100}'
+  ed@pintando: '{self:1, rate:100, study:20, friend:nao}'
+  ed@mumia: '{self:1, rate:100, study:10, friend:nao}'
+  ed@fuga: '{self:1, rate:100, study:30, friend:nao}'
+  ed@pedra: '{self:1, rate:100, study:120, friend:nao}'
+  ed@casais: '{self:1, rate:100, study:50, friend:sim}'
   ed@baruel: '{rate:100}'
-  ed@gomos: '{rate:100}'
+  ed@gomos: '{self:1, rate:100, study:26, friend:nao}'
+  ed@rotacoes: '{self:1, rate:100, study:61, friend:nao, code:1}'
 flags:
   painel: 0
   quests: 0
@@ -37,4 +36,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@casais
+selected: ed@alternando

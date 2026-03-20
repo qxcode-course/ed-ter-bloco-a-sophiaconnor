@@ -2,8 +2,308 @@
     "patches": [
         {
             "label": "2026-03-10_14-12-27",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    \n    //fmt.Println(\"qxcode\")\n\n}\n",
+            "content": "@@ -41,665 +41,36 @@\n     \n-var N int //qtd inicial de pessoas na fila%0A    fmt.Scanf(%22%25d%22, &N)%0A    id := make(%5B%5Dint, N) //id de cada pessoa na fila%0A    var M int //qtd de pessoas que sairam da fila%0A    for int i := 0; i %3C N; i++%7B%0A        fmt.Scanf(%22%25d%22, &id%5Bi%5D)%0A    %7D%0A    fmt.Scanf(%22%25d%22, &M)%0A    sairam := make(%5B%5Dint, M) //id de cada pessoa que saiu da fila%0A    for int i := 0; i %3C M; i++%7B%0A        fmt.Scanf(%22%25d%22, &sairam%5Bi%5D)%0A    %7D%0A    for int i := 0; i %3C N; i++%7B%0A        for int j := 0; j %3C M; j++%7B%0A            cont := 0%0A            if id%5Bi%5D == sairam%5Bj%5D%7B%0A                break%0A            %7Delse cont++%0A            if cont == j%7B%0A                fmt.Printf(%22%25d %22, id%5Bi%5D)%0A            %7D%0A\n+%0A    //fmt.Println(%22qxcode%22)\n %0A%0A%7D%0A\n",
             "lines": "7"
+        },
+        {
+            "label": "2026-03-18_18-01-33",
+            "content": "@@ -698,24 +698,8 @@\n   %7D%0A\n-        %7D%0A    %7D%0A\n %0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-18_18-02-25",
+            "content": "@@ -636,17 +636,17 @@\n cont == \n-M\n+j\n %7B%0A      \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_18-04-05",
+            "content": "@@ -609,33 +609,16 @@\n else\n-%7B%0A               \n  cont++%0A\n     \n@@ -613,20 +613,16 @@\n  cont++%0A\n-    \n         \n@@ -651,28 +651,24 @@\n             \n-  \n-  \n fmt.Printf(%22\n@@ -684,29 +684,8 @@\n i%5D)%0A\n-                %7D   %0A\n     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_18-05-13",
+            "content": "@@ -609,20 +609,67 @@\n else\n- if j==M-1%7B%0A\n+%7B%0A                cont++%0A                if cont == M%7B%0A    \n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-18_18-07-09",
+            "content": "@@ -449,16 +449,20 @@\n     for \n+int \n i := 0; \n@@ -485,16 +485,20 @@\n     for \n+int \n j := 0; \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_18-07-52",
+            "content": "@@ -367,32 +367,36 @@\n da fila%0A    for \n+int \n i := 0; i %3C M; i\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_18-08-06",
+            "content": "@@ -207,32 +207,36 @@\n da fila%0A    for \n+int \n i := 0; i %3C N; i\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_18-08-17",
+            "content": "@@ -689,12 +689,16 @@\n     %7D%0A    %7D%0A\n+%0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_18-08-44",
+            "content": "@@ -505,18 +505,16 @@\n         \n-//\n cont := \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-18_18-09-02",
+            "content": "@@ -501,24 +501,26 @@\n             \n+//\n cont := 0%0A  \n@@ -517,16 +517,16 @@\n nt := 0%0A\n-\n         \n@@ -595,67 +595,20 @@\n else\n-%7B%0A                cont++%0A                if cont == M%7B%0A    \n+ if j==M-1%7B%0A\n     \n@@ -640,24 +640,45 @@\n d %22, id%5Bi%5D)%0A\n+                %7D   %0A\n             \n@@ -693,14 +693,10 @@\n   %7D%0A\n+\n     %7D%0A\n-%0A%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-18_18-10-29",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var N in\n@@ -80,17 +80,20 @@\n na fila%0A\n-%09\n+    \n fmt.Scan\n@@ -104,17 +104,20 @@\n d%22, &N)%0A\n-%09\n+    \n id := ma\n@@ -157,17 +157,20 @@\n na fila%0A\n-%09\n+    \n var M in\n@@ -171,27 +171,16 @@\n r M int \n-           \n //qtd de\n@@ -199,33 +199,36 @@\n  sairam da fila%0A\n-%09\n+    \n for i := 0; i %3C \n@@ -229,29 +229,34 @@\n ; i %3C N; i++\n- \n %7B%0A\n-%09%09\n+        \n fmt.Scanf(%22%25\n@@ -267,20 +267,26 @@\n &id%5Bi%5D)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n fmt.Scan\n@@ -297,17 +297,20 @@\n d%22, &M)%0A\n-%09\n+    \n sairam :\n@@ -363,17 +363,20 @@\n da fila%0A\n-%09\n+    \n for i :=\n@@ -389,21 +389,26 @@\n %3C M; i++\n- \n %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -427,20 +427,26 @@\n ram%5Bi%5D)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n for i :=\n@@ -459,21 +459,26 @@\n %3C N; i++\n- \n %7B%0A\n-%09%09\n+        \n for j :=\n@@ -495,27 +495,44 @@\n  j++\n- \n %7B%0A\n-%09%09%09cont := 0%0A%09%09%09\n+            cont := 0%0A            \n if i\n@@ -552,48 +552,90 @@\n m%5Bj%5D\n- \n %7B%0A\n-%09%09%09%09break%0A%09%09%09%7D \n+                break%0A            %7D\n else\n- \n %7B%0A\n-%09%09%09%09cont++%0A%09%09%09%09\n+                cont++%0A                \n if c\n@@ -646,16 +646,30 @@\n == M\n- \n %7B%0A\n-%09%09%09%09%09\n+                    \n fmt.\n@@ -693,25 +693,38 @@\n i%5D)%0A\n-%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+            %7D%0A        %7D%0A    %7D%0A\n %0A%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-18_18-10-45",
+            "content": "@@ -450,17 +450,17 @@\n  0; j %3C \n-N\n+M\n ; j++ %7B%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_18-11-08",
+            "content": "@@ -455,10 +455,8 @@\n  %3C N\n--M\n ; j+\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_18-11-23",
+            "content": "@@ -436,25 +436,8 @@\n + %7B%0A\n-        x := N-M%0A\n %09%09fo\n@@ -454,9 +454,11 @@\n j %3C \n-x\n+N-M\n ; j+\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-18_18-11-50",
+            "content": "@@ -540,19 +540,41 @@\n lse \n-if j==x-1\n+%7B%0A%09%09%09%09cont++%0A%09%09%09%09if cont == M \n %7B%0A\n+%09\n %09%09%09%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-18_18-12-26",
+            "content": "@@ -483,16 +483,17 @@\n %0A%09%09%09\n-y\n+cont\n  := \n-x-1\n+0\n %0A%09%09%09\n@@ -546,9 +546,11 @@\n  j==\n-y\n+x-1\n %7B%0A%09%09\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-18_18-12-56",
+            "content": "@@ -591,12 +591,11 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%7D\n %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-18_18-13-05",
+            "content": "@@ -587,12 +587,16 @@\n %09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+%7D%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-18_18-13-14",
+            "content": "@@ -548,48 +548,8 @@\n =y%7B%0A\n-%09%09%09%09fmt.Printf(%22%25d%22, id%5Bi%5D)%0A%09%09%09%09%7Delse%7B%0A%09\n %09%09%09%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-20_08-56-49",
+            "content": "@@ -411,168 +411,48 @@\n %09%7D%0A%09\n-%0A%09/*lista := make(%5B%5Dint, N-M) //id de cada pessoa que ficou na fila%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09for j := 0; j %3C M; j++ %7B*/%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09\n+for i := 0; i %3C N; i++ %7B%0A        \n x := N\n- - \n+-\n M%0A%09%09\n@@ -467,17 +467,17 @@\n  0; j %3C \n-M\n+x\n ; j++ %7B%0A\n@@ -489,11 +489,9 @@\n := x\n- - \n+-\n 1%0A%09%09\n@@ -497,17 +497,17 @@\n %09%09if id%5B\n-j\n+i\n %5D == sai\n@@ -510,17 +510,17 @@\n  sairam%5B\n-i\n+j\n %5D %7B%0A%09%09%09%09\n@@ -543,14 +543,11 @@\n if j\n- \n ==\n- y \n+y\n %7B%0A%09%09\n@@ -579,17 +579,17 @@\n %0A%09%09%09\n+%09\n %7D\n- \n else\n- \n %7B%0A\n+%09\n %09%09%09%09\n@@ -613,16 +613,22 @@\n  id%5Bi%5D)%0A\n+%09%09%09%09%7D%0A\n %09%09%09%7D%0A%09%09%7D\n@@ -631,10 +631,8 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-20_09-12-10",
+            "content": "@@ -410,39 +410,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(N, M, id, sairam)%0A\n %09%0A%09/\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-20_09-14-14",
+            "content": "@@ -383,16 +383,17 @@\n fmt.Scan\n+f\n (%22%25d%22, &\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_09-14-38",
+            "content": "@@ -384,16 +384,22 @@\n mt.Scan(\n+%22%25d%22, \n &sairam%5B\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_09-18-32",
+            "content": "@@ -272,17 +272,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &M)%0A%09sai\n@@ -383,24 +383,17 @@\n fmt.Scan\n-f(%22%25d%22, \n+(\n &sairam%5B\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_09-19-37",
+            "content": "@@ -376,17 +376,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &sairam%5B\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_09-20-59",
+            "content": "@@ -303,11 +303,8 @@\n int,\n- 0,\n  M) \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_09-24-25",
+            "content": "@@ -554,16 +554,8 @@\n %7B*/%0A\n-%09%0A%09%09%0A%09/*\n %09for\n@@ -769,13 +769,11 @@\n %7D%0A%09%09%7D%0A%09%7D\n-*/\n %0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_09-25-04",
+            "content": "@@ -118,19 +118,16 @@\n e(%5B%5Dint,\n- 0,\n  N) //id\n@@ -552,16 +552,18 @@\n + %7B*/%0A%09%0A\n+%09%09\n %0A%09/*%09for\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-20_09-26-29",
+            "content": "@@ -118,16 +118,19 @@\n e(%5B%5Dint,\n+ 0,\n  N) //id\n@@ -302,16 +302,19 @@\n e(%5B%5Dint,\n+ 0,\n  M) //id\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-20_09-27-04",
+            "content": "@@ -393,18 +393,16 @@\n i%5D)%0A%09%7D%0A%09\n-//\n fmt.Prin\n@@ -550,16 +550,19 @@\n  %7B*/%0A%09%0A%0A\n+%09/*\n %09for i :\n@@ -772,11 +772,13 @@\n %7D%0A%09%09%7D%0A%09%7D\n+*/\n %0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-20_09-28-40",
+            "content": "@@ -570,32 +570,45 @@\n 0; i %3C N; i++ %7B%0A\n+%09%09x := N - M%0A\n %09%09for j := 0; j \n@@ -626,21 +626,17 @@\n %09%09%09y := \n-N - M\n+x\n  - 1%0A%09%09%09\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-20_09-29-29",
+            "content": "@@ -632,17 +632,17 @@\n %09%09if id%5B\n-i\n+j\n %5D == sai\n@@ -645,17 +645,17 @@\n  sairam%5B\n-j\n+i\n %5D %7B%0A%09%09%09%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-20_09-30-18",
+            "content": "@@ -582,37 +582,8 @@\n + %7B%0A\n-%09%09cont := 0%0A%09%09y := N - M - 1%0A\n %09%09fo\n@@ -605,16 +605,34 @@\n ; j++ %7B%0A\n+%09%09%09y := N - M - 1%0A\n %09%09%09if id\n@@ -673,66 +673,21 @@\n else\n-%7B%0A%09%09%09%09cont++%0A%09%09%09%09%7D%0A%09%09%09%09if cont == M -1 %7B%0A%09%09%09%09%09if i\n+ if j\n  == y %7B%0A\n %09%09%09%09\n@@ -682,18 +682,16 @@\n  == y %7B%0A\n-%09%09\n %09%09%09%09fmt.\n@@ -713,17 +713,16 @@\n %5Bi%5D)%0A%09%09%09\n-%09\n %7D else %7B\n@@ -722,17 +722,16 @@\n  else %7B%0A\n-%09\n %09%09%09%09fmt.\n@@ -755,14 +755,8 @@\n i%5D)%0A\n-%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-20_09-35-35",
+            "content": "@@ -611,25 +611,8 @@\n - 1%0A\n-%09%09verificar := 0%0A\n %09%09fo\n@@ -634,16 +634,16 @@\n ; j++ %7B%0A\n+\n %09%09%09if id\n@@ -729,25 +729,17 @@\n %09%09%09%09%09if \n-verificar\n+i\n  == y %7B%0A\n@@ -772,17 +772,16 @@\n i%5D)%0A%09%09%09%09\n-%09\n %7D else %7B\n@@ -781,17 +781,16 @@\n  else %7B%0A\n-%09\n %09%09%09%09%09fmt\n@@ -815,43 +815,23 @@\n i%5D)%0A\n-%09%09%09%09%09%7D%0A%09%09%09%09%09verificar++%0A\n %09%09%09%09%7D%0A\n-\n %09%09%09%7D%0A\n+%09%09%7D%0A\n %09%7D%0A%7D\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-20_09-40-02",
+            "content": "@@ -590,16 +590,33 @@\n nt := 0%0A\n+%09%09y := N - M - 1%0A\n %09%09verifi\n@@ -759,17 +759,17 @@\n icar == \n-0\n+y\n  %7B%0A%09%09%09%09%09\n@@ -825,17 +825,16 @@\n Printf(%22\n- \n %25d %22, id\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-20_09-41-15",
+            "content": "@@ -592,18 +592,16 @@\n  := 0%0A%09%09\n-//\n verifica\n@@ -611,28 +611,8 @@\n = 0%0A\n-%09%09var verificar int%0A\n %09%09fo\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-20_09-42-41",
+            "content": "@@ -425,16 +425,17 @@\n sairam)%0A\n+%09\n %0A%09/*list\n@@ -548,16 +548,18 @@\n  j++ %7B*/\n+%0A%09\n %0A%0A%09for i\n@@ -590,16 +590,55 @@\n nt := 0%0A\n+%09%09//verificar := 0%0A%09%09var verificar int%0A\n %09%09for j \n@@ -660,26 +660,8 @@\n + %7B%0A\n-%09%09%09verificar := 0%0A\n %09%09%09i\n@@ -698,25 +698,24 @@\n ak%0A%09%09%09%7D else\n- \n %7B%0A%09%09%09%09cont++\n@@ -715,24 +715,25 @@\n %09cont++%0A\n+%09\n %09%09%09%7D%0A%09%09%09\n if cont \n@@ -724,16 +724,17 @@\n %09%09%09%7D%0A%09%09%09\n+%09\n if cont \n@@ -737,16 +737,17 @@\n ont == M\n+ \n -1 %7B%0A%09%09%09\n@@ -747,16 +747,17 @@\n 1 %7B%0A%09%09%09%09\n+%09\n if verif\n@@ -768,16 +768,17 @@\n  == 0 %7B%0A\n+%09\n %09%09%09%09%09fmt\n@@ -794,24 +794,25 @@\n %25d%22, id%5Bi%5D)%0A\n+%09\n %09%09%09%09%7D else %7B\n@@ -813,24 +813,25 @@\n else %7B%0A%09%09%09%09%09\n+%09\n fmt.Printf(%22\n@@ -833,16 +833,17 @@\n ntf(%22 %25d\n+ \n %22, id%5Bi%5D\n@@ -840,24 +840,25 @@\n d %22, id%5Bi%5D)%0A\n+%09\n %09%09%09%09%7D%0A%09%09%09%09ve\n@@ -855,16 +855,17 @@\n %09%09%7D%0A%09%09%09%09\n+%09\n verifica\n@@ -871,18 +871,20 @@\n ar++%0A%09%09%09\n+%09\n %7D%0A\n+%09\n %09%09%7D%0A%09%7D%0A%7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-20_09-43-36",
+            "content": "@@ -617,18 +617,16 @@\n ++ %7B%0A%09%09%09\n-//\n verifica\n@@ -636,29 +636,8 @@\n = 0%0A\n-%09%09%09var verificar int%0A\n %09%09%09i\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-20_09-43-52",
+            "content": "@@ -427,16 +427,18 @@\n iram)%0A%0A%09\n+/*\n lista :=\n@@ -549,126 +549,13 @@\n ++ %7B\n-%0A%09%09%09if id%5Bi%5D == sairam%5Bj%5D %7B%0A%09%09%09%09break%0A%09%09%09%7Delse%7B%0A%09%09%09%09lista = append(lista, id%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(lista)%09\n+*/\n %0A%0A%09\n-/*\n for \n@@ -617,16 +617,18 @@\n ++ %7B%0A%09%09%09\n+//\n verifica\n@@ -634,16 +634,37 @@\n ar := 0%0A\n+%09%09%09var verificar int%0A\n %09%09%09if id\n@@ -869,13 +869,11 @@\n %7D%0A%09%09%7D%0A%09%7D\n-*/\n %0A%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-20_09-52-27",
+            "content": "@@ -451,10 +451,8 @@\n int,\n-0,\n  N-M\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_09-52-55",
+            "content": "@@ -523,19 +523,8 @@\n + %7B%0A\n-%09%09cont :=0%0A\n %09%09fo\n@@ -597,44 +597,8 @@\n se%7B%0A\n-%09%09%09%09cont++%0A%09%09%09%7D%0A%09%09%09if cont == M-1 %7B%0A\n %09%09%09%09\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-20_09-54-05",
+            "content": "@@ -635,16 +635,18 @@\n ont == M\n+-1\n  %7B%0A%09%09%09%09l\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-20_09-54-51",
+            "content": "@@ -431,10 +431,8 @@\n )%0A%0A%09\n-/*\n list\n@@ -489,24 +489,24 @@\n cou na fila%0A\n+\n %09for i := 0;\n@@ -708,12 +708,12 @@\n a)%09%0A\n-*/\n %0A%09\n+/*\n for \n@@ -866,24 +866,26 @@\n if cont == M\n+-1\n  %7B%0A%09%09%09%09if ve\n@@ -1002,13 +1002,15 @@\n %09%09%7D%0A%09%09%7D%0A\n-\n %09%7D\n+*/\n %0A%7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-20_09-55-55",
+            "content": "@@ -427,16 +427,18 @@\n iram)%0A%0A%09\n+/*\n lista :=\n@@ -706,20 +706,20 @@\n lista)%09%0A\n+*/\n %0A%09\n-/*\n for i :=\n@@ -1004,13 +1004,11 @@\n %7D%0A%09%09%7D%0A%09%7D\n-*/\n %0A%7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-20_09-57-29",
+            "content": "@@ -689,120 +689,26 @@\n %7D%0A%09f\n-or i:=0; i%3CN-M; i++ %7B%0A%09%09if i == 0 %7B%0A%09%09%09fmt.Printf(%22%25d%22, lista%5Bi%5D)%0A%09%09%7Delse%7B%0A%09%09%09fmt.Printf(%22 %25d%22, lista%5Bi%5D)%0A%09%09%7D%0A%09%7D\n+mt.Println(lista)%09\n %0A%0A%09/\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-20_09-59-33",
+            "content": "@@ -721,13 +721,9 @@\n  == \n-N-M-1\n+0\n  %7B%0A%09\n@@ -779,11 +779,11 @@\n tf(%22\n+ \n %25d\n- \n %22, l\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-20_10-00-18",
+            "content": "@@ -713,25 +713,29 @@\n %7B%0A%09%09if i == \n-0\n+N-M-1\n  %7B%0A%09%09%09fmt.Pr\n@@ -779,19 +779,19 @@\n Printf(%22\n- \n %25d\n+ \n %22, lista\n@@ -803,48 +803,8 @@\n %09%09%7D%0A\n-%09%09if i==N-M-1 %7B%0A%09%09%09fmt.Printf(%22%5Cn%22)%0A%09%09%7D%0A\n %09%7D%0A%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-20_10-00-46",
+            "content": "@@ -826,17 +826,18 @@\n Printf(%22\n- \n+%5Cn\n %22)%0A%09%09%7D%0A%09\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-20_10-01-20",
+            "content": "@@ -684,18 +684,16 @@\n %09%09%7D%0A%09%7D%0A%09\n-/*\n for i:=0\n@@ -838,98 +838,8 @@\n %09%09%7D%0A\n-%09%7D*/%0A%09saida := %22%22%0A%09for i:=0; i%3CN-M; i++ %7B%0A%09%09fmt.Sprint(saida, i)%0A%09%09fmt.Sprint(saida, %22 %22)%0A\n %09%7D%0A%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-20_10-06-07",
+            "content": "@@ -852,17 +852,16 @@\n ida := %22\n- \n %22%0A%09for i\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_10-08-00",
+            "content": "@@ -852,16 +852,17 @@\n ida := %22\n+ \n %22%0A%09for i\n@@ -899,24 +899,17 @@\n (saida, \n-lista%5Bi%5D\n+i\n )%0A%09%09fmt.\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_10-26-50",
+            "content": "@@ -940,43 +940,8 @@\n %0A%09%7D%0A\n-%09fmt.Println(saida%5B0:len(saida)-1%5D)\n %0A%09/*\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_10-28-54",
+            "content": "@@ -880,24 +880,16 @@\n i++ %7B%0A%09%09\n-saida = \n fmt.Spri\n@@ -914,16 +914,8 @@\n )%0A%09%09\n-saida = \n fmt.\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_10-30-55",
+            "content": "@@ -920,27 +920,8 @@\n i%5D)%0A\n-%09%09if i == N-M-1 %7B%09%0A\n %09%09sa\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_10-31-37",
+            "content": "@@ -937,17 +937,16 @@\n -1 %7B%09%0A%09%09\n-%09\n saida = \n@@ -968,20 +968,16 @@\n a, %22 %22)%0A\n-%09%09%7D%0A\n %09%7D%0A%09fmt.\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-20_10-31-52",
+            "content": "@@ -927,9 +927,9 @@\n f i \n-!\n+=\n = N-\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-20_10-32-06",
+            "content": "@@ -916,16 +916,36 @@\n sta%5Bi%5D)%0A\n+%09%09if i != N-M-1 %7B%09%0A%09\n %09%09saida \n@@ -969,16 +969,20 @@\n a, %22 %22)%0A\n+%09%09%7D%0A\n %09%7D%0A%09fmt.\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-20_10-32-49",
+            "content": "@@ -992,26 +992,8 @@\n 1%5D)%0A\n-%09fmt.Printf(%22%5Cn%22)%0A\n %09/*f\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-03-20_10-33-28",
+            "content": "@@ -997,25 +997,26 @@\n fmt.Printf(%22\n- \n+%5Cn\n %22)%0A%09/*for i \n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-20_10-33-37",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int //qtd inicial de pessoas na fila\n\tfmt.Scanf(\"%d\", &N)\n\tid := make([]int, N) //id de cada pessoa na fila\n\tvar M int            //qtd de pessoas que sairam da fila\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scanf(\"%d\", &id[i])\n\t}\n\tfmt.Scan(&M)\n\tsairam := make([]int, M) //id de cada pessoa que saiu da fila\n\tfor i := 0; i < M; i++ {\n\t\tfmt.Scan(&sairam[i])\n\t}\n\t//fmt.Println(N, M, id, sairam)\n\n\tlista := make([]int,0, N-M) //id de cada pessoa que ficou na fila\n\tfor i := 0; i < N; i++ {\n\t\tcont :=0\n\t\tfor j := 0; j < M; j++ {\n\t\t\tif id[i] == sairam[j] {\n\t\t\t\tbreak\n\t\t\t}else{\n\t\t\t\tcont++\n\t\t\t}\n\t\t\tif cont == M {\n\t\t\t\tlista = append(lista, id[i])\n\t\t\t}\n\t\t}\n\t}\n\t/*for i:=0; i<N-M; i++ {\n\t\tif i == 0 {\n\t\t\tfmt.Printf(\"%d\", lista[i])\n\t\t}else{\n\t\t\tfmt.Printf(\" %d\", lista[i])\n\t\t}\n\t\tif i==N-M-1 {\n\t\t\tfmt.Printf(\" \")\n\t\t}\n\t}*/\n\tsaida := \"\"\n\tfor i:=0; i<N-M; i++ {\n\t\tsaida = fmt.Sprint(saida, lista[i])\n\t\tsaida = fmt.Sprint(saida, \" \")\n\t}\n\tfmt.Println(saida[0:len(saida)-1])\n\tfmt.Printf(\" \")\n\t/*for i := 0; i < N; i++ {\n\t\tcont := 0\n\t\tfor j := 0; j < M; j++ {\n\t\t\tverificar := 0\n\t\t\tif id[i] == sairam[j] {\n\t\t\t\tbreak\n\t\t\t} else {\n\t\t\t\tcont++\n\t\t\t}\n\t\t\tif cont == M {\n\t\t\t\tif verificar == 0 {\n\t\t\t\t\tfmt.Printf(\"%d\", id[i])\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\" %d\", id[i])\n\t\t\t\t}\n\t\t\t\tverificar++\n\t\t\t}\n\t\t}\n\t}*/\n}\n",
+            "lines": "70"
         }
     ]
 }
