@@ -15,38 +15,32 @@ func main() {
 	for i := 0; i < M; i++ {
 		fmt.Scan(&sairam[i])
 	}
+
 	//fmt.Println(N, M, id, sairam)
 
-	lista := make([]int,0, N-M) //id de cada pessoa que ficou na fila
+	lista := make([]int, 0) //id de cada pessoa que ficou na fila
+	sairamCount := make(map[int]int)
+	for j := 0; j < M; j++ {
+		sairamCount[sairam[j]]++
+	}
+
 	for i := 0; i < N; i++ {
-		cont :=0
-		for j := 0; j < M; j++ {
-			if id[i] == sairam[j] {
-				break
-			}else{
-				cont++
-			}
-			if cont == M {
-				lista = append(lista, id[i])
-			}
+		if sairamCount[id[i]] > 0 {
+			sairamCount[id[i]]--
+			continue
 		}
+		lista = append(lista, id[i])
 	}
-	/*for i:=0; i<N-M; i++ {
-		if i == 0 {
-			fmt.Printf("%d", lista[i])
-		}else{
-			fmt.Printf(" %d", lista[i])
-		}
-		if i==N-M-1 {
-			fmt.Printf(" ")
-		}
-	}*/
+
 	saida := ""
-	for i:=0; i<N-M; i++ {
+	for i := 0; i < len(lista); i++ {
 		saida = fmt.Sprint(saida, lista[i])
-		saida = fmt.Sprint(saida, " ")
+		if i < len(lista)-1 {
+			saida = fmt.Sprint(saida, " ")
+		}
 	}
-	fmt.Println(saida[0:len(saida)-1])
+	fmt.Print(saida)
+	fmt.Print(" \n")
 	//fmt.Printf(" ")
 	/*for i := 0; i < N; i++ {
 		cont := 0

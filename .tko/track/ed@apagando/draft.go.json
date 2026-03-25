@@ -302,8 +302,133 @@
         },
         {
             "label": "2026-03-20_10-33-37",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int //qtd inicial de pessoas na fila\n\tfmt.Scanf(\"%d\", &N)\n\tid := make([]int, N) //id de cada pessoa na fila\n\tvar M int            //qtd de pessoas que sairam da fila\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scanf(\"%d\", &id[i])\n\t}\n\tfmt.Scan(&M)\n\tsairam := make([]int, M) //id de cada pessoa que saiu da fila\n\tfor i := 0; i < M; i++ {\n\t\tfmt.Scan(&sairam[i])\n\t}\n\t//fmt.Println(N, M, id, sairam)\n\n\tlista := make([]int,0, N-M) //id de cada pessoa que ficou na fila\n\tfor i := 0; i < N; i++ {\n\t\tcont :=0\n\t\tfor j := 0; j < M; j++ {\n\t\t\tif id[i] == sairam[j] {\n\t\t\t\tbreak\n\t\t\t}else{\n\t\t\t\tcont++\n\t\t\t}\n\t\t\tif cont == M {\n\t\t\t\tlista = append(lista, id[i])\n\t\t\t}\n\t\t}\n\t}\n\t/*for i:=0; i<N-M; i++ {\n\t\tif i == 0 {\n\t\t\tfmt.Printf(\"%d\", lista[i])\n\t\t}else{\n\t\t\tfmt.Printf(\" %d\", lista[i])\n\t\t}\n\t\tif i==N-M-1 {\n\t\t\tfmt.Printf(\" \")\n\t\t}\n\t}*/\n\tsaida := \"\"\n\tfor i:=0; i<N-M; i++ {\n\t\tsaida = fmt.Sprint(saida, lista[i])\n\t\tsaida = fmt.Sprint(saida, \" \")\n\t}\n\tfmt.Println(saida[0:len(saida)-1])\n\tfmt.Printf(\" \")\n\t/*for i := 0; i < N; i++ {\n\t\tcont := 0\n\t\tfor j := 0; j < M; j++ {\n\t\t\tverificar := 0\n\t\t\tif id[i] == sairam[j] {\n\t\t\t\tbreak\n\t\t\t} else {\n\t\t\t\tcont++\n\t\t\t}\n\t\t\tif cont == M {\n\t\t\t\tif verificar == 0 {\n\t\t\t\t\tfmt.Printf(\"%d\", id[i])\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\" %d\", id[i])\n\t\t\t\t}\n\t\t\t\tverificar++\n\t\t\t}\n\t\t}\n\t}*/\n}\n",
+            "content": "@@ -989,18 +989,16 @@\n a)-1%5D)%0A%09\n-//\n fmt.Prin\n",
             "lines": "70"
+        },
+        {
+            "label": "2026-03-23_20-56-55",
+            "content": "@@ -988,33 +988,16 @@\n da)-1%5D)%0A\n-%09fmt.Printf(%22 %22)%0A\n %09//fmt.P\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-03-24_13-20-57",
+            "content": "@@ -1006,10 +1006,8 @@\n f(%22 \n-%5Cn\n %22)%0A%09\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-21-20",
+            "content": "@@ -684,16 +684,18 @@\n %09%09%7D%0A%09%7D%0A%09\n+/*\n for i:=0\n@@ -838,20 +838,20 @@\n )%0A%09%09%7D%0A%09%7D\n+*/\n %0A%09\n-/*\n saida :=\n@@ -1010,10 +1010,8 @@\n %5Cn%22)\n-*%5C\n %0A%09//\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-25-13",
+            "content": "@@ -684,18 +684,16 @@\n %09%09%7D%0A%09%7D%0A%09\n-/*\n for i:=0\n@@ -840,12 +840,12 @@\n %7D%0A%09%7D\n-*/\n %0A%09\n+/*\n said\n@@ -1004,16 +1004,18 @@\n f(%22 %5Cn%22)\n+*%5C\n %0A%09//fmt.\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-26-59",
+            "content": "@@ -998,16 +998,17 @@\n mt.Print\n+f\n (%22 %5Cn%22)%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-27-15",
+            "content": "@@ -958,24 +958,26 @@\n %7D%0A%09fmt.Print\n+ln\n (saida%5B0:len\n@@ -1001,16 +1001,18 @@\n Print(%22 \n+%5Cn\n %22)%0A%09//fm\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-27-39",
+            "content": "@@ -986,16 +986,31 @@\n da)-1%5D)%0A\n+%09fmt.Print(%22 %22)\n %0A%09//fmt.\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-27-49",
+            "content": "@@ -447,17 +447,16 @@\n e(%5B%5Dint,\n- \n 0, N-M) \n@@ -489,24 +489,24 @@\n cou na fila%0A\n+\n %09for i := 0;\n@@ -520,33 +520,32 @@\n  i++ %7B%0A%09%09cont :=\n- \n 0%0A%09%09for j := 0; \n@@ -590,38 +590,36 @@\n %7B%0A%09%09%09%09break%0A%09%09%09%7D\n- \n else\n- \n %7B%0A%09%09%09%09cont++%0A%09%09%09\n@@ -860,27 +860,23 @@\n %22%0A%09for i\n- \n :=\n- \n 0; i\n- %3C \n+%3C\n N-M; i++\n@@ -974,11 +974,9 @@\n da%5B0\n- : \n+:\n len(\n@@ -990,25 +990,8 @@\n 1%5D)%0A\n-%09fmt.Print(%22 %5Cn%22)\n %0A%09//\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-28-03",
+            "content": "@@ -639,18 +639,16 @@\n ont == M\n--1\n  %7B%0A%09%09%09%09l\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-30-04",
+            "content": "@@ -635,24 +635,26 @@\n if cont == M\n+-1\n  %7B%0A%09%09%09%09lista\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-30-13",
+            "content": "@@ -392,17 +392,16 @@\n %5Bi%5D)%0A%09%7D%0A\n-%0A\n %09//fmt.P\n@@ -458,10 +458,8 @@\n  N-M\n-+1\n ) //\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-03-24_13-56-12",
+            "content": "@@ -455,16 +455,18 @@\n , 0, N-M\n++1\n ) //id d\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-24_13-56-20",
+            "content": "@@ -395,142 +395,8 @@\n )%0A%09%7D\n-%0A%09tamanho := M%0A%09for i := 0; i %3C M; i++ %7B%0A%09%09for j := 0; j %3C M; j++ %7B%0A%09%09%09if sairam%5Bi%5D == sairam%5Bj%5D %7B%0A%09%09%09%09tamanho--%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%0A%09/\n@@ -458,15 +458,9 @@\n , N-\n-tamanho\n+M\n ) //\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-24_13-59-24",
+            "content": "@@ -779,23 +779,17 @@\n cont == \n-tamanho\n+M\n  %7B%0A%09%09%09%09l\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-03-24_14-00-15",
+            "content": "@@ -599,10 +599,8 @@\n anho\n-+1\n ) //\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-03-24_14-02-15",
+            "content": "@@ -590,11 +590,19 @@\n  0, \n-100\n+N-tamanho+1\n ) //\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-03-24_14-03-42",
+            "content": "@@ -391,16 +391,150 @@\n m%5Bi%5D)%0A%09%7D\n+%0A%09tamanho := M%0A%09for i := 0; i %3C M; i++ %7B%0A%09%09for j := 0; j %3C M; j++ %7B%0A%09%09%09if sairam%5Bi%5D == sairam%5Bj%5D %7B%0A%09%09%09%09tamanho--%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%0A%09//fmt\n@@ -586,19 +586,19 @@\n int, 0, \n-N-M\n+100\n ) //id d\n@@ -769,25 +769,31 @@\n %09if cont == \n-M\n+tamanho\n  %7B%0A%09%09%09%09lista\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-03-24_14-05-05",
+            "content": "@@ -450,16 +450,21 @@\n %5B%5Dint, 0\n+, N-M\n ) //id d\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-24_14-08-03",
+            "content": "@@ -494,10 +494,8 @@\n ila%0A\n-%09%0A\n %09for\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-03-24_14-16-49",
+            "content": "@@ -495,116 +495,220 @@\n la%0A%09\n-sairamCount := make(map%5Bint%5Dint)%0A%09for j := 0; j %3C M; j++ %7B%0A%09%09sairamCount%5Bsairam%5Bj%5D%5D++%0A\n+%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09cont := 0%0A%09%09for j := 0; j %3C M; j++ %7B%0A%09%09%09if id%5Bi%5D == sairam%5Bj%5D %7B%0A%09%09%09%09break%0A%09%09%09%7D else %7B%0A%09%09%09%09cont++%0A%09%09%09%7D%0A%09%09%09if cont == M %7B%0A%09%09%09%09lista = append(lista, id%5Bi%5D)%0A%09%09%09%7D%0A%09\n %09%7D%0A\n-%0A\n %09\n+%7D%0A%09/*\n for i\n- \n :=\n- \n 0; i\n- %3C N\n+%3CN-M\n ; i+\n@@ -720,107 +720,134 @@\n %09if \n-sairamCount%5Bid%5Bi%5D%5D %3E 0 %7B%0A%09%09%09sairamCount%5Bid%5Bi%5D%5D--%0A%09%09%09continue%0A%09%09%7D%0A%09%09lista = append(lista, id%5Bi%5D\n+i == 0 %7B%0A%09%09%09fmt.Printf(%22%25d%22, lista%5Bi%5D)%0A%09%09%7Delse%7B%0A%09%09%09fmt.Printf(%22 %25d%22, lista%5Bi%5D)%0A%09%09%7D%0A%09%09if i==N-M-1 %7B%0A%09%09%09fmt.Printf(%22 %22\n )%0A\n+%09\n %09%7D%0A\n+%09%7D*/\n %0A%09sa\n@@ -873,26 +873,19 @@\n  0; i %3C \n-len(lista)\n+N-M\n ; i++ %7B%0A\n@@ -926,33 +926,8 @@\n i%5D)%0A\n-%09%09if i %3C len(lista)-1 %7B%0A%09\n %09%09sa\n@@ -959,57 +959,46 @@\n  %22)%0A\n-%09\n %09%7D%0A%09\n-%7D%0A%09if len(saida) %3E 0 %7B%0A%09%09fmt.Print\n+fmt.Print(saida%5B0 : len\n (saida)\n-%0A%09%7D\n+-1%5D)\n %0A%09fm\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-03-24_14-18-41",
+            "content": "@@ -864,18 +864,16 @@\n %09%09%7D%0A%09%7D%0A%09\n-//\n if len(s\n@@ -903,18 +903,16 @@\n (saida)%0A\n-//\n %09%7D%0A%09fmt.\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-24_14-24-51",
+            "content": "@@ -859,24 +859,48 @@\n %22 %22)%0A%09%09%7D%0A%09%7D%0A\n+%09//if len(saida) %3E 0 %7B%0A%09\n %09fmt.Print(s\n@@ -905,16 +905,21 @@\n (saida)%0A\n+//%09%7D%0A\n %09fmt.Pri\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-03-24_14-25-03",
+            "content": "@@ -800,18 +800,16 @@\n a%5Bi%5D)%0A%09%09\n-//\n if i %3C l\n@@ -858,18 +858,16 @@\n  %22 %22)%0A%09%09\n-//\n %7D%0A%09%7D%0A%09fm\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-24_14-25-22",
+            "content": "@@ -800,16 +800,18 @@\n a%5Bi%5D)%0A%09%09\n+//\n if i %3C l\n@@ -860,16 +860,18 @@\n  %22 %22)%0A%09%09\n+//\n %7D%0A%09%7D%0A%09fm\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-03-24_14-25-31",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int //qtd inicial de pessoas na fila\n\tfmt.Scanf(\"%d\", &N)\n\tid := make([]int, N) //id de cada pessoa na fila\n\tvar M int            //qtd de pessoas que sairam da fila\n\tfor i := 0; i < N; i++ {\n\t\tfmt.Scanf(\"%d\", &id[i])\n\t}\n\tfmt.Scan(&M)\n\tsairam := make([]int, M) //id de cada pessoa que saiu da fila\n\tfor i := 0; i < M; i++ {\n\t\tfmt.Scan(&sairam[i])\n\t}\n\n\t//fmt.Println(N, M, id, sairam)\n\n\tlista := make([]int, 0) //id de cada pessoa que ficou na fila\n\tsairamCount := make(map[int]int)\n\tfor j := 0; j < M; j++ {\n\t\tsairamCount[sairam[j]]++\n\t}\n\n\tfor i := 0; i < N; i++ {\n\t\tif sairamCount[id[i]] > 0 {\n\t\t\tsairamCount[id[i]]--\n\t\t\tcontinue\n\t\t}\n\t\tlista = append(lista, id[i])\n\t}\n\n\tsaida := \"\"\n\tfor i := 0; i < len(lista); i++ {\n\t\tsaida = fmt.Sprint(saida, lista[i])\n\t\tif i < len(lista)-1 {\n\t\t\tsaida = fmt.Sprint(saida, \" \")\n\t\t}\n\t}\n\tfmt.Print(saida)\n\tfmt.Print(\" \\n\")\n\t//fmt.Printf(\" \")\n\t/*for i := 0; i < N; i++ {\n\t\tcont := 0\n\t\tfor j := 0; j < M; j++ {\n\t\t\tverificar := 0\n\t\t\tif id[i] == sairam[j] {\n\t\t\t\tbreak\n\t\t\t} else {\n\t\t\t\tcont++\n\t\t\t}\n\t\t\tif cont == M {\n\t\t\t\tif verificar == 0 {\n\t\t\t\t\tfmt.Printf(\"%d\", id[i])\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\" %d\", id[i])\n\t\t\t\t}\n\t\t\t\tverificar++\n\t\t\t}\n\t\t}\n\t}*/\n}\n",
+            "lines": "64"
         }
     ]
 }

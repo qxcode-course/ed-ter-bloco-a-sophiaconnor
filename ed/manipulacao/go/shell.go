@@ -3,44 +3,94 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	var result []int
+	for _, v := range vet {
+		if v > 0 {
+			result = append(result, v)
+		}
+	}
+	return result
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	var result []int
+	for _, v := range vet {
+		if v > -10 && v < 0 {
+			result = append(result, v)
+		}
+	}
+	return result
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	result := make([]int, len(vet))
+	copy(result, vet)
+	sort.Ints(result)
+	return result
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	result := make([]int, len(vet))
+	copy(result, vet)
+	
+	sort.Slice(result, func(i, j int) bool {
+		// Converte primeiro para float, depois divide, para não perder as casas decimais
+		valI := math.Abs(float64(result[i]) / 10.0)
+		valJ := math.Abs(float64(result[j]) / 10.0)
+		return valI < valJ
+	})
+	
+	return result
 }
 
+
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	result := make([]int, len(vet))
+	for i, v := range vet {
+		result[len(vet)-1-i] = v
+	}
+	return result
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	seen := make(map[int]bool)
+	var result []int
+	for _, v := range vet {
+		if !seen[v] {
+			seen[v] = true
+			result = append(result, v)
+		}
+	}
+	return result
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	count := make(map[int]int)
+	for _, v := range vet {
+		count[v]++
+	}
+	var keys []int
+	for v, c := range count {
+		if c > 1 {
+			keys = append(keys, v)
+		}
+	}
+	sort.Ints(keys)
+	var result []int
+	for _, v := range keys {
+		for i := 0; i < count[v]-1; i++ {
+			result = append(result, v)
+		}
+	}
+	return result
 }
 
 func main() {
@@ -103,4 +153,3 @@ func str2vet(s string) []int {
 	}
 	return vet
 }
-

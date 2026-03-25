@@ -13,12 +13,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@pilha-e-fila
-- ed@análise
-- ed@side-quests
-- sandbox@sandbox:00_rascunhos
-- ed@main-quest
-- sandbox@sandbox
+- ed@map_set
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, friend:nao}'
   ed@mumia: '{self:1, rate:100, study:10, friend:nao}'
@@ -27,13 +22,15 @@ tasks:
   ed@casais: '{self:1, rate:100, study:50, friend:sim}'
   ed@baruel: '{rate:100}'
   ed@gomos: '{self:1, rate:100, study:26, friend:nao}'
+  ed@apagando: '{self:1, rate:100, study:180, friend:nao, code:1, refactor:1}'
+  ed@manipulacao: '{self:1, rate:100, study:100, friend:110, code:1, refactor:1}'
   ed@rotacoes: '{self:1, rate:100, study:61, friend:nao, code:1}'
 flags:
-  painel: 0
-  quests: 0
-  tracks: 0
+  panel: 0
+  inbox: 0
+  show_panel: 0
   tasks: 0
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@alternando
+selected: ed@apagando
