@@ -10,7 +10,7 @@ func main() {
 	for i := 0; i < T; i++ {
 		fmt.Scan(&vetor[i])
 	}
-    //parte implementada por ia
+    
 	if T == 0 {
 		fmt.Println("[ ]")
 		return
@@ -20,7 +20,7 @@ func main() {
 	if r < 0 {
 		r += T
 	}
-    // fim da parte implementada por ia
+    
     
 	vetor_rotacionado := make([]int, 0, T)
 	for i := T - r; i < T; i++ {
