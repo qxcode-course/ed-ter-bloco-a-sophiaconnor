@@ -1,0 +1,12 @@
+2026-04-03 23:35:38, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-04-03 23:35:40, EXEC, v:1, k:ed@eh_primo, mode:FULL, fail:COMP
+2026-04-03 23:36:11, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:0, size:25
+2026-04-03 23:40:02, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:0, size:25
+2026-04-03 23:41:49, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:0
+2026-04-03 23:43:05, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:29
+2026-04-03 23:43:43, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:24
+2026-04-03 23:44:14, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-04-03 23:45:22, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:15, refactor:1
+2026-04-03 23:51:40, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-03 23:55:23, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:47
+2026-04-03 23:56:19, MOVE, v:1, k:ed@triangulo, mode:BACK

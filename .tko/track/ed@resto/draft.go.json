@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_14-13-27",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func res\n@@ -48,135 +48,105 @@\n nt) \n-%7B%0A%09\n+int %7B%0A    \n if num\n- \n ==\n- 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09resto := num %25 2%0A%09quociente := num / 2%0A%09resultados(quociente)%0A%09fmt.Println(quociente, resto)\n+1%7B%0A        return 0%0A    %7D%0A    num = num/2%0A    resultados(num)%0A    return num\n %0A%7D%0A\n-%0A\n func\n@@ -155,17 +155,20 @@\n ain() %7B%0A\n-%09\n+    \n var num \n@@ -171,17 +171,20 @@\n num int%0A\n-%09\n+    \n fmt.Scan\n@@ -194,20 +194,37 @@\n um)%0A\n-%09\n+    \n resu\n-l\n tados\n-(\n+ := make(%5B%5Dint, \n num)\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-02_12-17-07",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc resultados(num int) {\n\tif num == 0 {\n\t\treturn\n\t}\n\n\tresto := num % 2\n\tquociente := num / 2\n\tresultados(quociente)\n\tfmt.Println(quociente, resto)\n}\n\nfunc main() {\n\tvar num int\n\tfmt.Scan(&num)\n\tresultados(num)\n}\n",
+            "lines": "20"
+        }
+    ]
+}
