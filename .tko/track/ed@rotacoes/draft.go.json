@@ -147,7 +147,12 @@
         },
         {
             "label": "2026-03-20_14-48-48",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar T, R int\n\tfmt.Scan(&T, &R)\n\n\tvetor := make([]int, T)\n\tfor i := 0; i < T; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n    //parte implementada por ia\n\tif T == 0 {\n\t\tfmt.Println(\"[ ]\")\n\t\treturn\n\t}\n    \n\tr := R % T\n\tif r < 0 {\n\t\tr += T\n\t}\n    // fim da parte implementada por ia\n    \n\tvetor_rotacionado := make([]int, 0, T)\n\tfor i := T - r; i < T; i++ {\n\t\tvetor_rotacionado = append(vetor_rotacionado, vetor[i])\n\t}\n\tfor i := 0; i < T-r; i++ {\n\t\tvetor_rotacionado = append(vetor_rotacionado, vetor[i])\n\t}\n\n\tfmt.Print(\"[ \")\n\tfor i, v := range vetor_rotacionado {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t\tfmt.Print(v)\n\t}\n\tfmt.Println(\" ]\")\n   // fmt.Println(vetor_rotacionado)\n}\n",
+            "content": "@@ -148,16 +148,43 @@\n %0A%09%7D%0A    \n+//parte implementada por ia\n %0A%09if T =\n@@ -267,16 +267,51 @@\n %0A%09%7D%0A    \n+// fim da parte implementada por ia\n %0A    %0A%09v\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-04_00-11-27",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar T, R int\n\tfmt.Scan(&T, &R)\n\n\tvetor := make([]int, T)\n\tfor i := 0; i < T; i++ {\n\t\tfmt.Scan(&vetor[i])\n\t}\n    \n\tif T == 0 {\n\t\tfmt.Println(\"[ ]\")\n\t\treturn\n\t}\n    \n\tr := R % T\n\tif r < 0 {\n\t\tr += T\n\t}\n    \n    \n\tvetor_rotacionado := make([]int, 0, T)\n\tfor i := T - r; i < T; i++ {\n\t\tvetor_rotacionado = append(vetor_rotacionado, vetor[i])\n\t}\n\tfor i := 0; i < T-r; i++ {\n\t\tvetor_rotacionado = append(vetor_rotacionado, vetor[i])\n\t}\n\n\tfmt.Print(\"[ \")\n\tfor i, v := range vetor_rotacionado {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t\tfmt.Print(v)\n\t}\n\tfmt.Println(\" ]\")\n   // fmt.Println(vetor_rotacionado)\n}\n",
             "lines": "42"
         }
     ]
