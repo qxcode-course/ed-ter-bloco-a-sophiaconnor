@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-05_19-44-13",
+            "content": "@@ -545,12 +545,8 @@\n e%0A%09%7D\n-*/%0A%09\n %0A%09re\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-05_19-44-33",
+            "content": "@@ -250,122 +250,8 @@\n l %7B%0A\n-%09_, _ = a, b%0A%09if len(a) == 0 && len(b) == 0 %7B%0A%09%09return true%0A%09%7D%0A%09if len(a) == 0 %7C%7C len(b) == 0 %7B%0A%09%09return false%0A%09%7D%0A\n %09// \n@@ -304,16 +304,16 @@\n amanhos%0A\n+\n %09// util\n@@ -496,16 +496,18 @@\n lse%0A%09%7D%0A%09\n+/*\n i := 1%0A%09\n@@ -545,13 +545,12 @@\n e%0A%09%7D\n+*/\n %0A%09\n-i++\n %0A%09re\n@@ -813,18 +813,29 @@\n liares%0A%09\n-//\n+_, _ = a, b%0A%09\n return f\n@@ -838,16 +838,18 @@\n rn false\n+%0A%7D\n %0A%0Afunc m\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-04-05_20-03-41",
+            "content": "@@ -614,10 +614,8 @@\n %09%7D%0A%09\n-/*\n i :=\n@@ -662,10 +662,8 @@\n %09i++\n-*/\n %0A%09re\n@@ -681,16 +681,16 @@\n s(a%5B\n-0\n+1\n :%5D, b%5B\n-0\n+1\n :%5D)%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-05_20-09-53",
+            "content": "@@ -208,16 +208,17 @@\n sinatura\n+%0A\n func equ\n@@ -251,95 +251,100 @@\n  %7B%0A%09\n-// 1. Verifica se ambos terminaram ao mesmo tempo (iguais)%0A%09if EhVazio(a) && EhVazio(b)\n+_, _ = a, b%0A%09if len(a) == 0 && len(b) == 0 %7B%0A%09%09return true%0A%09%7D%0A%09if len(a) == 0 %7C%7C len(b) == 0\n  %7B%0A%09\n@@ -355,78 +355,131 @@\n urn \n-tru\n+fals\n e%0A%09%7D%0A\n-%0A\n %09// \n-2. Se um acabou e o outro n%C3%A3o, os tamanhos s%C3%A3o diferentes\n+n%C3%A3o use a fun%C3%A7%C3%A3o len para ver ou comparar os tamanhos%0A%09// utilize a fun%C3%A7%C3%A3o EhVazio para ver se o vetor %C3%A9 vazio\n %0A%09if\n@@ -490,18 +490,18 @@\n azio(a) \n-%7C%7C\n+&&\n  EhVazio\n@@ -519,59 +519,64 @@\n urn \n-fals\n+tru\n e%0A%09%7D%0A\n-%0A%09// 3. Compara APENAS o primeiro elemento\n+%09if EhVazio(a) %7C%7C EhVazio(b) %7B%0A%09%09return false%0A%09%7D\n %0A%09if\n@@ -613,46 +613,61 @@\n %0A%09%7D%0A\n-%0A\n %09/\n-/ 4. Recurs%C3%A3o para o resto do vetor\n+*i := 1%0A%09if a%5Bi%5D != b%5Bi%5D %7B%0A%09%09return false%0A%09%7D%0A%09i++*/\n %0A%09re\n@@ -671,16 +671,17 @@\n %09return \n+%09\n equals(a\n@@ -685,23 +685,22 @@\n s(a%5B\n-1\n+0\n :%5D, b%5B\n-1\n+0\n :%5D)%0A%7D%0A\n-%0A\n %09// \n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-05_20-11-13",
+            "content": "@@ -309,106 +309,8 @@\n is)%0A\n-%09func equals(a %5B%5Dint, b %5B%5Dint) bool %7B%0A%09// 1. Verifica se ambos terminaram ao mesmo tempo (iguais)%0A\n %09if \n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-05_20-12-43",
+            "content": "@@ -348,140 +348,345 @@\n  %7B%0A%09\n-if EhVazio(a) && EhVazio(b) %7B%0A%09%09return true%0A%09%7D%0A%09if EhVazio(a) %7C%7C EhVazio(b) %7B%0A%09%09return false%0A%09%7D%0A%09if a%5B0%5D != b%5B0%5D %7B%0A%09%09return false%0A%09%7D\n+// 1. Verifica se ambos terminaram ao mesmo tempo (iguais)%0A%09if EhVazio(a) && EhVazio(b) %7B%0A%09%09return true%0A%09%7D%0A%0A%09// 2. Se um acabou e o outro n%C3%A3o, os tamanhos s%C3%A3o diferentes%0A%09if EhVazio(a) %7C%7C EhVazio(b) %7B%0A%09%09return false%0A%09%7D%0A%0A%09// 3. Compara APENAS o primeiro elemento%0A%09if a%5B0%5D != b%5B0%5D %7B%0A%09%09return false%0A%09%7D%0A%0A%09// 4. Recurs%C3%A3o para o resto do vetor\n %0A%09re\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-04-05_20-13-38",
+            "content": "@@ -310,14 +310,8 @@\n s)%0A%09\n-%0A%09%0A%09/*\n func\n@@ -510,494 +510,8 @@\n :%5D)%0A\n-%7D*/%0Afunc equals(a %5B%5Dint, b %5B%5Dint) bool %7B%0A%09//_, _ = a, b%0A%09if len(a) == 0 && len(b) == 0 %7B%0A%09%09return true%0A%09%7D%0A%09if len(a) == 0 %7C%7C len(b) == 0 %7B%0A%09%09return false%0A%09%7D%0A%09// n%C3%A3o use a fun%C3%A7%C3%A3o len para ver ou comparar os tamanhos%0A%09// utilize a fun%C3%A7%C3%A3o EhVazio para ver se o vetor %C3%A9 vazio%0A%09if EhVazio(a) && EhVazio(b) %7B%0A%09%09return true%0A%09%7D%0A%09if EhVazio(a) %7C%7C EhVazio(b) %7B%0A%09%09return false%0A%09%7D%0A%09if a%5B0%5D != b%5B0%5D %7B%0A%09%09return false%0A%09%7D%0A%09i := 1%0A%09if a%5Bi%5D != b%5Bi%5D %7B%0A%09%09return false%0A%09%7D%0A%09i++%0A%09return %09equals(a%5B1:%5D, b%5B1:%5D)%0A\n %7D%0A%0A%09\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-05_20-15-04",
+            "content": "@@ -910,32 +910,82 @@\n return false%0A%09%7D%0A\n+%09i := 1%0A%09if a%5Bi%5D != b%5Bi%5D %7B%0A%09%09return false%0A%09%7D%0A%09i++%0A\n %09return %09equals(\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-04-05_20-15-16",
+            "content": "@@ -305,16 +305,227 @@\n iguais)%0A\n+%09%0A%09%0A%09/*func equals(a %5B%5Dint, b %5B%5Dint) bool %7B%0A%09if EhVazio(a) && EhVazio(b) %7B%0A%09%09return true%0A%09%7D%0A%09if EhVazio(a) %7C%7C EhVazio(b) %7B%0A%09%09return false%0A%09%7D%0A%09if a%5B0%5D != b%5B0%5D %7B%0A%09%09return false%0A%09%7D%0A%09return equals(a%5B1:%5D, b%5B1:%5D)%0A%7D*/%0A\n func equ\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-04-05_20-15-45",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc EhVazio(vet []int) bool {\n\tif len(vet) == 0 {\n\t\treturn true\n\t}\n\t//return fmt.Sprint(vet) == \"[]\"\n\treturn false\n}\n\n// n\u00e3o altere a assinaturafunc equals(a []int, b []int) bool {\n\t// 1. Verifica se ambos terminaram ao mesmo tempo (iguais)\nfunc equals(a []int, b []int) bool {\n\t//_, _ = a, b\n\tif len(a) == 0 && len(b) == 0 {\n\t\treturn true\n\t}\n\tif len(a) == 0 || len(b) == 0 {\n\t\treturn false\n\t}\n\t// n\u00e3o use a fun\u00e7\u00e3o len para ver ou comparar os tamanhos\n\t// utilize a fun\u00e7\u00e3o EhVazio para ver se o vetor \u00e9 vazio\n\tif EhVazio(a) && EhVazio(b) {\n\t\treturn true\n\t}\n\tif EhVazio(a) || EhVazio(b) {\n\t\treturn false\n\t}\n\tif a[0] != b[0] {\n\t\treturn false\n\t}\n\treturn \tequals(a[1:], b[1:])\n}\n\n\t// voc\u00ea s\u00f3 pode consultar o primeiro elemento do vetor\n\t// e n\u00e3o pode usar nenhum tipo de la\u00e7o\n\t// Use recursao para consultar os outros elementos equals(a[1:], b[1:])\n\t// n\u00e3o altere o prot\u00f3tipo da fun\u00e7\u00e3o nem crie fun\u00e7\u00f5es auxiliares\n\t//return false\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tscanner.Scan()\n\tvet1 := str2slice(scanner.Text())\n\tscanner.Scan()\n\tvet2 := str2slice(scanner.Text())\n\tif equals(vet1, vet2) {\n\t\tfmt.Println(\"iguais\")\n\t} else {\n\t\tfmt.Println(\"diferentes\")\n\t}\n}\n\nfunc str2slice(line string) []int {\n\tparts := strings.Fields(line)\n\tnums := make([]int, 0)\n\tfor i := 1; i < len(parts)-1; i++ {\n\t\tvalue, _ := strconv.Atoi(parts[i])\n\t\tnums = append(nums, value)\n\t}\n\treturn nums\n}\n",
+            "lines": "71"
+        }
+    ]
+}

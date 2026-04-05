@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-05_16-37-45",
+            "content": "@@ -23,341 +23,8 @@\n mt%22%0A\n-func eh_primo(x int, div int) bool %7B%0A%09if x %3C 2 %7B%0A%09%09return false%0A%09%7D%0A%09if x == div %7B%0A%09%09return true%0A%09%7D%0A%09if x%25div == 0 %7B%0A%09%09return false%0A%09%7D%0A%09return eh_primo(x, div+1)%0A%7D%0Afunc contar_primos(n int) int %7B%0A    if n %3C 2 %7B%0A        return 0%0A    %7D%0A    if eh_primo(n, 2) %7B%0A        return 1 + contar_primos(n-1)%0A    %7D%0A    return contar_primos(n-1)%0A%7D%0A\n func\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-05_16-42-46",
+            "content": "@@ -374,65 +374,35 @@\n     \n-var n int%0A    fmt.Scan(&n)%0A    fmt.Println(contar_primos(n))\n+fmt.Println(%22Hello, World!%22)%0A%7D\n %0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-05_19-14-30",
+            "content": "@@ -431,9 +431,8 @@\n mos(n))%0A\n-%7D\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-05_19-15-20",
+            "content": "@@ -188,21 +188,19 @@\n %7D%0Afunc c\n-alcul\n+ont\n ar_primo\n@@ -218,44 +218,20 @@\n t %7B%0A\n-%09var i int%0A%09primo := 2%0A\n     if \n-i == n\n+n %3C 2\n  %7B%0A \n@@ -244,21 +244,17 @@\n  return \n-primo\n+0\n %0A    %7D%0A \n@@ -268,17 +268,17 @@\n h_primo(\n-i\n+n\n , 2) %7B%0A \n@@ -288,17 +288,37 @@\n     \n-primo = i\n+return 1 + contar_primos(n-1)\n %0A   \n@@ -336,13 +336,11 @@\n rn c\n-alcul\n+ont\n ar_p\n@@ -349,10 +349,10 @@\n mos(\n-i+\n+n-\n 1)%0A%7D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-05_19-24-44",
+            "content": "@@ -430,13 +430,11 @@\n ln(c\n-slcul\n+ont\n ar_p\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-05_19-25-03",
+            "content": "@@ -426,17 +426,17 @@\n rintln(c\n-a\n+s\n lcular_p\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-05_19-25-13",
+            "content": "@@ -209,15 +209,8 @@\n s(n \n-int, i \n int)\n@@ -221,17 +221,17 @@\n  %7B%0A%09\n-soma := 0\n+var i int\n %0A%09pr\n@@ -246,20 +246,17 @@\n %0A    if \n-soma\n+i\n  == n %7B%0A\n@@ -328,17 +328,8 @@\n = i%0A\n-%09%09soma++%0A\n     \n@@ -442,15 +442,12 @@\n primos(n\n-, 2\n ))%0A%7D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-05_19-27-32",
+            "content": "@@ -379,19 +379,16 @@\n imos(i+1\n-, 2\n )%0A%7D%0Afunc\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-05_19-29-01",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func eh_\n@@ -191,29 +191,31 @@\n unc \n-enesimo\n+calcular\n _primo\n+s\n (n int, \n atua\n@@ -214,82 +214,94 @@\n nt, \n-atual int, contador int) int %7B%0A%09if contador == n %7B%0A%09%09return atual - 1%0A%09%7D%0A%09\n+i int) int %7B%0A%09soma := 0%0A%09primo := 2%0A    if soma == n %7B%0A        return primo%0A    %7D%0A    \n if e\n@@ -312,117 +312,86 @@\n imo(\n-atual\n+i\n , 2) %7B%0A\n-%09%09return enesimo_primo(n, atual+1, contador+1)%0A%09%7D%0A%09return enesimo_primo(n, atual+1, contador\n+        primo = i%0A%09%09soma++%0A    %7D%0A    return calcular_primos(i+1, 2\n )%0A%7D%0A\n-%0A\n func\n@@ -400,17 +400,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -414,17 +414,20 @@\n r n int%0A\n-%09\n+    \n fmt.Scan\n@@ -431,17 +431,20 @@\n can(&n)%0A\n-%09\n+    \n fmt.Prin\n@@ -451,30 +451,28 @@\n tln(\n-enesimo\n+calcular\n _primo\n+s\n (n, 2\n-, 0\n ))%0A%7D\n-%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-05_19-31-03",
+            "content": "@@ -223,58 +223,52 @@\n  int\n-) int %7B%0A%09if eh_primo(atual, 2)\n+, contador int) int\n  %7B%0A\n-%09\n %09if \n-n\n+contador\n  == \n-1\n+n\n  %7B%0A%09%09\n-%09\n retu\n@@ -279,12 +279,40 @@\n tual\n-%0A%09%09%7D\n+ - 1%0A%09%7D%0A%09if eh_primo(atual, 2) %7B\n %0A%09%09r\n@@ -336,10 +336,8 @@\n mo(n\n--1\n , at\n@@ -341,16 +341,28 @@\n  atual+1\n+, contador+1\n )%0A%09%7D%0A%09re\n@@ -390,16 +390,26 @@\n  atual+1\n+, contador\n )%0A%7D%0A%0Afun\n@@ -475,13 +475,16 @@\n imo(n, 2\n+, 0\n ))%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-05_19-31-42",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int, div int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tif x == div {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1)\n}\nfunc enesimo_primo(n int, atual int) int {\n\tif eh_primo(atual, 2) {\n\t\tif n == 1 {\n\t\t\treturn atual\n\t\t}\n\t\treturn enesimo_primo(n-1, atual+1)\n\t}\n\treturn enesimo_primo(n, atual+1)\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tfmt.Println(enesimo_primo(n, 2))\n}\n",
+            "lines": "31"
+        }
+    ]
+}
