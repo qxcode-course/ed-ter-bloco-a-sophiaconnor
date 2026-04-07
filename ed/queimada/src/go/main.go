@@ -7,13 +7,13 @@ import (
 )
 
 func burnTrees(grid [][]rune, l, c int) {
-	_, _, _ = mat, l, c
+	//_, _, _ = mat, l, c
 	// se estiver fora da matriz, retorne
 	if l < 0 || l >= len(grid) || c < 0 || c >= len(grid[0]) {
 		return
 	}
 	// se o elemento atual não for uma arvore, retorne
-	if grid[l][c] != 'T' {
+	if grid[l][c] != '#' {
 		return
 	}
 	// queime a arvore colocando o caractere 'o' na posição atual
