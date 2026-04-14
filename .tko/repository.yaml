@@ -14,9 +14,19 @@ sources:
   writeable: false
   quests: null
   tasks: null
+- name: aval1
+  target: https://github.com/senapk/eval_26_ed_1
+  index: README.md
+  type: git
+  writeable: false
+  quests: null
+  tasks: null
 expanded:
+- ed@map_set
 - sandbox@sandbox
 - ed@rec
+- aval1@teste-1
+- ed@backtrack
 flags:
   inbox: all
   panel: help
@@ -24,4 +34,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@queimada
+selected: aval1@queimada

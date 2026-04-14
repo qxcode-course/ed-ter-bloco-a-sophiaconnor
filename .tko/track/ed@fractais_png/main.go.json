@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-08_14-16-49",
+            "content": "@@ -1,6 +1,4 @@\n-/*\n pack\n@@ -973,742 +973,4 @@\n )%0A%7D%0A\n-*/%0Apackage main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math/rand%22%0A)%0A%0Afunc ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D%0A%0Afunc arvere(pen *Pen, dist float64) %7B%0A%09if dist %3C 10 %7B%0A%09%09if ri(0, 50) == 0 %7B%0A%09%09%09pen.SetRGB(255, 0, 0)%0A%09%09%09pen.FillCircle(10)%0A%09%09%7D%0A%09%09return%0A%09%7D%0A%09ang_dir := ri(10, 40)%0A%09ang_esq := ri(10, 40)%0A%0A%09pen.SetLineWidth(dist / 5)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(dist)%0A%09pen.Right(ang_dir)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Left(ang_dir + ang_esq)%0A%09arvere(pen, dist*(ri(80, 85)/100))%0A%09pen.Right(ang_esq)%0A%09pen.SetRGB(0, 0, 0)%0A%09pen.Walk(-dist)%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(600, 500)%0A%09pen.SetHeading(90)%0A%09pen.SetPosition(300, 500)%0A%09arvere(pen, 80)%0A%09pen.SavePNG(%22tree.png%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-08_14-20-52",
+            "content": "@@ -1280,13 +1280,13 @@\n  ri(\n-20, 5\n+10, 4\n 0)%0A%0A\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-08_14-25-27",
+            "content": "@@ -1253,21 +1253,21 @@\n r := ri(\n-20, 5\n+10, 4\n 0)%0A%09ang_\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-08_14-26-39",
+            "content": "@@ -1329,17 +1329,14 @@\n RGB(\n-5\n 0, 0, \n-10\n 0)%0A%09\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-08_14-31-59",
+            "content": "@@ -1190,18 +1190,18 @@\n SetRGB(2\n-00\n+55\n , 0, 0)%0A\n@@ -1317,38 +1317,41 @@\n  5)%0A%09pen.SetRGB(\n+5\n 0, 0, \n+10\n 0)%0A%09pen.Walk(dis\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-08_14-32-30",
+            "content": "@@ -978,14 +978,8 @@\n %0A*/%0A\n-%0A%0A%0A%0A/*\n pack\n@@ -1713,622 +1713,4 @@\n )%0A%7D%0A\n-*/%0Apackage main%0A%0Aimport (%0A%09%22fmt%22%0A%09%22math/rand%22%0A)%0A%0Afunc ri(inf, sup int) float64 %7B%0A%09return float64(rand.Intn(sup-inf+1) + inf)%0A%7D%0A%0Afunc embua(pen *Pen, dist float64) %7B%0A%09if dist %3C 1 %7B%0A%09%09return // acaba recursao%0A%09%7D%0A%09pen.SetLineWidth(dist / 30) // grossura da linha%0A%09pen.Walk(dist) // anda quatidade %0A%09dist *= 0.97%0A%09pen.Right(90) // gira em 90 graus%0A%09embua(pen, dist) // recursao%0A%7D%0A%0Afunc main() %7B%0A%09pen := NewPen(500, 500) // criar o tamanho da imagem%0A%09pen.SetRGB(134, 0, 0) // cor%0A%09pen.SetPosition(0, 0)// onde a caenta vai comecar%0A%09embua(pen, 500)%0A%0A%09pen.SavePNG(%22tree.png%22)%0A%09fmt.Println(%22PNG file created successfully.%22)%0A%7D%0A\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-04-08_14-40-40",
+            "content": "@@ -1950,17 +1950,17 @@\n (dist / \n-5\n+3\n 0) // gr\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-04-08_14-41-04",
+            "content": "@@ -1950,17 +1950,17 @@\n (dist / \n-2\n+5\n 0) // gr\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-04-08_14-41-14",
+            "content": "@@ -2173,18 +2173,18 @@\n SetRGB(1\n-00\n+34\n , 0, 0) \n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-04-08_14-41-31",
+            "content": "@@ -2164,32 +2164,34 @@\n gem%0A%09pen.SetRGB(\n+10\n 0, 0, 0) // cor%0A\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-04-08_14-41-42",
+            "content": "/*package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.Left(30)              // dobra 30 graus para esquerda\n\tpen.Walk(100)             // anda 100 pixels\n\tpen.DrawCircle(50)        // desenha um c\u00edrculo de raio 50\n\tpen.Right(60)             // gira para direita 60 graus\n\tpen.Walk(150)\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t\tpen.DrawCircle(10) //desenha um circulo pequeno\n\n\t\tpen.Up()\n\t\tpen.Walk(-30) // volta sem riscar\n\t\tpen.Down()\n\n\t\tpen.Left(36) // gira\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n*/\n\n\n\n\n/*package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc ri(inf, sup int) float64 {\n\treturn float64(rand.Intn(sup-inf+1) + inf)\n}\n\nfunc arvere(pen *Pen, dist float64) {\n\tif dist < 10 {\n\t\tif ri(0, 50) == 0 {\n\t\t\tpen.SetRGB(200, 0, 0)\n\t\t\tpen.FillCircle(10)\n\t\t}\n\t\treturn\n\t}\n\tang_dir := ri(20, 50)\n\tang_esq := ri(20, 50)\n\n\tpen.SetLineWidth(dist / 5)\n\tpen.SetRGB(0, 0, 0)\n\tpen.Walk(dist)\n\tpen.Right(ang_dir)\n\tarvere(pen, dist*(ri(80, 85)/100))\n\tpen.Left(ang_dir + ang_esq)\n\tarvere(pen, dist*(ri(80, 85)/100))\n\tpen.Right(ang_esq)\n\tpen.SetRGB(0, 0, 0)\n\tpen.Walk(-dist)\n}\n\nfunc main() {\n\tpen := NewPen(600, 500)\n\tpen.SetHeading(90)\n\tpen.SetPosition(300, 500)\n\tarvere(pen, 80)\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n*/\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc ri(inf, sup int) float64 {\n\treturn float64(rand.Intn(sup-inf+1) + inf)\n}\n\nfunc embua(pen *Pen, dist float64) {\n\tif dist < 1 {\n\t\treturn // acaba recursao\n\t}\n\tpen.SetLineWidth(dist / 20) // grossura da linha\n\tpen.Walk(dist) // anda quatidade \n\tdist *= 0.97\n\tpen.Right(90) // gira em 90 graus\n\tembua(pen, dist) // recursao\n}\n\nfunc main() {\n\tpen := NewPen(500, 500) // criar o tamanho da imagem\n\tpen.SetRGB(0, 0, 0) // cor\n\tpen.SetPosition(0, 0)// onde a caenta vai comecar\n\tembua(pen, 500)\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "118"
+        }
+    ]
+}

@@ -1,2 +1,14 @@
 2026-04-07 13:24:45, SELF, v:1, k:ed@queimada, self:1, rate:100, study:68
 2026-04-07 13:25:06, SELF, v:1, k:ed@queimada, self:1, rate:100, study:68
+2026-04-07 13:28:12, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-07 13:28:16, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:100
+2026-04-07 13:28:33, SELF, v:1, k:ed@rotacoes, self:1, rate:100, study:40, refactor:1
+2026-04-07 13:28:37, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-04-07 13:29:06, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-04-07 13:29:08, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-04-07 13:29:14, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-04-07 13:47:56, EXEC, v:1, k:workspaces@ed-ter-bloco-a-sophiaconnor, mode:FREE, size:1174
+2026-04-07 13:55:36, EXEC, v:1, k:drafts@go, mode:FREE, size:152
+2026-04-07 13:59:30, EXEC, v:1, k:drafts@go, mode:FREE
+2026-04-07 14:02:44, EXEC, v:1, k:drafts@go, mode:FREE
+2026-04-07 14:55:18, MOVE, v:1, k:ed@fractais_png, mode:DOWN

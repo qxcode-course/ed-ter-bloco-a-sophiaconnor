@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-45-01",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtd_figuras int\n    fmt.Scan(&qtd_figuras)\n    var qtd_fig_baruel int\n    fmt.Scan(&qtd_fig_baruel)\n    figurinhas := make(map[int]int)\n    for i := 0; i < qtd_fig_baruel; i++ {\n}\n",
+            "lines": "10"
+        }
+    ]
+}

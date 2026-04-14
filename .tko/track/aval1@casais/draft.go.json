@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-50-56",
+            "content": "@@ -435,9 +435,8 @@\n  == \n--\n anim\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-52-39",
+            "content": "@@ -227,42 +227,8 @@\n     \n-repetidos := make(%5B%5Dint, 0)%0A    //\n var \n@@ -236,24 +236,24 @@\n epetido int%0A\n+\n     for i :=\n@@ -330,62 +330,8 @@\n + %7B%0A\n-            for k := 0; k %3C len(repetidos); k++ %7B%0A    \n     \n@@ -367,12 +367,8 @@\n tido\n-s%5Bk%5D\n  %7B%0A \n@@ -386,36 +386,14 @@\n     \n-  \n-  \n break%0A\n-                %7D%0A\n     \n@@ -474,16 +474,16 @@\n asais++%0A\n+\n         \n@@ -494,68 +494,8 @@\n     \n-repetidos = append(repetidos, animais%5Bi%5D)%0A                //\n anim\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-54-46",
+            "content": "@@ -433,25 +433,25 @@\n  if animais%5B\n-i\n+j\n %5D == repetid\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_13-55-11",
+            "content": "@@ -219,28 +219,30 @@\n is := 0%0A    \n-casa\n+repeti\n dos := make(\n@@ -392,20 +392,22 @@\n k %3C len(\n-casa\n+repeti\n dos); k+\n@@ -441,18 +441,20 @@\n ais%5B\n-j\n+i\n %5D == \n-casa\n+repeti\n dos%5B\n@@ -604,20 +604,22 @@\n         \n-casa\n+repeti\n dos = ap\n@@ -623,20 +623,22 @@\n  append(\n-casa\n+repeti\n dos, ani\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_13-57-22",
+            "content": "@@ -227,10 +227,8 @@\n     \n-//\n casa\n@@ -249,24 +249,26 @@\n int, 0)%0A    \n+//\n var repetido\n@@ -354,24 +354,176 @@\n mais; j++ %7B%0A\n+            for k := 0; k %3C len(casados); k++ %7B%0A                if animais%5Bj%5D == casados%5Bk%5D %7B%0A                    break%0A                %7D%0A            %7D%0A\n             \n@@ -632,24 +632,24 @@\n animais%5Bi%5D)%0A\n-\n             \n@@ -648,24 +648,26 @@\n             \n+//\n animais%5Bi%5D =\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_13-59-30",
+            "content": "@@ -442,26 +442,24 @@\n             \n-//\n casados = ap\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_13-59-40",
+            "content": "@@ -387,17 +387,16 @@\n s%5Bi%5D == \n-(\n -animais\n@@ -398,17 +398,16 @@\n imais%5Bj%5D\n-)\n  %7B%0A     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_14-27-51",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var qtd_animais int\n    fmt.Scan(&qtd_animais)\n    animais := make([]int, qtd_animais)\n    for i := 0; i < qtd_animais; i++ {\n        fmt.Scan(&animais[i])\n    }\n    qtd_casais := 0\n    //casados := make([]int, 0)\n    var repetido int\n    for i := 0; i < qtd_animais; i++ {\n        for j := i + 1; j < qtd_animais; j++ {\n            if animais[i] == (-animais[j]) {\n                qtd_casais++\n                //casados = append(casados, animais[i])\n                animais[i] = repetido\n                break\n            }\n        }\n    }\n    fmt.Println(qtd_casais)\n}\n",
+            "lines": "24"
+        }
+    ]
+}
