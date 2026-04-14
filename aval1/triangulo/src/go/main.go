@@ -12,7 +12,9 @@ func processa(vet []int) {
 	_ = vet;
 	// 1. defina o ponto de parada
 	if len(vet) == 1 {
-		fmt.Println(vet, " ")
+		fmt.Print("[ ")
+		fmt.Print(vet[0],)
+		fmt.Println(" ]")
 		return
 	}
 	// 2. monte o vetor auxiliar com os resultados das somas
@@ -24,7 +26,17 @@ func processa(vet []int) {
 	// 3. chame recursivamente a função processa para o vetor auxiliar
 	processa(aux)
 	// 4. imprima o vetor original
-	fmt.Println(vet, " ")
+	//fmt.Println(vet, " ")
+	//fmt.Println("[ ")
+	retorna(vet, len(vet))
+	
+}
+func retorna(vet []int, tamanho int){
+	fmt.Print("[ ")
+	for i:=0; i<tamanho; i++ {
+		fmt.Print(vet[i], " ")
+	}
+	fmt.Println("]")
 }
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)

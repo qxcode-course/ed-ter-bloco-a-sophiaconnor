@@ -22,11 +22,11 @@ sources:
   quests: null
   tasks: null
 expanded:
+- aval1@teste-1
+- ed@backtrack
 - ed@map_set
 - sandbox@sandbox
 - ed@rec
-- aval1@teste-1
-- ed@backtrack
 flags:
   inbox: all
   panel: help
@@ -34,4 +34,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: aval1@queimada
+selected: aval1@triangulo
