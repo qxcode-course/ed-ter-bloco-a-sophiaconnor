@@ -98,12 +98,12 @@ func (v *Vector) Clear() {
 	v.size = 0
 }
 
-func (v *Vector) PopBack() (int, error) {
+func (v *Vector) PopBack() error {
 	if v.size == 0 {
-		return 0, errors.New("vector is empty")
+		return errors.New("vector is empty")
 	}
 	v.size--
-	return v.data[v.size], nil
+	return nil
 }
 
 func (v *Vector) Insert(index int, value int) error {
@@ -152,6 +152,9 @@ func (v *Vector) Contains(value int) bool {
 func (v *Vector) Slice(start, end int) *Vector {
 	if start < 0 {
 		start = 0
+	}
+	if end < 0 {
+		end = v.size + end
 	}
 	if end > v.size {
 		end = v.size
@@ -214,22 +217,22 @@ func main() {
 		case "status":
 			fmt.Println(v.Status())
 		case "pop":
-			//err := v.PopBack()
-			//if err != nil {
-			//fmt.Println(err)
-			//}
+			err := v.PopBack()
+			if err != nil {
+				fmt.Println(err)
+			}
 		case "insert":
 			index, _ := strconv.Atoi(parts[1])
 			value, _ := strconv.Atoi(parts[2])
 			err := v.Insert(index, value)
 			if err != nil {
-			fmt.Println(err)
+				fmt.Println(err)
 			}
 		case "erase":
 			index, _ := strconv.Atoi(parts[1])
 			err := v.Erase(index)
 			if err != nil {
-			fmt.Println(err)
+				fmt.Println(err)
 			}
 		case "indexOf":
 			value, _ := strconv.Atoi(parts[1])
@@ -238,10 +241,10 @@ func main() {
 		case "contains":
 			value, _ := strconv.Atoi(parts[1])
 			if v.Contains(value) {
-			fmt.Println("true")
-			 } else {
-			 	fmt.Println("false")
-			 }
+				fmt.Println("true")
+			} else {
+				fmt.Println("false")
+			}
 		case "clear":
 			v.Clear()
 		case "capacity":
@@ -250,26 +253,26 @@ func main() {
 			index, _ := strconv.Atoi(parts[1])
 			value, err := v.At(index)
 			if err != nil {
-			fmt.Println(err)
+				fmt.Println(err)
 			} else {
-			fmt.Println(value)
+				fmt.Println(value)
 			}
 		case "set":
 			index, _ := strconv.Atoi(parts[1])
 			value, _ := strconv.Atoi(parts[2])
 			err := v.Set(index, value)
 			if err != nil {
-			fmt.Println(err)
+				fmt.Println(err)
 			}
 			//
 		case "reserve":
 			newCapacity, _ := strconv.Atoi(parts[1])
 			v.Reserve(newCapacity)
 		case "slice":
-			// start, _ := strconv.Atoi(parts[1])
-			// end, _ := strconv.Atoi(parts[2])
-			// slice := v.Slice(start, end)
-			// fmt.Println(slice)
+			start, _ := strconv.Atoi(parts[1])
+			end, _ := strconv.Atoi(parts[2])
+			slice := v.Slice(start, end)
+			fmt.Println(slice)
 		default:
 			fmt.Println("fail: comando invalido")
 		}
