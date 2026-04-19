@@ -226,11 +226,11 @@ func main() {
 			fmt.Println(err)
 			}
 		case "erase":
-			// index, _ := strconv.Atoi(parts[1])
-			// err := v.Erase(index)
-			// if err != nil {
-			// 	fmt.Println(err)
-			// }
+			index, _ := strconv.Atoi(parts[1])
+			err := v.Erase(index)
+			if err != nil {
+			fmt.Println(err)
+			}
 		case "indexOf":
 			// value, _ := strconv.Atoi(parts[1])
 			// index := v.IndexOf(value)
