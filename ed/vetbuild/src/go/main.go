@@ -243,9 +243,9 @@ func main() {
 			// 	fmt.Println("false")
 			// }
 		case "clear":
-			//v.Clear()
+			v.Clear()
 		case "capacity":
-			// fmt.Println(v.Capacity())
+			fmt.Println(v.Capacity())
 		case "get":
 			// index, _ := strconv.Atoi(parts[1])
 			// value, err := v.At(index)
@@ -263,8 +263,8 @@ func main() {
 			// }
 			//
 		case "reserve":
-			// newCapacity, _ := strconv.Atoi(parts[1])
-			// v.Reserve(newCapacity)
+			newCapacity, _ := strconv.Atoi(parts[1])
+			v.Reserve(newCapacity)
 		case "slice":
 			// start, _ := strconv.Atoi(parts[1])
 			// end, _ := strconv.Atoi(parts[2])
