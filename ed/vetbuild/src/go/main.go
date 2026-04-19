@@ -212,7 +212,7 @@ func main() {
 		case "show":
 			fmt.Println(v.String())
 		case "status":
-			// fmt.Println(v.Status())
+			fmt.Println(v.Status())
 		case "pop":
 			// err := v.PopBack()
 			// if err != nil {
@@ -243,7 +243,7 @@ func main() {
 			// 	fmt.Println("false")
 			// }
 		case "clear":
-			// v.Clear()
+			//v.Clear()
 		case "capacity":
 			// fmt.Println(v.Capacity())
 		case "get":
