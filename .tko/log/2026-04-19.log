@@ -65,3 +65,8 @@
 2026-04-19 11:39:06, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:27, size:277
 2026-04-19 11:40:00, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:27, size:277
 2026-04-19 11:40:46, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:36, size:277
+2026-04-19 11:41:37, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-04-19 17:49:25, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-04-19 17:49:28, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:36
+2026-04-19 17:50:40, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:277, fail:COMP
+2026-04-19 17:51:58, EXEC, v:1, k:ed@vetbuild, mode:FULL, rate:54, size:277

@@ -22,10 +22,10 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
-- sandbox@sandbox
 - ed@rec
+- sandbox@sandbox
 - ed@vector
+- ed@map_set
 flags:
   inbox: all
   panel: help
