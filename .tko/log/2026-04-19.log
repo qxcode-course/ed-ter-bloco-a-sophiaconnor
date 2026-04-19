@@ -120,3 +120,50 @@
 2026-04-19 18:37:24, MOVE, v:1, k:ed@vetbuild, mode:EDIT
 2026-04-19 18:38:44, MOVE, v:1, k:ed@vetbuild, mode:BACK
 2026-04-19 18:39:15, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-04-19 18:44:04, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-04-19 18:44:46, SELF, v:1, k:ed@vetbuild, self:1, rate:100, study:40, concept:1, refactor:1
+2026-04-19 18:50:07, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-04-19 18:50:10, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-04-19 18:50:20, SELF, v:1, k:ed@vetbuild, self:1, study:90, concept:1, refactor:1
+2026-04-19 18:50:29, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-19 18:50:44, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-04-19 18:52:20, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-19 18:52:22, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:33
+2026-04-19 18:52:52, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18
+2026-04-19 18:52:52, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-19 18:54:42, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-19 18:54:53, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18
+2026-04-19 18:55:10, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18
+2026-04-19 18:57:21, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-19 18:57:25, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-04-19 18:57:26, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:59
+2026-04-19 18:58:57, EXEC, v:1, k:ed@multiset, mode:FULL, size:59, fail:COMP
+2026-04-19 18:59:10, EXEC, v:1, k:ed@multiset, mode:FULL, size:59, fail:COMP
+2026-04-19 18:55:10, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-19 18:57:16, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-19 18:57:26, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-19 18:59:09, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-19 19:00:15, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-04-19 19:00:27, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-19 19:00:31, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:45
+2026-04-19 19:00:12, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-19 19:00:31, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-19 19:02:25, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-19 19:09:47, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-04-19 19:09:49, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-19 19:09:50, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0
+2026-04-19 19:10:22, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-04-19 19:10:25, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-19 19:10:28, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18, size:34
+2026-04-19 19:10:33, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-19 19:10:36, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-04-19 19:11:18, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-04-19 19:11:21, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-04-19 19:11:25, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:18
+2026-04-19 19:09:50, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-04-19 19:11:25, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-19 19:12:08, MOVE, v:1, k:ed@bettersearch, mode:EDIT
+2026-04-19 19:25:28, EXEC, v:1, k:ed@bettersearch, mode:FULL, rate:100, size:44
+2026-04-19 19:25:32, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-04-19 19:27:16, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:20, concept:1, refactor:1
+2026-04-19 19:26:51, MOVE, v:1, k:ed@bettersearch, mode:EDIT

@@ -22,10 +22,10 @@ sources:
   quests: null
   tasks: null
 expanded:
-- sandbox@sandbox
-- ed@vector
 - ed@map_set
 - ed@rec
+- ed@vector
+- sandbox@sandbox
 flags:
   inbox: all
   panel: help
@@ -33,4 +33,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@vetbuild
+selected: ed@multiset
+selected_index: 42
