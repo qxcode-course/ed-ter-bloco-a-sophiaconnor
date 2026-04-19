@@ -232,16 +232,16 @@ func main() {
 			fmt.Println(err)
 			}
 		case "indexOf":
-			// value, _ := strconv.Atoi(parts[1])
-			// index := v.IndexOf(value)
-			// fmt.Println(index)
+			value, _ := strconv.Atoi(parts[1])
+			index := v.IndexOf(value)
+			fmt.Println(index)
 		case "contains":
-			// value, _ := strconv.Atoi(parts[1])
-			// if v.Contains(value) {
-			// 	fmt.Println("true")
-			// } else {
-			// 	fmt.Println("false")
-			// }
+			value, _ := strconv.Atoi(parts[1])
+			if v.Contains(value) {
+			fmt.Println("true")
+			 } else {
+			 	fmt.Println("false")
+			 }
 		case "clear":
 			v.Clear()
 		case "capacity":
