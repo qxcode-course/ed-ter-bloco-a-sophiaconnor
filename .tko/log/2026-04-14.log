@@ -147,3 +147,4 @@
 2026-04-14 14:55:04, EXEC, v:1, k:aval1@triangulo, mode:FULL, rate:0, size:69
 2026-04-14 14:55:14, EXEC, v:1, k:aval1@triangulo, mode:FULL, rate:100, size:69
 2026-04-14 14:55:20, MOVE, v:1, k:aval1@triangulo, mode:BACK
+2026-04-14 14:56:23, SELF, v:1, k:aval1@triangulo, self:1, rate:100, study:40
