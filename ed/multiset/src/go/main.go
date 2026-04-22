@@ -6,7 +6,69 @@ import (
 	"os"
 	"strings"
 	"strconv"
+	"errors"
 )
+
+type Vector struct {
+	data     []int
+	size     int
+	capacity int
+}
+
+func (v *Vector) String() string {
+	if v.size == 0 {
+		return "[]"
+	}
+	var builder strings.Builder
+	builder.WriteString("[")
+	for i := 0; i < v.size; i++ {
+		if i > 0 {
+			builder.WriteString(", ")
+		}
+		fmt.Fprintf(&builder, "%d", v.data[i])
+	}
+	builder.WriteString("]")
+	return builder.String()
+}
+
+func NewMultiSet(capacity int) *Vector {
+	return &Vector{
+		data:     make([]int, capacity),
+		size:     0,
+		capacity: capacity,
+	}
+}
+
+func (v *Vector) Insert(index int, value int) error {
+	if index < 0{
+		return errors.New("index out of range")
+	}
+	if v.size == v.capacity {
+		newCapacity := v.capacity * 2
+		if newCapacity == 0 {
+			newCapacity = 1
+		}
+		v.Reserve(newCapacity)
+	}
+	for i := v.size; i > index; i-- {
+		v.data[i] = v.data[i-1]
+	}
+	v.data[index] = value
+	v.size++
+	return nil
+}
+
+func (v *Vector) Reserve(newCapacity int) {
+	if newCapacity <= v.capacity {
+		return
+	}
+	newData := make([]int, newCapacity)
+	for i := 0; i < v.size; i++ {
+		newData[i] = v.data[i]
+	}
+	v.data = newData
+	v.capacity = newCapacity
+}
 
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
@@ -27,24 +89,42 @@ func main() {
 	for scanner.Scan() {
 		fmt.Print("$")
 		line = scanner.Text()
-		args := strings.Fields(line)
+		parts := strings.Fields(line)
 		fmt.Println(line)
-		if len(args) == 0 {
+		if len(parts) == 0 {
 			continue
 		}
-		cmd = args[0]
+		cmd = parts[0]
 
 		switch cmd {
 		case "end":
 			return
 		case "init":
-			// value, _ := strconv.Atoi(args[1])
-			// ms = NewMultiSet(value)
+			value, _ := strconv.Atoi(parts[1])
+			ms = NewMultiSet(value)
 		case "insert":
-			// for _, part := range args[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// }
+	if len(parts) < 3 {
+		fmt.Println("fail: parametros insuficientes")
+		continue
+	}
+
+	index, _ := strconv.Atoi(parts[1])
+
+	for i := 2; i < len(parts); i++ {
+		value, _ := strconv.Atoi(parts[i])
+		err := ms.Insert(index, value)
+		if err != nil {
+			fmt.Println(err)
+			break
+		}
+		index++ // desloca o índice para manter a ordem
+	}
+
+			//for _, part := range parts[1:] {
+			//value, _ := strconv.Atoi(part)
+			//}
 		case "show":
+			fmt.Println(ms.String())
 		case "erase":
 			// value, _ := strconv.Atoi(args[1])
 		case "contains":

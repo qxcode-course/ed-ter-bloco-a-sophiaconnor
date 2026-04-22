@@ -73,6 +73,18 @@ func (v *Vector) IndexOf(value int) int {
 	return -1
 }
 
+func (v *Vector) Erase(index int) error {
+    if index < 0 || index >= v.size {
+        return errors.New("index out of range")
+    }
+    for i := index; i < v.size-1; i++ {
+        v.data[i] = v.data[i+1]
+    }
+    v.size--
+    return nil
+}
+
+
 func (v *Vector) String() string {
 	if v.size == 0 {
 		return "[]"
@@ -128,12 +140,14 @@ func main() {
 		case "contains":
 			value, _ := strconv.Atoi(parts[1])
 			fmt.Println(v.Contains(value))
-		/*case "erase":
+		case "erase":
 			value, _ := strconv.Atoi(parts[1])
 			index := v.IndexOf(value)
 			if index != -1 {
 				v.Erase(index)
-			}*/
+			}else{
+				fmt.Printf("value not found\n")
+			}
 		case "clear":
 			v.Clear()
 		default:
