@@ -11,7 +11,7 @@ import (
 func BetterSearch(slice []int, value int) (bool, int) {
 	low, high := 0, len(slice)
 	for low < high {
-		mid := (low + high) / 2
+		mid := (low + high)/2
 		if slice[mid] < value {
 			low = mid + 1
 		} else {

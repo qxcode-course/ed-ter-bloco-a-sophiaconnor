@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
 )
 
 func Join(slice []int, sep string) string {
@@ -21,7 +22,7 @@ func Join(slice []int, sep string) string {
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
-	// ms := NewMultiSet(0)
+	ms := NewMultiSet(0)
 
 	for scanner.Scan() {
 		fmt.Print("$")
