@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"errors"
 )
 
 type Vector struct {
@@ -97,6 +98,16 @@ func Join(slice []int, sep string) string {
 	}
 	return result
 }
+func (v *Vector) Erase(index int) error {
+	if index < 0 || index >= v.size {
+		return errors.New("index out of range")
+	}
+	for i := index; i < v.size-1; i++ {
+		v.data[i] = v.data[i+1]
+	}
+	v.size--
+	return nil
+}
 
 func main() {
 	var line, cmd string
@@ -120,18 +131,18 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			ms = NewMultiSet(value)
 		case "insert":
-			for i := 1; i < len(parts); i++ {
-				value, _ := strconv.Atoi(parts[i])
-				ms.Insert(value)
+			for _, part := range parts[1:] {
+				value, _ := strconv.Atoi(part)
+				err := ms.Insert(value)
+				if err != nil {
+					fmt.Println(err)
+				}
 			}
-
-			//for _, part := range parts[1:] {
-			//	value, _ := strconv.Atoi(part)
-			//}
 		case "show":
 			fmt.Println(ms.String())
 		case "erase":
-			// value, _ := strconv.Atoi(args[1])
+			//value, _ := strconv.Atoi(args[1])
+			//fmt.Println(sm.)
 		case "contains":
 			value, _ := strconv.Atoi(parts[1])
 			fmt.Println(ms.Contains(value))

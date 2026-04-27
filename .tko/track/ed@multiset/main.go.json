@@ -197,8 +197,68 @@
         },
         {
             "label": "2026-04-27_15-32-09",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Vector struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc (v *Vector) String() string {\n\tif v.size == 0 {\n\t\treturn \"[]\"\n\t}\n\tvar builder strings.Builder\n\tbuilder.WriteString(\"[\")\n\tfor i := 0; i < v.size; i++ {\n\t\tif i > 0 {\n\t\t\tbuilder.WriteString(\", \")\n\t\t}\n\t\tfmt.Fprintf(&builder, \"%d\", v.data[i])\n\t}\n\tbuilder.WriteString(\"]\")\n\treturn builder.String()\n}\n\nfunc NewMultiSet(capacity int) *Vector {\n\treturn &Vector{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (v *Vector) Insert(value int) error {\n\t// Find the position to insert to keep sorted\n\tpos := 0\n\tfor pos < v.size && v.data[pos] < value {\n\t\tpos++\n\t}\n\tif v.size == v.capacity {\n\t\tnewCapacity := v.capacity * 2\n\t\tif newCapacity == 0 {\n\t\t\tnewCapacity = 1\n\t\t}\n\t\tv.Reserve(newCapacity)\n\t}\n\tfor i := v.size; i > pos; i-- {\n\t\tv.data[i] = v.data[i-1]\n\t}\n\tv.data[pos] = value\n\tv.size++\n\treturn nil\n}\n\nfunc (v *Vector) Reserve(newCapacity int) {\n\tif newCapacity <= v.capacity {\n\t\treturn\n\t}\n\tnewData := make([]int, newCapacity)\n\tfor i := 0; i < v.size; i++ {\n\t\tnewData[i] = v.data[i]\n\t}\n\tv.data = newData\n\tv.capacity = newCapacity\n}\n\nfunc (v *Vector) Contains(value int) bool {\n\tlow := 0\n\thigh := v.size - 1\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif v.data[mid] == value {\n\t\t\treturn true\n\t\t} else if v.data[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn false\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tparts := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor i := 1; i < len(parts); i++ {\n\t\t\t\tvalue, _ := strconv.Atoi(parts[i])\n\t\t\t\tms.Insert(value)\n\t\t\t}\n\n\t\t\t//for _, part := range parts[1:] {\n\t\t\t//\tvalue, _ := strconv.Atoi(part)\n\t\t\t//}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms.String())\n\t\tcase \"erase\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tfmt.Println(ms.Contains(value))\n\t\tcase \"count\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"unique\":\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "content": "@@ -1681,220 +1681,8 @@\n lt%0A%7D\n-%0Afunc (v *Vector) Erase(index int) error %7B%0A%09if index %3C 0 %7C%7C index %3E= v.size %7B%0A%09%09return errors.New(%22index out of range%22)%0A%09%7D%0A%09for i := index; i %3C v.size-1; i++ %7B%0A%09%09v.data%5Bi%5D = v.data%5Bi+1%5D%0A%09%7D%0A%09v.size--%0A%09return nil%0A%7D\n %0A%0Afu\n",
             "lines": "146"
+        },
+        {
+            "label": "2026-04-27_15-34-25",
+            "content": "@@ -64,18 +64,8 @@\n gs%22%0A\n-%09%22errors%22%0A\n )%0A%0At\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-27_15-34-44",
+            "content": "@@ -2550,24 +2550,27 @@\n %22erase%22:%0A%09%09%09\n+// \n value, _ := \n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-04-27_15-35-12",
+            "content": "@@ -2306,26 +2306,24 @@\n insert%22:%0A%09%09%09\n-//\n for i := 1; \n@@ -2343,26 +2343,24 @@\n ); i++ %7B%0A%09%09%09\n-//\n %09value, _ :=\n@@ -2407,18 +2407,16 @@\n lue)%0A%09%09%09\n-//\n %7D%0A%0A%09%09%09//\n@@ -2554,18 +2554,16 @@\n se%22:%0A%09%09%09\n-//\n value, _\n@@ -2592,28 +2592,8 @@\n 1%5D)%0A\n-%09%09%09fmt.Println(sm.)%0A\n %09%09ca\n",
+            "lines": "157"
+        },
+        {
+            "label": "2026-04-27_15-43-29",
+            "content": "@@ -2599,18 +2599,16 @@\n %5B1%5D)%0A%09%09%09\n-//\n fmt.Prin\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-27_15-44-06",
+            "content": "@@ -2314,45 +2314,49 @@\n %0A%09%09%09\n-index, _ := strconv.Atoi(parts%5B1%5D)%0A%09%09\n+//for i := 1; i %3C len(parts); i++ %7B%0A%09%09%09//\n %09val\n@@ -2387,31 +2387,26 @@\n rts%5B\n-2\n+i\n %5D)%0A%09%09%09\n-err := v\n+%09ms\n .Insert(\n inde\n@@ -2405,15 +2405,8 @@\n ert(\n-index, \n valu\n@@ -2415,49 +2415,12 @@\n %0A%09%09%09\n-if err != nil %7B%0A%09%09%09%09fmt.Println(err)%0A%09%09%09%7D\n+//%7D%0A\n %0A%09%09%09\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-04-27_15-57-40",
+            "content": "@@ -2393,18 +2393,17 @@\n %09err := \n-sm\n+v\n .Insert(\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-04-27_15-57-48",
+            "content": "@@ -2393,18 +2393,18 @@\n %09err := \n-m\n s\n+m\n .Insert(\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-04-27_15-57-54",
+            "content": "@@ -2408,16 +2408,23 @@\n rt(index\n+, value\n )%0A%09%09%09if \n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-04-27_15-58-07",
+            "content": "@@ -2344,26 +2344,24 @@\n arts%5B1%5D)%0A%09%09%09\n-//\n value, _ := \n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-04-27_15-58-17",
+            "content": "@@ -2310,18 +2310,16 @@\n rt%22:%0A%09%09%09\n-//\n index, _\n@@ -2344,24 +2344,26 @@\n arts%5B1%5D)%0A%09%09%09\n+//\n value, _ := \n@@ -2405,21 +2405,21 @@\n .Insert(\n-value\n+index\n )%0A%09%09%09if \n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-04-27_15-58-38",
+            "content": "@@ -2314,42 +2314,45 @@\n %0A%09%09%09\n-for _, part := range \n+//index, _ := strconv.Atoi(\n parts%5B1\n-:%5D %7B%0A%09\n+%5D)%0A\n %09%09%09v\n@@ -2379,19 +2379,22 @@\n toi(part\n+s%5B2%5D\n )%0A\n-%09\n %09%09%09err :\n@@ -2412,17 +2412,16 @@\n (value)%0A\n-%09\n %09%09%09if er\n@@ -2435,17 +2435,16 @@\n l %7B%0A%09%09%09%09\n-%09\n fmt.Prin\n@@ -2459,14 +2459,90 @@\n %0A%09%09%09\n-%09\n %7D%0A%09%09%09\n+//for _, part := range parts%5B1:%5D %7B%0A%09%09%09//%09value, _ := strconv.Atoi(part)%0A%09%09%09//\n %7D%0A%09%09\n",
+            "lines": "159"
+        },
+        {
+            "label": "2026-04-27_16-01-33",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n\t\"errors\"\n)\n\ntype Vector struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc (v *Vector) String() string {\n\tif v.size == 0 {\n\t\treturn \"[]\"\n\t}\n\tvar builder strings.Builder\n\tbuilder.WriteString(\"[\")\n\tfor i := 0; i < v.size; i++ {\n\t\tif i > 0 {\n\t\t\tbuilder.WriteString(\", \")\n\t\t}\n\t\tfmt.Fprintf(&builder, \"%d\", v.data[i])\n\t}\n\tbuilder.WriteString(\"]\")\n\treturn builder.String()\n}\n\nfunc NewMultiSet(capacity int) *Vector {\n\treturn &Vector{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (v *Vector) Insert(value int) error {\n\t// Find the position to insert to keep sorted\n\tpos := 0\n\tfor pos < v.size && v.data[pos] < value {\n\t\tpos++\n\t}\n\tif v.size == v.capacity {\n\t\tnewCapacity := v.capacity * 2\n\t\tif newCapacity == 0 {\n\t\t\tnewCapacity = 1\n\t\t}\n\t\tv.Reserve(newCapacity)\n\t}\n\tfor i := v.size; i > pos; i-- {\n\t\tv.data[i] = v.data[i-1]\n\t}\n\tv.data[pos] = value\n\tv.size++\n\treturn nil\n}\n\nfunc (v *Vector) Reserve(newCapacity int) {\n\tif newCapacity <= v.capacity {\n\t\treturn\n\t}\n\tnewData := make([]int, newCapacity)\n\tfor i := 0; i < v.size; i++ {\n\t\tnewData[i] = v.data[i]\n\t}\n\tv.data = newData\n\tv.capacity = newCapacity\n}\n\nfunc (v *Vector) Contains(value int) bool {\n\tlow := 0\n\thigh := v.size - 1\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif v.data[mid] == value {\n\t\t\treturn true\n\t\t} else if v.data[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn false\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\nfunc (v *Vector) Erase(index int) error {\n\tif index < 0 || index >= v.size {\n\t\treturn errors.New(\"index out of range\")\n\t}\n\tfor i := index; i < v.size-1; i++ {\n\t\tv.data[i] = v.data[i+1]\n\t}\n\tv.size--\n\treturn nil\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tparts := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor _, part := range parts[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(part)\n\t\t\t\terr := ms.Insert(value)\n\t\t\t\tif err != nil {\n\t\t\t\t\tfmt.Println(err)\n\t\t\t\t}\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms.String())\n\t\tcase \"erase\":\n\t\t\t//value, _ := strconv.Atoi(args[1])\n\t\t\t//fmt.Println(sm.)\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tfmt.Println(ms.Contains(value))\n\t\tcase \"count\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"unique\":\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "157"
         }
     ]
 }
