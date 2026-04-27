@@ -73,3 +73,6 @@
 2026-04-27 16:13:07, MOVE, v:1, k:ed@multiset, mode:BACK
 2026-04-27 16:17:02, MOVE, v:1, k:ed@multiset, mode:PICK
 2026-04-27 16:17:03, EXEC, v:1, k:ed@multiset, mode:FULL, rate:66, size:183
+2026-04-27 16:16:57, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-27 16:17:03, MOVE, v:1, k:ed@multiset, mode:EDIT
+2026-04-27 16:19:00, EXEC, v:1, k:ed@multiset, mode:FULL, rate:83, size:192

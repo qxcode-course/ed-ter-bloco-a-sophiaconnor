@@ -131,7 +131,15 @@ func (v *Vector) Count(value int) int {
 	}
 	return count
 }
-
+func (v *Vector) Unique() int {
+	unique := 0
+	for i := 0; i < v.size; i++ {
+		if i == 0 || v.data[i] != v.data[i-1] {
+			unique++
+		}
+	}
+	return unique
+}
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
@@ -175,6 +183,7 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			fmt.Println(ms.Count(value))
 		case "unique":
+			fmt.Println(ms.Unique())
 		case "clear":
 		default:
 			fmt.Println("fail: comando invalido")
