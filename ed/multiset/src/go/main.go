@@ -4,9 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
 	"strconv"
-	"errors"
+	"strings"
 )
 
 type Vector struct {
@@ -39,9 +38,11 @@ func NewMultiSet(capacity int) *Vector {
 	}
 }
 
-func (v *Vector) Insert(index int, value int) error {
-	if index < 0{
-		return errors.New("index out of range")
+func (v *Vector) Insert(value int) error {
+	// Find the position to insert to keep sorted
+	pos := 0
+	for pos < v.size && v.data[pos] < value {
+		pos++
 	}
 	if v.size == v.capacity {
 		newCapacity := v.capacity * 2
@@ -50,10 +51,10 @@ func (v *Vector) Insert(index int, value int) error {
 		}
 		v.Reserve(newCapacity)
 	}
-	for i := v.size; i > index; i-- {
+	for i := v.size; i > pos; i-- {
 		v.data[i] = v.data[i-1]
 	}
-	v.data[index] = value
+	v.data[pos] = value
 	v.size++
 	return nil
 }
@@ -103,22 +104,10 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			ms = NewMultiSet(value)
 		case "insert":
-	if len(parts) < 3 {
-		fmt.Println("fail: parametros insuficientes")
-		continue
-	}
-
-	index, _ := strconv.Atoi(parts[1])
-
-	for i := 2; i < len(parts); i++ {
-		value, _ := strconv.Atoi(parts[i])
-		err := ms.Insert(index, value)
-		if err != nil {
-			fmt.Println(err)
-			break
-		}
-		index++ // desloca o índice para manter a ordem
-	}
+			for i := 1; i < len(parts); i++ {
+				value, _ := strconv.Atoi(parts[i])
+				ms.Insert(value)
+			}
 
 			//for _, part := range parts[1:] {
 			//value, _ := strconv.Atoi(part)
