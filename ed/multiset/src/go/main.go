@@ -2,11 +2,11 @@ package main
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"os"
 	"strconv"
 	"strings"
-	"errors"
 )
 
 type Vector struct {
@@ -98,11 +98,25 @@ func Join(slice []int, sep string) string {
 	}
 	return result
 }
-func (v *Vector) Erase(index int) error {
-	if index < 0 || index >= v.size {
-		return errors.New("index out of range")
+func (v *Vector) Erase(value int) error {
+	idx := -1
+	low := 0
+	high := v.size - 1
+	for low <= high {
+		mid := (low + high) / 2
+		if v.data[mid] == value {
+			idx = mid
+			break
+		} else if v.data[mid] < value {
+			low = mid + 1
+		} else {
+			high = mid - 1
+		}
 	}
-	for i := index; i < v.size-1; i++ {
+	if idx == -1 {
+		return errors.New("value not found")
+	}
+	for i := idx; i < v.size-1; i++ {
 		v.data[i] = v.data[i+1]
 	}
 	v.size--
@@ -141,8 +155,10 @@ func main() {
 		case "show":
 			fmt.Println(ms.String())
 		case "erase":
-			//value, _ := strconv.Atoi(args[1])
-			//fmt.Println(sm.)
+			value, _ := strconv.Atoi(parts[1])
+			if err := ms.Erase(value); err != nil {
+				fmt.Println(err)
+			}
 		case "contains":
 			value, _ := strconv.Atoi(parts[1])
 			fmt.Println(ms.Contains(value))
