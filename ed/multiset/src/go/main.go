@@ -122,6 +122,15 @@ func (v *Vector) Erase(value int) error {
 	v.size--
 	return nil
 }
+func (v *Vector) Count(value int) int {
+	count := 0
+	for i := 0; i < v.size; i++ {
+		if v.data[i] == value {
+			count++
+		}
+	}
+	return count
+}
 
 func main() {
 	var line, cmd string
@@ -163,7 +172,8 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			fmt.Println(ms.Contains(value))
 		case "count":
-			// value, _ := strconv.Atoi(args[1])
+			value, _ := strconv.Atoi(parts[1])
+			fmt.Println(ms.Count(value))
 		case "unique":
 		case "clear":
 		default:
