@@ -152,8 +152,53 @@
         },
         {
             "label": "2026-04-27_15-26-05",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Vector struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc (v *Vector) String() string {\n\tif v.size == 0 {\n\t\treturn \"[]\"\n\t}\n\tvar builder strings.Builder\n\tbuilder.WriteString(\"[\")\n\tfor i := 0; i < v.size; i++ {\n\t\tif i > 0 {\n\t\t\tbuilder.WriteString(\", \")\n\t\t}\n\t\tfmt.Fprintf(&builder, \"%d\", v.data[i])\n\t}\n\tbuilder.WriteString(\"]\")\n\treturn builder.String()\n}\n\nfunc NewMultiSet(capacity int) *Vector {\n\treturn &Vector{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (v *Vector) Insert(value int) error {\n\t// Find the position to insert to keep sorted\n\tpos := 0\n\tfor pos < v.size && v.data[pos] < value {\n\t\tpos++\n\t}\n\tif v.size == v.capacity {\n\t\tnewCapacity := v.capacity * 2\n\t\tif newCapacity == 0 {\n\t\t\tnewCapacity = 1\n\t\t}\n\t\tv.Reserve(newCapacity)\n\t}\n\tfor i := v.size; i > pos; i-- {\n\t\tv.data[i] = v.data[i-1]\n\t}\n\tv.data[pos] = value\n\tv.size++\n\treturn nil\n}\n\nfunc (v *Vector) Reserve(newCapacity int) {\n\tif newCapacity <= v.capacity {\n\t\treturn\n\t}\n\tnewData := make([]int, newCapacity)\n\tfor i := 0; i < v.size; i++ {\n\t\tnewData[i] = v.data[i]\n\t}\n\tv.data = newData\n\tv.capacity = newCapacity\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tparts := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor i := 1; i < len(parts); i++ {\n\t\t\t\tvalue, _ := strconv.Atoi(parts[i])\n\t\t\t\tms.Insert(value)\n\t\t\t}\n\n\t\t\t//for _, part := range parts[1:] {\n\t\t\t//value, _ := strconv.Atoi(part)\n\t\t\t//}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms.String())\n\t\tcase \"erase\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"contains\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"count\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"unique\":\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "content": "@@ -1415,217 +1415,8 @@\n lt%0A%7D\n-%0Afunc (v *Vector) IndexOf(value int) int %7B%0A%09for i := 0; i %3C v.size; i++ %7B%0A%09%09if v.data%5Bi%5D == value %7B%0A%09%09%09return i%0A%09%09%7D%0A%09%7D%0A%09return -1%0A%7D%0A%0Afunc (v *Vector) Contains(value int) bool %7B%0A%09return v.IndexOf(value) != -1%0A%7D\n %0A%0Afu\n",
             "lines": "129"
+        },
+        {
+            "label": "2026-04-27_15-28-06",
+            "content": "@@ -2130,24 +2130,26 @@\n e)%0A%09%09%09%7D%0A%0A%09%09%09\n+//\n for _, part \n@@ -2168,25 +2168,26 @@\n ts%5B1:%5D %7B%0A%09%09%09\n-%09\n+//\n value, _ := \n@@ -2208,16 +2208,18 @@\n art)%0A%09%09%09\n+//\n %7D%0A%09%09case\n@@ -2329,24 +2329,27 @@\n ntains%22:%0A%09%09%09\n+// \n value, _ := \n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-04-27_15-28-57",
+            "content": "@@ -2366,27 +2366,8 @@\n 1%5D)%0A\n-%09%09%09contains(value)%0A\n %09%09ca\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-04-27_15-29-10",
+            "content": "@@ -2353,20 +2353,20 @@\n nv.Atoi(\n-p\n ar\n-t\n+gs\n %5B1%5D)%0A%09%09%09\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-04-27_15-30-07",
+            "content": "@@ -2349,33 +2349,32 @@\n trconv.Atoi(part\n-s\n %5B1%5D)%0A%09%09%09contains\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-04-27_15-30-15",
+            "content": "@@ -2366,17 +2366,17 @@\n %5B1%5D)%0A%09%09%09\n-C\n+c\n ontains(\n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-04-27_15-30-28",
+            "content": "@@ -1412,16 +1412,224 @@\n esult%0A%7D%0A\n+func (v *Vector) IndexOf(value int) int %7B%0A%09for i := 0; i %3C v.size; i++ %7B%0A%09%09if v.data%5Bi%5D == value %7B%0A%09%09%09return i%0A%09%09%7D%0A%09%7D%0A%09return -1%0A%7D%0A%0Afunc (v *Vector) Contains(value int) bool %7B%0A%09return v.IndexOf(value) != -1%0A%7D\n %0A%0Afunc m\n@@ -2366,31 +2366,16 @@\n %5B1%5D)%0A%09%09%09\n-fmt.Println(ms.\n Contains\n@@ -2381,17 +2381,16 @@\n s(value)\n-)\n %0A%09%09case \n",
+            "lines": "142"
+        },
+        {
+            "label": "2026-04-27_15-31-21",
+            "content": "@@ -1198,274 +1198,8 @@\n %0A%7D%0A%0A\n-func (v *Vector) Contains(value int) bool %7B%0A%09low := 0%0A%09high := v.size - 1%0A%09for low %3C= high %7B%0A%09%09mid := (low + high) / 2%0A%09%09if v.data%5Bmid%5D == value %7B%0A%09%09%09return true%0A%09%09%7D else if v.data%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%09%7D%0A%09return false%0A%7D%0A%0A\n func\n@@ -1234,24 +1234,24 @@\n g) string %7B%0A\n+\n %09if len(slic\n@@ -1410,19 +1410,20 @@\n  result%0A\n-\n %7D%0A%0A\n+%0A\n func mai\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-04-27_15-31-37",
+            "content": "@@ -2191,18 +2191,16 @@\n %09%09%7D%0A%0A%09%09%09\n-//\n for _, p\n@@ -2227,18 +2227,16 @@\n :%5D %7B%0A%09%09%09\n-//\n %09value, \n@@ -2262,18 +2262,16 @@\n art)%0A%09%09%09\n-//\n %7D%0A%09%09case\n",
+            "lines": "146"
+        },
+        {
+            "label": "2026-04-27_15-32-09",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Vector struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc (v *Vector) String() string {\n\tif v.size == 0 {\n\t\treturn \"[]\"\n\t}\n\tvar builder strings.Builder\n\tbuilder.WriteString(\"[\")\n\tfor i := 0; i < v.size; i++ {\n\t\tif i > 0 {\n\t\t\tbuilder.WriteString(\", \")\n\t\t}\n\t\tfmt.Fprintf(&builder, \"%d\", v.data[i])\n\t}\n\tbuilder.WriteString(\"]\")\n\treturn builder.String()\n}\n\nfunc NewMultiSet(capacity int) *Vector {\n\treturn &Vector{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (v *Vector) Insert(value int) error {\n\t// Find the position to insert to keep sorted\n\tpos := 0\n\tfor pos < v.size && v.data[pos] < value {\n\t\tpos++\n\t}\n\tif v.size == v.capacity {\n\t\tnewCapacity := v.capacity * 2\n\t\tif newCapacity == 0 {\n\t\t\tnewCapacity = 1\n\t\t}\n\t\tv.Reserve(newCapacity)\n\t}\n\tfor i := v.size; i > pos; i-- {\n\t\tv.data[i] = v.data[i-1]\n\t}\n\tv.data[pos] = value\n\tv.size++\n\treturn nil\n}\n\nfunc (v *Vector) Reserve(newCapacity int) {\n\tif newCapacity <= v.capacity {\n\t\treturn\n\t}\n\tnewData := make([]int, newCapacity)\n\tfor i := 0; i < v.size; i++ {\n\t\tnewData[i] = v.data[i]\n\t}\n\tv.data = newData\n\tv.capacity = newCapacity\n}\n\nfunc (v *Vector) Contains(value int) bool {\n\tlow := 0\n\thigh := v.size - 1\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif v.data[mid] == value {\n\t\t\treturn true\n\t\t} else if v.data[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else {\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn false\n}\n\nfunc Join(slice []int, sep string) string {\n\tif len(slice) == 0 {\n\t\treturn \"\"\n\t}\n\tresult := fmt.Sprintf(\"%d\", slice[0])\n\tfor _, value := range slice[1:] {\n\t\tresult += sep + fmt.Sprintf(\"%d\", value)\n\t}\n\treturn result\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\tms := NewMultiSet(0)\n\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tparts := strings.Fields(line)\n\t\tfmt.Println(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tms = NewMultiSet(value)\n\t\tcase \"insert\":\n\t\t\tfor i := 1; i < len(parts); i++ {\n\t\t\t\tvalue, _ := strconv.Atoi(parts[i])\n\t\t\t\tms.Insert(value)\n\t\t\t}\n\n\t\t\t//for _, part := range parts[1:] {\n\t\t\t//\tvalue, _ := strconv.Atoi(part)\n\t\t\t//}\n\t\tcase \"show\":\n\t\t\tfmt.Println(ms.String())\n\t\tcase \"erase\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"contains\":\n\t\t\tvalue, _ := strconv.Atoi(parts[1])\n\t\t\tfmt.Println(ms.Contains(value))\n\t\tcase \"count\":\n\t\t\t// value, _ := strconv.Atoi(args[1])\n\t\tcase \"unique\":\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "146"
         }
     ]
 }

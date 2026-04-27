@@ -71,6 +71,22 @@ func (v *Vector) Reserve(newCapacity int) {
 	v.capacity = newCapacity
 }
 
+func (v *Vector) Contains(value int) bool {
+	low := 0
+	high := v.size - 1
+	for low <= high {
+		mid := (low + high) / 2
+		if v.data[mid] == value {
+			return true
+		} else if v.data[mid] < value {
+			low = mid + 1
+		} else {
+			high = mid - 1
+		}
+	}
+	return false
+}
+
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -110,14 +126,15 @@ func main() {
 			}
 
 			//for _, part := range parts[1:] {
-			//value, _ := strconv.Atoi(part)
+			//	value, _ := strconv.Atoi(part)
 			//}
 		case "show":
 			fmt.Println(ms.String())
 		case "erase":
 			// value, _ := strconv.Atoi(args[1])
 		case "contains":
-			// value, _ := strconv.Atoi(args[1])
+			value, _ := strconv.Atoi(parts[1])
+			fmt.Println(ms.Contains(value))
 		case "count":
 			// value, _ := strconv.Atoi(args[1])
 		case "unique":
