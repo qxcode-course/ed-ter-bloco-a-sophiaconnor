@@ -140,6 +140,9 @@ func (v *Vector) Unique() int {
 	}
 	return unique
 }
+func (v *Vector) Clear() {
+	v.size = 0
+}
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
@@ -185,6 +188,7 @@ func main() {
 		case "unique":
 			fmt.Println(ms.Unique())
 		case "clear":
+			ms.Clear()
 		default:
 			fmt.Println("fail: comando invalido")
 		}

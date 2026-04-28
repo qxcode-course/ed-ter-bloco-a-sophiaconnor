@@ -8,32 +8,38 @@ import (
 	"strings"
 )
 
-func BetterSearch(slice []int, value int) (bool, int) {
-	low, high := 0, len(slice)
+func BetterSearch(slice []int, size int, value int) (bool, int) {
+	low, high := 0, size
 	for low < high {
-		mid := (low + high)/2
+		mid := (low + high) / 2
 		if slice[mid] < value {
 			low = mid + 1
 		} else {
 			high = mid
 		}
 	}
-	return low < len(slice) && slice[low] == value, low
+	return low < size && slice[low] == value, low
 }
-
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	parts := strings.Split(scanner.Text(), " ")
 	slice := []int{}
-	for _, elem := range parts[1 : len(parts)-1] {
+	i := 1
+	for {
+		if i >= len(parts)-1 {
+			break
+		}
+		elem := parts[i]
 		value, _ := strconv.Atoi(elem)
 		slice = append(slice, value)
+		i++
 	}
+	size := i - 1
 	scanner.Scan()
 	value, _ := strconv.Atoi(scanner.Text())
-	found, result := BetterSearch(slice, value)
+	found, result := BetterSearch(slice, size, value)
 	if found {
 		fmt.Println("V", result)
 	} else {
