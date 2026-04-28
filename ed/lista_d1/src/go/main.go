@@ -16,10 +16,20 @@ type Node struct {
 func NewDList() *DList {
 	dList := &DList{}
 	dList.head = &Note{}
-	dList.
-	dList..head = dList.head
+	dList.head.next = dList.head
+	dList.head.previous = dList.head
 	return dList
 	}
+func insert (A *Node, value int) {
+	B := A.previous
+	C := &Node{
+		info := value,
+		next : A,
+		previous : B,		
+	}		
+	B.next = C
+	A.previous = C
+}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)

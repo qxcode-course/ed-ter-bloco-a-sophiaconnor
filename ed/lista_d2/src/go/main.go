@@ -5,12 +5,65 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
 )
 
+type Node struct {
+	value int
+	next  *Node
+	prev  *Node
+}
 
+type LList struct {
+	head *Node
+	tail *Node
+	size int
+}
+
+func NewLList() *LList {
+	return &LList{}
+}
+
+func (l *LList) Size() int {
+	return l.size
+}
+
+func (l *LList) String() string {
+	if l.head == nil {
+		return "[]"
+	}
+
+	values := make([]string, 0, l.size)
+	for node := l.head; node != nil; node = node.next {
+		values = append(values, strconv.Itoa(node.value))
+	}
+	return "[" + strings.Join(values, ", ") + "]"
+}
+func (l *LList) PushBack(value int) {
+	node := &Node{value: value, prev: l.tail}
+	if l.tail != nil {
+		l.tail.next = node
+	}
+	l.tail = node
+	if l.head == nil {
+		l.head = node
+	}
+	l.size++
+}
+func (l *LList) PushFront(value int) {
+	node := &Node{value: value, next: l.head}
+	if l.head != nil {
+		l.head.prev = node
+	}
+	l.head = node
+	if l.tail == nil {
+		l.tail = node
+	}
+	l.size++
+}
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-// 	ll := NewLList()
+	ll := NewLList()
 
 	for {
 		fmt.Print("$")
@@ -29,19 +82,19 @@ func main() {
 
 		switch cmd {
 		case "show":
-			// fmt.Println(ll.String())
+			fmt.Println(ll.String())
 		case "size":
 			// fmt.Println(ll.Size())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushBack(num)
-			// }
+			for _, v := range args[1:] {
+			num, _ := strconv.Atoi(v)
+			ll.PushBack(num)
+			}
 		case "push_front":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushFront(num)
-			// }
+			for _, v := range args[1:] {
+			num, _ := strconv.Atoi(v)
+			ll.PushFront(num)
+			}
 		case "pop_back":
 			// ll.PopBack()
 		case "pop_front":
