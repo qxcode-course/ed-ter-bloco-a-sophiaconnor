@@ -9,13 +9,12 @@ import (
 )
 
 type Node struct {
-	value int
-	next  *Node
-	prev  *Node
+	info int		
+	next *Node
+	previous *Node
 }
-
 type LList struct {
-	head *Node
+	head *Node	
 	tail *Node
 	size int
 }
@@ -35,12 +34,12 @@ func (l *LList) String() string {
 
 	values := make([]string, 0, l.size)
 	for node := l.head; node != nil; node = node.next {
-		values = append(values, strconv.Itoa(node.value))
+		values = append(values, strconv.Itoa(node.info))
 	}
 	return "[" + strings.Join(values, ", ") + "]"
 }
 func (l *LList) PushBack(value int) {
-	node := &Node{value: value, prev: l.tail}
+	node := &Node{info: value, previous: l.tail}
 	if l.tail != nil {
 		l.tail.next = node
 	}
@@ -50,17 +49,33 @@ func (l *LList) PushBack(value int) {
 	}
 	l.size++
 }
-func (l *LList) PushFront(value int) {
-	node := &Node{value: value, next: l.head}
-	if l.head != nil {
-		l.head.prev = node
-	}
-	l.head = node
-	if l.tail == nil {
-		l.tail = node
-	}
-	l.size++
+func (l *LList) PushFront(info int) {
+    node := &Node{info: info, next: l.head}
+    if l.head != nil {
+        l.head.previous = node
+    }
+    l.head = node
+    if l.tail == nil {
+        l.tail = node
+    }
+    l.size++
 }
+func (l *LList) Front() *Node {
+	return l.head
+}
+func (l *LList) Back() *Node {
+	return l.tail
+}
+func (n *Node) Next() *Node {
+	return n.next
+}
+func (n *Node) Prev() *Node {
+	return n.previous
+}
+func (n *Node) Value() int {
+	return n.info
+}
+
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	ll := NewLList()
@@ -84,17 +99,17 @@ func main() {
 		case "show":
 			fmt.Println(ll.String())
 		case "size":
-			// fmt.Println(ll.Size())
+			 fmt.Println(ll.Size())
 		case "push_back":
 			for _, v := range args[1:] {
 			num, _ := strconv.Atoi(v)
 			ll.PushBack(num)
 			}
 		case "push_front":
-			for _, v := range args[1:] {
-			num, _ := strconv.Atoi(v)
-			ll.PushFront(num)
-			}
+			//for _, v := range args[1:] {
+			//num, _ := strconv.Atoi(v)
+			//ll.PushFront(num)
+			//}
 		case "pop_back":
 			// ll.PopBack()
 		case "pop_front":
@@ -102,15 +117,15 @@ func main() {
 		case "clear":
 			// ll.Clear()
 		case "walk":
-			// fmt.Print("[ ")
-			// for node := ll.Front(); node != nil; node = node.Next() {
-			// 	fmt.Printf("%v ", node.Value)
-			// }
-			// fmt.Print("]\n[ ")
-			// for node := ll.Back(); node != nil; node = node.Prev() {
-			// 	fmt.Printf("%v ", node.Value)
-			// }
-			// fmt.Println("]")
+			 fmt.Print("[ ")
+			 for node := ll.Front(); node != nil; node = node.Next() {
+			 	fmt.Printf("%v ", node.Value)
+			 }
+			 fmt.Print("]\n[ ")
+			 for node := ll.Back(); node != nil; node = node.Prev() {
+			 	fmt.Printf("%v ", node.Value)
+			 }
+			 fmt.Println("]")
 		case "replace":
 			// oldvalue, _ := strconv.Atoi(args[1])
 			// newvalue, _ := strconv.Atoi(args[2])
