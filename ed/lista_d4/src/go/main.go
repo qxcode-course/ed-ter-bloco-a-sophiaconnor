@@ -55,8 +55,29 @@ func (l *LList[T]) String() string {
 	}
 	return "[" + strings.Join(values, ", ") + "]"
 }
-
-
+func (l *LList[T]) Insert(A *Node[T], value T) {
+	B := A.prev
+	C := &Node[T]{
+		Value: value,
+		next:  A,
+		prev:  B,
+	}
+	if B != nil {
+		B.next = C
+	} else {
+		l.root = C
+	}
+	A.prev = C
+	l.size++
+}
+func (l *LList[T]) Search(value T) *Node[T] {
+	for node := l.root.next; node != l.root; node = node.next {
+		if node.Value == value {
+			return node
+		}
+	}
+	return nil
+}
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
  	ll := NewLList[int]()
@@ -89,19 +110,19 @@ func main() {
 		case "clear":
 			// ll.Clear()
 		case "forward":
-			// search, _ := strconv.Atoi(args[1])
-			// steps, _ := strconv.Atoi(args[2])
-			// node := ll.Search(search)
-			// if node == nil {
-			// 	fmt.Println("fail: valor não encontrado")
-			// 	continue
-			// }
-			// collect := []string{}
-			// for range steps {
-			// 	collect = append(collect, fmt.Sprintf("%v", node.Value))
-			// 	node = node.Next()
-			// }
-			// fmt.Printf("[ %s ]\n", strings.Join(collect, " "))
+			 search, _ := strconv.Atoi(args[1])
+			 steps, _ := strconv.Atoi(args[2])
+			 node := ll.Search(search)
+			 if node == nil {
+			 	fmt.Println("fail: valor não encontrado")
+			 	continue
+			 }
+			 collect := []string{}
+			 for range steps {
+			 	collect = append(collect, fmt.Sprintf("%v", node.Value))
+			 	node = node.Next()
+			 }
+			 fmt.Printf("[ %s ]\n", strings.Join(collect, " "))
 		case "backward":
 			// search, _ := strconv.Atoi(args[1])
 			// steps, _ := strconv.Atoi(args[2])
