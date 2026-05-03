@@ -39,15 +39,15 @@ func (l *LList) String() string {
 	return "[" + strings.Join(values, ", ") + "]"
 }
 func (l *LList) PushBack(value int) {
-	node := &Node{info: value, previous: l.tail}
-	if l.tail != nil {
-		l.tail.next = node
-	}
-	l.tail = node
-	if l.head == nil {
-		l.head = node
-	}
-	l.size++
+    node := &Node{info: value, previous: l.tail}
+    if l.tail != nil {
+        l.tail.next = node
+    }
+    l.tail = node
+    if l.head == nil {
+        l.head = node
+    }
+    l.size++
 }
 func (l *LList) PushFront(info int) {
     node := &Node{info: info, next: l.head}
@@ -75,7 +75,7 @@ func (n *Node) Prev() *Node {
 func (n *Node) Value() int {
 	return n.info
 }
-
+func 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	ll := NewLList()
@@ -119,11 +119,11 @@ func main() {
 		case "walk":
 			 fmt.Print("[ ")
 			 for node := ll.Front(); node != nil; node = node.Next() {
-			 	fmt.Printf("%v ", node.Value)
+			 	fmt.Printf("%v ", node.Value())
 			 }
 			 fmt.Print("]\n[ ")
 			 for node := ll.Back(); node != nil; node = node.Prev() {
-			 	fmt.Printf("%v ", node.Value)
+			 	fmt.Printf("%v ", node.Value())
 			 }
 			 fmt.Println("]")
 		case "replace":
