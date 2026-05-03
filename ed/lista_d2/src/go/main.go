@@ -75,7 +75,11 @@ func (n *Node) Prev() *Node {
 func (n *Node) Value() int {
 	return n.info
 }
-func 
+func (l *LList) Clear() {
+	 l.head = nil
+	 l.tail = nil
+	 l.size = 0
+}
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	ll := NewLList()
@@ -115,7 +119,7 @@ func main() {
 		case "pop_front":
 			// ll.PopFront()
 		case "clear":
-			// ll.Clear()
+			ll.Clear()
 		case "walk":
 			 fmt.Print("[ ")
 			 for node := ll.Front(); node != nil; node = node.Next() {
