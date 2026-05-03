@@ -106,10 +106,10 @@ func main() {
 			ll.PushBack(num)
 			}
 		case "push_front":
-			//for _, v := range args[1:] {
-			//num, _ := strconv.Atoi(v)
-			//ll.PushFront(num)
-			//}
+			for _, v := range args[1:] {
+			num, _ := strconv.Atoi(v)
+			ll.PushFront(num)
+			}
 		case "pop_back":
 			// ll.PopBack()
 		case "pop_front":
