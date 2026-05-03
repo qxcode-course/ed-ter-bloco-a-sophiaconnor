@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
 )
 
 type Node[T comparable] struct {
@@ -58,7 +59,7 @@ func (l *LList[T]) String() string {
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-// 	ll := NewLList[int]()
+ 	ll := NewLList[int]()
 
 	for {
 		fmt.Print("$")
@@ -77,14 +78,14 @@ func main() {
 
 		switch cmd {
 		case "show":
-			// fmt.Println(ll.String())
+			 fmt.Println(ll.String())
 		case "size":
 			// fmt.Println(ll.Size())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushBack(num)
-			// }
+			 for _, v := range args[1:] {
+			 	num, _ := strconv.Atoi(v)
+			 	ll.PushBack(num)
+			 }
 		case "clear":
 			// ll.Clear()
 		case "forward":
