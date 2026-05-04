@@ -51,6 +51,18 @@ func (ll *LList) PushFront(value int) {
 	}
 	ll.size++
 }
+func (ll *LList) PushBack(value int) {
+	newNode := &Node{value: value}
+	if ll.size == 0 {
+		ll.head = newNode
+		ll.tail = newNode
+	} else {
+		newNode.prev = ll.tail
+		ll.tail.next = newNode
+		ll.tail = newNode
+	}
+	ll.size++
+}
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	ll := NewLList()
@@ -76,10 +88,10 @@ func main() {
 		case "size":
 			//fmt.Println(ll.Size())
 		case "push_back":
-			//for _, v := range args[1:] {
-			//	num, _ := strconv.Atoi(v)
-			//	ll.PushBack(num)
-			//}
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				ll.PushBack(num)
+			}
 		case "push_front":
 			for _, v := range args[1:] {
 				num, _ := strconv.Atoi(v)

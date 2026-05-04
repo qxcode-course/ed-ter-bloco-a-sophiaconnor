@@ -21,3 +21,6 @@
 2026-05-04 19:36:44, EXEC, v:1, k:ed@lista_d1, mode:FULL, size:111, fail:COMP
 2026-05-04 19:36:53, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:42, size:111
 2026-05-04 19:37:33, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:28, size:100
+2026-05-04 19:39:45, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:42, size:112
+2026-05-04 19:39:44, MOVE, v:1, k:ed@lista_d1, mode:EDIT
+2026-05-04 19:39:45, MOVE, v:1, k:ed@lista_d1, mode:EDIT
