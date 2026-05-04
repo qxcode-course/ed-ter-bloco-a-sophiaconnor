@@ -2,8 +2,123 @@
     "patches": [
         {
             "label": "2026-05-03_16-18-01",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\treturn \"\"\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\treturn nil\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tfmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "content": "@@ -145,279 +145,17 @@\n  %7B%0A%09\n-var sb strings.Builder%0A%09sb.WriteString(%22%5B %22)%0A%09for it := l.Front(); it != nil; it = Next(l, it) %7B%0A%09%09if it == sword %7B%0A%09%09%09sb.WriteString(fmt.Sprintf(%22%25d%3E %22, it.Value))%0A%09%09%7D else %7B%0A%09%09%09sb.WriteString(fmt.Sprintf(%22%25d %22, it.Value))%0A%09%09%7D%0A%09%7D%0A%09sb.WriteString(%22%5D%22)%0A%09return sb.String()\n+return %22%22\n %0A%7D%0A%0A\n@@ -247,17 +247,16 @@\n %5Bint%5D %7B%0A\n-%0A\n %09return \n",
             "lines": "36"
+        },
+        {
+            "label": "2026-05-03_16-26-04",
+            "content": "@@ -513,424 +513,8 @@\n %5D %7B%0A\n-%09if it == nil %7B%0A%09%09return nil%0A%09%7D%0A%09if it.next == l.root %7B%0A%09%09return l.root.next%0A%09%7D%0A%09return it.next%0A%7D%0A%0Atype DNode%5BT comparable%5D struct %7B%0A%09Value T%0A%09next  *DNode%5BT%5D%0A%09prev  *DNode%5BT%5D%0A%09root  *DNode%5BT%5D%0A%7D%0A%0Atype DList%5BT comparable%5D struct %7B%0A%09root *DNode%5BT%5D%0A%09size int%0A%7D%0A%0Afunc NewDList%5BT comparable%5D() *DList%5BT%5D %7B%0A%09root := &DNode%5BT%5D%7B%7D%0A%09root.next = root%0A%09root.prev = root%0A%09root.root = root%0A%09return &DList%5BT%5D%7Broot: root, size: 0%7D%0A%7D\n %0A%09re\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-03_16-28-48",
+            "content": "@@ -929,10 +929,22 @@\n 0%7D%0A%7D\n-%09\n %0A\n+%09return nil%0A%7D\n %0A%0Afu\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-03_16-29-02",
+            "content": "@@ -608,16 +608,337 @@\n next%0A%7D%0A%0A\n+type DNode%5BT comparable%5D struct %7B%0A%09Value T%0A%09next  *DNode%5BT%5D%0A%09prev  *DNode%5BT%5D%0A%09root  *DNode%5BT%5D%0A%7D%0A%0Atype DList%5BT comparable%5D struct %7B%0A%09root *DNode%5BT%5D%0A%09size int%0A%7D%0A%0Afunc NewDList%5BT comparable%5D() *DList%5BT%5D %7B%0A%09root := &DNode%5BT%5D%7B%7D%0A%09root.next = root%0A%09root.prev = root%0A%09root.root = root%0A%09return &DList%5BT%5D%7Broot: root, size: 0%7D%0A%7D%09%0A%0A%0A\n func mai\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-05-03_16-29-23",
+            "content": "@@ -527,24 +527,8 @@\n nil \n-%7C%7C it == l.root \n %7B%0A%09%09\n@@ -546,30 +546,14 @@\n %09%7D%0A%09\n-next := it.Next()%0A%09\n if \n+it.\n next\n@@ -570,27 +570,35 @@\n  %7B%0A%09%09return \n-nil\n+l.root.next\n %0A%09%7D%0A%09return \n@@ -597,16 +597,19 @@\n %09return \n+it.\n next%0A%7D%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-03_16-30-41",
+            "content": "@@ -509,20 +509,17 @@\n %5Bint%5D %7B%0A\n-    \n+%09\n if it ==\n@@ -537,32 +537,26 @@\n == l.root %7B%0A\n-        \n+%09%09\n return nil%0A \n@@ -554,26 +554,20 @@\n urn nil%0A\n-    %7D%0A    \n+%09%7D%0A%09\n next := \n@@ -576,20 +576,17 @@\n .Next()%0A\n-    \n+%09\n if next \n@@ -601,82 +601,25 @@\n t %7B%0A\n-        return l.root.next  // retorna o primeiro elemento vivo%0A    %7D%0A    \n+%09%09return nil%0A%09%7D%0A%09\n retu\n@@ -628,16 +628,17 @@\n  next%0A%7D%0A\n+%0A\n func mai\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-39-27",
+            "content": "@@ -509,17 +509,20 @@\n %5Bint%5D %7B%0A\n-%09\n+    \n if it ==\n@@ -536,34 +536,40 @@\n  it == l.root %7B%0A\n-%09%09\n+        \n return nil%0A%09%7D%0A%09n\n@@ -563,20 +563,26 @@\n urn nil%0A\n-%09%7D%0A%09\n+    %7D%0A    \n next := \n@@ -591,17 +591,20 @@\n .Next()%0A\n-%09\n+    \n if next \n@@ -619,25 +619,82 @@\n t %7B%0A\n-%09%09return nil%0A%09%7D%0A%09\n+        return l.root.next  // retorna o primeiro elemento vivo%0A    %7D%0A    \n retu\n@@ -703,17 +703,16 @@\n  next%0A%7D%0A\n-%0A\n func mai\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-03_16-39-43",
+            "content": "@@ -606,25 +606,19 @@\n %09return \n-l.Front()\n+nil\n %0A%09%7D%0A%09ret\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-40-42",
+            "content": "@@ -603,23 +603,21 @@\n %7B%0A%09%09\n-next = next.Nex\n+return l.Fron\n t()%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-40-54",
+            "content": "@@ -603,68 +603,25 @@\n %7B%0A%09%09\n-return l.root.next // retorna ao primeiro elemento (circular\n+next = next.Next(\n )%0A%09%7D\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-43-13",
+            "content": "@@ -515,34 +515,50 @@\n %7B%0A%09if it == nil \n+%7C%7C it == l.root \n %7B%0A\n-\n %09%09return nil%0A%09%7D%0A\n@@ -557,18 +557,16 @@\n  nil%0A%09%7D%0A\n-%09%0A\n %09next :=\n@@ -581,61 +581,61 @@\n ()%0A%09\n-%0A%09// Se o pr%C3%B3ximo for a raiz (sentinela), volta par\n+if next == l.root %7B%0A%09%09return l.root.next // retorn\n a \n+a\n o pr\n@@ -653,69 +653,23 @@\n ento\n-%0A%09if next == l.root %7C%7C next == nil %7B%0A%09%09return l.Front(\n+ (circular\n )%0A%09%7D%0A\n-%09%0A\n %09ret\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-45-50",
+            "content": "@@ -514,93 +514,10 @@\n  %7B%0A%09\n-// Se a lista estiver vazia ou o n%C3%B3 for inv%C3%A1lido, n%C3%A3o h%C3%A1 pr%C3%B3ximo%0A%09if l.Size() == 0 %7C%7C\n+if\n  it \n@@ -541,17 +541,18 @@\n  nil%0A%09%7D%0A\n+%09\n %0A\n-\n %09next :=\n@@ -562,16 +562,17 @@\n .Next()%0A\n+%09\n %0A%09// Se \n@@ -587,16 +587,22 @@\n o for a \n+raiz (\n sentinel\n@@ -606,35 +606,21 @@\n nela\n- (root), o %22pr%C3%B3ximo real%22 %C3%A9\n+), volta para\n  o p\n@@ -631,16 +631,16 @@\n iro \n-da lista\n+elemento\n %0A%09if\n@@ -659,113 +659,10 @@\n oot \n-%7B%0A%09%09return l.Front()%0A%09%7D%0A%0A%09// Se por algum motivo o next for nil (lista n%C3%A3o circular), volta ao in%C3%ADcio%0A%09if\n+%7C%7C\n  nex\n@@ -694,17 +694,18 @@\n nt()%0A%09%7D%0A\n+%09\n %0A\n-\n %09return \n@@ -713,12 +713,11 @@\n ext%0A\n+\n %7D%0A%0A\n-%0A\n func\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-03_16-47-10",
+            "content": "@@ -509,16 +509,82 @@\n %5Bint%5D %7B%0A\n+%09// Se a lista estiver vazia ou o n%C3%B3 for inv%C3%A1lido, n%C3%A3o h%C3%A1 pr%C3%B3ximo%0A\n %09if l.Si\n@@ -650,28 +650,211 @@\n )%0A%0A%09\n-if next == l.root %7C%7C\n+// Se o pr%C3%B3ximo for a sentinela (root), o %22pr%C3%B3ximo real%22 %C3%A9 o primeiro da lista%0A%09if next == l.root %7B%0A%09%09return l.Front()%0A%09%7D%0A%0A%09// Se por algum motivo o next for nil (lista n%C3%A3o circular), volta ao in%C3%ADcio%0A%09if\n  nex\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-03_16-52-19",
+            "content": "@@ -513,74 +513,8 @@\n %5D %7B%0A\n-%09// Se a lista estiver vazia ou o n%C3%B3 for inv%C3%A1lido, n%C3%A3o h%C3%A1 pr%C3%B3ximo%0A\n %09if \n@@ -584,211 +584,28 @@\n )%0A%0A%09\n-// Se o pr%C3%B3ximo for a sentinela (root), o %22pr%C3%B3ximo real%22 %C3%A9 o primeiro da lista%0A%09if next == l.root %7B%0A%09%09return l.Front()%0A%09%7D%0A%0A%09// Se por algum motivo o next for nil (lista n%C3%A3o circular), volta ao in%C3%ADcio%0A%09if\n+if next == l.root %7C%7C\n  nex\n@@ -840,36 +840,28 @@\n for \n-i := 0; i %3C chosen-1; i++\n+range chosen - 1\n  %7B%0A\n+%09\n %09swo\n@@ -884,40 +884,33 @@\n rd)%0A\n+%09\n %7D%0A\n-%0A\n+%09\n for \n-i := 0; i %3C qtd-1; i++\n+range qtd - 1\n  %7B%0A\n+%09\n %09fmt\n@@ -935,16 +935,17 @@\n sword))%0A\n+%09\n %09l.Erase\n@@ -961,16 +961,17 @@\n sword))%0A\n+%09\n %09sword =\n@@ -986,16 +986,17 @@\n  sword)%0A\n+%09\n %7D%0A%09fmt.P\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-03_16-53-24",
+            "content": "@@ -514,20 +514,90 @@\n  %7B%0A%09\n-if it\n+// Se a lista estiver vazia ou o n%C3%B3 for inv%C3%A1lido, n%C3%A3o h%C3%A1 pr%C3%B3ximo%0A%09if l.Size()\n  == \n-nil\n+0\n  %7C%7C \n@@ -598,30 +598,27 @@\n  0 %7C%7C it == \n-l.root\n+nil\n  %7B%0A%09%09return \n@@ -690,18 +690,27 @@\n t), \n-voltamos a\n+o %22pr%C3%B3ximo real%22 %C3%A9 \n o pr\n@@ -716,24 +716,24 @@\n rimeiro \n-elemento\n+da lista\n %0A%09if nex\n@@ -752,16 +752,14 @@\n %7B%0A%09%09\n-front :=\n+return\n  l.F\n@@ -770,72 +770,106 @@\n ()%0A%09\n+%7D%0A%0A\n %09// Se \n-Front %C3%A9 root, a lista est%C3%A1 vazia%0A%09\n+por algum motivo o next for nil (lista n%C3%A3o circular), volta ao in%C3%ADcio%0A\n %09if \n-fron\n+nex\n t == \n-l.root\n+nil\n  %7B%0A\n-%09\n %09%09re\n@@ -877,30 +877,17 @@\n urn \n-nil%0A%09%09%7D%0A%09%09return f\n+l.F\n ront\n+()\n %0A%09%7D%0A\n@@ -903,16 +903,17 @@\n next%0A%7D%0A%0A\n+%0A\n func mai\n@@ -1089,28 +1089,36 @@\n for \n-range chosen - 1\n+i := 0; i %3C chosen-1; i++\n  %7B%0A\n-%09\n %09swo\n@@ -1141,33 +1141,40 @@\n rd)%0A\n-%09\n %7D%0A\n-%09\n+%0A\n for \n-range qtd - 1\n+i := 0; i %3C qtd-1; i++\n  %7B%0A\n-%09\n %09fmt\n@@ -1199,17 +1199,16 @@\n sword))%0A\n-%09\n %09l.Erase\n@@ -1224,17 +1224,16 @@\n sword))%0A\n-%09\n %09sword =\n@@ -1248,17 +1248,16 @@\n  sword)%0A\n-%09\n %7D%0A%09fmt.P\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-05-03_16-56-27",
+            "content": "@@ -557,16 +557,17 @@\n  nil%0A%09%7D%0A\n+%0A\n %09next :=\n@@ -581,78 +581,223 @@\n t()%0A\n-%09if next == l.root %7B%0A%09%09 // retorna ao primeiro elemento (circular)\n+%0A%09// Se o pr%C3%B3ximo for a sentinela (root), voltamos ao primeiro elemento%0A%09if next == l.root %7B%0A%09%09front := l.Front()%0A%09%09// Se Front %C3%A9 root, a lista est%C3%A1 vazia%0A%09%09if front == l.root %7B%0A%09%09%09return nil%0A%09%09%7D%0A%09%09return front\n %0A%09%7D%0A\n+%0A\n %09ret\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-03_16-56-56",
+            "content": "@@ -603,27 +603,8 @@\n %7B%0A%09%09\n-return l.root.next \n  // \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-57-20",
+            "content": "@@ -603,15 +603,70 @@\n %7B%0A%09%09\n-next = \n+return l.root.next  // retorna ao primeiro elemento (circular)\n %0A%09%7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-57-27",
+            "content": "@@ -610,19 +610,8 @@\n t = \n-next.Next()\n %0A%09%7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-57-32",
+            "content": "@@ -603,21 +603,23 @@\n %7B%0A%09%09\n-return l.Fron\n+next = next.Nex\n t()%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-57-45",
+            "content": "@@ -602,27 +602,33 @@\n  %7B%0A%09%09return \n-nil\n+l.Front()\n %0A%09%7D%0A%09return \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-57-48",
+            "content": "@@ -90,67 +90,8 @@\n ado%0A\n-// mostra a lista percorrendo linearmente do in%C3%ADcio ao fim%0A\n func\n@@ -190,84 +190,8 @@\n  %22)%0A\n-%09// Use l.root.next para percorrer a lista real sem entrar em loop infinito%0A\n %09for\n@@ -203,25 +203,23 @@\n = l.\n+F\n ro\n-ot.next\n+nt()\n ; it != \n l.ro\n@@ -218,28 +218,29 @@\n  != \n-l.root\n+nil\n ; it = \n-it.next\n+Next(l, it)\n  %7B%0A%09\n@@ -449,25 +449,16 @@\n sta \n-de forma CIRCULAR\n+circular\n %0Afun\n@@ -523,16 +523,32 @@\n  == nil \n+%7C%7C it == l.root \n %7B%0A%09%09retu\n@@ -573,79 +573,14 @@\n  it.\n-next%0A%09// Se o pr%C3%B3ximo for a sentinela, pula ela e volta para o primeiro\n+Next()\n %0A%09if\n@@ -610,19 +610,11 @@\n urn \n-l.root.next\n+nil\n %0A%09%7D%0A\n@@ -629,17 +629,16 @@\n next%0A%7D%0A%0A\n-%0A\n func mai\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-03_16-59-11",
+            "content": "@@ -893,18 +893,16 @@\n hosen)%0A%09\n-//\n fmt.Prin\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-03_17-00-23",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\n// mostra a lista percorrendo linearmente do in\u00edcio ao fim\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar sb strings.Builder\n\tsb.WriteString(\"[ \")\n\t// Use l.root.next para percorrer a lista real sem entrar em loop infinito\n\tfor it := l.root.next; it != l.root; it = it.next {\n\t\tif it == sword {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%d> \", it.Value))\n\t\t} else {\n\t\t\tsb.WriteString(fmt.Sprintf(\"%d \", it.Value))\n\t\t}\n\t}\n\tsb.WriteString(\"]\")\n\treturn sb.String()\n}\n\n// move para frente na lista de forma CIRCULAR\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tif it == nil {\n\t\treturn nil\n\t}\n\tnext := it.next\n\t// Se o pr\u00f3ximo for a sentinela, pula ela e volta para o primeiro\n\tif next == l.root {\n\t\treturn l.root.next\n\t}\n\treturn next\n}\n\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\t//fmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "57"
         }
     ]
 }

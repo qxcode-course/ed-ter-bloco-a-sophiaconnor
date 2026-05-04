@@ -13,9 +13,7 @@ type Node struct {
 	size int 
 }
 
-func NewDList() *DList {
-	dList := &DList{}
-	dList.head = &Note{}
+
 	dList.head.next = dList.head
 	dList.head.previous = dList.head
 	return dList
