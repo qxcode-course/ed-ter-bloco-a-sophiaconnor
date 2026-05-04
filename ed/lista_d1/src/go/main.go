@@ -89,6 +89,9 @@ func (ll *LList) PopBack() {
 	}
 	ll.size--
 }
+func (ll *LList) Size() int {
+	return ll.size
+}
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	ll := NewLList()
@@ -112,7 +115,7 @@ func main() {
 		case "show":
 			fmt.Println(ll.String())
 		case "size":
-			//fmt.Println(ll.Size())
+			fmt.Println(ll.Size())
 		case "push_back":
 			for _, v := range args[1:] {
 				num, _ := strconv.Atoi(v)
