@@ -80,12 +80,29 @@ func (e *Editor) KeyUp() {
 	}
 }
 func (e *Editor) KeyDown() {
+	cursorPos := 0
+	if e.line.Next() != e.lines.End() { // Se não está na última linha
+		e.line = e.line.Next() // Move para a próxima linha
+		// Ajusta o cursor para a posição correspondente na nova linha
+		for char := e.line.Value.Front(); char != e.line.Value.End(); char = char.Next() {
+			if char == e.cursor {
+				break
+			}
+			cursorPos++
+		}
+	}
+	e.cursor = e.line.Value.Front()
+	for i := 0; i < cursorPos && e.cursor != e.line.Value.End(); i++ {
+		e.cursor = e.cursor.Next()
+	}
 }
 
 func (e *Editor) KeyBackspace() {
+	
 }
 
 func (e *Editor) KeyDelete() {
+	
 }
 
 func main() {
