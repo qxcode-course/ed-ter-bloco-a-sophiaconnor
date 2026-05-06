@@ -22,8 +22,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@rec
 - ed@list
+- ed@rec
 flags:
   inbox: all
   panel: help

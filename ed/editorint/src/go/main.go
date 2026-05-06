@@ -63,68 +63,56 @@ func (e *Editor) KeyRight() {
 }
 
 func (e *Editor) KeyUp() {
-	cursorPos := 0
 	if e.line != e.lines.Front() { // Se não está na primeira linha
-		e.line = e.line.Prev() // Move para a linha anterior
-		// Ajusta o cursor para a posição correspondente na nova linha
-		for char := e.line.Value.Front(); char != e.line.Value.End(); char = char.Next() {
-			if char == e.cursor {
-				break
-			}
-			cursorPos++
-		}
-	}
-	e.cursor = e.line.Value.Front()
-	for i := 0; i < cursorPos && e.cursor != e.line.Value.End(); i++ {
-		e.cursor = e.cursor.Next()
+		e.line = e.line.Prev()          // Move para a linha anterior
+		e.cursor = e.line.Value.Front() // Cursor vai para o início da nova linha
 	}
 }
 func (e *Editor) KeyDown() {
-	cursorPos := 0
-	if e.line.Next() != e.lines.End() { // Se não está na última linha
-		e.line = e.line.Next() // Move para a próxima linha
-		// Ajusta o cursor para a posição correspondente na nova linha
-		for char := e.line.Value.Front(); char != e.line.Value.End(); char = char.Next() {
-			if char == e.cursor {
-				break
-			}
-			cursorPos++
-		}
-	}
-	e.cursor = e.line.Value.Front()
-	for i := 0; i < cursorPos && e.cursor != e.line.Value.End(); i++ {
-		e.cursor = e.cursor.Next()
+	if e.line != e.lines.End() { // Se não está na última linha
+		e.line = e.line.Next()          // Move para a próxima linha
+		e.cursor = e.line.Value.Front() // Cursor vai para o começo da nova linha
 	}
 }
 
 func (e *Editor) KeyBackspace() {
 	if e.cursor != e.line.Value.Front() {
-        e.cursor = e.cursor.Prev()
-        e.line.Value.Erase(e.cursor)
-    } else if e.line != e.lines.Front() {
-        linhaAnterior := e.line.Prev()
-        posCursor := 0
-        for char := linhaAnterior.Value.Front(); char != linhaAnterior.Value.End(); char = char.Next() {
-            posCursor++
-        }
-        linhaAnterior.Value.Insert(linhaAnterior.Value.End(), ' ')
-        for char := e.line.Value.Front(); char != e.line.Value.End(); char = char.Next() {
-            linhaAnterior.Value.Insert(linhaAnterior.Value.End(), char.Value)
-        }
-        e.lines.Erase(e.line)
-        e.line = linhaAnterior
-        e.cursor = linhaAnterior.Value.Front()
-        for i := 0; i < posCursor && e.cursor != linhaAnterior.Value.End(); i++ {
-            e.cursor = e.cursor.Next()
-        }
-    }
+		e.cursor = e.cursor.Prev()
+		e.line.Value.Erase(e.cursor)
+	} else if e.line != e.lines.Front() {
+		linhaAnterior := e.line.Prev()
+		posCursor := 0
+		for char := linhaAnterior.Value.Front(); char != linhaAnterior.Value.End(); char = char.Next() {
+			posCursor++
+		}
+		linhaAnterior.Value.Insert(linhaAnterior.Value.End(), ' ')
+		for char := e.line.Value.Front(); char != e.line.Value.End(); char = char.Next() {
+			linhaAnterior.Value.Insert(linhaAnterior.Value.End(), char.Value)
+		}
+		e.lines.Erase(e.line)
+		e.line = linhaAnterior
+		e.cursor = linhaAnterior.Value.Front()
+		for i := 0; i < posCursor && e.cursor != linhaAnterior.Value.End(); i++ {
+			e.cursor = e.cursor.Next()
+		}
+	}
 
 }
 
 func (e *Editor) KeyDelete() {
 	if e.cursor != e.line.Value.End() {
-        e.line.Value.Erase(e.cursor)
-    }
+		e.line.Value.Erase(e.cursor)
+	} else if e.line.Next() != e.lines.End() {
+		// Junta a próxima linha com a atual
+		nextLine := e.line.Next()
+		for char := nextLine.Value.Front(); char != nextLine.Value.End(); {
+			nextChar := char.Next()
+			e.line.Value.Erase(char)
+			e.line.Value.Insert(e.line.Value.End(), char.Value)
+			char = nextChar
+		}
+		e.lines.Erase(nextLine)
+	}
 }
 
 func main() {
