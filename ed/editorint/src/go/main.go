@@ -102,7 +102,9 @@ func (e *Editor) KeyBackspace() {
 }
 
 func (e *Editor) KeyDelete() {
-	
+	if e.cursor != e.line.Value.End() {
+        e.line.Value.Erase(e.cursor)
+    }
 }
 
 func main() {
