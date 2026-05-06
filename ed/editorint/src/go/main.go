@@ -38,11 +38,16 @@ func (e *Editor) KeyLeft() {
 }
 
 func (e *Editor) KeyEnter() {
-
-	nova := NewList[rune]()
-	e.texto.Insert(e.it_line.Next(), nova)
-	e.it_line = e.it_line.Next()
-	e.it_char = e.it_line.Value.Front()
+	novaLinha := NewList[rune]()
+	for char := e.cursor; char != e.line.Value.End(); {
+		next := char.Next()
+		e.line.Value.Erase(char)
+		novaLinha.Insert(novaLinha.End(), char.Value)
+		char = next
+	}
+	e.lines.Insert(e.line.Next(), novaLinha)
+	e.line = e.line.Next()
+	e.cursor = e.line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
@@ -58,8 +63,22 @@ func (e *Editor) KeyRight() {
 }
 
 func (e *Editor) KeyUp() {
+	cursorPos := 0
+	if e.line != e.lines.Front() { // Se não está na primeira linha
+		e.line = e.line.Prev() // Move para a linha anterior
+		// Ajusta o cursor para a posição correspondente na nova linha
+		for char := e.line.Value.Front(); char != e.line.Value.End(); char = char.Next() {
+			if char == e.cursor {
+				break
+			}
+			cursorPos++
+		}
+	}
+	e.cursor = e.line.Value.Front()
+	for i := 0; i < cursorPos && e.cursor != e.line.Value.End(); i++ {
+		e.cursor = e.cursor.Next()
+	}
 }
-
 func (e *Editor) KeyDown() {
 }
 
