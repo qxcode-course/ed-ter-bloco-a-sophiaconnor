@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_19-48-20",
+            "content": "@@ -23,750 +23,53 @@\n mt%22%0A\n-#include %3Cfstream%3E%0A#include %3Ciostream%3E%0A#include %3Cvector%3E%0A//#include %3Cstring%3E%0Ausing namespace std;%0Avoid preencher(string line, int index, int lim, int prox) %7B%0A    if (line.size() == index) %7B%0A        return true;%0A    %7D%0A    if (line%5Bindex%5D != '.') %7B%0A        return preencher(line, index + 1, lim, prox);%0A    %7D%0A    for (int i = 0; i %3C prox; i++) %7B%0A        if (index + i %3C line.size() && line%5Bindex + i%5D == '.') %7B%0A            line%5Bindex + i%5D = 'X';%0A        %7D else %7B%0A            return preencher(line, index + 1, lim, prox);%0A        %7D%0A    %7D%0A    return preencher(line, index + 1, lim, prox);%0A%7D%0Afunc main() %7B%0A    ifstream arq(%22input.txt%22);%0A    string line;%0A    int prox = 0;%0A    arq %3E%3E line %3E%3E prox;%0A    int lim = 1;%0A    preencher(line, 0, lim, prox);\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-17_20-00-08",
+            "content": "@@ -606,19 +606,20 @@\n rox);%0A%7D%0A\n-int\n+func\n  main() \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-17_20-00-15",
+            "content": "@@ -121,550 +121,8 @@\n td;%0A\n-bool posso_inserir(string line, int index, int value, int lim, int prox) %7B%0A    for (int i = index - 1; i %3E= 0 && line%5Bi%5D != '.'; i--) %7B%0A        if (line%5Bi%5D - '0' == value) %7B%0A            return false;%0A        %7D%0A        if (line%5Bi%5D - '0' %3E value) %7B%0A            break;%0A        %7D%0A    %7D%0A    for (int i = index + 1; i %3C line.size() && line%5Bi%5D != '.'; i++) %7B%0A        if (line%5Bi%5D - '0' == value) %7B%0A            return false;%0A        %7D%0A        if (line%5Bi%5D - '0' %3E value) %7B%0A            break;%0A        %7D%0A    %7D%0A    return value %3C= lim && value %3C= prox;%0A%7D%0A\n void\n@@ -343,29 +343,28 @@\n int \n-value\n+i\n  = 0; \n-value%3C=lim\n+i %3C prox; i++\n ) %7B%0A\n@@ -378,51 +378,58 @@\n  if \n-posso_inserir(line, index, value, lim, prox\n+(index + i %3C line.size() && line%5Bindex + i%5D == '.'\n ) %7B%0A\n@@ -454,22 +454,18 @@\n ndex\n-%5D = value + '0\n+ + i%5D = 'X\n ';%0A \n@@ -471,19 +471,43 @@\n         \n-   \n+%7D else %7B%0A            return\n  preench\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-17_20-04-09",
+            "content": "@@ -219,92 +219,296 @@\n dex \n-+\n+- \n 1; i \n-%3C index +1 +prox; i--) %7B%0A        if (i %3C line.size() && line%5Bi%5D == value + '0'\n+%3E= 0 && line%5Bi%5D != '.'; i--) %7B%0A        if (line%5Bi%5D - '0' == value) %7B%0A            return false;%0A        %7D%0A        if (line%5Bi%5D - '0' %3E value) %7B%0A            break;%0A        %7D%0A    %7D%0A    for (int i = index + 1; i %3C line.size() && line%5Bi%5D != '.'; i++) %7B%0A        if (line%5Bi%5D - '0' == value\n ) %7B%0A\n@@ -545,41 +545,125 @@\n     \n+%7D%0A\n     \n-return true;%0A        %7D%0A    %7D%0A\n+    if (line%5Bi%5D - '0' %3E value) %7B%0A            break;%0A        %7D%0A    %7D%0A    return value %3C= lim && value %3C= prox;%0A%7D\n %0Avoi\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-17_20-33-33",
+            "content": "@@ -333,26 +333,24 @@\n se;%0A        \n-%7D%0A\n     return t\n@@ -358,18 +358,26 @@\n ue;%0A    \n-%7D%0A\n+    %7D%0A    \n %7D%0A%0Avoid \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-17_20-34-15",
+            "content": "@@ -191,17 +191,16 @@\n  prox) %7B\n-%7D\n %0A    for\n@@ -244,16 +244,17 @@\n x; i--) \n+%7B\n %0A       \n@@ -329,16 +329,26 @@\n  false;%0A\n+        %7D%0A\n     retu\n@@ -361,16 +361,18 @@\n e;%0A    %7D\n+%0A%7D\n %0A%0Avoid p\n@@ -721,19 +721,16 @@\n         \n-if \n preenche\n@@ -762,53 +762,9 @@\n rox)\n- %7B%0A                return true;%0A            %7D\n+;\n %0A   \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-17_20-36-42",
+            "content": "@@ -819,78 +819,8 @@\n     \n-line %5Bindex%5D = '.';%0A    cout %3C%3C line %3C%3C endl;%0A    return false;%0A    //\n retu\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-17_20-43-33",
+            "content": "@@ -23,58 +23,64 @@\n mt%22%0A\n-import %22fstream%22%0Aimport %22iostream%22%0Aimport %22\n+#include %3Cfstream%3E%0A#include %3Ciostream%3E%0A#include %3C\n vector\n-%22\n+%3E\n %0A//#\n@@ -96,18 +96,16 @@\n string%3E%0A\n-//\n using na\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-17_20-44-43",
+            "content": "@@ -10,220 +10,190 @@\n ain%0A\n-%0A\n import \n-(%0A    %22bufio%22%0A    %22fmt%22%0A   \n+%22fmt%22%0Aimport %22fstream%22%0Aimport\n  %22\n+i\n os\n-%22%0A    %22strconv%22%0A    %22strings%22%0A)%0A%0Afunc abs(x int) int %7B%0A    if x %3C 0 %7B%0A        return -x%0A    %7D%0A    return x%0A%7D%0A%0Afunc canPlace(line %5B%5Drune, pos int, digit rune,\n+tream%22%0Aimport %22vector%22%0A//#include %3Cstring%3E%0A//using namespace std;%0Abool posso_inserir(string line, int index, int value, int\n  lim\n+,\n  int\n-) bool\n+ prox)\n  %7B\n+%7D\n %0A   \n@@ -201,225 +201,306 @@\n for \n-i, ch := range line %7B%0A        if ch == digit && abs(i-pos) %3C= lim %7B%0A            return false%0A        %7D%0A    %7D%0A    return true%0A%7D%0A%0Afunc fill(line %5B%5Drune,\n+(int i = index +1; i %3C index +1 +prox; i--) %0A        if (i %3C line.size() && line%5Bi%5D == value + '0') %7B%0A            return false;%0A    return true;%0A    %7D%0A%0Avoid preencher(string line, int index, int\n  lim\n+,\n  int\n-) bool\n+ prox)\n  %7B%0A    \n-for i, ch := range line %7B\n+if (line.size() == index) %7B%0A        return true;\n %0A    \n+%7D%0A\n     if \n-ch\n+(line%5Bindex%5D\n  != '.'\n+)\n  %7B%0A \n@@ -510,64 +510,95 @@\n     \n-    continue%0A        %7D%0A        for d := 0; d \n+return preencher(line, index + 1, lim, prox);%0A    %7D%0A    for (int value = 0; value\n %3C=\n- \n lim\n-; d++\n+)\n  %7B%0A \n@@ -608,155 +608,152 @@\n     \n- \n-   digit := rune('0' + d)%0A            if canPlace(line, i, digit, lim) %7B%0A                line%5Bi%5D = digit%0A                if fill(line, lim) %7B%0A    \n+if posso_inserir(line, index, value, lim, prox) %7B%0A            line%5Bindex%5D = value + '0';%0A            if preencher(line, index + 1, lim, prox) %7B%0A\n     \n@@ -775,18 +775,18 @@\n urn true\n+;\n %0A\n- \n         \n@@ -781,35 +781,32 @@\n ue;%0A            \n-   \n %7D%0A              \n@@ -799,28 +799,32 @@\n         \n+%7D%0A\n     \n+%7D%0A\n     line\n %5Bi%5D = '.\n@@ -819,46 +819,50 @@\n line\n+ \n %5Bi\n+ndex\n %5D = '.'\n+;\n %0A    \n-        %7D%0A        %7D%0A    \n+cout %3C%3C line %3C%3C endl;%0A\n     \n@@ -877,418 +877,218 @@\n alse\n+;\n %0A    \n-%7D%0A    \n+//\n return \n-true%0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A    if !scanner.Scan() %7B%0A        return%0A    %7D%0A    line := scanner.Text()%0A    if !scanner.Scan() %7B%0A        return%0A    %7D%0A    lim, err := strconv.Atoi(strings.TrimSpace(scanner.Text()))%0A    if err != nil %7B%0A        return%0A    %7D%0A%0A    lineRunes := %5B%5Drune(line)%0A    if fill(lineRunes, lim) %7B%0A        fmt.Println(string(lineRunes))%0A    %7D\n+preencher(line, index + 1, lim, prox);%0A%7D%0Aint main() %7B%0A    ifstream arq(%22input.txt%22);%0A    string line;%0A    int prox = 0;%0A    arq %3E%3E line %3E%3E prox;%0A    int lim = 1;%0A    preencher(line, 0, lim, prox);\n %0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-17_20-46-38",
+            "content": "package main\n\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n    \"strconv\"\n    \"strings\"\n)\n\nfunc abs(x int) int {\n    if x < 0 {\n        return -x\n    }\n    return x\n}\n\nfunc canPlace(line []rune, pos int, digit rune, lim int) bool {\n    for i, ch := range line {\n        if ch == digit && abs(i-pos) <= lim {\n            return false\n        }\n    }\n    return true\n}\n\nfunc fill(line []rune, lim int) bool {\n    for i, ch := range line {\n        if ch != '.' {\n            continue\n        }\n        for d := 0; d <= lim; d++ {\n            digit := rune('0' + d)\n            if canPlace(line, i, digit, lim) {\n                line[i] = digit\n                if fill(line, lim) {\n                    return true\n                }\n                line[i] = '.'\n            }\n        }\n        return false\n    }\n    return true\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    if !scanner.Scan() {\n        return\n    }\n    line := scanner.Text()\n    if !scanner.Scan() {\n        return\n    }\n    lim, err := strconv.Atoi(strings.TrimSpace(scanner.Text()))\n    if err != nil {\n        return\n    }\n\n    lineRunes := []rune(line)\n    if fill(lineRunes, lim) {\n        fmt.Println(string(lineRunes))\n    }\n}\n",
+            "lines": "65"
+        }
+    ]
+}
