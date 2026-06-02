@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2026-04-27_15-12-26",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\t_, _ = slice, value\n\treturn 0\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "content": "@@ -136,286 +136,16 @@\n ue%0A%09\n-%09low, high := 0, len(slice)-1%0A%09for low %3C= high %7B%0A%09%09mid := (low + high) / 2%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09for mid+1 %3C len(slice) && slice%5Bmid+1%5D == value %7B%0A%09%09%09%09mid++%0A%09%09%09%7D%0A%09%09%09return mid%0A%09%09%7D%0A%09%09if slice%5Bmid%5D %3C value %7B%0A%09%09%09low = mid + 1%0A%09%09%7D else %7B%0A%09%09%09high = mid - 1%0A%09%09%7D%0A%09%7D%0A%09return low\n+return 0\n %0A%7D%0A%0A\n",
             "lines": "30"
+        },
+        {
+            "label": "2026-05-31_19-42-25",
+            "content": "@@ -371,16 +371,17 @@\n %09%09%7D else\n+ \n %7B%0A%09%09%09hig\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-31_19-46-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\t_, _ = slice, value\n\t\tlow, high := 0, len(slice)-1\n\tfor low <= high {\n\t\tmid := (low + high) / 2\n\t\tif slice[mid] == value {\n\t\t\tfor mid+1 < len(slice) && slice[mid+1] == value {\n\t\t\t\tmid++\n\t\t\t}\n\t\t\treturn mid\n\t\t}\n\t\tif slice[mid] < value {\n\t\t\tlow = mid + 1\n\t\t} else{\n\t\t\thigh = mid - 1\n\t\t}\n\t}\n\treturn low\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "45"
         }
     ]
 }

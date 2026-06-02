@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-26_12-10-43",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,1207 +23,53 @@\n mt%22%0A\n-%0A\n func \n-show(vet %5B%5Dint, esc int) %7B%0A%09fmt.Printf(%22%5B %22)%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if i==0 %7B%0A%09%09%09if i+1 == esc %7B%0A%09%09%09%09fmt.Printf(%22%25d%3E %22, vet%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09if i!=0 && i+1 == esc %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, vet%5Bi%5D)%0A%09%09%7D%0A%09%09if i+1 != esc %7B%0A%09%09%09if vet%5Bi%5D != 0 %7B%0A%09%09%09%09fmt.Printf(%22%25d %22, vet%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09fmt.Printf(%22%5D%5Cn%22)%0A%7D%0A%0Afunc find_person(vet %5B%5Dint, size int, esc int) int %7B //achar o pr%C3%B3ximo vivo%0A%09dead := 0%0A%09pos := (esc + 1) %25 size%0A%09for vet%5Bpos%5D == dead %7B%0A%09%09pos = (pos + 1) %25 size%0A%09%7D%0A%09return pos%0A%7D%0A%0Afunc main() %7B%0A%09var size int%0A%09var esc int%0A    var alternando int%0A%09fmt.Scanf(%22%25d%22, &size) // quantidade de pessoas%0A%09fmt.Scanf(%22%25d%22, &esc)  //quem est%C3%A1 com a espada%0A%09fmt.Scanf(%22%25d%22, &alternando) // intervalo de altern%C3%A2ncia%0A%09vet := make(%5B%5Dint, size)%0A%09// Inicializar o vetor com os n%C3%BAmeros 1 a size%0A%09for i := 0; i %3C size; i++ %7B%0A        if alternando != 1 %7B%0A            if i%252 == 0 %7B%0A                vet%5Bi%5D = i + 1%0A            %7D%0A        %7D else %7B%0A            if i%252 == 0 %7B%0A%09%09        vet%5Bi%5D = -(i + 1)%0A            %7D%0A        %7D%0A%09%7D%0A%09show(vet, esc)%0A%09qtd := size%0A%09for qtd %3E 1 %7B%0A%09%09gonna_die := find_person(vet, size, esc-1) %0A%09%09vet%5Bgonna_die%5D = 0%0A%09%09esc = find_person(vet, size, gonna_die) +1%0A%09%09show(vet, esc)%0A%09%09qtd--%0A%09%7D\n+main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-26_12-17-19",
+            "content": "@@ -861,17 +861,17 @@\n ernando \n-=\n+!\n = 1 %7B%0A  \n@@ -887,17 +887,17 @@\n  if i%252 \n-!\n+=\n = 0 %7B%0A  \n@@ -942,132 +942,49 @@\n    %7D\n-else %7B%0A%09%09        vet%5Bi%5D = -(i + 1)%0A            %7D%0A%09%09%7Delse %7B%0A%09%09%09if i%252 == 0 %7B%0A                vet%5Bi%5D = i + 1%0A            %7Delse\n+%0A        %7D else %7B%0A            if i%252 == 0\n  %7B%0A%09\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-31_18-58-21",
+            "content": "@@ -715,69 +715,32 @@\n  // \n-1 para come%C3%A7ar com o positivo, -1 para come%C3%A7ar com o negativo\n+intervalo de altern%C3%A2ncia\n %0A%09ve\n@@ -883,21 +883,17 @@\n      if \n-(i+1)\n+i\n %252 != 0 \n@@ -1007,13 +1007,9 @@\n %09if \n-(i+1)\n+i\n %252 =\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-31_19-00-38",
+            "content": "@@ -205,28 +205,8 @@\n c %7B%0A\n-%09%09%09if vet%5Bi%5D %3E 0 %7B%0A%09\n %09%09%09f\n@@ -235,56 +235,8 @@\n i%5D)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09fmt.Printf(%22%3C%25d %22, vet%5Bi%5D)%0A%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-31_19-02-32",
+            "content": "@@ -496,28 +496,8 @@\n = 0%0A\n-%09if vet%5Besc%5D %3E 0 %7B%0A%09\n %09pos\n@@ -517,17 +517,16 @@\n  %25 size%0A\n-%09\n %09for vet\n@@ -541,17 +541,16 @@\n  dead %7B%0A\n-%09\n %09%09pos = \n@@ -566,21 +566,19 @@\n  %25 size%0A\n-%09\n %09%7D%0A\n-%09\n %09return \n@@ -585,22 +585,8 @@\n pos%0A\n-%09%7D%0A%09return -1%0A\n %7D%0A%0Af\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-05-31_19-04-03",
+            "content": "@@ -611,119 +611,17 @@\n s%0A%09%7D\n-else %7B%0A%09%09pos := (esc - 1 + size) %25 size%0A%09%09for vet%5Bpos%5D == dead %7B%0A%09%09%09pos = (pos - 1 + size) %25 size%0A%09%09%7D%0A%09\n+%0A\n %09return \n pos%0A\n@@ -616,22 +616,18 @@\n %09return \n-pos%0A%09%7D\n+-1\n %0A%7D%0A%0Afunc\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-05-31_19-04-52",
+            "content": "@@ -110,20 +110,18 @@\n %7B%0A%09%09if i\n- \n ==\n- \n 0 %7B%0A%09%09%09i\n@@ -181,20 +181,18 @@\n %7D%0A%09%09if i\n- \n !=\n- \n 0 && i+1\n@@ -607,17 +607,16 @@\n n pos%0A%09%7D\n- \n else %7B%0A%09\n@@ -765,25 +765,28 @@\n var esc int%0A\n-%09\n+    \n var alternan\n@@ -815,22 +815,16 @@\n , &size)\n-      \n  // quan\n@@ -863,22 +863,16 @@\n %22, &esc)\n-      \n   //quem\n@@ -1088,18 +1088,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n if alter\n@@ -1117,19 +1117,28 @@\n  == 1 %7B%0A\n-%09%09%09\n+            \n if (i+1)\n@@ -1143,28 +1143,40 @@\n 1)%252 != 0 %7B%0A\n-%09%09%09%09\n+                \n vet%5Bi%5D = i +\n@@ -1170,37 +1170,45 @@\n  vet%5Bi%5D = i + 1%0A\n-%09%09%09%7D \n+            %7D\n else %7B%0A%09%09%09%09vet%5Bi\n@@ -1192,34 +1192,40 @@\n       %7Delse %7B%0A%09%09\n-%09%09\n+        \n vet%5Bi%5D = -(i + 1\n@@ -1230,17 +1230,25 @@\n  1)%0A\n-%09%09%09\n+            \n %7D%0A%09%09%7D\n- \n else\n@@ -1271,20 +1271,32 @@\n  == 0 %7B%0A\n-%09%09%09%09\n+                \n vet%5Bi%5D =\n@@ -1302,21 +1302,29 @@\n = i + 1%0A\n-%09%09%09%7D \n+            %7D\n else %7B%0A%09\n@@ -1324,18 +1324,24 @@\n lse %7B%0A%09%09\n-%09%09\n+        \n vet%5Bi%5D =\n@@ -1350,23 +1350,38 @@\n (i + 1)%0A\n-%09%09%09%7D%0A%09%09\n+            %7D%0A        \n %7D%0A%09%7D%0A%09sh\n@@ -1425,29 +1425,8 @@\n 1 %7B%0A\n-%09%09current := esc - 1%0A\n %09%09go\n@@ -1459,24 +1459,23 @@\n , size, \n-current)\n+esc-1) \n %0A%09%09vet%5Bg\n@@ -1523,19 +1523,20 @@\n ze, \n-current\n+gonna_die\n ) +\n- \n 1%0A%09%09\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-05-31_19-08-11",
+            "content": "@@ -141,29 +141,8 @@\n c %7B%0A\n-%09%09%09%09if vet%5Bi%5D %3E 0 %7B%0A%09\n %09%09%09%09\n@@ -172,59 +172,8 @@\n i%5D)%0A\n-%09%09%09%09%7D else %7B%0A%09%09%09%09%09fmt.Printf(%22%3C%25d %22, vet%5Bi%5D)%0A%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-05-31_19-09-38",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc show(vet []int, esc int) {\n\tfmt.Printf(\"[ \")\n\tfor i := 0; i < len(vet); i++ {\n\t\tif i == 0 {\n\t\t\tif i+1 == esc {\n\t\t\t\tif vet[i] > 0 {\n\t\t\t\t\tfmt.Printf(\"%d> \", vet[i])\n\t\t\t\t} else {\n\t\t\t\t\tfmt.Printf(\"<%d \", vet[i])\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tif i != 0 && i+1 == esc {\n\t\t\tif vet[i] > 0 {\n\t\t\t\tfmt.Printf(\"%d> \", vet[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"<%d \", vet[i])\n\t\t\t}\n\t\t}\n\t\tif i+1 != esc {\n\t\t\tif vet[i] != 0 {\n\t\t\t\tfmt.Printf(\"%d \", vet[i])\n\t\t\t}\n\t\t}\n\t}\n\tfmt.Printf(\"]\\n\")\n}\n\nfunc find_person(vet []int, size int, esc int) int { //achar o pr\u00f3ximo vivo\n\tdead := 0\n\tif vet[esc] > 0 {\n\t\tpos := (esc + 1) % size\n\t\tfor vet[pos] == dead {\n\t\t\tpos = (pos + 1) % size\n\t\t}\n\t\treturn pos\n\t} else {\n\t\tpos := (esc - 1 + size) % size\n\t\tfor vet[pos] == dead {\n\t\t\tpos = (pos - 1 + size) % size\n\t\t}\n\t\treturn pos\n\t}\n}\n\nfunc main() {\n\tvar size int\n\tvar esc int\n\tvar alternando int\n\tfmt.Scanf(\"%d\", &size)       // quantidade de pessoas\n\tfmt.Scanf(\"%d\", &esc)        //quem est\u00e1 com a espada\n\tfmt.Scanf(\"%d\", &alternando) // 1 para come\u00e7ar com o positivo, -1 para come\u00e7ar com o negativo\n\tvet := make([]int, size)\n\t// Inicializar o vetor com os n\u00fameros 1 a size\n\tfor i := 0; i < size; i++ {\n\t\tif alternando == 1 {\n\t\t\tif (i+1)%2 != 0 {\n\t\t\t\tvet[i] = i + 1\n\t\t\t} else {\n\t\t\t\tvet[i] = -(i + 1)\n\t\t\t}\n\t\t} else {\n\t\t\tif (i+1)%2 == 0 {\n\t\t\t\tvet[i] = i + 1\n\t\t\t} else {\n\t\t\t\tvet[i] = -(i + 1)\n\t\t\t}\n\t\t}\n\t}\n\tshow(vet, esc)\n\tqtd := size\n\tfor qtd > 1 {\n\t\tcurrent := esc - 1\n\t\tgonna_die := find_person(vet, size, current)\n\t\tvet[gonna_die] = 0\n\t\tesc = find_person(vet, size, current) + 1\n\t\tshow(vet, esc)\n\t\tqtd--\n\t}\n}\n",
+            "lines": "84"
+        }
+    ]
+}

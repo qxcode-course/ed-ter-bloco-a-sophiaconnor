@@ -22,8 +22,313 @@
         },
         {
             "label": "2026-03-18_14-04-22",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar N int\n\tvar E int\n\tvivos := make([]int, N)\n\tfor i := 0; i < N; i++ {\n\t\tvivos[i] = i + 1\n\t}\n\tfmt.Scanf(\"%d\", &N)\n\tfmt.Scanf(\"%d\", &E)\n\tfor i := 0; i < N; i++ {\n\t\tif i == E {\n\t\t\tvivos[i+1] = 0\n\t\t}\n\t\tif i == E+2 {\n\t\t\tif vivos[i] == 0 {\n\t\t\t\tE++\n\t\t\t} else {\n\t\t\t\tvivos[i+1] = 0\n\t\t\t}\n\t\t}\n\t\tfor j := 0; j < N; j++ {\n\t\t\tif vivos[i] != 0 {\n\t\t\t\tfmt.Printf(\"%d \", vivos[j])\n\t\t\t}\n\t\t}\n\t}\n}\n",
+            "content": "@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n@@ -61,29 +61,8 @@\n int%0A\n-%09fmt.Scanf(%22%25d%22, &N)%0A\n %09viv\n@@ -130,16 +130,37 @@\n  + 1%0A%09%7D%0A\n+%09fmt.Scanf(%22%25d%22, &N)%0A\n %09fmt.Sca\n",
             "lines": "31"
+        },
+        {
+            "label": "2026-05-20_20-45-10",
+            "content": "@@ -80,87 +80,8 @@\n  &N)\n- //n%C3%BAmero de pessoas%0A%09fmt.Scanf(%22%25d%22, &E) //quem est%C3%A1 com a espada inicialmente\n %0A%09vi\n@@ -96,20 +96,13 @@\n ake(\n-map%5Bint%5Dbool\n+%5B%5Dint\n , N)\n@@ -145,16 +145,38 @@\n %5D = \n-true\n+i + 1\n %0A%09%7D%0A\n+%09fmt.Scanf(%22%25d%22, &E)%0A\n %09for\n@@ -227,21 +227,17 @@\n %5Bi+1%5D = \n-false\n+0\n %0A%09%09%7D%0A%09%09i\n@@ -267,21 +267,17 @@\n s%5Bi%5D == \n-false\n+0\n  %7B%0A%09%09%09%09E\n@@ -308,21 +308,17 @@\n %5Bi+1%5D = \n-false\n+0\n %0A%09%09%09%7D%0A%09%09\n@@ -368,13 +368,9 @@\n  != \n-false\n+0\n  %7B%0A%09\n@@ -390,17 +390,24 @@\n (%22%25d %22, \n-i\n+vivos%5Bj%5D\n )%0A%09%09%09%7D%0A%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-20_20-53-38",
+            "content": "@@ -80,21 +80,17 @@\n  &N)\n+ \n //\n- quantidade\n+n%C3%BAmero\n  de \n@@ -142,16 +142,29 @@\n a espada\n+ inicialmente\n %0A%09vivos \n@@ -175,13 +175,20 @@\n ake(\n-%5B%5Dint\n+map%5Bint%5Dbool\n , N)\n@@ -231,13 +231,12 @@\n %5D = \n-i + 1\n+true\n %0A%09%7D%0A\n@@ -270,28 +270,14 @@\n %09if \n-(E%252 == 0 && i%252!=0)\n+i == E\n  %7B%0A%09\n@@ -281,29 +281,35 @@\n %7B%0A%09%09%09vivos%5Bi\n++1\n %5D = \n-0\n+false\n %0A%09%09%7D%0A%09%09if (E\n@@ -310,31 +310,66 @@\n %09if \n-(E%252 != 0 && i%252==0)\n+i == E+2 %7B%0A%09%09%09if vivos%5Bi%5D == false %7B%0A%09%09%09%09E++%0A%09%09%09%7D else\n  %7B%0A\n+%09\n %09%09%09v\n@@ -378,21 +378,29 @@\n os%5Bi\n++1\n %5D = \n-0\n+false%0A%09%09%09%7D\n %0A%09%09%7D%0A\n-%09%7D%0A\n %09%09fo\n@@ -438,15 +438,19 @@\n vos%5B\n-j\n+i\n %5D != \n-0\n+false\n  %7B%0A%09\n@@ -474,16 +474,9 @@\n  %22, \n-vivos%5Bj%5D\n+i\n )%0A%09%09\n@@ -481,12 +481,14 @@\n %09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-20_21-06-48",
+            "content": "@@ -346,14 +346,8 @@\n %09%09%7D%0A\n-%09%09E++%0A\n %09%7D%0A%09\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-20_21-07-06",
+            "content": "@@ -24,234 +24,8 @@\n mt%22%0A\n-func show(vet %5B%5Dint) %7B%0A%09qtd := 0%0A%09fmt.Printf(%22%5B %22)%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if vet%5Bi%5D != 0 %7B%0A%09%09%09if qtd %3E 0 %7B%0A%09%09%09%09fmt.Printf(%22 %22)%0A%09%09%09%7D%0A%09%09%09fmt.Printf(%22%25d %22, vet%5Bi%5D)%0A%09%09%09qtd++%0A%09%09%7D%0A%09%7D%0A%09fmt.Println()%0A%09fmt.Printf(%22%5D%5Cn%22)%0A%7D%0A%0A\n func\n@@ -39,20 +39,17 @@\n  %7B%0A%09var \n-size\n+N\n  int%0A%09va\n@@ -50,19 +50,17 @@\n nt%0A%09var \n-esc\n+E\n  int%0A%09fm\n@@ -74,20 +74,17 @@\n (%22%25d%22, &\n-size\n+N\n )// quan\n@@ -123,11 +123,9 @@\n %22, &\n-esc\n+E\n ) //\n@@ -149,18 +149,20 @@\n spada%0A%09v\n-et\n+ivos\n  := make\n@@ -169,20 +169,17 @@\n (%5B%5Dint, \n-size\n+N\n )%0A%09for i\n@@ -193,38 +193,259 @@\n i %3C \n-size; i++ %7B%0A%09%09vet%5Bi%5D = i + 1%0A%09%7D%0A\n+N; i++ %7B%0A%09%09vivos%5Bi%5D = i + 1%0A%09%7D%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09if (E%252 == 0 && i%252!=0) %7B%0A%09%09%09vivos%5Bi%5D = 0%0A%09%09%7D%0A%09%09if (E%252 != 0 && i%252==0) %7B%0A%09%09%09vivos%5Bi%5D = 0%0A%09%09%7D%0A%09%09E++%0A%09%7D%0A%09%09for j := 0; j %3C N; j++ %7B%0A%09%09%09if vivos%5Bj%5D != 0 %7B%0A%09%09%09%09fmt.Printf(%22%25d %22, vivos%5Bj%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09\n %7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-24_10-55-24",
+            "content": "@@ -137,10 +137,9 @@\n qtd \n-==\n+%3E\n  0 %7B\n@@ -462,17 +462,6 @@\n %0A%09%7D%0A\n-%09show(vet)%0A\n %7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-24_20-30-22",
+            "content": "@@ -44,18 +44,16 @@\n int) %7B%0A%09\n-//\n qtd := 0\n@@ -126,18 +126,16 @@\n  0 %7B%0A%09%09%09\n-//\n if qtd =\n@@ -144,18 +144,16 @@\n 0 %7B%0A%09%09%09%09\n-//\n fmt.Prin\n@@ -163,18 +163,16 @@\n %22 %22)%0A%09%09%09\n-//\n %7D%0A%09%09%09fmt\n@@ -197,18 +197,16 @@\n %5Bi%5D)%0A%09%09%09\n-//\n qtd++%0A%09%09\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-24_20-30-54",
+            "content": "@@ -108,18 +108,16 @@\n i++ %7B%0A%09%09\n-//\n if vet%5Bi\n@@ -215,18 +215,16 @@\n qtd++%0A%09%09\n-//\n %7D%0A%09%7D%0A%09fm\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-24_20-31-48",
+            "content": "@@ -225,18 +225,16 @@\n //%7D%0A%09%7D%0A%09\n-//\n fmt.Prin\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-24_20-31-57",
+            "content": "@@ -112,37 +112,140 @@\n %7B%0A%09%09\n-%09fmt.Printf(%22%25d %22, vet%5Bi%5D)%0A%09%7D\n+//if vet%5Bi%5D != 0 %7B%0A%09%09%09//if qtd == 0 %7B%0A%09%09%09%09//fmt.Printf(%22 %22)%0A%09%09%09//%7D%0A%09%09%09fmt.Printf(%22%25d %22, vet%5Bi%5D)%0A%09%09%09//qtd++%0A%09%09//%7D%0A%09%7D%0A%09//fmt.Println()\n %0A%09fm\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-24_20-32-20",
+            "content": "@@ -43,16 +43,28 @@\n %5Dint) %7B%0A\n+%09//qtd := 0%0A\n %09fmt.Pri\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-05-24_20-32-32",
+            "content": "@@ -47,18 +47,8 @@\n ) %7B%0A\n-%09qtd := 0%0A\n %09fmt\n@@ -98,74 +98,8 @@\n + %7B%0A\n-%09%09if qtd == 0 %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, vet%5Bi%5D)%0A%09%09%09qtd++%0A%09%09%7D else %7B%0A\n %09%09%09f\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-05-24_20-35-21",
+            "content": "@@ -203,12 +203,8 @@\n i%5D)%0A\n-%09%09%7D%0A\n %09%7D%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-24_20-36-04",
+            "content": "@@ -43,20 +43,21 @@\n %5Dint\n-, esc int) %7B\n+) %7B%0A%09qtd := 0\n %0A%09fm\n@@ -113,21 +113,16 @@\n %09if \n-vet%5Bi%5D\n+qtd\n  == \n-esc\n+0\n  %7B%0A%09\n@@ -150,16 +150,25 @@\n vet%5Bi%5D)%0A\n+%09%09%09qtd++%0A\n %09%09%7D else\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-24_20-39-51",
+            "content": "@@ -444,17 +444,12 @@\n show(vet\n-, esc\n )%0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-24_20-40-10",
+            "content": "@@ -227,163 +227,8 @@\n %0A%7D%0A%0A\n-func find_person(vet %5B%5Dint, size int, esc int) int %7B%0A%09dead := 0%0A%09pos := (esc + 1) %25 size%0A%09for vet%5Bpos%5D == dead%7B%0A%09%09pos = (pos + 1) %25 size%0A%09%7D%0A%09return pos%0A%7D%0A%0A\n func\n@@ -237,16 +237,16 @@\n ain() %7B%0A\n+\n %09var siz\n@@ -391,119 +391,56 @@\n e)%0A%09\n-qtd := size%0A%09for qtd--%7B%0A%09%09find_person(vet, size, esc)%0A%09%09esc := (esc + 1) %25 size%0A%09%09find_person(vet, size, esc)%0A%09\n+for i := 0; i %3C size; i++ %7B%0A%09%09vet%5Bi%5D = i + 1%0A%09%7D%0A\n %09sho\n@@ -450,15 +450,11 @@\n et, \n-size)%0A%09%7D\n+esc)\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-24_22-45-29",
+            "content": "@@ -566,27 +566,14 @@\n  qtd\n-%3E0\n+--\n %7B%0A%09%09\n-gonna_die := \n find\n@@ -602,36 +602,34 @@\n )%0A%09%09\n-vet%5Bgonna_die%5D = 0%0A%09%09esc := \n+esc := (esc + 1) %25 size%0A%09%09\n find\n@@ -651,17 +651,11 @@\n ze, \n-gonna_die\n+esc\n )%0A%09%09\n@@ -674,16 +674,8 @@\n ze)%0A\n-%09%09qtd--%0A\n %09%7D%0A%7D\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-24_22-52-48",
+            "content": "@@ -169,29 +169,8 @@\n e %7B%0A\n-%09%09%09if vet%5Bi%5D != 0 %7B%0A%09\n %09%09%09f\n@@ -198,13 +198,8 @@\n i%5D)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n@@ -279,31 +279,8 @@\n nt %7B\n- //achar o pr%C3%B3ximo vivo\n %0A%09de\n@@ -567,15 +567,13 @@\n qtd%3E\n-1\n+0\n %7B%0A%09%09\n-/*\n gonn\n@@ -676,63 +676,8 @@\n die)\n-*/%0A%09%09vet%5Besc+1%5D = 0%0A%09%09esc = find_person(vet, size, esc)\n %0A%09%09s\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-05-26_11-20-43",
+            "content": "@@ -617,16 +617,18 @@\n td%3E1%7B%0A%09%09\n+/*\n gonna_di\n@@ -727,24 +727,80 @@\n die)\n+*/\n %0A%09%09\n-show(vet, esc\n+vet%5Besc+1%5D = 0%0A%09%09esc = find_person(vet, size, esc)%0A%09%09show(vet, size\n )%0A%09%09\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-05-26_11-22-32",
+            "content": "@@ -20,17 +20,16 @@\n t %22fmt%22%0A\n-%0A\n func sho\n@@ -382,17 +382,16 @@\n  == dead\n- \n %7B%0A%09%09pos \n@@ -491,17 +491,16 @@\n , &size)\n- \n // quant\n@@ -538,17 +538,16 @@\n %22, &esc)\n- \n  //quem \n@@ -594,105 +594,8 @@\n ze)%0A\n-%09// Inicializar o vetor com os n%C3%BAmeros 1 a size%0A%09for i := 0; i %3C size; i++ %7B%0A%09%09vet%5Bi%5D = i + 1%0A%09%7D%0A\n %09qtd\n@@ -615,13 +615,10 @@\n  qtd\n- %3E 1 \n+%3E1\n %7B%0A%09%09\n@@ -685,16 +685,17 @@\n 0%0A%09%09esc \n+:\n = find_p\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-05-26_11-24-19",
+            "content": "@@ -113,11 +113,14 @@\n %09if \n-i+1\n+vet%5Bi%5D\n  == \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_11-26-28",
+            "content": "@@ -110,16 +110,18 @@\n %7B%0A%09%09if i\n++1\n  == esc \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_11-27-25",
+            "content": "@@ -87,17 +87,16 @@\n = 0; i %3C\n-=\n  len(vet\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_11-33-07",
+            "content": "@@ -87,16 +87,17 @@\n = 0; i %3C\n+=\n  len(vet\n@@ -654,17 +654,16 @@\n = 0; i %3C\n-=\n  size; i\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_11-33-30",
+            "content": "@@ -653,16 +653,17 @@\n = 0; i %3C\n+=\n  size; i\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_11-33-35",
+            "content": "@@ -161,16 +161,37 @@\n  else %7B%0A\n+%09%09%09if vet%5Bi%5D != 0 %7B%0A%09\n %09%09%09fmt.P\n@@ -211,16 +211,21 @@\n vet%5Bi%5D)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_11-34-17",
+            "content": "@@ -165,29 +165,8 @@\n e %7B%0A\n-%09%09%09if vet%5Bi%5D != 0 %7B%0A%09\n %09%09%09f\n@@ -194,13 +194,8 @@\n i%5D)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-26_11-34-25",
+            "content": "@@ -686,32 +686,16 @@\n  + 1%0A%09%7D%0A\n-%09show(vet, esc)%0A\n %09qtd := \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_11-35-26",
+            "content": "@@ -114,10 +114,8 @@\n if i\n-+1\n  == \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-35-45",
+            "content": "@@ -110,16 +110,18 @@\n %7B%0A%09%09if i\n++1\n  == esc \n@@ -163,16 +163,37 @@\n  else %7B%0A\n+%09%09%09if vet%5Bi%5D != 0 %7B%0A%09\n %09%09%09fmt.P\n@@ -213,16 +213,21 @@\n vet%5Bi%5D)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n@@ -569,69 +569,8 @@\n ada%0A\n-%09esc--                  // converter de 1-based para 0-based%0A\n %09vet\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-38-46",
+            "content": "@@ -165,29 +165,8 @@\n e %7B%0A\n-%09%09%09if vet%5Bi%5D != 0 %7B%0A%09\n %09%09%09f\n@@ -194,13 +194,8 @@\n i%5D)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A\n@@ -537,16 +537,77 @@\n  espada%0A\n+%09esc--                  // converter de 1-based para 0-based%0A\n %09vet := \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-05-26_11-38-59",
+            "content": "@@ -114,10 +114,8 @@\n if i\n-+1\n  == \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-39-38",
+            "content": "@@ -790,18 +790,16 @@\n onna_die\n-+1\n %5D = 0%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-41-57",
+            "content": "@@ -790,17 +790,17 @@\n onna_die\n--\n++\n 1%5D = 0%0A%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-42-06",
+            "content": "@@ -838,18 +838,16 @@\n onna_die\n-+1\n )%0A%09%09show\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-42-22",
+            "content": "@@ -838,17 +838,17 @@\n onna_die\n--\n++\n 1)%0A%09%09sho\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-42-29",
+            "content": "@@ -838,16 +838,18 @@\n onna_die\n+-1\n )%0A%09%09show\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-42-34",
+            "content": "@@ -778,11 +778,8 @@\n esc)\n- -1\n %0A%09%09v\n@@ -790,16 +790,18 @@\n onna_die\n+-1\n %5D = 0%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-43-05",
+            "content": "@@ -775,16 +775,18 @@\n e, esc) \n+-1\n %0A%09%09vet%5Bg\n@@ -793,18 +793,16 @@\n onna_die\n--1\n %5D = 0%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-43-16",
+            "content": "@@ -856,18 +856,16 @@\n vet, esc\n-+1\n )%0A%09%09qtd-\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-44-33",
+            "content": "@@ -856,17 +856,17 @@\n vet, esc\n--\n++\n 1)%0A%09%09qtd\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-44-42",
+            "content": "@@ -844,11 +844,8 @@\n die)\n- +1\n %0A%09%09s\n@@ -856,16 +856,18 @@\n vet, esc\n+-1\n )%0A%09%09qtd-\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-44-57",
+            "content": "@@ -846,9 +846,9 @@\n e) +\n-2\n+1\n %0A%09%09s\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-45-05",
+            "content": "@@ -841,18 +841,18 @@\n na_die) \n--1\n++2\n %0A%09%09show(\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-45-10",
+            "content": "@@ -841,16 +841,18 @@\n na_die) \n+-1\n %0A%09%09show(\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-46-09",
+            "content": "@@ -777,10 +777,8 @@\n  esc\n--1\n ) %0A%09\n@@ -791,16 +791,18 @@\n onna_die\n+-1\n %5D = 0%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-47-37",
+            "content": "@@ -773,17 +773,17 @@\n ize, esc\n-+\n+-\n 1) %0A%09%09ve\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-47-48",
+            "content": "@@ -773,17 +773,17 @@\n ize, esc\n--\n++\n 1) %0A%09%09ve\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-48-47",
+            "content": "@@ -773,16 +773,18 @@\n ize, esc\n+-1\n ) %0A%09%09vet\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-49-01",
+            "content": "@@ -108,21 +108,8 @@\n + %7B%0A\n-%09%09if i==0 %7B%0A%09\n %09%09if\n@@ -114,33 +114,32 @@\n if i+1 == esc %7B%0A\n-%09\n %09%09%09fmt.Printf(%22%25\n@@ -156,75 +156,8 @@\n i%5D)%0A\n-%09%09%09%7D%0A%09%09if i!=0 && i+1 == esc %7B%0A%09%09%09%09fmt.Printf(%22%25d%3E %22, vet%5Bi%5D)%0A%09%09%09%7D%0A\n %09%09%7D \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-26_11-53-09",
+            "content": "@@ -241,32 +241,12 @@\n %09%09%7D \n-%0A%09%09if i!=0 && i+1 != esc\n+else\n  %7B%0A%09\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-05-26_11-55-09",
+            "content": "@@ -171,20 +171,16 @@\n %5D)%0A%09%09%09%7D%0A\n-%09%09%7D%0A\n %09%09if i!=\n@@ -185,16 +185,18 @@\n !=0 && i\n++1\n  == esc \n@@ -197,16 +197,17 @@\n = esc %7B%0A\n+%09\n %09%09%09fmt.P\n@@ -230,17 +230,23 @@\n t%5Bi%5D)%0A%09%09\n-%7D\n+%09%7D%0A%09%09%7D \n %0A%09%09if i!\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_11-58-33",
+            "content": "@@ -181,18 +181,16 @@\n %7D%0A%09%09if i\n-+1\n !=0 && i\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_11-58-46",
+            "content": "@@ -181,24 +181,26 @@\n %7D%0A%09%09if i\n++1\n !=0 && i\n +1 == es\n@@ -191,18 +191,16 @@\n !=0 && i\n-+1\n  == esc \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_11-59-36",
+            "content": "@@ -189,16 +189,18 @@\n !=0 && i\n++1\n  == esc \n@@ -249,16 +249,18 @@\n !=0 && i\n++1\n  != esc \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_11-59-44",
+            "content": "@@ -123,16 +123,18 @@\n %0A%09%09%09if i\n++1\n  == esc \n@@ -189,18 +189,16 @@\n !=0 && i\n-+1\n  == esc \n@@ -247,18 +247,16 @@\n !=0 && i\n-+1\n  != esc \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_12-00-00",
+            "content": "@@ -110,20 +110,18 @@\n %7B%0A%09%09if i\n- \n ==\n- \n 0 %7B%0A%09%09%09i\n@@ -123,18 +123,16 @@\n %0A%09%09%09if i\n-+1\n  == esc \n@@ -179,20 +179,18 @@\n %7D%0A%09%09if i\n- \n !=\n- \n 0 && i+1\n@@ -239,116 +239,15 @@\n %7D%0A%09%09\n-// CORRE%C3%87%C3%83O: Permitir que o elemento i==0 tamb%C3%A9m seja impresso se n%C3%A3o tiver a espada%0A%09%09if (i != 0 %7C%7C i == 0)\n+if i!=0\n  && \n@@ -832,93 +832,8 @@\n 1 %7B%0A\n-%09%09// CORRE%C3%87%C3%83O: find_person precisa receber o %C3%ADndice (esc-1) e n%C3%A3o o n%C3%BAmero da pessoa%0A\n %09%09go\n@@ -873,10 +873,8 @@\n  esc\n--1\n ) %0A%09\n@@ -897,102 +897,8 @@\n = 0%0A\n-%09%09// CORRE%C3%87%C3%83O: find_person retorna o %C3%ADndice do vetor, somamos 1 para virar o n%C3%BAmero da pessoa%0A\n %09%09es\n@@ -939,12 +939,8 @@\n ie) \n-+ 1 \n %0A%09%09s\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_12-02-34",
+            "content": "@@ -110,18 +110,20 @@\n %7B%0A%09%09if i\n+ \n ==\n+ \n 0 %7B%0A%09%09%09i\n@@ -183,18 +183,20 @@\n %7D%0A%09%09if i\n+ \n !=\n+ \n 0 && i+1\n@@ -243,26 +243,119 @@\n %09%09%7D%0A\n+%09%09// CORRE%C3%87%C3%83O: Permitir que o elemento i==0 tamb%C3%A9m seja impresso se n%C3%A3o tiver a espada%0A\n %09%09if (i\n+ \n !=\n+ \n 0 %7C%7C\n-i\n+ i \n ==\n+ \n 0)\n+ \n && i\n@@ -935,16 +935,101 @@\n d %3E 1 %7B%0A\n+%09%09// CORRE%C3%87%C3%83O: find_person precisa receber o %C3%ADndice (esc-1) e n%C3%A3o o n%C3%BAmero da pessoa%0A\n %09%09gonna_\n@@ -1061,16 +1061,18 @@\n ize, esc\n+-1\n ) %0A%09%09vet\n@@ -1087,16 +1087,110 @@\n ie%5D = 0%0A\n+%09%09// CORRE%C3%87%C3%83O: find_person retorna o %C3%ADndice do vetor, somamos 1 para virar o n%C3%BAmero da pessoa%0A\n %09%09esc = \n@@ -1224,17 +1224,19 @@\n a_die) +\n-1\n+ 1 \n %0A%09%09show(\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-26_12-04-28",
+            "content": "@@ -237,16 +237,106 @@\n )%0A%09%09%7D%0A%09%09\n+if (i!=0 %7C%7Ci==0)&& i+1 != esc %7B%0A%09%09%09if vet%5Bi%5D != 0 %7B%0A%09%09%09%09fmt.Printf(%22%25d %22, vet%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A%09fmt\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_12-04-45",
+            "content": "@@ -241,82 +241,8 @@\n %7D%0A%09%09\n-if i+1 != esc %7B%0A%09%09%09if vet%5Bi%5D != 0 %7B%0A%09%09%09%09fmt.Printf(%22%25d %22, vet%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-05-26_12-06-37",
+            "content": "@@ -867,10 +867,8 @@\n  esc\n--1\n ) %0A%09\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-26_12-08-37",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc show(vet []int, esc int) {\n\tfmt.Printf(\"[ \")\n\tfor i := 0; i < len(vet); i++ {\n\t\tif i==0 {\n\t\t\tif i+1 == esc {\n\t\t\t\tfmt.Printf(\"%d> \", vet[i])\n\t\t\t}\n\t\t}\n\t\tif i!=0 && i+1 == esc {\n\t\t\tfmt.Printf(\"%d> \", vet[i])\n\t\t}\n\t\tif i+1 != esc {\n\t\t\tif vet[i] != 0 {\n\t\t\t\tfmt.Printf(\"%d \", vet[i])\n\t\t\t}\n\t\t}\n\t}\n\tfmt.Printf(\"]\\n\")\n}\n\nfunc find_person(vet []int, size int, esc int) int { //achar o pr\u00f3ximo vivo\n\tdead := 0\n\tpos := (esc + 1) % size\n\tfor vet[pos] == dead {\n\t\tpos = (pos + 1) % size\n\t}\n\treturn pos\n}\n\nfunc main() {\n\tvar size int\n\tvar esc int\n\tfmt.Scanf(\"%d\", &size) // quantidade de pessoas\n\tfmt.Scanf(\"%d\", &esc)  //quem est\u00e1 com a espada\n\tvet := make([]int, size)\n\t// Inicializar o vetor com os n\u00fameros 1 a size\n\tfor i := 0; i < size; i++ {\n\t\tvet[i] = i + 1\n\t}\n\tshow(vet, esc)\n\tqtd := size\n\tfor qtd > 1 {\n\t\tgonna_die := find_person(vet, size, esc-1) \n\t\tvet[gonna_die] = 0\n\t\tesc = find_person(vet, size, gonna_die) +1\n\t\tshow(vet, esc)\n\t\tqtd--\n\t}\n}\n",
+            "lines": "53"
         }
     ]
 }

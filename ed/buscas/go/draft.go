@@ -3,22 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	var N int
-	fmt.Scanf("%d", &N)
+	var tam_consulta int
+	fmt.Scanf("%d", &tam_consulta)
 
-	consulta := make([]string, N)
-	for i := 0; i < N; i++ {
+	consulta := make([]string, tam_consulta)
+	for i := 0; i < tam_consulta; i++ {
 		fmt.Scanf("%s", &consulta[i])
 	}
 
-	var M int
-	fmt.Scanf("%d", &M)
+	var tam_busca int
+	fmt.Scanf("%d", &tam_busca)
 
-	busca := make([]string, M)
-	for i := 0; i < M; i++ {
+	busca := make([]string, tam_busca)
+	for i := 0; i < tam_busca; i++ {
 		fmt.Scanf("%s", &busca[i])
 	}
-    fmt.Println(N, M, consulta, busca)
+    fmt.Println(tam_consulta, tam_busca, consulta, busca)
 	/*freq := make(map[string]int)
 	for _, s := range consulta {
 		freq[s]++

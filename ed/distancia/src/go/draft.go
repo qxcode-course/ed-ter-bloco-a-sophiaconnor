@@ -5,10 +5,12 @@ import "iostream"
 import "vector"
 //#include <string>
 //using namespace std;
-bool posso_inserir(string line, int index, int value, int lim, int prox) {}
-    for (int i = index +1; i < index +1 +prox; i--) 
+bool posso_inserir(string line, int index, int value, int lim, int prox) {
+    for (int i = index +1; i < index +1 +prox; i--) {
         if (i < line.size() && line[i] == value + '0') {
             return false;
+        }
+    }
     return true;
     }
 

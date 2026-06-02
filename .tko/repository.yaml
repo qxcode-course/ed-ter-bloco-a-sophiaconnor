@@ -20,17 +20,12 @@ sources:
   quests: null
 expanded:
 - ed@vector
-- ed@list
-- ed@linear
-- ed@map_set
-- ed@backtrack
-- ed@rec
 flags:
   inbox: all
-  panel: help
-  show_panel: 'true'
+  panel: skills
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@distancia
-selected_index: 39
+selected: ed@iterador
+selected_index: 11

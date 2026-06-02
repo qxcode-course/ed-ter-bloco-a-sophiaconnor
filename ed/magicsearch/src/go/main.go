@@ -9,8 +9,23 @@ import (
 )
 
 func MagicSearch(slice []int, value int) int {
-	_, _ = slice, value
-	return 0
+	_, _ = slice, value 
+		low, high := 0, len(slice)-1 
+	for low <= high { 
+		mid := (low + high) / 2 
+		if slice[mid] == value {
+			for mid+1 < len(slice) && slice[mid+1] == value {
+				mid++
+			}
+			return mid
+		}
+		if slice[mid] < value { 
+			low = mid + 1
+		} else{
+			high = mid - 1
+		}
+	}
+	return low
 }
 
 func main() {

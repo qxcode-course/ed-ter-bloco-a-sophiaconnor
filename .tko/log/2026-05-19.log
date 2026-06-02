@@ -1,0 +1,37 @@
+2026-05-19 13:34:33, SELF, v:1, k:ed@editorint, self:1, study:150, concept:1, refactor:1
+2026-05-19 13:38:15, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-19 13:38:16, EXEC, v:1, k:ed@distancia, mode:FULL, size:42, fail:COMP
+2026-05-19 13:38:18, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-19 13:39:30, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-05-19 13:39:33, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-05-19 13:39:35, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-05-19 13:39:33, MOVE, v:1, k:ed@princesa, mode:EDIT
+2026-05-19 13:55:09, MOVE, v:1, k:ed@ilhas, mode:DOWN
+2026-05-19 13:55:10, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-05-19 13:55:13, EXEC, v:1, k:ed@ilhas, mode:FULL, size:31, fail:COMP
+2026-05-19 13:58:12, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-05-19 13:58:17, MOVE, v:1, k:ed@cercado, mode:DOWN
+2026-05-19 13:58:21, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-19 13:58:22, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:29
+2026-05-19 13:55:09, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 13:55:09, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 13:55:09, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-05-19 13:58:17, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-19 13:58:17, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-19 13:58:17, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-19 13:58:22, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-05-19 14:00:56, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-19 14:01:00, MOVE, v:1, k:ed@pintura, mode:DOWN
+2026-05-19 14:01:03, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-19 14:01:04, EXEC, v:1, k:ed@pintura, mode:FULL, size:57, fail:COMP
+2026-05-19 14:01:08, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-05-19 14:00:59, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-19 14:01:00, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-19 14:01:00, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-19 14:15:18, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-19 14:15:19, EXEC, v:1, k:ed@distancia, mode:FULL, fail:COMP
+2026-05-19 14:15:50, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-05-19 14:19:38, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-19 14:19:40, EXEC, v:1, k:ed@distancia, mode:FULL, fail:COMP
+2026-05-19 14:20:38, EXEC, v:1, k:ed@distancia, mode:FULL, size:44, fail:COMP
+2026-05-19 14:20:36, MOVE, v:1, k:ed@distancia, mode:EDIT

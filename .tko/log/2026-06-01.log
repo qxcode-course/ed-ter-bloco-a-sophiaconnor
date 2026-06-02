@@ -1,0 +1,16 @@
+2026-06-01 23:47:49, SELF, v:1, k:ed@magicsearch, self:1, rate:100, study:50, concept:1, refactor:1
+2026-06-01 23:49:09, MOVE, v:1, k:ed@iterador, mode:DOWN
+2026-06-01 23:49:10, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-01 23:49:13, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33, size:82
+2026-06-01 23:50:15, EXEC, v:1, k:ed@iterador, mode:FULL, size:83, fail:COMP
+2026-06-01 23:51:42, EXEC, v:1, k:ed@iterador, mode:FULL, size:85, fail:COMP
+2026-06-01 23:51:44, EXEC, v:1, k:ed@iterador, mode:FULL, fail:COMP
+2026-06-01 23:49:09, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-01 23:49:09, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-01 23:49:09, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-01 23:51:41, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-01 23:49:13, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-01 23:56:30, EXEC, v:1, k:ed@iterador, mode:FULL, size:91, fail:COMP
+2026-06-01 23:56:32, EXEC, v:1, k:ed@iterador, mode:FULL, fail:COMP
+2026-06-01 23:58:10, EXEC, v:1, k:ed@iterador, mode:FULL, size:93, fail:COMP
+2026-06-01 23:58:09, MOVE, v:1, k:ed@iterador, mode:EDIT
