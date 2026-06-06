@@ -27,7 +27,11 @@ func editar(comando string) string {
                 if cursor < len(texto) {
                     cursor++
                 }
-        }else{
+        }else if c == 'D'{
+            if cursor < len(texto) {
+                texto = append(texto[:cursor], texto[cursor+1:]...)
+            }
+        }else {
 			texto = append(texto[:cursor], append([]rune{c}, texto[cursor:]...)...)
 			cursor++
 		}

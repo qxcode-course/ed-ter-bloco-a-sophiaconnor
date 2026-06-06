@@ -162,8 +162,23 @@
         },
         {
             "label": "2026-06-06_17-54-35",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc editar(comando string) string {\n\tvar texto []rune\n\tcursor := 0\n\n\tfor _, c := range comando {\n\t\tif c == 'R' {\n\t\t\ttexto = append(texto[:cursor], append([]rune{'\\n'}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t} else if c == 'B' {\n            if cursor > 0 {\n                texto = append(texto[:cursor-1], texto[cursor:]...)\n                cursor--\n            }\n        }else if c == '<' {\n                if cursor > 0 {\n                    cursor--\n                }\n        }else if c == '>' {\n                if cursor < len(texto) {\n                    cursor++\n                }\n        }else{\n\t\t\ttexto = append(texto[:cursor], append([]rune{c}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t}\n\t}\n    resultado := append(texto[:cursor], append([]rune{'|'}, texto[cursor:]...)...)\n    return string(resultado)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif scanner.Scan() {\n\t\tentrada := scanner.Text()\n\t\tresultado := editar(entrada)\n\t\tfmt.Println(resultado)\n\t}\n}\n",
+            "content": "@@ -639,21 +639,16 @@\n    %7Delse\n- if c\n %7B%0A%09%09%09tex\n",
             "lines": "46"
+        },
+        {
+            "label": "2026-06-06_17-55-56",
+            "content": "@@ -639,16 +639,21 @@\n    %7Delse\n+ if c\n %7B%0A%09%09%09tex\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-06_17-56-04",
+            "content": "@@ -643,155 +643,8 @@\n else\n- if c == 'D'%7B%0A            if cursor %3C len(texto) %7B%0A                texto = append(texto%5B:cursor%5D, texto%5Bcursor+1:%5D...)%0A            %7D%0A        %7Delse \n %7B%0A%09%09\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-06_17-56-53",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc editar(comando string) string {\n\tvar texto []rune\n\tcursor := 0\n\n\tfor _, c := range comando {\n\t\tif c == 'R' {\n\t\t\ttexto = append(texto[:cursor], append([]rune{'\\n'}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t} else if c == 'B' {\n            if cursor > 0 {\n                texto = append(texto[:cursor-1], texto[cursor:]...)\n                cursor--\n            }\n        }else if c == '<' {\n                if cursor > 0 {\n                    cursor--\n                }\n        }else if c == '>' {\n                if cursor < len(texto) {\n                    cursor++\n                }\n        }else if c == 'D'{\n            if cursor < len(texto) {\n                texto = append(texto[:cursor], texto[cursor+1:]...)\n            }\n        }else {\n\t\t\ttexto = append(texto[:cursor], append([]rune{c}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t}\n\t}\n    resultado := append(texto[:cursor], append([]rune{'|'}, texto[cursor:]...)...)\n    return string(resultado)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif scanner.Scan() {\n\t\tentrada := scanner.Text()\n\t\tresultado := editar(entrada)\n\t\tfmt.Println(resultado)\n\t}\n}\n",
+            "lines": "50"
         }
     ]
 }

@@ -127,3 +127,87 @@
 2026-06-06 17:53:30, MOVE, v:1, k:ed@editor, mode:PICK
 2026-06-06 17:53:31, EXEC, v:1, k:ed@editor, mode:FULL, size:46, fail:COMP
 2026-06-06 17:54:35, EXEC, v:1, k:ed@editor, mode:FULL, rate:83, size:46
+2026-06-06 17:55:17, MOVE, v:1, k:ed@editor, mode:BACK
+2026-06-06 17:55:46, MOVE, v:1, k:ed@editor, mode:PICK
+2026-06-06 17:55:49, MOVE, v:1, k:ed@editor, mode:BACK
+2026-06-06 17:55:54, MOVE, v:1, k:ed@editor, mode:PICK
+2026-06-06 17:55:56, EXEC, v:1, k:ed@editor, mode:FULL, size:46, fail:COMP
+2026-06-06 17:56:04, EXEC, v:1, k:ed@editor, mode:FULL, rate:83, size:46
+2026-06-06 17:56:53, EXEC, v:1, k:ed@editor, mode:FULL, rate:100, size:50
+2026-06-06 17:56:56, MOVE, v:1, k:ed@editor, mode:BACK
+2026-06-06 17:57:19, SELF, v:1, k:ed@editor, self:1, rate:100, study:55, concept:1, refactor:1
+2026-06-06 17:59:19, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-06-06 17:59:19, EXEC, v:1, k:ed@distancia, mode:FULL, fail:COMP
+2026-06-06 17:59:21, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-06 18:05:44, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:05:45, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:14
+2026-06-06 18:06:38, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:11
+2026-06-06 18:06:57, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-06 18:07:37, SELF, v:1, k:ed@editor, self:1, rate:100, study:55, concept:1, refactor:1
+2026-06-06 18:07:42, SELF, v:1, k:ed@editor, self:1, rate:100, study:55, concept:1, refactor:1
+2026-06-06 18:07:58, SELF, v:1, k:ed@prin_list2, self:1, rate:100, study:30, concept:1, refactor:1
+2026-06-06 18:07:59, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-06-06 18:08:02, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-06-06 18:08:07, SELF, v:1, k:ed@prin_list2, self:1, rate:100, study:30, concept:1, refactor:1
+2026-06-06 18:06:38, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:06:37, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:08:22, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-06-06 18:08:23, MOVE, v:1, k:ed@lista_d1, mode:BACK
+2026-06-06 18:08:45, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:08:46, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-06-06 18:09:41, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:13
+2026-06-06 18:10:55, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-06 18:13:01, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:13:03, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:14
+2026-06-06 18:13:02, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:13:00, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:13:26, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:14
+2026-06-06 18:13:59, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:14
+2026-06-06 18:14:11, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:14
+2026-06-06 18:16:59, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:14
+2026-06-06 18:18:00, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:18:01, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:18, fail:COMP
+2026-06-06 18:18:25, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:20
+2026-06-06 18:19:07, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:14
+2026-06-06 18:20:02, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-06 18:20:31, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-06-06 18:20:32, EXEC, v:1, k:ed@buscas, mode:FULL, size:34, fail:COMP
+2026-06-06 18:20:40, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:34
+2026-06-06 18:21:34, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:33
+2026-06-06 18:21:38, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-06-06 18:22:08, SELF, v:1, k:ed@buscas, self:1, rate:100, study:50, concept:1
+2026-06-06 18:19:16, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:19:07, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:21:33, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-06-06 18:21:34, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-06-06 18:23:32, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:23:34, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:13
+2026-06-06 18:23:41, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-06 18:24:56, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-06-06 18:24:57, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:32
+2026-06-06 18:24:58, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-06-06 18:27:56, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-06-06 18:27:57, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:46
+2026-06-06 18:27:49, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-06-06 18:23:33, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:27:57, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-06-06 18:28:18, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:52
+2026-06-06 18:28:42, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-06-06 18:29:52, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:29:54, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:38
+2026-06-06 18:32:28, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-06 18:32:39, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:32:41, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-06 18:28:28, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-06-06 18:28:18, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-06-06 18:30:23, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:29:53, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:40:39, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:42:58, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:47:56, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-06 18:49:42, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-06 18:50:13, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-06 18:50:14, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:36
+2026-06-06 18:50:15, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-06 18:50:50, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:50, concept:1, refactor:1
+2026-06-06 18:51:03, MOVE, v:1, k:ed@subset_sum, mode:PICK

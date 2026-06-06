@@ -57,8 +57,38 @@
         },
         {
             "label": "2026-06-02_17-43-41",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar tam_consulta int\n\tfmt.Scanf(\"%d\", &tam_consulta)\n\n\tconsulta := make([]string, tam_consulta)\n\tfor i := 0; i < tam_consulta; i++ {\n\t\tfmt.Scanf(\"%s\", &consulta[i])\n\t}\n\n\tvar tam_busca int\n\tfmt.Scanf(\"%d\", &tam_busca)\n\n\tbusca := make([]string, tam_busca)\n\tfor i := 0; i < tam_busca; i++ {\n\t\tfmt.Scanf(\"%s\", &busca[i])\n\t}\n    fmt.Println(tam_consulta, tam_busca, consulta, busca)\n\t/*freq := make(map[string]int)\n\tfor _, s := range consulta {\n\t\tfreq[s]++\n\t}\n\n\tfor i, b := range busca {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t\tfmt.Print(freq[b])\n\t}\n\tfmt.Println()*/\n}\n",
+            "content": "@@ -66,17 +66,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &tam_con\n@@ -179,17 +179,24 @@\n fmt.Scan\n-(\n+f(%22%25s%22, \n &consult\n@@ -235,16 +235,22 @@\n t.Scanf(\n+%22%25d%22, \n &tam_bus\n@@ -334,17 +334,24 @@\n fmt.Scan\n-(\n+f(%22%25s%22, \n &busca%5Bi\n",
             "lines": "34"
+        },
+        {
+            "label": "2026-06-06_18-20-32",
+            "content": "@@ -215,24 +215,25 @@\n nt%0A%09fmt.Scan\n+f\n (&tam_busca)\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-06_18-20-40",
+            "content": "@@ -332,16 +332,73 @@\n %0A%09%7D%0A    \n+fmt.Println(tam_consulta, tam_busca, consulta, busca)%0A%09/*\n freq := \n@@ -564,11 +564,13 @@\n rintln()\n+*/\n %0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-06_18-21-34",
+            "content": "@@ -20,16 +20,17 @@\n t %22fmt%22%0A\n+%0A\n func mai\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_18-24-57",
+            "content": "@@ -24,261 +24,8 @@\n mt%22%0A\n-func matchingStrings(consulta %5B%5Dstring, busca %5B%5Dstring) %5B%5Dint %7B%0A%09freq := make(map%5Bstring%5Dint)%0A%09for _, s := range consulta %7B%0A%09%09freq%5Bs%5D++%0A%09%7D%0A%0A%09resultado := make(%5B%5Dint, len(busca))%0A%09for i, b := range busca %7B%0A%09%09resultado%5Bi%5D = freq%5Bb%5D%0A%09%7D%0A%09return resultado%0A%7D%0A\n func\n@@ -34,16 +34,16 @@\n ain() %7B%0A\n+\n %09var tam\n@@ -335,10 +335,8 @@\n     \n-/*\n freq\n@@ -492,16 +492,16 @@\n %5Bb%5D)%0A%09%7D%0A\n+\n %09fmt.Pri\n@@ -510,80 +510,7 @@\n ln()\n-*/%0A%09resultado := matchingStrings(consulta, busca)%0A%09fmt.Println(resultado)\n %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-06-06_18-27-57",
+            "content": "@@ -817,92 +817,8 @@\n )%0A%09f\n-or i, r := range resultado %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%09fmt.Print(r)%0A%09%7D%0A%09f\n mt.P\n@@ -824,12 +824,21 @@\n Println(\n+resultado\n )%0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-06_18-28-18",
+            "content": "package main\n\nimport \"fmt\"\nfunc matchingStrings(consulta []string, busca []string) []int {\n\tfreq := make(map[string]int)\n\tfor _, s := range consulta {\n\t\tfreq[s]++\n\t}\n\n\tresultado := make([]int, len(busca))\n\tfor i, b := range busca {\n\t\tresultado[i] = freq[b]\n\t}\n\treturn resultado\n}\nfunc main() {\n\tvar tam_consulta int\n\tfmt.Scan(&tam_consulta)\n\n\tconsulta := make([]string, tam_consulta)\n\tfor i := 0; i < tam_consulta; i++ {\n\t\tfmt.Scan(&consulta[i])\n\t}\n\n\tvar tam_busca int\n\tfmt.Scan(&tam_busca)\n\n\tbusca := make([]string, tam_busca)\n\tfor i := 0; i < tam_busca; i++ {\n\t\tfmt.Scan(&busca[i])\n\t}\n    /*freq := make(map[string]int)\n\tfor _, s := range consulta {\n\t\tfreq[s]++\n\t}\n\n\tfor i, b := range busca {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t\tfmt.Print(freq[b])\n\t}\n\tfmt.Println()*/\n\tresultado := matchingStrings(consulta, busca)\n\tfor i, r := range resultado {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t\tfmt.Print(r)\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "52"
         }
     ]
 }
