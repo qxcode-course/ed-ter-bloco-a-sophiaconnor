@@ -82,8 +82,13 @@
         },
         {
             "label": "2026-06-06_18-50-14",
-            "content": "package main\nimport \"fmt\"\nfunc subsetSum(nums []int, resultado_soma int) bool {\n    qtd := len(nums)\n    eh_possivel := make([][]bool, qtd+1)\n    for i := range eh_possivel {\n        eh_possivel[i] = make([]bool, resultado_soma+1)\n        eh_possivel[i][0] = true\n    }\n    for i := 1; i <= qtd; i++ {\n        for j := 1; j <= resultado_soma; j++ {\n            if nums[i-1] > j {\n                eh_possivel[i][j] = eh_possivel[i-1][j]\n            } else {\n                eh_possivel[i][j] = eh_possivel[i-1][j] || eh_possivel[i-1][j-nums[i-1]]\n            }\n        }\n    }\n    return eh_possivel[qtd][resultado_soma]\n}\nfunc main() {\n    var qtd_num int\n    fmt.Scan(&qtd_num)\n    var soma int\n    fmt.Scan(&soma)\n    vet := make([]int, qtd_num)\n    for i := 0; i < qtd_num; i++ {\n        fmt.Scan(&vet[i])\n    }\n    result := subsetSum(vet, soma)\n    if result {\n        fmt.Println(\"true\")\n    } else {\n        fmt.Println(\"false\")\n    }\n}\n",
+            "content": "@@ -70,14 +70,12 @@\n nt) \n-string\n+bool\n  %7B%0A \n@@ -573,18 +573,22 @@\n   %7D%0A    \n-if\n+return\n  eh_poss\n@@ -616,57 +616,8 @@\n oma%5D\n- %7B%0A        return %22true%22%0A    %7D%0A    return %22false%22\n %0A%7D%0Af\n@@ -851,26 +851,94 @@\n     \n-fmt.Println(result)\n+if result %7B%0A        fmt.Println(%22true%22)%0A    %7D else %7B%0A        fmt.Println(%22false%22)%0A    %7D\n %0A%7D%0A\n",
             "lines": "36"
+        },
+        {
+            "label": "2026-06-06_18-53-00",
+            "content": "package main\nimport \"fmt\"\nfunc subsetSum(nums []int, resultado_soma int) string {\n    qtd := len(nums)\n    eh_possivel := make([][]bool, qtd+1)\n    for i := range eh_possivel {\n        eh_possivel[i] = make([]bool, resultado_soma+1)\n        eh_possivel[i][0] = true\n    }\n    for i := 1; i <= qtd; i++ {\n        for j := 1; j <= resultado_soma; j++ {\n            if nums[i-1] > j {\n                eh_possivel[i][j] = eh_possivel[i-1][j]\n            } else {\n                eh_possivel[i][j] = eh_possivel[i-1][j] || eh_possivel[i-1][j-nums[i-1]]\n            }\n        }\n    }\n    if eh_possivel[qtd][resultado_soma] {\n        return \"true\"\n    }\n    return \"false\"\n}\nfunc main() {\n    var qtd_num int\n    fmt.Scan(&qtd_num)\n    var soma int\n    fmt.Scan(&soma)\n    vet := make([]int, qtd_num)\n    for i := 0; i < qtd_num; i++ {\n        fmt.Scan(&vet[i])\n    }\n    result := subsetSum(vet, soma)\n    fmt.Println(result)\n}\n",
+            "lines": "35"
         }
     ]
 }

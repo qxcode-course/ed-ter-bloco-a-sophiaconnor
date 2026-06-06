@@ -1,6 +1,6 @@
 package main
 import "fmt"
-func subsetSum(nums []int, resultado_soma int) bool {
+func subsetSum(nums []int, resultado_soma int) string {
     qtd := len(nums)
     eh_possivel := make([][]bool, qtd+1)
     for i := range eh_possivel {
@@ -16,7 +16,10 @@ func subsetSum(nums []int, resultado_soma int) bool {
             }
         }
     }
-    return eh_possivel[qtd][resultado_soma]
+    if eh_possivel[qtd][resultado_soma] {
+        return "true"
+    }
+    return "false"
 }
 func main() {
     var qtd_num int
@@ -28,9 +31,5 @@ func main() {
         fmt.Scan(&vet[i])
     }
     result := subsetSum(vet, soma)
-    if result {
-        fmt.Println("true")
-    } else {
-        fmt.Println("false")
-    }
+    fmt.Println(result)
 }
