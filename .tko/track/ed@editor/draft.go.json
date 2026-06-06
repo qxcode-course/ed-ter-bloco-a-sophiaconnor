@@ -2,8 +2,138 @@
     "patches": [
         {
             "label": "2026-05-17_18-21-40",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,23 +41,35 @@\n     \n-%0A    fmt.Scanf(\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-06-06_11-06-16",
+            "content": "@@ -38,15 +38,17 @@\n ) %7B%0A\n+    \n %0A    \n-//\n fmt.\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-06_11-06-24",
+            "content": "@@ -6,18 +6,16 @@\n ge main%0A\n-//\n import %22\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-06_11-06-33",
+            "content": "@@ -6,16 +6,18 @@\n ge main%0A\n+//\n import %22\n@@ -40,43 +40,15 @@\n ) %7B%0A\n-    entrada := make(%5B%5Dchar, 3)\n %0A    \n+//\n fmt.\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-06_11-09-49",
+            "content": "@@ -10,10 +10,8 @@\n ain%0A\n-//\n impo\n@@ -38,11 +38,53 @@\n ) %7B%0A    \n+entrada := make(%5B%5Dchar, 3)%0A    fmt.Scanf()\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-06_11-10-02",
+            "content": "@@ -6,16 +6,18 @@\n ge main%0A\n+//\n import %22\n@@ -44,75 +44,7 @@\n     \n-var entrada string%0A    fmt.Scanln(&entrada)%0A    fmt.Println(entrada)\n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-06-06_11-10-51",
+            "content": "@@ -23,142 +23,8 @@\n mt%22%0A\n-import %22strings%22%0Afunc editar(comando string) string %7B%0A    var sb strings.Builder%0A    for _, c := range comando %7B%0A        if c == 'a' %7B\n %0Afun\n@@ -64,18 +64,8 @@\n %0A   \n- _, err :=\n  fmt\n@@ -95,16 +95,18 @@\n mt.Print\n+ln\n (entrada\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-06-06_11-23-39",
+            "content": "@@ -36,18 +36,16 @@\n trings%22%0A\n-//\n func edi\n@@ -77,18 +77,16 @@\n g %7B%0A    \n-//\n var sb s\n@@ -104,18 +104,16 @@\n der%0A    \n-//\n for _, c\n@@ -144,10 +144,8 @@\n     \n-//\n if c\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-06_17-19-57",
+            "content": "@@ -247,17 +247,16 @@\n mt.Print\n-f\n (entrada\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-06_17-20-06",
+            "content": "@@ -198,24 +198,34 @@\n a string%0A   \n+ _, err :=\n  fmt.Scanln(\n@@ -247,16 +247,17 @@\n mt.Print\n+f\n (entrada\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-06_17-20-35",
+            "content": "@@ -19,18 +19,16 @@\n t %22fmt%22%0A\n-//\n import %22\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-06_17-20-52",
+            "content": "@@ -19,16 +19,18 @@\n t %22fmt%22%0A\n+//\n import %22\n@@ -44,31 +44,8 @@\n %22%0A//\n-func enter() string %7B%0A%0A\n func\n@@ -81,44 +81,8 @@\n g %7B%0A\n-    var texto %5B%5Drune%0A    cursor :=0%0A\n     \n@@ -110,16 +110,18 @@\n der%0A    \n+//\n for _, c\n@@ -151,148 +151,11 @@\n     \n- \n-if c == 'R' %7B%0A            texto = append(texto:%5Bcursor%5D, append(%5B%5Drune%7B'%5Cn'%7D, texto%5Bcursor:%5D...)...)%0A            cursor++%0A       // %7D else \n+ //\n if c\n@@ -163,23 +163,13 @@\n == '\n-B\n+a\n ' %7B%0A\n-        %7D%0A\n func\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-06-06_17-33-28",
+            "content": "@@ -436,62 +436,25 @@\n     \n-resultado := editar(entrada)%0A    fmt.Println(resultado\n+fmt.Print(entrada\n )%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-06_17-34-02",
+            "content": "@@ -253,10 +253,10 @@\n exto\n-%5B\n :\n+%5B\n curs\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-06_17-36-58",
+            "content": "@@ -370,41 +370,8 @@\n   %7D%0A\n-    %7D%0A    return string(texto)%0A%7D%0A\n func\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-06_17-37-25",
+            "content": "@@ -19,18 +19,16 @@\n t %22fmt%22%0A\n-//\n import %22\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-06_17-37-33",
+            "content": "@@ -10,41 +10,63 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)\n+%22fmt%22%0A//import %22strings%22%0A//func enter() string %7B\n %0A%0Afu\n@@ -100,17 +100,20 @@\n tring %7B%0A\n-%09\n+    \n var text\n@@ -121,17 +121,20 @@\n  %5B%5Drune%0A\n-%09\n+    \n cursor :\n@@ -138,13 +138,43 @@\n r :=\n- \n 0%0A\n-%0A%09\n+    //var sb strings.Builder%0A    \n for \n@@ -197,18 +197,24 @@\n mando %7B%0A\n-%09%09\n+        \n if c == \n@@ -219,19 +219,28 @@\n = 'R' %7B%0A\n-%09%09%09\n+            \n texto = \n@@ -310,127 +310,80 @@\n ..)%0A\n-%09%09%09cursor++%0A%09%09%7D else %7B%0A%09%09%09texto = append(texto%5B:cursor%5D, append(%5B%5Drune%7Bc%7D, texto%5Bcursor:%5D...)...)%0A%09%09%09cursor++%0A%09%09%7D%0A%09%7D%0A%0A%09\n+            cursor++%0A       // %7D else if c == 'B' %7B%0A        %7D%0A    %7D%0A    \n retu\n@@ -401,17 +401,16 @@\n exto)%0A%7D%0A\n-%0A\n func mai\n@@ -419,98 +419,60 @@\n ) %7B%0A\n-%09scanner := bufio.NewScanner(os.Stdin)%0A%09if scanner.Scan() %7B%0A%09%09entrada := scanner.Text()%0A%09%09\n+    var entrada string%0A    fmt.Scanln(&entrada)%0A    \n resu\n@@ -500,10 +500,12 @@\n da)%0A\n-%09%09\n+    \n fmt.\n@@ -527,9 +527,6 @@\n do)%0A\n-%09%7D%0A\n %7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-06_17-40-20",
+            "content": "@@ -536,13 +536,8 @@\n tado\n-, '%7C'\n )%0A%09%7D\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-40-49",
+            "content": "@@ -520,17 +520,18 @@\n mt.Print\n-f\n+ln\n (resulta\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-41-09",
+            "content": "@@ -524,10 +524,9 @@\n rint\n-ln\n+f\n (res\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-41-16",
+            "content": "@@ -538,11 +538,11 @@\n do, \n-%22%7C%22\n+'%7C'\n )%0A%09%7D\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-42-11",
+            "content": "@@ -308,11 +308,9 @@\n une%7B\n-'%7C'\n+c\n %7D, t\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-43-20",
+            "content": "@@ -534,15 +534,20 @@\n esultado\n+, %22%7C%22\n )%0A%09%7D%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-43-26",
+            "content": "@@ -304,17 +304,19 @@\n (%5B%5Drune%7B\n-c\n+'%7C'\n %7D, texto\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-44-34",
+            "content": "@@ -308,11 +308,9 @@\n une%7B\n-'%7C'\n+c\n %7D, t\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-44-55",
+            "content": "@@ -304,17 +304,19 @@\n (%5B%5Drune%7B\n-c\n+'%7C'\n %7D, texto\n@@ -356,95 +356,10 @@\n %0A%09%7D%0A\n-    resultado := append(texto%5B:cursor%5D, append(%5B%5Drune%7B'%7C'%7D, texto%5Bcursor:%5D...)...)%0A    \n+%0A%09\n retu\n@@ -368,24 +368,20 @@\n  string(\n-resultad\n+text\n o)%0A%7D%0A%0Afu\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-46-24",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc editar(comando string) string {\n\tvar texto []rune\n\tcursor := 0\n\n\tfor _, c := range comando {\n\t\tif c == 'R' {\n\t\t\ttexto = append(texto[:cursor], append([]rune{'\\n'}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t} else {\n\t\t\ttexto = append(texto[:cursor], append([]rune{c}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t}\n\t}\n    resultado := append(texto[:cursor], append([]rune{'|'}, texto[cursor:]...)...)\n    return string(resultado)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif scanner.Scan() {\n\t\tentrada := scanner.Text()\n\t\tresultado := editar(entrada)\n\t\tfmt.Println(resultado)\n\t}\n}\n",
+            "lines": "33"
         }
     ]
 }

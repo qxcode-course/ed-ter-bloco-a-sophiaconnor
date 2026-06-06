@@ -19,13 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@vector
+- ed@list
 flags:
   inbox: all
-  panel: skills
+  panel: help
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@iterador
-selected_index: 11
+selected: ed@editor
+selected_index: 13
