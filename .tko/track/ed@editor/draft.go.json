@@ -132,8 +132,38 @@
         },
         {
             "label": "2026-06-06_17-46-24",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc editar(comando string) string {\n\tvar texto []rune\n\tcursor := 0\n\n\tfor _, c := range comando {\n\t\tif c == 'R' {\n\t\t\ttexto = append(texto[:cursor], append([]rune{'\\n'}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t} else {\n\t\t\ttexto = append(texto[:cursor], append([]rune{c}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t}\n\t}\n    resultado := append(texto[:cursor], append([]rune{'|'}, texto[cursor:]...)...)\n    return string(resultado)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif scanner.Scan() {\n\t\tentrada := scanner.Text()\n\t\tresultado := editar(entrada)\n\t\tfmt.Println(resultado)\n\t}\n}\n",
+            "content": "@@ -258,187 +258,8 @@\n lse \n-if c == 'B' %7B%0A            if cursor %3E 0 %7B%0A                texto = append(texto%5B:cursor-1%5D, texto%5Bcursor:%5D...)%0A                cursor--%0A            %7D//else if c == ''%0A        %7Delse\n %7B%0A%09%09\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-06-06_17-49-59",
+            "content": "@@ -406,186 +406,26 @@\n    %7D\n-else if c == '%3C' %7B%0A                if cursor %3E 0 %7B%0A                cursor--%0A            %7Delse if c == '%3E' %7B%0A                if cursor %3C len(texto) %7B%0A                cursor++%0A    \n+//else if c == ''%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-06_17-51-42",
+            "content": "@@ -563,28 +563,24 @@\n             \n-    \n cursor++%0A   \n@@ -580,26 +580,8 @@\n r++%0A\n-                %7D%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-06_17-52-14",
+            "content": "@@ -715,16 +715,8 @@\n %0A%09%7D%0A\n-%7D%0A    %7D%0A\n     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-06_17-52-48",
+            "content": "@@ -713,16 +713,26 @@\n %09%7D%0A%09%7D%0A%7D%0A\n+    %7D%0A    \n resultad\n@@ -831,22 +831,16 @@\n ultado)%0A\n-    %7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-06_17-53-31",
+            "content": "@@ -389,34 +389,24 @@\n ursor--%0A    \n-        %7D%0A\n         %7Dels\n@@ -417,24 +417,24 @@\n  c == '%3C' %7B%0A\n+\n             \n@@ -461,36 +461,32 @@\n                 \n-    \n cursor--%0A       \n@@ -478,38 +478,24 @@\n ursor--%0A    \n-            %7D%0A\n         %7Dels\n@@ -598,16 +598,20 @@\n       %7D%0A\n+    \n         \n@@ -617,16 +617,16 @@\n  %7Delse%7B%0A\n-\n %09%09%09texto\n@@ -711,20 +711,18 @@\n %0A%09%09%7D%0A%09%7D%0A\n-    \n+%7D%0A\n resultad\n@@ -821,16 +821,22 @@\n ultado)%0A\n+    %7D%0A\n %7D%0A%0Afunc \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-06_17-54-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc editar(comando string) string {\n\tvar texto []rune\n\tcursor := 0\n\n\tfor _, c := range comando {\n\t\tif c == 'R' {\n\t\t\ttexto = append(texto[:cursor], append([]rune{'\\n'}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t} else if c == 'B' {\n            if cursor > 0 {\n                texto = append(texto[:cursor-1], texto[cursor:]...)\n                cursor--\n            }\n        }else if c == '<' {\n                if cursor > 0 {\n                    cursor--\n                }\n        }else if c == '>' {\n                if cursor < len(texto) {\n                    cursor++\n                }\n        }else{\n\t\t\ttexto = append(texto[:cursor], append([]rune{c}, texto[cursor:]...)...)\n\t\t\tcursor++\n\t\t}\n\t}\n    resultado := append(texto[:cursor], append([]rune{'|'}, texto[cursor:]...)...)\n    return string(resultado)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif scanner.Scan() {\n\t\tentrada := scanner.Text()\n\t\tresultado := editar(entrada)\n\t\tfmt.Println(resultado)\n\t}\n}\n",
+            "lines": "46"
         }
     ]
 }

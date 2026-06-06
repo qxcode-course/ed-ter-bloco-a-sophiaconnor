@@ -14,7 +14,20 @@ func editar(comando string) string {
 		if c == 'R' {
 			texto = append(texto[:cursor], append([]rune{'\n'}, texto[cursor:]...)...)
 			cursor++
-		} else {
+		} else if c == 'B' {
+            if cursor > 0 {
+                texto = append(texto[:cursor-1], texto[cursor:]...)
+                cursor--
+            }
+        }else if c == '<' {
+                if cursor > 0 {
+                    cursor--
+                }
+        }else if c == '>' {
+                if cursor < len(texto) {
+                    cursor++
+                }
+        }else{
 			texto = append(texto[:cursor], append([]rune{c}, texto[cursor:]...)...)
 			cursor++
 		}
