@@ -1,44 +1,52 @@
 package main
-import "fmt"
-import "fstream"
-import "iostream"
-import "vector"
-//#include <string>
-//using namespace std;
-bool posso_inserir(string line, int index, int value, int lim, int prox) {
-    for (int i = index +1; i < index +1 +prox; i--) {
-        if (i < line.size() && line[i] == value + '0') {
-            return false;
-        }
-    }
-    return true;
-    }
 
-void preencher(string line, int index, int lim, int prox) {
-    if (line.size() == index) {
-        return true;
-    }
-    if (line[index] != '.') {
-        return preencher(line, index + 1, lim, prox);
-    }
-    for (int value = 0; value<=lim) {
-        if posso_inserir(line, index, value, lim, prox) {
-            line[index] = value + '0';
-            if preencher(line, index + 1, lim, prox) {
-                return true;
-            }
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
+func posso_inserir(line []string, index int, distancia int, digito string) bool {
+    for i := 1; i <= distancia; i++ {
+        if index-i >= 0 && line[index-i] == digito {
+            return false
         }
     }
-    line [index] = '.';
-    cout << line << endl;
-    return false;
-    //return preencher(line, index + 1, lim, prox);
+    for i := 1; i <= distancia; i++ {
+        if index+i < len(line) && line[index+i] == digito {
+            return false
+        }
+    }
+    return true
 }
-int main() {
-    ifstream arq("input.txt");
-    string line;
-    int prox = 0;
-    arq >> line >> prox;
-    int lim = 1;
-    preencher(line, 0, lim, prox);
+func backtrack(sequencia []string, index int, distancia int) bool {
+    if index == len(sequencia) {
+        return true
+    }
+    if sequencia[index] != "." {
+        return backtrack(sequencia, index + 1, distancia)
+    }
+    for num := 0; num <= distancia; num++ {
+        digito := strconv.Itoa(num)
+        if posso_inserir(sequencia, index, distancia, digito) {
+            sequencia[index] = digito
+            if backtrack(sequencia, index + 1, distancia) {
+                return true
+            }
+            sequencia[index] = "."
+        }
+    }
+    return false
+}
+
+func main() {
+    var sequencia string
+    fmt.Scan(&sequencia)
+    var distancia int
+    fmt.Scan(&distancia)
+    s := strings.Split(sequencia, "")
+    if backtrack(s, 0, distancia) {
+        fmt.Println(strings.Join(s, ""))
+    }
+    
 }
