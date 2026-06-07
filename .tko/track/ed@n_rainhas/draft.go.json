@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-07_16-02-45",
+            "content": "@@ -41,56 +41,35 @@\n     \n-var num int%0A    fmt.Scan(&num)%0A    fmt.Print(num\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-07_16-03-42",
+            "content": "@@ -85,10 +85,8 @@\n rint\n-ln\n (num\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-07_16-03-58",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,603 +23,56 @@\n mt%22%0A\n-%0A\n func \n-totalNQueens(n int) int %7B%0A    count := 0%0A    var solve func(row, cols, diag1, diag2 int)%0A    solve = func(row, cols, diag1, diag2 int) %7B%0A        if row == n %7B%0A            count++%0A            return%0A        %7D%0A%0A        available := ((1 %3C%3C n) - 1) & %5E(cols %7C diag1 %7C diag2)%0A        for available != 0 %7B%0A            bit := available & -available%0A            available -= bit%0A            solve(row+1, cols%7Cbit, (diag1%7Cbit)%3C%3C1, (diag2%7Cbit)%3E%3E1)%0A        %7D%0A    %7D%0A%0A    solve(0, 0, 0, 0)%0A    return count%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A    if _, err := fmt.Scan(&n); err != nil %7B%0A        return%0A    %7D\n+main() %7B%0A    var num int%0A    fmt.Scan(&num)\n %0A   \n@@ -88,23 +88,11 @@\n tln(\n-totalNQueens(n)\n+num\n )%0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-07_16-09-07",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc totalNQueens(n int) int {\n    count := 0\n    var solve func(row, cols, diag1, diag2 int)\n    solve = func(row, cols, diag1, diag2 int) {\n        if row == n {\n            count++\n            return\n        }\n\n        available := ((1 << n) - 1) & ^(cols | diag1 | diag2)\n        for available != 0 {\n            bit := available & -available\n            available -= bit\n            solve(row+1, cols|bit, (diag1|bit)<<1, (diag2|bit)>>1)\n        }\n    }\n\n    solve(0, 0, 0, 0)\n    return count\n}\n\nfunc main() {\n    var n int\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n    fmt.Println(totalNQueens(n))\n}\n",
+            "lines": "32"
+        }
+    ]
+}

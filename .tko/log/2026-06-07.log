@@ -24,3 +24,80 @@
 2026-06-07 11:06:59, MOVE, v:1, k:ed@distancia, mode:EDIT
 2026-06-07 11:07:55, EXEC, v:1, k:ed@distancia, mode:FULL, rate:100, size:52
 2026-06-07 11:07:59, MOVE, v:1, k:ed@distancia, mode:BACK
+2026-06-07 11:10:54, SELF, v:1, k:ed@distancia, self:1, rate:100, study:60, concept:1, refactor:1
+2026-06-07 11:11:04, SELF, v:1, k:ed@distancia, self:1, rate:100, study:60, concept:1
+2026-06-07 15:13:45, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-07 15:18:50, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-07 15:19:14, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-06-07 15:30:46, MOVE, v:1, k:ed@permutacoes, mode:DOWN
+2026-06-07 15:30:48, MOVE, v:1, k:ed@permutacoes, mode:PICK
+2026-06-07 15:30:52, EXEC, v:1, k:ed@permutacoes, mode:FULL, rate:0, size:5
+2026-06-07 15:30:57, MOVE, v:1, k:ed@permutacoes, mode:BACK
+2026-06-07 15:30:46, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-07 15:30:46, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-07 15:30:46, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-07 15:30:52, MOVE, v:1, k:ed@permutacoes, mode:EDIT
+2026-06-07 15:34:01, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-06-07 15:34:01, EXEC, v:1, k:ed@wordsearch, mode:FULL, fail:COMP
+2026-06-07 15:37:13, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-06-07 15:38:01, MOVE, v:1, k:ed@sudoku, mode:DOWN
+2026-06-07 15:38:02, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-07 15:38:04, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-07 15:38:00, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-07 15:38:01, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:38:01, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:39:12, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-07 15:39:13, EXEC, v:1, k:ed@sudoku, mode:FULL, size:7, fail:COMP
+2026-06-07 15:39:21, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:7
+2026-06-07 15:39:32, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-07 15:40:55, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-07 15:40:56, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:14
+2026-06-07 15:41:40, EXEC, v:1, k:ed@sudoku, mode:FULL, size:14, fail:COMP
+2026-06-07 15:41:51, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:15
+2026-06-07 15:42:38, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:41:50, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:45:44, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:25
+2026-06-07 15:46:17, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:25
+2026-06-07 15:47:16, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-07 15:48:34, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-06-07 15:48:34, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:75, size:70
+2026-06-07 15:46:16, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:46:17, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:48:27, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-07 15:48:34, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-06-07 15:50:12, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-06-07 15:51:03, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-07 15:51:05, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0
+2026-06-07 15:52:16, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-07 15:51:05, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:53:29, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:54:33, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-06-07 15:54:34, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:27
+2026-06-07 15:54:34, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:58:21, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-06-07 15:59:24, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-06-07 15:59:30, MOVE, v:1, k:ed@n_rainhas, mode:DOWN
+2026-06-07 15:59:31, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-07 16:02:44, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-07 16:02:46, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0, size:5
+2026-06-07 16:03:42, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:0, size:7
+2026-06-07 16:03:58, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:8, size:7
+2026-06-07 16:03:58, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-07 16:05:13, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-07 16:06:24, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-07 16:09:06, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-07 16:09:07, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100, size:32
+2026-06-07 16:09:51, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-07 16:10:06, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-07 16:06:57, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-07 16:10:06, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-07 16:10:22, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-07 16:10:33, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-07 16:10:55, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-07 16:11:57, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-07 16:12:46, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-07 16:12:48, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-07 16:13:28, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-07 16:20:30, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-07 16:20:31, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-07 16:21:41, SELF, v:1, k:ed@n_rainhas, self:1, rate:100, study:30, concept:1, refactor:1

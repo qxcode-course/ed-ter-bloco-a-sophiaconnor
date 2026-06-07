@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-07_15-39-13",
+            "content": "@@ -80,19 +80,15 @@\n fmt.\n-Println(num\n+Append(\n )%0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-07_15-39-21",
+            "content": "@@ -72,190 +72,8 @@\n um)%0A\n-    grid := make(%5B%5D%5B%5Dint, num)%0A    for i := 0; i %3C num; i++ %7B%0A        grid%5Bi%5D = make(%5B%5Dint, num)%0A        for j := 0; j %3C num; j++ %7B%0A            fmt.Scan(&grid%5Bi%5D%5Bj%5D)%0A        %7D%0A    %7D%0A\n     \n@@ -91,14 +91,8 @@\n (num\n-, grid\n )%0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-06-07_15-40-56",
+            "content": "@@ -89,20 +89,19 @@\n ake(%5B%5D%5B%5D\n-char\n+int\n , num)%0A \n@@ -159,12 +159,11 @@\n e(%5B%5D\n-char\n+int\n , nu\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-06-07_15-41-40",
+            "content": "@@ -23,23 +23,8 @@\n mt%22%0A\n-type char byte%0A\n func\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-06-07_15-41-51",
+            "content": "@@ -91,56 +91,36 @@\n     \n-if num == 4 %7B%0A        var matriz %5B4\n+grid := make(%5B\n %5D%5B\n-4\n %5Dchar\n-%0A    \n+, num)%0A\n     \n@@ -135,17 +135,19 @@\n  0; i %3C \n-4\n+num\n ; i++ %7B%0A\n@@ -158,228 +158,36 @@\n     \n-    for j := 0; j %3C 4; j++ %7B%0A                fmt.Scanf(%22%25c%22, &matriz%5Bi%5D%5Bj%5D)%0A            %7D%0A        %7D%0A        fmt.Println(matriz)%0A    %7D else if num == 9 %7B%0A        var matriz %5B9%5D%5B9%5Dchar%0A        for i := 0; i %3C 9; i++ %7B%0A    \n+grid%5Bi%5D = make(%5B%5Dchar, num)%0A\n     \n@@ -210,9 +210,11 @@\n j %3C \n-9\n+num\n ; j+\n@@ -229,28 +229,24 @@\n         \n-    \n fmt.Scan\n f(%22%25c%22, \n@@ -241,23 +241,14 @@\n Scan\n-f(%22%25c%22, &matriz\n+(&grid\n %5Bi%5D%5B\n@@ -263,28 +263,16 @@\n     \n-    \n %7D%0A\n-    \n     %7D%0A\n-    \n     \n@@ -287,25 +287,17 @@\n tln(\n-matriz)%0A    %7D%0A    \n+num, grid)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-07_15-45-44",
+            "content": "@@ -217,33 +217,40 @@\n         fmt.Scan\n-(\n+f(%22%25c%22, \n &matriz%5Bi%5D%5Bj%5D)%0A \n@@ -449,17 +449,24 @@\n fmt.Scan\n-(\n+f(%22%25c%22, \n &matriz%5B\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-07_15-46-17",
+            "content": "@@ -10,40 +10,20 @@\n ain%0A\n-%0A\n import \n-(%0A    %22fmt%22%0A    %22log%22%0A)%0A\n+%22fmt%22\n %0Atyp\n@@ -34,17 +34,16 @@\n ar byte%0A\n-%0A\n func mai\n@@ -67,29 +67,16 @@\n  int%0A   \n- if _, err :=\n  fmt.Sca\n@@ -86,87 +86,61 @@\n num)\n-; err != nil %7B%0A        log.Fatal(err)%0A    %7D%0A%0A    matriz := make(%5B\n+%0A    if num == 4 %7B%0A        var matriz %5B4\n %5D%5B\n+4\n %5Dchar\n-, num)%0A\n+%0A    \n     \n@@ -155,19 +155,17 @@\n  0; i %3C \n-num\n+4\n ; i++ %7B%0A\n@@ -172,42 +172,8 @@\n     \n-    matriz%5Bi%5D = make(%5B%5Dchar, num)%0A\n     \n@@ -192,19 +192,17 @@\n  0; j %3C \n-num\n+4\n ; j++ %7B%0A\n@@ -217,20 +217,11 @@\n     \n-if _, err :=\n+   \n  fmt\n@@ -244,52 +244,224 @@\n %5Bj%5D)\n-; err != nil %7B%0A                log.Fatal(err\n+%0A            %7D%0A        %7D%0A        fmt.Println(matriz)%0A    %7D else if num == 9 %7B%0A        var matriz %5B9%5D%5B9%5Dchar%0A        for i := 0; i %3C 9; i++ %7B%0A            for j := 0; j %3C 9; j++ %7B%0A                fmt.Scan(&matriz%5Bi%5D%5Bj%5D\n )%0A  \n@@ -490,11 +490,8 @@\n     \n-%7D%0A%0A\n     \n@@ -510,10 +510,21 @@\n matriz)%0A\n+    %7D%0A    %0A\n %7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-07_15-54-34",
+            "content": "package main\n\nimport (\n    \"fmt\"\n    \"log\"\n)\n\ntype char byte\n\nfunc main() {\n    var num int\n    if _, err := fmt.Scan(&num); err != nil {\n        log.Fatal(err)\n    }\n\n    matriz := make([][]char, num)\n    for i := 0; i < num; i++ {\n        matriz[i] = make([]char, num)\n        for j := 0; j < num; j++ {\n            if _, err := fmt.Scan(&matriz[i][j]); err != nil {\n                log.Fatal(err)\n            }\n        }\n    }\n\n    fmt.Println(matriz)\n}\n",
+            "lines": "27"
+        }
+    ]
+}
