@@ -51,7 +51,7 @@ func (d *Deque) Clear() {
 }
 func (d *Deque) PopFront() error {
 	if d.size == 0 {
-		return errors.New("fail: deque vazio")
+		return errors.New("fail: buffer vazio")
 	}
 	d.front = (d.front + 1) % d.capacity
 	d.size--
