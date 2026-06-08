@@ -42,12 +42,17 @@ func (d *Deque) PushBack(val int) {
 	d.size++
 }
 
-func (d *Deque) Front() int {
-	return d.data[d.front]
-}
 func (d *Deque) Clear() {
 	d.front = 0
 	d.size = 0
+}
+
+func (d *Deque) PopBack() error {
+	if d.size == 0 {
+		return errors.New("fail: buffer vazio")
+	}
+	d.size--
+	return nil
 }
 func (d *Deque) PopFront() error {
 	if d.size == 0 {
@@ -127,13 +132,13 @@ func main() {
 			}
 		case "push_front":
 			for _, v := range args[1:] {
-			num, _ := strconv.Atoi(v)
-			buf.PushFront(num)
+				num, _ := strconv.Atoi(v)
+				buf.PushFront(num)
 			}
 		case "pop_back":
-			// if err := buf.PopBack(); err != nil {
-			// 	fmt.Println(err)
-			// }
+			if err := buf.PopBack(); err != nil {
+				fmt.Println(err)
+			}
 		case "pop_front":
 			if err := buf.PopFront(); err != nil {
 				fmt.Println(err)
