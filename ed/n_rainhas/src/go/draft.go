@@ -2,31 +2,36 @@ package main
 
 import "fmt"
 
-func totalNQueens(n int) int {
-    count := 0
-    var solve func(row, cols, diag1, diag2 int)
-    solve = func(row, cols, diag1, diag2 int) {
-        if row == n {
-            count++
-            return
-        }
+func solve(linha, num int, cols, diag1, diag2 []bool, count int) {
+	if linha == num {
+		count++
+		return
+	}
 
-        available := ((1 << n) - 1) & ^(cols | diag1 | diag2)
-        for available != 0 {
-            bit := available & -available
-            available -= bit
-            solve(row+1, cols|bit, (diag1|bit)<<1, (diag2|bit)>>1)
-        }
-    }
+	for col := 0; col < num; col++ {
+		if cols[col] || diag1[linha+col] || diag2[linha-col+num-1] {
+			continue
+		}
+		cols[col] = true
+		diag1[linha+col] = true
+		diag2[linha-col+num-1] = true
+		solve(linha+1, num, cols, diag1, diag2, count)
+		cols[col] = false
+		diag1[linha+col] = false
+		diag2[linha-col+num-1] = false
+	}
+}
 
-    solve(0, 0, 0, 0)
-    return count
+func totalNQueens(num int) int {
+	cols := make([]bool, num)
+	diag1 := make([]bool, 2*num-1)
+	diag2 := make([]bool, 2*num-1)
+	count := 0
+	solve(0, num, cols, diag1, diag2, count)
+	return count
 }
 
 func main() {
-    var n int
-    if _, err := fmt.Scan(&n); err != nil {
-        return
-    }
-    fmt.Println(totalNQueens(n))
+	var num int
+	fmt.Println(totalNQueens(num))
 }
