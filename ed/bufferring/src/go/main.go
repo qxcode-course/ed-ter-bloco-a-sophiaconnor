@@ -45,7 +45,10 @@ func (d *Deque) PushBack(val int) {
 func (d *Deque) Front() int {
 	return d.data[d.front]
 }
-
+func (d *Deque) Clear() {
+	d.front = 0
+	d.size = 0
+}
 func (d *Deque) PopFront() error {
 	if d.size == 0 {
 		return errors.New("fail: deque vazio")
@@ -148,7 +151,7 @@ func main() {
 			// 	fmt.Println(val)
 			// }
 		case "clear":
-			// buf.Clear()
+			buf.Clear()
 		case "end":
 			return
 		default:
