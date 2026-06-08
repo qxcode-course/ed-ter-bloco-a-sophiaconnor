@@ -16,6 +16,18 @@ type Deque struct {
 	capacity int
 }
 
+func (d *Deque) Front() (int, error) {
+	if d.size == 0 {
+		return 0, errors.New("fail: buffer vazio")
+	}
+	return d.data[d.front], nil
+}
+func (d *Deque) Back() (int, error) {
+	if d.size == 0 {
+		return 0, errors.New("fail: buffer vazio")
+	}
+	return d.data[(d.front+d.size-1)%d.capacity], nil
+}
 func (d *Deque) Len() int {
 	return d.size
 }
@@ -144,17 +156,17 @@ func main() {
 				fmt.Println(err)
 			}
 		case "front":
-			// if val, err := buf.Front(); err != nil {
-			// 	fmt.Println(err)
-			// } else {
-			// 	fmt.Println(val)
-			// }
+			if val, err := buf.Front(); err != nil {
+				fmt.Println(err)
+			} else {
+				fmt.Println(val)
+			}
 		case "back":
-			// if val, err := buf.Back(); err != nil {
-			// 	fmt.Println(err)
-			// } else {
-			// 	fmt.Println(val)
-			// }
+			if val, err := buf.Back(); err != nil {
+				fmt.Println(err)
+			} else {
+				fmt.Println(val)
+			}
 		case "clear":
 			buf.Clear()
 		case "end":
