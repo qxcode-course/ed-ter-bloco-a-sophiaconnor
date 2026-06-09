@@ -63,3 +63,10 @@
 2026-06-09 18:52:21, MOVE, v:1, k:ed@pilha, mode:PICK
 2026-06-09 18:53:36, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:86
 2026-06-09 18:54:02, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:86
+2026-06-09 18:54:34, EXEC, v:1, k:ed@pilha, mode:FULL, size:86, fail:COMP
+2026-06-09 18:55:20, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:89
+2026-06-09 18:55:48, EXEC, v:1, k:ed@pilha, mode:FULL, size:89, fail:COMP
+2026-06-09 18:56:15, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:55:20, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:57:09, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:96
+2026-06-09 18:58:12, EXEC, v:1, k:ed@pilha, mode:FULL, rate:66, size:99

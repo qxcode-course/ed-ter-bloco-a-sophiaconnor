@@ -28,10 +28,23 @@ func (s *Stack[T]) String() string {
 	}
 	return output
  }
+ func (s *Stack[T]) Size() int{
+	return len(s.data)
+ }
  func (s *Stack[T]) Push(value T) {
 	s.data = append(s.data, value)
  }
 // 
+func (s *Stack[T]) Peek() (T, error){
+	if len(s.data) == 0 {
+		var zero T
+		return zero, fmt.Errorf("stack is empty")
+	}
+	return s.data[len(s.data)-1], nil
+}
+func (s *Stack[T]) Clear() {
+	s.data = s.data[:0]
+}
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
@@ -64,21 +77,21 @@ func main() {
 		case "debug":
 			 fmt.Println(v)
 		case "top":
-			// top, err := v.Peek()
-			// if err != nil {
-			// 	fmt.Println(err)
-			// } else {
-			// 	fmt.Println(top)
-			// }
+			 top, err := v.Peek()
+			 if err != nil {
+			 	fmt.Println(err)
+			 } else {
+			 	fmt.Println(top)
+			 }
 		case "size":
-			// fmt.Println(v.Size())
+			 fmt.Println(v.Size())
 		case "pop":
 			// err := v.Pop()
 			// if err != nil {
 			// 	fmt.Println(err)
 			// }
 		case "clear":
-			// v.Clear()
+			 v.Clear()
 		default:
 			fmt.Println("fail: comando invalido")
 		}
