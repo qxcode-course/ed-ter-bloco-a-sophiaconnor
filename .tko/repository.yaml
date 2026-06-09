@@ -23,9 +23,9 @@ expanded:
 flags:
   inbox: all
   panel: skills
-  show_panel: 'true'
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fila_enc
-selected_index: 8
+selected: ed@pilha
+selected_index: 9

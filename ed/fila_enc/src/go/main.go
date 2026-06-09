@@ -111,14 +111,15 @@ func main() {
 			queue.Enqueue(value)
 			}
 		case "pop":
-			// if _, ok := queue.Dequeue(); !ok {
-			// 	fmt.Println("falha: fila vazia")
-			// }
+			if _,ok := queue.Dequeue(); !ok {
+				fmt.Println("falha: fila vazia")
+			}
+
 		case "peek":
 			if value, ok := queue.Peek(); ok {
-			fmt.Println(value)
+				fmt.Println(value)
 			} else {
-			fmt.Println("falha: fila vazia")
+				fmt.Println("falha: fila vazia")
 			}
 		default:
 			fmt.Println("Unknown command:", args[0])
