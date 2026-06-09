@@ -23,9 +23,9 @@ expanded:
 flags:
   inbox: all
   panel: skills
-  show_panel: 'false'
+  show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@bufferring
-selected_index: 7
+selected: ed@fila_enc
+selected_index: 8
