@@ -70,3 +70,7 @@
 2026-06-09 18:55:20, MOVE, v:1, k:ed@pilha, mode:EDIT
 2026-06-09 18:57:09, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:96
 2026-06-09 18:58:12, EXEC, v:1, k:ed@pilha, mode:FULL, rate:66, size:99
+2026-06-09 18:59:54, EXEC, v:1, k:ed@pilha, mode:FULL, rate:66, size:106
+2026-06-09 19:00:07, EXEC, v:1, k:ed@pilha, mode:FULL, rate:100, size:106
+2026-06-09 19:00:10, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-09 19:00:46, SELF, v:1, k:ed@pilha, self:1, rate:100, study:25, concept:1, refactor:1

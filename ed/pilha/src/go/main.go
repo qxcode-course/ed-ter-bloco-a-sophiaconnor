@@ -45,6 +45,13 @@ func (s *Stack[T]) Peek() (T, error){
 func (s *Stack[T]) Clear() {
 	s.data = s.data[:0]
 }
+func (s *Stack[T]) Pop() error{
+	if len(s.data) == 0 {
+		return fmt.Errorf("stack is empty")
+	}
+	s.data = s.data[:len(s.data)-1]
+	return nil
+}
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
@@ -86,10 +93,10 @@ func main() {
 		case "size":
 			 fmt.Println(v.Size())
 		case "pop":
-			// err := v.Pop()
-			// if err != nil {
-			// 	fmt.Println(err)
-			// }
+			 err := v.Pop()
+			 if err != nil {
+			 	fmt.Println(err)
+			 }
 		case "clear":
 			 v.Clear()
 		default:
