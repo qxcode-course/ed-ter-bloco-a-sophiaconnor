@@ -44,3 +44,22 @@
 2026-06-09 18:38:41, MOVE, v:1, k:ed@pilha, mode:DOWN
 2026-06-09 18:38:44, MOVE, v:1, k:ed@pilha, mode:PICK
 2026-06-09 18:38:46, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:80
+2026-06-09 18:39:42, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-09 18:37:04, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-09 18:37:04, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-09 18:38:41, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:38:41, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:38:41, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:38:41, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:38:46, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:43:07, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:49:08, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-09 18:49:09, EXEC, v:1, k:ed@pilha, mode:FULL, size:82, fail:COMP
+2026-06-09 18:51:06, EXEC, v:1, k:ed@pilha, mode:FULL, size:82, fail:COMP
+2026-06-09 18:51:17, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-09 18:51:30, EXEC, v:1, k:ed@pilha, mode:FULL, size:83, fail:COMP
+2026-06-09 18:51:49, EXEC, v:1, k:ed@pilha, mode:FULL, size:83, fail:COMP
+2026-06-09 18:52:17, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-09 18:52:21, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-09 18:53:36, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:86
+2026-06-09 18:54:02, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:86
