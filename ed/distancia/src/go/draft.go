@@ -5,8 +5,12 @@ import (
 	"strconv"
 	"strings"
 )
-
+type problem struct {
+    sequencia [] string
+    distancia int
+}
 //verifica se esse valor pode ser usado nesse índice, ou seja, se não existe o mesmo número a uma distância menor ou igual a distância dada
+
 func (p *problem) fit(index int, value rune) bool {
     _, _ = index, value
     return false

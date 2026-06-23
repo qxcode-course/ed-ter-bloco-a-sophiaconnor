@@ -85,6 +85,7 @@ func main() {
 			 fmt.Println(v)
 		case "top":
 			 top, err := v.Peek()
+			
 			 if err != nil {
 			 	fmt.Println(err)
 			 } else {
