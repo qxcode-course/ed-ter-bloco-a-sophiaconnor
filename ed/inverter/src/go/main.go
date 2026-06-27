@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-
 	"strconv"
 	"strings"
 )
@@ -15,39 +14,11 @@ type Node struct {
 	Right *Node
 }
 
-// MyShow imprime a árvore binária de forma formatada.
-func MyShow(node *Node, nivel int) {
-	_, _ = node, nivel
+func Reverse(node *Node) {
+	_ = node
 	// TODO
-	if node == nil {
-		return
-	}
-	temFilhos := node.Left != nil || node.Right != nil
-	if temFilhos {
-		if node.Left == nil {
-			for i := 0; i < nivel+1; i++ {
-				fmt.Print("....")
-			} 
-			fmt.Println("#")
-		} else {
-			MyShow(node.Left, nivel+1)
-		}
-	}
-	for i := 0; i<nivel; i++ {
-		fmt.Print("....")
-	}
-	fmt.Println(node.Value)
-	if temFilhos{
-		if node.Right == nil {
-			for i:= 0; i<nivel+1; i++ {
-				fmt.Print("....")
-			}
-			fmt.Println("#")
-		} else {
-			MyShow(node.Right, nivel+1)
-		}
-	}
 }
+
 // -----------------------------------------------------------------------------------
 func BShow(node *Node, history string) {
 	if node != nil && (node.Left != nil || node.Right != nil) {
@@ -96,5 +67,6 @@ func main() {
 	parts := strings.Split(scanner.Text(), " ")
 	root := create(&parts)
 	BShow(root, "") // Chama a função de impressão formatada
-	MyShow(root, 0) // Chama a função de impressão personalizada
+	Reverse(root)   // Inverte a árvore
+	BShow(root, "") // Chama novamente para mostrar a árvore invertida
 }
