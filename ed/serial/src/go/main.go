@@ -21,8 +21,20 @@ type Node struct {
 // Você pode fazer um "push_front" no array usando '*parts = (*parts)[1:]
 // Se o elemento for "#", significa que o nó é nulo.
 func create(parts *[]string) *Node {
-	_ = parts
-	return nil
+	if len(*parts) == 0{
+		return nil
+	}
+	elem := (*parts)[0]
+	*parts = (*parts)[1:]
+	if elem == "#" || elem == "" {
+		return nil
+	}
+	var valor int
+	fmt.Sscan(elem, &valor)
+	novoNo := &Node{Value: valor}
+	novoNo.Left = create(parts)
+	novoNo.Right = create(parts)
+	return novoNo
 }
 
 // BShow é uma função auxiliar para imprimir a árvore binária.
