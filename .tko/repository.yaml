@@ -21,7 +21,7 @@ sources:
 expanded:
 - ed@tree
 flags:
-  inbox: inbox
+  inbox: all
   panel: graph
   task_graph_mode: executions
   show_time: 'true'

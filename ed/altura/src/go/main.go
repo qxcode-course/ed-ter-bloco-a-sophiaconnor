@@ -20,14 +20,33 @@ type Node struct {
 // Returns the node with the value or nil if not found
 func find(node *Node, value int) *Node {
 	_, _ = node,  value
-	return nil
+	if node == nil {
+		return nil
+	}
+	if node.Value == value {
+		return node
+	}
+	noEsquerdo := find(node.Left, value)
+	if noEsquerdo != nil {
+		return noEsquerdo
+	}
+	return find(node.Right, value)
 }
 
 // node is the node we want to find the height of
 // the height of a node is the number of edges on the longest path from the node to a leaf
 func getHeight(node *Node) int {
 	_ = node
-	return 0
+	if node == nil {
+		return 0
+	}
+	altEsquerda := getHeight(node.Left)
+	altDireita := getHeight(node.Right)
+	if altEsquerda > altDireita {
+		return altEsquerda + 1
+	} else {
+		return altDireita + 1
+	}
 }
 
 // node is the root of the tree
@@ -35,7 +54,17 @@ func getHeight(node *Node) int {
 // value is the value we are looking for
 func calcNodeDepth(node *Node, level int, value int) int {
 	_, _, _ = node, level, value
-	return 0
+	if node == nil {
+		return 0
+	}
+	if node.Value == value {
+		return level
+	}
+	profundidade_esquerda := calcNodeDepth(node.Left, level + 1, value)
+	if profundidade_esquerda != - {
+		return profundidade_esquerda
+	}
+	return calcNodeDepth(node.Right, level+1, value)
 }
 
 // --------------------------------------------------------------------
@@ -95,14 +124,14 @@ func main() {
 	fmt.Println("Arvore:")
 	BShow(root, "")
 
-	// values := strings.FieldsSeq(line)
-	// for s := range values {
-	// 	value, _ := strconv.Atoi(s)
-	// 	node := find(root, value)
-	// 	if node != nil {
-	// 		fmt.Printf("Altura: %d, Profundidade: %d\n", getHeight(node), calcNodeDepth(root, 1, value))
-	// 	} else {
-	// 		fmt.Println("-1")
-	// 	}
-	// }
+	 values := strings.FieldsSeq(line)
+	 for s := range values {
+	 	value, _ := strconv.Atoi(s)
+	 	node := find(root, value)
+	 	if node != nil {
+	 		fmt.Printf("Altura: %d, Profundidade: %d\n", getHeight(node), calcNodeDepth(root, 1, value))
+	 	} else {
+	 		fmt.Println("-1")
+	 	}
+	 }
 }
