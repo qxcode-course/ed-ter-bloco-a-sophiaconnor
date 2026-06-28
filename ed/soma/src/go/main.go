@@ -25,7 +25,23 @@ func rec_sum(node *Node) int {
 
 func rec_min(node *Node) int {
 	_ = node
-	return 0
+	if node == nil {
+		return 0
+	}
+	menor := node.Value
+	if node.Left != nil {
+		min_esquerda := rec_min(node.Left)
+		if min_esquerda < menor {
+			menor = min_esquerda
+		}
+	}
+	if node.Right != nil {
+		min_direita := rec_min(node.Right)
+		if min_direita < menor {
+			menor = min_direita
+		}
+	}
+	return menor
 }
 
 // MyShow imprime a árvore binária de forma formatada.

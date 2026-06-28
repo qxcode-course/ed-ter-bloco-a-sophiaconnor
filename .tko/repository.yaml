@@ -21,13 +21,13 @@ sources:
 expanded:
 - ed@tree
 flags:
-  inbox: all
-  panel: skills
+  inbox: inbox
+  panel: graph
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@soma
-selected_index: 13
+selected: ed@altura
+selected_index: 14

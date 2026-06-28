@@ -21,3 +21,18 @@
 2026-06-28 18:34:07, MOVE, v:1, k:ed@soma, mode:EDIT
 2026-06-28 18:34:09, MOVE, v:1, k:ed@soma, mode:EDIT
 2026-06-28 18:43:37, EXEC, v:1, k:ed@soma, mode:FULL, rate:42, size:86
+2026-06-28 18:47:16, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-06-28 18:43:37, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-06-28 18:48:23, MOVE, v:1, k:ed@soma, mode:BACK
+2026-06-28 18:48:25, MOVE, v:1, k:ed@soma, mode:PICK
+2026-06-28 18:48:25, EXEC, v:1, k:ed@soma, mode:FULL, size:102, fail:COMP
+2026-06-28 18:48:27, MOVE, v:1, k:ed@soma, mode:BACK
+2026-06-28 18:48:28, MOVE, v:1, k:ed@soma, mode:PICK
+2026-06-28 18:48:29, EXEC, v:1, k:ed@soma, mode:FULL, fail:COMP
+2026-06-28 18:48:58, EXEC, v:1, k:ed@soma, mode:FULL, size:102, fail:COMP
+2026-06-28 18:50:46, EXEC, v:1, k:ed@soma, mode:FULL, rate:100, size:102
+2026-06-28 18:50:48, MOVE, v:1, k:ed@soma, mode:BACK
+2026-06-28 18:51:17, SELF, v:1, k:ed@soma, self:1, rate:100, study:15, concept:1
+2026-06-28 18:59:27, MOVE, v:1, k:ed@altura, mode:DOWN
+2026-06-28 18:59:28, MOVE, v:1, k:ed@altura, mode:PICK
+2026-06-28 18:59:39, EXEC, v:1, k:ed@altura, mode:FULL, rate:0, size:108
