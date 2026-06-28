@@ -14,17 +14,10 @@ type Node struct {
 	Right *Node
 }
 
-func Reverse(node *Node) {
-	_ = node
+func Clone(node *Node) *Node {
 	// TODO
-	if node == nil {
-		return
-	}
-	aux := node.Left
-	node.Left = node.Right
-	node.Right = aux
-	Reverse(node.Left)
-	Reverse(node.Right)
+	_ = node
+	return nil
 }
 
 // -----------------------------------------------------------------------------------
@@ -74,7 +67,10 @@ func main() {
 	scanner.Scan()
 	parts := strings.Split(scanner.Text(), " ")
 	root := create(&parts)
+	fmt.Println("original:")
 	BShow(root, "") // Chama a função de impressão formatada
-	Reverse(root)   // Inverte a árvore
-	BShow(root, "") // Chama novamente para mostrar a árvore invertida
+	newRoot := Clone(root) // Clona a árvore
+	root.Value = 4         // Modifica o valor do nó raiz original
+	fmt.Println("clone:")
+	BShow(newRoot, "") // Chama novamente para mostrar a árvore invertida
 }
