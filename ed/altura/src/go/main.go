@@ -61,7 +61,7 @@ func calcNodeDepth(node *Node, level int, value int) int {
 		return level
 	}
 	profundidade_esquerda := calcNodeDepth(node.Left, level + 1, value)
-	if profundidade_esquerda != - {
+	if profundidade_esquerda != 0 {
 		return profundidade_esquerda
 	}
 	return calcNodeDepth(node.Right, level+1, value)
